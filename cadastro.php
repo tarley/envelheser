@@ -54,7 +54,7 @@
                                 <div class="col-lg-12">
                                     <form role="form">
                                         <div class="form-group col-md-2">
-                                            <label>Código</label>
+                                            <label>CÃ³digo</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-6">
@@ -74,7 +74,7 @@
                                             <input id="escolaridadeCliente" class="form-control">
                                         </div>	
                                          <div class="form-group col-md-4">
-                                            <label>Ocupação</label>
+                                            <label>OcupaÃ§Ã£o</label>
                                             <input id="ocupacaoCliente" class="form-control">
                                         </div>	
                                         <div class="form-group col-md-4">
@@ -94,11 +94,11 @@
                                             <input id="dataNascimentoCliente" class="form-control">
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label>Número de Filhos</label>
+                                            <label>NÃºmero de Filhos</label>
                                             <input id="numeroFilhosCliente" class="form-control">
                                         </div>	
                                         <div class="form-group col-md-4">
-                                            <label>Endereço</label>
+                                            <label>EndereÃ§o</label>
                                             <input id="enderecoCliente" class="form-control">
                                         </div>
                                     </form>
@@ -117,9 +117,6 @@
         <!-- /#page-wrapper -->		
     </div>
     <!-- /#wrapper -->
-    
-    <!-- Teste de alteração em um arquivo -->
-    <!-- outra alteração -->
     
 	<?php include("includes/footer.php"); ?>	
 	<script>
