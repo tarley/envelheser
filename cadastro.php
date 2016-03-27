@@ -117,11 +117,6 @@
         <!-- /#page-wrapper -->		
     </div>
     <!-- /#wrapper -->
-<<<<<<< HEAD
-    <!-- Teste de alteração -->
-=======
->>>>>>> branch 'master' of https://github.com/tarley/envelheser.git
-
 	<?php include("includes/footer.php"); ?>	
 	<script>
 		$(document).ready(function() {
