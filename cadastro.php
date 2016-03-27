@@ -118,6 +118,8 @@
     </div>
     <!-- /#wrapper -->
     
+    <!--  Tambem alterei o mesmo arquivo. -->
+    
 	<?php include("includes/footer.php"); ?>	
 	<script>
 		$(document).ready(function() {
