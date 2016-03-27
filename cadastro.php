@@ -117,6 +117,9 @@
         <!-- /#page-wrapper -->		
     </div>
     <!-- /#wrapper -->
+    
+    <!-- Teste de alteração em um arquivo -->
+    
 	<?php include("includes/footer.php"); ?>	
 	<script>
 		$(document).ready(function() {
