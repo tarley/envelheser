@@ -126,6 +126,9 @@
 	<!-- Mais uma alteração -->
 	<!-- Mais um merge (local) -->
     
+    
+    <!-- Testes de merge -->
+    
 	<?php include("includes/footer.php"); ?>	
 	<script>
 		$(document).ready(function() {
