@@ -123,8 +123,7 @@
 	<!-- Exemplo de alteração no mesmo arquivo por dois alunos diferentes -->
 	<!-- Ao mesmo tempo outro aluno alterou o arquivo -->
 	<!-- Posso fazer isso varias vezes antes de sincronizar com o repositorio remoto -->
-	
-	
+	<!-- Mais uma alteraÃ§Ã£o -->
 	<!-- Mais um merge (local) -->
     
 	<?php include("includes/footer.php"); ?>	
