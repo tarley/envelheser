@@ -120,6 +120,7 @@
 
 	<!-- Alterando o arquivo Cadastro.php -->
 	<!-- Outro aluno alterou o arquivo -->
+	<!-- Exemplo de alteração no mesmo arquivo por dois alunos diferentes -->
     
 	<?php include("includes/footer.php"); ?>	
 	<script>
