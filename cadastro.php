@@ -131,6 +131,8 @@
     
     <!-- Testes de merge -->
     
+    <!--  Exemplo quando eu altero primeiro -->
+    
 	<?php include("includes/footer.php"); ?>	
 	<script>
 		$(document).ready(function() {
