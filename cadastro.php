@@ -54,7 +54,7 @@
                                 <div class="col-lg-12">
                                     <form role="form">
                                         <div class="form-group col-md-2">
-                                            <label>CÃ³digo</label>
+                                            <label>CÃƒÂ³digo</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-6">
@@ -74,7 +74,7 @@
                                             <input id="escolaridadeCliente" class="form-control">
                                         </div>	
                                          <div class="form-group col-md-4">
-                                            <label>OcupaÃ§Ã£o</label>
+                                            <label>OcupaÃƒÂ§ÃƒÂ£o</label>
                                             <input id="ocupacaoCliente" class="form-control">
                                         </div>	
                                         <div class="form-group col-md-4">
@@ -94,11 +94,11 @@
                                             <input id="dataNascimentoCliente" class="form-control">
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label>NÃºmero de Filhos</label>
+                                            <label>NÃƒÂºmero de Filhos</label>
                                             <input id="numeroFilhosCliente" class="form-control">
                                         </div>	
                                         <div class="form-group col-md-4">
-                                            <label>EndereÃ§o</label>
+                                            <label>EndereÃƒÂ§o</label>
                                             <input id="enderecoCliente" class="form-control">
                                         </div>
                                     </form>
@@ -120,16 +120,17 @@
 
 	<!-- Alterando o arquivo Cadastro.php -->
 	<!-- Outro aluno alterou o arquivo -->
-	<!-- Exemplo de alteração no mesmo arquivo por dois alunos diferentes -->
+	<!-- Exemplo de alteraÃ§Ã£o no mesmo arquivo por dois alunos diferentes -->
 	<!-- Ao mesmo tempo outro aluno alterou o arquivo -->
 	<!-- Posso fazer isso varias vezes antes de sincronizar com o repositorio remoto -->
-	<!-- Mais uma alteraÃ§Ã£o -->
+	<!-- Mais uma alteraÃƒÂ§ÃƒÂ£o -->
 	<!-- Mais um merge (local) -->
-	<!-- Alteração Remota -->
-    <!-- Altera��o Local -->
-	<!-- Outra alteração Remota -->
+	<!-- AlteraÃ§Ã£o Remota -->
+    <!-- Alteração Local -->
+	<!-- Outra alteraÃ§Ã£o Remota -->
     
     <!-- Testes de merge -->
+    <!-- Alguem alterou depois -->
     
     <!--  Exemplo quando eu altero primeiro -->
     
