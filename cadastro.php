@@ -119,6 +119,7 @@
     <!-- /#wrapper -->
 
 	<!-- Alterando o arquivo Cadastro.php -->
+	<!-- Outro aluno alterou o arquivo -->
     
 	<?php include("includes/footer.php"); ?>	
 	<script>
