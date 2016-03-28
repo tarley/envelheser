@@ -117,9 +117,8 @@
         <!-- /#page-wrapper -->		
     </div>
     <!-- /#wrapper -->
-    <!-- teste de alteração em conjunto -->
-    
-    <!--  Tambem alterei o mesmo arquivo. -->
+
+	<!-- Alterando o arquivo Cadastro.php -->
     
 	<?php include("includes/footer.php"); ?>	
 	<script>
