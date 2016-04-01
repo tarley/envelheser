@@ -1,6 +1,7 @@
 <?php
 	require_once 'init.php';
 ?>
+<!-- Alterando arquivo aula 31/03/2016 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +16,8 @@
 <body>
     <div id="wrapper">
 		<?php include("includes/menu.php") ?>
+		<!--Oiiii!-->
+		<!--Olá!-->
 		
         <div id="page-wrapper">
             <div class="row">
