@@ -16,6 +16,8 @@
     <div id="wrapper">
 		<?php include("includes/menu.php") ?>
 		
+		<!--Olá!-->
+		
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
