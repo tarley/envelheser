@@ -1,5 +1,5 @@
 <?php
- 
+// Hello world 
 /**
 * Função para carregar automaticamente todas as classes padrão
 * Ver: http://php.net/manual/pt_BR/function.autoload.php.
