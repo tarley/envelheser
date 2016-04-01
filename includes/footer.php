@@ -1,4 +1,5 @@
 <!-- jQuery -->
+<!-- alteracao--> 
 <!--<script src="components/jquery/dist/jquery.min.js"></script> -->
 <script src="components/jquery/jquery-2.2.1.min.js"></script>	
 <script src="components/jquery-ui/jquery-ui.min.js"></script>
