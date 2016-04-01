@@ -1,6 +1,7 @@
 <?php
 	require_once 'init.php';
 ?>
+<!-- Alterando arquivo aula 31/03/2016 -->
 
 <!DOCTYPE html>
 <html lang="en">
