@@ -2,6 +2,7 @@
 // Evita que usuários acesse este arquivo diretamente
 if (!defined('ABSPATH')) exit;
 
+//Teste 31/03/2016
 // Inicia a sessão
 session_start();
 
