@@ -1,7 +1,6 @@
 <?php
 	require_once 'init.php';
 ?>
-<!-- Alterando arquivo aula 31/03/2016 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +15,6 @@
 <body>
     <div id="wrapper">
 		<?php include("includes/menu.php") ?>
-		<!--Oiiii!-->
-		<!--Ol�!-->
 		
         <div id="page-wrapper">
             <div class="row">
@@ -57,7 +54,7 @@
                                 <div class="col-lg-12">
                                     <form role="form">
                                         <div class="form-group col-md-2">
-                                            <label>CÃƒÂ³digo</label>
+                                            <label>C�digo</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-6">
@@ -77,7 +74,7 @@
                                             <input id="escolaridadeCliente" class="form-control">
                                         </div>	
                                          <div class="form-group col-md-4">
-                                            <label>OcupaÃƒÂ§ÃƒÂ£o</label>
+                                            <label>Ocupa��o</label>
                                             <input id="ocupacaoCliente" class="form-control">
                                         </div>	
                                         <div class="form-group col-md-4">
@@ -97,11 +94,11 @@
                                             <input id="dataNascimentoCliente" class="form-control">
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label>NÃƒÂºmero de Filhos</label>
+                                            <label>N�mero de Filhos</label>
                                             <input id="numeroFilhosCliente" class="form-control">
                                         </div>	
                                         <div class="form-group col-md-4">
-                                            <label>EndereÃƒÂ§o</label>
+                                            <label>Endere�o</label>
                                             <input id="enderecoCliente" class="form-control">
                                         </div>
                                     </form>
@@ -112,6 +109,21 @@
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Hist�rico Prontu�rio
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div id="divHistoricos">
+                                    	<button type="button">Historico</button>
+                                    </div>
+                                </div>
+                             </div>
+                         </div>
+                     </div>
+                                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -120,22 +132,6 @@
         <!-- /#page-wrapper -->		
     </div>
     <!-- /#wrapper -->
-
-	<!-- Alterando o arquivo Cadastro.php -->
-	<!-- Outro aluno alterou o arquivo -->
-	<!-- Exemplo de alteraÃ§Ã£o no mesmo arquivo por dois alunos diferentes -->
-	<!-- Ao mesmo tempo outro aluno alterou o arquivo -->
-	<!-- Posso fazer isso varias vezes antes de sincronizar com o repositorio remoto -->
-	<!-- Mais uma alteraÃƒÂ§ÃƒÂ£o -->
-	<!-- Mais um merge (local) -->
-	<!-- AlteraÃ§Ã£o Remota -->
-    <!-- Alteração Local -->
-	<!-- Outra alteraÃ§Ã£o Remota -->
-    
-    <!-- Testes de merge -->
-    <!-- Alguem alterou depois -->
-    
-    <!--  Exemplo quando eu altero primeiro -->
     
 	<?php include("includes/footer.php"); ?>	
 	<script>
@@ -169,14 +165,16 @@
 								$("#enderecoCliente").val(cliente.endereco);							
 							}
 						});
-					}				
+					}		
 				}
 			})
+			
 			.autocomplete("instance")._renderItem = function(ul, item) {
 				return $("<li>")
 					.append(item.nome + "<br>" + item.telefone)
 					.appendTo(ul);
-			};			
+			};	
+					
 		});
 	</script>
 </body>
