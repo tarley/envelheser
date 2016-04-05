@@ -1,4 +1,4 @@
-/*==============================================================*/
+﻿/*==============================================================*/
 /* Inclusão na tabela Escolaridade                              */
 /*==============================================================*/
 INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Ensino Superior Incompleto');
@@ -101,7 +101,7 @@ Cod_Grupo
 INSERT INTO TB_Lista_Radio (
 Des_Item_Radio, 
 Cod_Pergunta
-) values ('Estuda na Newton?', 1)
+) values ('Estuda na Newton?', 1);
 
 /*==============================================================*/
 /* Inclusão na tabela TB_Resposta                           */
@@ -111,7 +111,7 @@ INSERT INTO TB_resposta (
 Cod_Pergunta,
 Num_Prontuario,
 Ind_Resposta_SimNao
-)VALUES (1,1,1)
+)VALUES (1,1,1);
 
 
 
