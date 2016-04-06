@@ -1,8 +1,17 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     04/04/2016 07:34:43                          */
+/* Created on:     06/04/2016 17:49:47                          */
 /*==============================================================*/
 
+
+/*==============================================================*/
+/* Table: TB_Avaliador                                          */
+/*==============================================================*/
+create table TB_Avaliador
+(
+   Cod_Avaliador        int not null auto_increment PRIMARY KEY,
+   Nom_Avaliador        varchar(100) not null
+);
 
 /*==============================================================*/
 /* Table: TB_Cliente                                            */
@@ -16,11 +25,11 @@ create table TB_Cliente
    Des_Endereco         varchar(150) not null,
    Ind_Sexo             char(1) not null,
    Num_Filhos           tinyint not null,
-   Cod_Cor              tinyint not null,
-   Cod_Escolaridade     tinyint not null,
-   Cod_Ocupacao         smallint not null,
-   Cod_Estado_Civil     tinyint not null,
-   Cod_Naturalidade     smallint not null
+   Cod_Cor              tinyint,
+   Cod_Escolaridade     tinyint,
+   Cod_Ocupacao         smallint,
+   Cod_Estado_Civil     tinyint,
+   Cod_Naturalidade     smallint
 );
 
 /*==============================================================*/
@@ -57,9 +66,10 @@ create table TB_Grupo
 (
    Cod_Grupo            tinyint not null auto_increment PRIMARY KEY,
    Nom_Grupo            varchar(100) not null,
-   Cod_Grupo_Superior   tinyint
+   Cod_Grupo_Superior   tinyint,
+   Cod_Questionario     int,
+   Num_Ordem_Grupo      int
 );
-
 
 /*==============================================================*/
 /* Table: TB_Lista_Check_Box                                    */
@@ -67,8 +77,8 @@ create table TB_Grupo
 create table TB_Lista_Check_Box
 (
    Cod_Item_Check       smallint not null auto_increment PRIMARY KEY,
-   Des_Item_Check       varchar(50) not null,
-   Cod_Pergunta         smallint not null
+   Cod_Pergunta         smallint,
+   Des_Item_Check       varchar(50) not null
 );
 
 /*==============================================================*/
@@ -78,7 +88,7 @@ create table TB_Lista_Combo_Box
 (
    Cod_Item_Combo       smallint not null auto_increment PRIMARY KEY,
    Des_Item_Combo       varchar(50) not null,
-   Cod_Pergunta         smallint not null
+   Cod_Pergunta         smallint
 );
 
 /*==============================================================*/
@@ -88,7 +98,7 @@ create table TB_Lista_Radio
 (
    Cod_Item_Radio       smallint not null auto_increment PRIMARY KEY,
    Des_Item_Radio       varchar(50) not null,
-   Cod_Pergunta         smallint not null
+   Cod_Pergunta         smallint
 );
 
 /*==============================================================*/
@@ -115,10 +125,10 @@ create table TB_Ocupacao
 create table TB_Pergunta
 (
    Cod_Pergunta         smallint not null auto_increment PRIMARY KEY,
+   Cod_Grupo            tinyint,
+   Cod_Tipo_Pergunta    tinyint,
    Des_Pergunta         varchar(150) not null,
-   Cod_Tipo_Pergunta    tinyint not null,
-   Cod_Questionario     tinyint not null,
-   Cod_Grupo            tinyint not null
+   Num_Ordem_Pergunta   int
 );
 
 /*==============================================================*/
@@ -128,7 +138,10 @@ create table TB_Prontuario
 (
    Num_Prontuario       int not null auto_increment PRIMARY KEY,
    Dta_Data_Prontuario  datetime,
-   Cod_Cliente          int not null
+   Cod_Cliente          int,
+   Cod_Avaliador        int,
+   Val_Pontuacao        decimal(10,2),
+   Val_Tempo_Gasto      decimal(10,2)
 );
 
 /*==============================================================*/
@@ -136,9 +149,10 @@ create table TB_Prontuario
 /*==============================================================*/
 create table TB_Questionario
 (
-   Cod_Questionario     tinyint not null auto_increment PRIMARY KEY,
-   Nom_Questionario     char(100) not null
+   Cod_Questionario     int not null auto_increment PRIMARY KEY,
+   Des_Questionario     varchar(100) not null
 );
+
 
 /*==============================================================*/
 /* Table: TB_Resposta                                           */
@@ -146,10 +160,10 @@ create table TB_Questionario
 create table TB_Resposta
 (
    Cod_Resposta_Prontuario smallint not null auto_increment PRIMARY KEY,
-   Cod_Pergunta         smallint not null,
    Num_Prontuario       int not null,
+   Cod_Pergunta         smallint not null,
    Des_Resposta_Aberta  varchar(200),
-   Ind_Resposta_SimNao  boolean,
+   Ind_Resposta_SimNao  bool,
    Des_Resposta_Qual    varchar(100),
    Des_Resposta_Quando  varchar(100),
    Des_Resposta_Outros  varchar(100),
@@ -165,10 +179,10 @@ create table TB_Resposta
 create table TB_Resposta_CheckBox
 (
    Cod_Resposta_CheckBox smallint not null auto_increment PRIMARY KEY,
-   Cod_Item_Check       smallint not null,
-   Cod_Pergunta         smallint not null,
-   Num_Prontuario       int not null,
-   Ind_CheckBox_Resposta boolean
+   Num_Prontuario       int,
+   Cod_Pergunta         smallint,
+   Cod_Item_Check       smallint,
+   Ind_CheckBox         bool
 );
 
 /*==============================================================*/
@@ -178,8 +192,8 @@ create table TB_Telefone
 (
    Cod_Telefone_Cliente int not null auto_increment PRIMARY KEY,
    Num_Telefone         varchar(20) not null,
-   Cod_Cliente          int not null,
-   Cod_Tipo_Telefone    int not null
+   Cod_Cliente          int,
+   Cod_Tipo_Telefone    int
 );
 
 /*==============================================================*/
@@ -188,16 +202,16 @@ create table TB_Telefone
 create table TB_Tipo_Pergunta
 (
    Cod_Tipo_Pergunta    tinyint not null auto_increment PRIMARY KEY,
-   Ind_Pergunta_Aberta  boolean,
-   Ind_Pergunta_SimNao  boolean,
-   Ind_Pergunta_Qual    boolean,
-   Ind_Pergunta_Quando  boolean,
-   Ind_Pergunta_Outros  boolean,
-   Ind_Pergunta_Cite    boolean,
-   Ind_Pergunta_Observacao boolean,
-   ind_Pergunta_ComboBox boolean,
-   Ind_Pergunta_Radio   boolean,
-   Ind_Pergunta_CheckBox boolean
+   Ind_Pergunta_Aberta  bool,
+   Ind_Pergunta_SimNao  bool,
+   Ind_Pergunta_Qual    bool,
+   Ind_Pergunta_Quando  bool,
+   Ind_Pergunta_Outros  bool,
+   Ind_Pergunta_Cite    bool,
+   Ind_Pergunta_Observacao bool,
+   ind_Pergunta_ComboBox bool,
+   Ind_Pergunta_Radio   bool,
+   Ind_Pergunta_CheckBox bool
 );
 
 /*==============================================================*/
@@ -209,43 +223,47 @@ create table TB_Tipo_Telefone
    Des_Tipo_Telefone    varchar(20)
 );
 
-alter table TB_Cliente add constraint FK_FK_Cor_Cliente foreign key (Cod_Cor)
+
+alter table TB_Cliente add constraint FK_Cor_Cliente foreign key (Cod_Cor)
       references TB_Cor (Cod_Cor);
 
-alter table TB_Cliente add constraint FK_FK_Escolaridade_Cliente foreign key (Cod_Escolaridade)
+alter table TB_Cliente add constraint FK_Escolaridade_Cliente foreign key (Cod_Escolaridade)
       references TB_Escolaridade (Cod_Escolaridade);
 
-alter table TB_Cliente add constraint FK_FK_Estado_Civil_Cliente foreign key (Cod_Estado_Civil)
+alter table TB_Cliente add constraint FK_Estado_Civil_Cliente foreign key (Cod_Estado_Civil)
       references TB_Estado_Civil (Cod_Estado_Civil);
 
-alter table TB_Cliente add constraint FK_FK_Naturalidade_Cliente foreign key (Cod_Naturalidade)
+alter table TB_Cliente add constraint FK_Naturalidade_Cliente foreign key (Cod_Naturalidade)
       references TB_Naturalidade (Cod_Naturalidade);
 
-alter table TB_Cliente add constraint FK_FK_Ocupacao_Cliente foreign key (Cod_Ocupacao)
+alter table TB_Cliente add constraint FK_Ocupacao_Cliente foreign key (Cod_Ocupacao)
       references TB_Ocupacao (Cod_Ocupacao);
 
-alter table TB_Grupo add constraint FK_FK_Sub_Grupo_De_Algum_Grupo foreign key (Cod_Grupo_Superior)
+alter table TB_Grupo add constraint FK_Questionario_Grupo foreign key (Cod_Questionario)
+      references TB_Questionario (Cod_Questionario);
+
+alter table TB_Grupo add constraint FK_Sub_Grupo_De_Algum_Grupo foreign key (Cod_Grupo_Superior)
       references TB_Grupo (Cod_Grupo);
 
 alter table TB_Lista_Check_Box add constraint FK_Pergunta_Check_Box foreign key (Cod_Pergunta)
       references TB_Pergunta (Cod_Pergunta);
 
-alter table TB_Lista_Combo_Box add constraint FK_Reference_14 foreign key (Cod_Pergunta)
+alter table TB_Lista_Combo_Box add constraint FK_Pergunta_ComboBox foreign key (Cod_Pergunta)
       references TB_Pergunta (Cod_Pergunta);
 
 alter table TB_Lista_Radio add constraint FK_Pergunta_Radio foreign key (Cod_Pergunta)
       references TB_Pergunta (Cod_Pergunta);
 
-alter table TB_Pergunta add constraint FK_FK_Grupo_Pergunta foreign key (Cod_Grupo)
+alter table TB_Pergunta add constraint FK_Grupo_Pergunta foreign key (Cod_Grupo)
       references TB_Grupo (Cod_Grupo);
 
-alter table TB_Pergunta add constraint FK_FK_Pergunta_Tipo_Pergunta foreign key (Cod_Tipo_Pergunta)
+alter table TB_Pergunta add constraint FK_Pergunta_Tipo_Pergunta foreign key (Cod_Tipo_Pergunta)
       references TB_Tipo_Pergunta (Cod_Tipo_Pergunta);
 
-alter table TB_Pergunta add constraint FK_Questionario_Perguntas foreign key (Cod_Questionario)
-      references TB_Questionario (Cod_Questionario);
+alter table TB_Prontuario add constraint FK_Avaliador_Prontuario foreign key (Cod_Avaliador)
+      references TB_Avaliador (Cod_Avaliador);
 
-alter table TB_Prontuario add constraint FK_FK_Cliente_Prontuario foreign key (Cod_Cliente)
+alter table TB_Prontuario add constraint FK_Cliente_Prontuario foreign key (Cod_Cliente)
       references TB_Cliente (Cod_Cliente);
 
 alter table TB_Resposta add constraint FK_Pergunta_Resposta foreign key (Cod_Pergunta)
@@ -254,17 +272,18 @@ alter table TB_Resposta add constraint FK_Pergunta_Resposta foreign key (Cod_Per
 alter table TB_Resposta add constraint FK_Prontuario_Resposta foreign key (Num_Prontuario)
       references TB_Prontuario (Num_Prontuario);
 
+alter table TB_Resposta_CheckBox add constraint FK_CheckBox_Lista foreign key (Cod_Item_Check)
+      references TB_Lista_Check_Box (Cod_Item_Check);
+
 alter table TB_Resposta_CheckBox add constraint FK_Pergunta_Resposta_CheckBox foreign key (Cod_Pergunta)
       references TB_Pergunta (Cod_Pergunta);
 
-alter table TB_Resposta_CheckBox add constraint FK_FK_Prontuario_Resposta_CheckBox foreign key (Num_Prontuario)
+alter table TB_Resposta_CheckBox add constraint FK_Prontuario_Resposta_CheckBox foreign key (Num_Prontuario)
       references TB_Prontuario (Num_Prontuario);
 
-alter table TB_Resposta_CheckBox add constraint FK_FK_Resposta_CheckBox foreign key (Cod_Item_Check)
-      references TB_Lista_Check_Box (Cod_Item_Check);
-
-alter table TB_Telefone add constraint FK_FK_Telefone_Cliente foreign key (Cod_Cliente)
+alter table TB_Telefone add constraint FK_Telefone_Cliente foreign key (Cod_Cliente)
       references TB_Cliente (Cod_Cliente);
 
-alter table TB_Telefone add constraint FK_FK_Tipo_Telefone foreign key (Cod_Tipo_Telefone)
+alter table TB_Telefone add constraint FK_Tipo_Telefone foreign key (Cod_Tipo_Telefone)
       references TB_Tipo_Telefone (Cod_Tipo_Telefone);
+
