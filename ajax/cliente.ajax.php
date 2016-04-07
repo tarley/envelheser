@@ -23,8 +23,9 @@
 		
 		echo "[" . $retorno . "]";
 		
-	} else if($_GET['codigo']) {
+	} else if(isset($_GET['codigo'])) {
 		$dados = $cliente->getDados($mysql->link, $_GET['codigo']);
+		$pront = $cliente->getProntuarios($mysql->link, $dados['Cod_Cliente']);
 		
 		$retorno = "{";
 		$retorno .= "\"codigo\": " . $dados['Cod_Cliente'] . ", ";
@@ -38,7 +39,20 @@
 		$retorno .= "\"sexo\": \"" . $dados['Ind_Sexo'] . "\", ";
 		$retorno .= "\"dataNascimento\": \"" . $dados['Dta_Nascimento'] . "\", ";
 		$retorno .= "\"numeroFilhos\": \"" . $dados['Num_Filhos'] . "\", ";
-		$retorno .= "\"endereco\": \"" . $dados['Des_Endereco'] . "\"";
+		$retorno .= "\"endereco\": \"" . $dados['Des_Endereco'] . "\"; ";
+		
+		
+		$jsonPront = "";
+		for ($i = 0; $i < sizeof($pront); $i++) {
+			$jsonPront .= ($jsonPront != "") ? "," : "";
+			$jsonPront .= "{";
+			$jsonPront .= "\"NumProntuario\": " .$pront[$i]['Num_Prontuario'] . ", ";
+			$jsonPront .= "\"DtaProntuario\": \"" .$pront[$i]['Dta_Data_Prontuario'] . "\" ";
+			$jsonPront .= "}";
+		}
+		
+		$retorno .= "\"prontuario\": [". $jsonPront ."]";
+		
 		$retorno .= "}";
 		
 		echo $retorno;
