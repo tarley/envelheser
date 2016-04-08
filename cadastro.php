@@ -117,7 +117,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div id="divHistoricos">
-                                    	<button type="button">Historico</button>
+                                    	<button type="button">Novo</button>
                                     </div>
                                 </div>
                              </div>
@@ -166,7 +166,7 @@
 								if(cliente.prontuario.length != 0){
 									for(var i=0; i < cliente.prontuario.length; i++){
 										var divButton = ("<button type='button' name='" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
-										divHistoricos.append(divButton);
+										$("#divHistoricos").append(divButton);
 									}
 								}				
 							}
