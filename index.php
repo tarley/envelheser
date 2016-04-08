@@ -1,5 +1,5 @@
 <?php
-	require_once ABSPATH . 'init.php';
+	require_once('init.php');
 ?>
 
 
