@@ -16,10 +16,10 @@ class Cliente {
 	/**
 	* Retorna a lista de clientes baseada no nome passado pelo parâmetro
 	*/	
-	function getLista($cnn, $nomCliente) {
+	function getLista($cnn, $input) {
 		$query = "SELECT Cod_Cliente, Nom_Cliente, ";
 		$query .= "(SELECT Num_Telefone FROM tb_telefone t WHERE t.Cod_Cliente = c.Cod_Cliente LIMIT 1) AS Num_Telefone ";
-		$query .= "FROM tb_cliente c WHERE nom_cliente LIKE '%$nomCliente%'";
+		$query .= "FROM tb_cliente c WHERE nom_cliente LIKE '%$input%' or Num_Rg LIKE '%$input%' ";
 		
 		$query = mysqli_query($cnn, $query);
 
