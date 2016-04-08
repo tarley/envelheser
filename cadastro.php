@@ -142,14 +142,13 @@
 				minLength: 2,
 				select: function(event, ui) {					
 					
-					console.log(ui);
-				
 					if(ui.item) {
 						$.ajax({
 							url: "ajax/cliente.ajax.php?codigo=" + ui.item.codigo,
 							success: function (data) {
+								console.log(data);
 								var cliente = jQuery.parseJSON(data);
-								
+								console.log(cliente);
 								$("#codCliente").val(cliente.codigo);
 								$("#telCliente").val(cliente.telefone);	
 								
@@ -162,7 +161,14 @@
 								$("#sexoCliente").val(cliente.sexo);	
 								$("#dataNascimentoCliente").val(cliente.dataNascimento);	
 								$("#numeroFilhosCliente").val(cliente.numeroFilhos);
-								$("#enderecoCliente").val(cliente.endereco);							
+								$("#enderecoCliente").val(cliente.endereco);
+									
+								if(cliente.prontuario.length != 0){
+									for(var i=0; i < cliente.prontuario.length; i++){
+										var divButton = ("<button type='button' name='" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
+										divHistoricos.append(divButton);
+									}
+								}				
 							}
 						});
 					}		
@@ -171,7 +177,7 @@
 			
 			.autocomplete("instance")._renderItem = function(ul, item) {
 				return $("<li>")
-					.append(item.nome + "<br>" + item.telefone)
+					.append(item.nome + "<br>" + item.NumRg)
 					.appendTo(ul);
 			};	
 					

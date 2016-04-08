@@ -17,7 +17,7 @@
 			$retorno .= "{";
 			$retorno .= "\"codigo\": " . $lista[$i]["Cod_Cliente"] . ", ";
 			$retorno .= "\"nome\": \"" . $lista[$i]["Nom_Cliente"] . "\", ";
-			$retorno .= "\"telefone\": \"" . $lista[$i]["Num_Telefone"] . "\"";
+			$retorno .= "\"NumRg\": \"" . $lista[$i]["Num_Rg"] . "\"";
 			$retorno .= "}";
 		}
 		
@@ -39,7 +39,7 @@
 		$retorno .= "\"sexo\": \"" . $dados['Ind_Sexo'] . "\", ";
 		$retorno .= "\"dataNascimento\": \"" . $dados['Dta_Nascimento'] . "\", ";
 		$retorno .= "\"numeroFilhos\": \"" . $dados['Num_Filhos'] . "\", ";
-		$retorno .= "\"endereco\": \"" . $dados['Des_Endereco'] . "\"; ";
+		$retorno .= "\"endereco\": \"" . $dados['Des_Endereco'] . "\", ";
 		
 		
 		$jsonPront = "";
