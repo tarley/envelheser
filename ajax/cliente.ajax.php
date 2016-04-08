@@ -17,7 +17,7 @@
 			$retorno .= "{";
 			$retorno .= "\"codigo\": " . $lista[$i]["Cod_Cliente"] . ", ";
 			$retorno .= "\"nome\": \"" . $lista[$i]["Nom_Cliente"] . "\", ";
-			$retorno .= "\"telefone\": \"" . $lista[$i]["Num_Telefone"] . "\"";
+			$retorno .= "\"NumRg\": \"" . $lista[$i]["Num_Rg"] . "\"";
 			$retorno .= "}";
 		}
 		

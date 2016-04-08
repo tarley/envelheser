@@ -171,7 +171,7 @@
 			
 			.autocomplete("instance")._renderItem = function(ul, item) {
 				return $("<li>")
-					.append(item.nome + "<br>" + item.telefone)
+					.append(item.nome + "<br>" + item.NumRg)
 					.appendTo(ul);
 			};	
 					
