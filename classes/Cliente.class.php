@@ -60,7 +60,9 @@ class Cliente {
 	 * Retorna a lista de prontuarios do cliente
 	 */
 	function getProntuarios($cnn, $codCliente) {
-		$query = "SELECT Num_Prontuario, Dta_Data_Prontuario FROM TB_Prontuario ";
+		$query = "SELECT Num_Prontuario, ";
+		$query .= "DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Data_Prontuario ";
+		$query .= "FROM TB_Prontuario ";
 		$query .= "WHERE Cod_Cliente = '$codCliente'";
 		
 		$query = mysqli_query($cnn, $query);

@@ -70,7 +70,7 @@
 			   	else if(tipoCampo == "check"){
 				   	var valores=[];
 				   	
-			   		$("input :checked", $(this)).each(function(){
+			   		$("input:checked", $(this)).each(function(){
 			   			valores.push($(this).val());
 			   		});
 

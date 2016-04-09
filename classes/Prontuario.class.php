@@ -50,6 +50,54 @@ class Prontuario {
 		return $listaPerguntas;
 	}
 	
+	function getOpcoesRadio($cnn, $codPergunta) {
+		$query = "SELECT Cod_Item_Radio, Des_Item_Radio, ";
+		$query .= "FROM tb_lista_radio l ";
+		$query .= "WHERE Cod_Pergunta = '$codPergunta'";
+		
+		$query = mysqli_query($cnn, $query);
+		
+		$listaOpcoes = array();
+		
+		while($list  = mysqli_fetch_assoc($query)) {
+			$listaOpcoes[] = $list;
+		}
+		
+		return $listaOpcoes;
+	}
+	
+	function getOpcoesCombo($cnn, $codPergunta) {
+		$query = "SELECT Cod_Item_Combo, Des_Item_Combo, ";
+		$query .= "FROM tb_lista_combo_box l ";
+		$query .= "WHERE Cod_Pergunta = '$codPergunta'";
+		
+		$query = mysqli_query($cnn, $query);
+		
+		$listaOpcoes = array();
+		
+		while($list  = mysqli_fetch_assoc($query)) {
+			$listaOpcoes[] = $list;
+		}
+		
+		return $listaOpcoes;		
+	}
+	
+	function getOpcoesCheck($cnn, $codPergunta) {
+		$query = "SELECT Cod_Item_Check, Des_Item_Check, ";
+		$query .= "FROM tb_lista_check_box l ";
+		$query .= "WHERE Cod_Pergunta = '$codPergunta'";
+		
+		$query = mysqli_query($cnn, $query);
+		
+		$listaOpcoes = array();
+		
+		while($list  = mysqli_fetch_assoc($query)) {
+			$listaOpcoes[] = $list;
+		}
+		
+		return $listaOpcoes;
+	}
+	
 	
 	function getDados($cnn, $numProntuario) {
 		
