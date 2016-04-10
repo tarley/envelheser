@@ -75,19 +75,26 @@
 				echo '</br>';
 			}
 			else if($listaPerguntas[$i]['ind_Pergunta_ComboBox']){
-				echo '<select name="sexo">
-				<option>Fem</option>
-				<option>Masc</option>
-				</select>';
+				echo '<select>';
+				$listaOpcoes = $Prontuario->getOpcoesCombo($listaPerguntas[$i]['Cod_Pergunta']);
+				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+					echo '<option value="'.$listaOpcoes[j]['Cod_Item_Combo'].'">'.$listaOpcoes[j]['Des_Item_Combo'].'</option>';
+				}
+				echo '</select>';
 				echo '</br>';
 			}
 			else if($listaPerguntas[$i]['Ind_Pergunta_Radio']){
-				echo '<input type="radio" id="" value="true" class="form-control" >';
-				echo '<input type="radio" id="" value="false" class="form-control" >';
+				$listaOpcoes = $Prontuario->getOpcoesRadio($listaPerguntas[$i]['Cod_Pergunta']);
+				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+					echo '<input type="radio" value="'.$listaOpcoes[j]['Cod_Item_Radio'].'" class="form-control" >';
+				}
 				echo '</br>';
 			}
 			else if($listaPerguntas[$i]['Ind_Pergunta_CheckBox']){
-				echo '<input type="checkbox" name="testeB[]" value="a" id="aA" class="form-control" >';
+				$listaOpcoes = $Prontuario->getOpcoesCheck($listaPerguntas[$i]['Cod_Pergunta']);
+				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+					echo '<input type="checkbox" value="'.$listaOpcoes[j]['Cod_Item_Check'].'" class="form-control" >';
+				}
 				echo '</br>';
 			}
 			echo '</div>';
@@ -103,6 +110,11 @@
 	<style>
 		.ui-autocomplete-loading {
 		    background: white url("components/jquery-ui/images/ui-anim_basic_16x16.gif") no-repeat scroll 99% center;
+		}
+		
+		.ui-autocomplete-rg {
+			font-style: italic;
+			font-size: 10pt;
 		}
 	</style>
 </head>
@@ -203,6 +215,12 @@
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
+                    
+					<div id="alert" class="alert alert-dismissable" style="display: none">
+						<span class="text"></span>
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					</div>
+						                    
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Histórico Prontuário
@@ -213,6 +231,7 @@
                                     <div id="divQuestionario">
                                     	<div id='divHistoricoProntuarios'>
                                     		<button type="button">Novo</button>
+                                    		<button id="save" type="button">Salvar</button>
                                     	</div>
                                     	<?php 
                                     		MontaGrupos(null);
@@ -235,6 +254,26 @@
 	<?php include("includes/footer.php"); ?>	
 	<script>
 		$(document).ready(function() {
+
+			$("#save").click(function() {
+				var obj = [{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
+		
+				$.post( "ajax/prontuario.ajax.php", { listaRespostas: JSON.stringify(obj) }, function(data) {
+					var retorno = jQuery.parseJSON(data);
+
+					if(retorno.Sucesso) {
+						$('#alert .text').append(retorno.Mensagem);
+						$('#alert').addClass("alert-success");
+					} else {
+						$('#alert .text').append(retorno.Mensagem);
+						$('#alert').addClass("alert-danger");
+					}
+
+					$('#alert').show().delay(3000).fadeOut("fast", function() {
+						$('#alert .text').html(""); 
+					}); 					
+				});
+			});			
 			
 			$("#nomeCliente").autocomplete({
 				source: "ajax/cliente.ajax.php",
@@ -275,20 +314,19 @@
 			})			
 			.autocomplete("instance")._renderItem = function(ul, item) {
 				return $("<li>")
-					.append(item.nome + "<br>" + item.NumRg)
+					.append(item.nome + "<br><span class='ui-autocomplete-rg'>" + item.NumRg + "</span>")
 					.appendTo(ul);
 			};	
 
-			  $('.btn-toggle .btn').click(function() {
-	                var div = $(this).parent();
-	               
-	                div.find('.btn-primary input').attr("checked", false);             
-	                div.find('.btn-primary').removeClass('btn-primary').removeClass('active').addClass('btn-default');
-	               
-	                $(this).addClass('btn-primary').addClass('active').removeClass('btn-default');
-	                $('input', this).attr('checked', true);        
-	            });
-	            
+			$('.btn-toggle .btn').click(function() {
+				var div = $(this).parent();
+			   
+				div.find('.btn-primary input').attr("checked", false);             
+				div.find('.btn-primary').removeClass('btn-primary').removeClass('active').addClass('btn-default');
+			   
+				$(this).addClass('btn-primary').addClass('active').removeClass('btn-default');
+				$('input', this).attr('checked', true);        
+			});
 		});
 	</script>
 </body>
