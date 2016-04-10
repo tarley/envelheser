@@ -19,11 +19,21 @@ class Prontuario {
 		$this->cnn = $cnn;
 	}
 	
-	function getGrupos() {
+	function getGrupos($codGrupoSuperior) {
+		
+		
 		$query = "SELECT Cod_Grupo, Nom_Grupo ";
-		$query .= "FROM tb_grupo g ORDER BY Num_Ordem_Grupo";
-	
-		$query = mysqli_query($query);
+		$query .= "FROM tb_grupo g ";
+		$query .= "WHERE ";
+		
+		if($codGrupoSuperior == null)
+			$query .= "Cod_Grupo_Superior IS NULL ";
+		else
+			$query .= "Cod_Grupo_Superior = " . $codGrupoSuperior . " ";
+		
+		$query .= "ORDER BY Num_Ordem_Grupo";
+		
+		$query = mysqli_query($this->cnn, $query);
 	
 		$listaGrupos = array();
 	
@@ -77,7 +87,7 @@ class Prontuario {
 		$query .= "FROM tb_lista_combo_box l ";
 		$query .= "WHERE Cod_Pergunta = $codPergunta";
 		
-		$query = mysqli_query($query);
+		$query = mysqli_query($this->cnn, $query);
 		
 		$listaOpcoes = array();
 		
@@ -93,7 +103,7 @@ class Prontuario {
 		$query .= "FROM tb_lista_check_box l ";
 		$query .= "WHERE Cod_Pergunta = $codPergunta";
 		
-		$query = mysqli_query($query);
+		$query = mysqli_query($this->cnn, $query);
 		
 		$listaOpcoes = array();
 		
@@ -104,10 +114,21 @@ class Prontuario {
 		return $listaOpcoes;
 	}
 	
-	function getRespostasCheck() {
+	function getRespostasCheck($numProntuario, $codPergunta) {
+		$query = "SELECT Cod_Item_Check ";
+		$query .= "FROM tb_resposta_checkbox r ";
+		$query .= "WHERE Cod_Pergunta = $codPergunta AND Num_Prontuario = $numProntuario";
 		
+		$query = mysqli_query($this->cnn, $query);
+		
+		$listaRespostas = array();
+		
+		while($list  = mysqli_fetch_assoc($query)) {
+			$listaRespostas[] = $list;
+		}
+		
+		return $listaRespostas;
 	}
-	
 	
 	function getRespostas($numProntuario) {
 		$query = "SELECT ";
@@ -144,10 +165,42 @@ class Prontuario {
 		$listaRespostas = array();
 		
 		while($list  = mysqli_fetch_assoc($query)) {
+			
+			if($list['Ind_Pergunta_CheckBox']) {
+				$list['Lista_Resposta_CheckBox'] = $this->getRespostasCheck($list['Num_Prontuario'], $list['Cod_Pergunta']);
+			}
+			
 			$listaRespostas[] = $list;
 		}
 		
 		return $listaRespostas;		
+	}
+	
+	function insertRespostas($listaRespostas) {		
+		$retorno = array();
+		$retorno['Sucesso'] = false;
+		$retorno['Mensagem'] = "";
+		
+		try {
+			
+			for ($i = 0; $i < sizeof($listaRespostas); $i++) {
+				$r = $listaRespostas[$i];
+				
+			}			
+			
+			$retorno['Sucesso'] = false;
+			$retorno['Mensagem'] = "Dados inseridos com sucesso";
+			
+		} catch (Exception $e) {
+			$retorno['Sucesso'] = false;			
+			$retorno['Mensagem'] = "Falha ao inserir respostas";
+		}
+		
+		return $retorno;
+	}
+	
+	function insertResposta(){
+		
 	}
 	
 }
