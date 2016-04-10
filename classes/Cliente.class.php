@@ -6,21 +6,27 @@ class Cliente {
 	*/
 	var $log;
 	
+	/*
+	 * Instância da conexão com o Banco
+	 */
+	var $cnn;	
+	
 	/**
 	* Cria instancia de Logger para gerenciar exceções.
 	*/
-	function Cliente() {
+	function Cliente($cnn) {
 		$this->log = new Logger();
+		$this->cnn = $cnn;
 	}
 	
 	/**
 	* Retorna a lista de clientes baseada no nome passado pelo parâmetro
 	*/	
-	function getLista($cnn, $input) {
+	function getLista($input) {
 		$query = "SELECT Cod_Cliente, Nom_Cliente, Num_Rg ";
 		$query .= "FROM tb_cliente c WHERE nom_cliente LIKE '%$input%' or Num_Rg LIKE '%$input%' ";
 		
-		$query = mysqli_query($cnn, $query);
+		$query = mysqli_query($this->cnn, $query);
 
 		$listaClientes = array();
 		
@@ -34,7 +40,7 @@ class Cliente {
 	/**
 	* Retorna os dados do cliente de acordo com o codigo passado pelo parâmetro
 	*/	
-	function getDados($cnn, $codCliente) {		
+	function getDados($codCliente) {		
 
 		$query = "SELECT Cod_Cliente, Nom_Cliente, ";
 		$query .= "(SELECT Num_Telefone FROM tb_telefone t WHERE t.Cod_Cliente = c.Cod_Cliente LIMIT 1) AS Num_Telefone, ";
@@ -47,9 +53,9 @@ class Cliente {
 		$query .= "LEFT JOIN tb_ocupacao o ON (c.Cod_Ocupacao = o.Cod_Ocupacao) ";
 		$query .= "LEFT JOIN tb_estado_civil ec ON (c.Cod_Estado_Civil = ec.Cod_Estado_Civil) ";
 		$query .= "LEFT JOIN tb_naturalidade n ON (c.Cod_Naturalidade = n.Cod_Naturalidade) ";
-		$query .= "WHERE Cod_Cliente = '$codCliente'";
+		$query .= "WHERE Cod_Cliente = $codCliente";
 		
-		$query = mysqli_query($cnn, $query);
+		$query = mysqli_query($this->cnn, $query);
 		
 		$cliente  = mysqli_fetch_assoc($query);		
 
@@ -59,13 +65,13 @@ class Cliente {
 	/**
 	 * Retorna a lista de prontuarios do cliente
 	 */
-	function getProntuarios($cnn, $codCliente) {
+	function getProntuarios($codCliente) {
 		$query = "SELECT Num_Prontuario, ";
 		$query .= "DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Data_Prontuario ";
 		$query .= "FROM TB_Prontuario ";
-		$query .= "WHERE Cod_Cliente = '$codCliente'";
+		$query .= "WHERE Cod_Cliente = $codCliente";
 		
-		$query = mysqli_query($cnn, $query);
+		$query = mysqli_query($this->cnn, $query);
 		
 		$listaProntuario = array();
 		

@@ -5,12 +5,12 @@
 	
 	$mysql = new MySQL();	
 	
-	$cliente = new Cliente();
+	$cliente = new Cliente($mysql->link);
 	
 	if(isset($_GET['term'])) {		
 		$retorno = "";
 		
-		$lista = $cliente->getLista($mysql->link, utf8_decode($_GET['term']));		
+		$lista = $cliente->getLista(utf8_decode($_GET['term']));		
 		for($i = 0; $i < sizeOf($lista); $i++) {
 			
 			$retorno .= ($retorno != "") ? "," : "";
@@ -24,8 +24,8 @@
 		echo "[" . $retorno . "]";
 		
 	} else if(isset($_GET['codigo'])) {
-		$dados = $cliente->getDados($mysql->link, $_GET['codigo']);
-		$pront = $cliente->getProntuarios($mysql->link, $dados['Cod_Cliente']);
+		$dados = $cliente->getDados($_GET['codigo']);
+		$pront = $cliente->getProntuarios($dados['Cod_Cliente']);
 		
 		$retorno = "{";
 		$retorno .= "\"codigo\": " . $dados['Cod_Cliente'] . ", ";

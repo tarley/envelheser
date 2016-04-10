@@ -5,18 +5,20 @@
 	
 	$mysql = new MySQL();	
 	
-	$prontuario = new Prontuario();
+	$prontuario = new Prontuario($mysql->link);
+	
+	print_r($prontuario->getPerguntas(4));
 	
 	if(isset($_GET['numProntuario'])) {
 			
-		$lista = $prontuario->getDados($mysql->link, utf8_decode($_GET['numProntuario']));
+		$lista = $prontuario->getDados(utf8_decode($_GET['numProntuario']));
 		
-			echo json_encode($lista);			
+		echo json_encode($lista);			
 	}
 	
-	elseif ($_POST['']){
+	//elseif ($_POST['a']){
 		
-	}
+	//}
 		
 	//Este trecho deve ficar sempre no fim do arquivo
 	$mysql->disconect();
