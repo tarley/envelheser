@@ -7,18 +7,19 @@
 	
 	$prontuario = new Prontuario($mysql->link);
 	
-	print_r($prontuario->getPerguntas(4));
-	
 	if(isset($_GET['numProntuario'])) {
 			
-		$lista = $prontuario->getDados(utf8_decode($_GET['numProntuario']));
+		$listaRespostas = $prontuario->getRespostas(utf8_decode($_GET['numProntuario']));
 		
-		echo json_encode($lista);			
+		echo json_encode($listaRespostas);	
+		
+	} elseif (isset($_POST['listaRespostas'])) {		
+		
+		$listaRespostas = json_decode($_POST['listaRespostas'], true);
+		$retorno = $prontuario->insertRespostas($listaRespostas);
+		
+		echo json_encode($retorno);		
 	}
-	
-	//elseif ($_POST['a']){
-		
-	//}
 		
 	//Este trecho deve ficar sempre no fim do arquivo
 	$mysql->disconect();

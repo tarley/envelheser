@@ -116,6 +116,11 @@
 			font-style: italic;
 			font-size: 10pt;
 		}
+		
+		.ui-autocomplete-rg {
+			font-style: italic;
+			font-size: 10pt;
+		}
 	</style>
 </head>
 <body>
