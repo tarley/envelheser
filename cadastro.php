@@ -1,5 +1,99 @@
 <?php
 	require_once 'init.php';
+	
+	$mysql = new MySQL();
+	$Prontuario = new Prontuario($mysql->link);
+	
+	function MontaGrupos($codGrupoSuperior){
+		global $Prontuario;
+		
+		$listaGrupos = $Prontuario->getGrupos($codGrupoSuperior);
+		 
+		for($i=0; $i < sizeof($listaGrupos); $i++)
+		{
+			echo '<div class="panel panel-default">';
+			echo '<div class="panel-heading">';
+			echo $listaGrupos[$i]['Nom_Grupo'];
+			echo '</div>';
+			MontaPerguntas($listaGrupos[$i]['Cod_Grupo']);
+			echo '</div>';
+			MontaGrupos($listaGrupos[$i]['Cod_Grupo']);
+		}
+		 
+		return $listaGrupos;
+	}
+	
+	function MontaPerguntas($codGrupo){
+		global $Prontuario;
+		
+		$listaPerguntas = $Prontuario->getPerguntas($codGrupo);
+			
+		for($i=0; $i < sizeof($listaPerguntas); $i++)
+		{
+			echo '<div id='. $listaPerguntas[$i]['Cod_Pergunta'] .'>';
+			echo '</br>';
+			echo '<div>';
+			echo $listaPerguntas[$i]['Des_Pergunta'];
+			echo '</div>';
+			echo '</br>';
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Aberta']){
+				echo '<input id="" class="form-control">';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_SimNao']){
+				echo '<div class="col-md-3">
+                	<div class="btn-group btn-toggle text-right" data-toggle="buttons">
+                    	<label class="btn btn-primary active">
+                        	<input name="options" value="option1" type="radio" checked="checked">Sim
+                        </label>
+                        <label class="btn btn-default">
+                        	<input name="options" value="option2" type="radio">Não
+                        </label>
+                    </div>
+                </div>';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
+				echo '<input id="" class="form-control">';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
+				echo '<input id="" class="form-control">';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
+				echo '<input id="" class="form-control">';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
+				echo '<input id="" class="form-control">';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
+				echo '<input id="" class="form-control">';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['ind_Pergunta_ComboBox']){
+				echo '<select name="sexo">
+				<option>Fem</option>
+				<option>Masc</option>
+				</select>';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_Radio']){
+				echo '<input type="radio" id="" value="true" class="form-control" >';
+				echo '<input type="radio" id="" value="false" class="form-control" >';
+				echo '</br>';
+			}
+			else if($listaPerguntas[$i]['Ind_Pergunta_CheckBox']){
+				echo '<input type="checkbox" name="testeB[]" value="a" id="aA" class="form-control" >';
+				echo '</br>';
+			}
+			echo '</div>';
+		}
+	}
+	
 ?>
 
 <!DOCTYPE html>
@@ -116,8 +210,13 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div id="divHistoricos">
-                                    	<button type="button">Novo</button>
+                                    <div id="divQuestionario">
+                                    	<div id='divHistoricoProntuarios'>
+                                    		<button type="button">Novo</button>
+                                    	</div>
+                                    	<?php 
+                                    		MontaGrupos(null);
+                                    	?>
                                     </div>
                                 </div>
                              </div>
@@ -166,7 +265,7 @@
 								if(cliente.prontuario.length != 0){
 									for(var i=0; i < cliente.prontuario.length; i++){
 										var divButton = ("<button type='button' name='btnPront" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
-										$("#divHistoricos").append(divButton);
+										$("#divHistoricoProntuarios").append(divButton);
 									}
 								}				
 							}
@@ -179,6 +278,17 @@
 					.append(item.nome + "<br>" + item.NumRg)
 					.appendTo(ul);
 			};	
+
+			  $('.btn-toggle .btn').click(function() {
+	                var div = $(this).parent();
+	               
+	                div.find('.btn-primary input').attr("checked", false);             
+	                div.find('.btn-primary').removeClass('btn-primary').removeClass('active').addClass('btn-default');
+	               
+	                $(this).addClass('btn-primary').addClass('active').removeClass('btn-default');
+	                $('input', this).attr('checked', true);        
+	            });
+	            
 		});
 	</script>
 </body>

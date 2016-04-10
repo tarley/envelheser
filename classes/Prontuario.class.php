@@ -19,11 +19,21 @@ class Prontuario {
 		$this->cnn = $cnn;
 	}
 	
-	function getGrupos() {
+	function getGrupos($codGrupoSuperior) {
+		
+		
 		$query = "SELECT Cod_Grupo, Nom_Grupo ";
-		$query .= "FROM tb_grupo g ORDER BY Num_Ordem_Grupo";
-	
-		$query = mysqli_query($query);
+		$query .= "FROM tb_grupo g ";
+		$query .= "WHERE ";
+		
+		if($codGrupoSuperior == null)
+			$query .= "Cod_Grupo_Superior IS NULL ";
+		else
+			$query .= "Cod_Grupo_Superior = " . $codGrupoSuperior . " ";
+		
+		$query .= "ORDER BY Num_Ordem_Grupo";
+		
+		$query = mysqli_query($this->cnn, $query);
 	
 		$listaGrupos = array();
 	
@@ -77,7 +87,7 @@ class Prontuario {
 		$query .= "FROM tb_lista_combo_box l ";
 		$query .= "WHERE Cod_Pergunta = $codPergunta";
 		
-		$query = mysqli_query($query);
+		$query = mysqli_query($this->cnn, $query);
 		
 		$listaOpcoes = array();
 		
