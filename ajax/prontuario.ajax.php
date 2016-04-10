@@ -15,8 +15,9 @@
 		
 	} elseif (isset($_POST['listaRespostas'])) {		
 		
+		$codCliente = $_POST['CodCliente'];
 		$listaRespostas = json_decode($_POST['listaRespostas'], true);
-		$retorno = $prontuario->insertRespostas($listaRespostas);
+		$retorno = $prontuario->insertRespostas($codCliente, $listaRespostas);
 		
 		echo json_encode($retorno);		
 	}

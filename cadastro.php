@@ -15,9 +15,17 @@
 			echo '<div class="panel-heading">';
 			echo $listaGrupos[$i]['Nom_Grupo'];
 			echo '</div>';
-			MontaPerguntas($listaGrupos[$i]['Cod_Grupo']);
-			echo '</div>';
+			echo '<div class="panel-body">';
+			echo '<div class="row">';
+			echo '<div class="col-lg-12">';
+			
+			MontaPerguntas($listaGrupos[$i]['Cod_Grupo']);			
 			MontaGrupos($listaGrupos[$i]['Cod_Grupo']);
+			
+			echo '</div>';
+			echo '</div>';
+			echo '</div>';
+			echo '</div>';
 		}
 		 
 		return $listaGrupos;
@@ -29,19 +37,19 @@
 		$listaPerguntas = $Prontuario->getPerguntas($codGrupo);
 			
 		for($i=0; $i < sizeof($listaPerguntas); $i++)
-		{
-			echo '<div id='. $listaPerguntas[$i]['Cod_Pergunta'] .'>';
-			echo '</br>';
-			echo '<div>';
-			echo $listaPerguntas[$i]['Des_Pergunta'];
+		{			
+			echo '<div id='. $listaPerguntas[$i]['Cod_Pergunta'] .' class="form-group clearfix">';
+			echo '<div class="col-md-3">';
+			echo '<label style="margin-bottom: 0;">' . $listaPerguntas[$i]['Des_Pergunta'] . '</label>';
 			echo '</div>';
-			echo '</br>';
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Aberta']){
+				echo '<div class="col-md-3">';
 				echo '<input id="" class="form-control">';
-				echo '</br>';
+				echo '</div>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_SimNao']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_SimNao']){
 				echo '<div class="col-md-3">
                 	<div class="btn-group btn-toggle text-right" data-toggle="buttons">
                     	<label class="btn btn-primary active">
@@ -54,46 +62,65 @@
                 </div>';
 				echo '</br>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
+				echo '<div class="col-md-3">';
+				echo '<label>Qual?</label>';
 				echo '<input id="" class="form-control">';
-				echo '</br>';
+				echo '</div>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
+				echo '<div class="col-md-3">';
+				echo '<label>Quando?</label>';
 				echo '<input id="" class="form-control">';
-				echo '</br>';
+				echo '</div>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
+				echo '<div class="col-md-3">';
+				echo '<label>Outros:</label>';
 				echo '<input id="" class="form-control">';
-				echo '</br>';
+				echo '</div>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
+				echo '<div class="col-md-3">';
+				echo '<label>Cite:</label>';
 				echo '<input id="" class="form-control">';
-				echo '</br>';
+				echo '</div>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
+				echo '<div class="col-md-3">';
+				echo '<label>Observação:</label>';
 				echo '<input id="" class="form-control">';
-				echo '</br>';
+				echo '</div>';
 			}
-			else if($listaPerguntas[$i]['ind_Pergunta_ComboBox']){
+			
+			if($listaPerguntas[$i]['ind_Pergunta_ComboBox']){
+				echo '<div class="col-md-3">';				
 				echo '<select>';
 				$listaOpcoes = $Prontuario->getOpcoesCombo($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<option value="'.$listaOpcoes[j]['Cod_Item_Combo'].'">'.$listaOpcoes[j]['Des_Item_Combo'].'</option>';
+					echo '<option value="'.$listaOpcoes[$j]['Cod_Item_Combo'].'">'.$listaOpcoes[$j]['Des_Item_Combo'].'</option>';
 				}
 				echo '</select>';
-				echo '</br>';
+				echo '</div>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_Radio']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Radio']){
 				$listaOpcoes = $Prontuario->getOpcoesRadio($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<input type="radio" value="'.$listaOpcoes[j]['Cod_Item_Radio'].'" class="form-control" >';
+					echo '<input type="radio" value="'.$listaOpcoes[$j]['Cod_Item_Radio'].'" class="form-control" >';
 				}
 				echo '</br>';
 			}
-			else if($listaPerguntas[$i]['Ind_Pergunta_CheckBox']){
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_CheckBox']){
 				$listaOpcoes = $Prontuario->getOpcoesCheck($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<input type="checkbox" value="'.$listaOpcoes[j]['Cod_Item_Check'].'" class="form-control" >';
+					echo '<input type="checkbox" value="'.$listaOpcoes[$j]['Cod_Item_Check'].'" class="form-control" >';
 				}
 				echo '</br>';
 			}
@@ -263,7 +290,7 @@
 			$("#save").click(function() {
 				var obj = [{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
 		
-				$.post( "ajax/prontuario.ajax.php", { listaRespostas: JSON.stringify(obj) }, function(data) {
+				$.post( "ajax/prontuario.ajax.php", { CodCliente: 3, listaRespostas: JSON.stringify(obj) }, function(data) {
 					var retorno = jQuery.parseJSON(data);
 
 					if(retorno.Sucesso) {
@@ -308,7 +335,7 @@
 									
 								if(cliente.prontuario.length != 0){
 									for(var i=0; i < cliente.prontuario.length; i++){
-										var divButton = ("<button type='button' name='btnPront" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
+										var divButton = ("<button type='button' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
 										$("#divHistoricoProntuarios").append(divButton);
 									}
 								}				
@@ -332,6 +359,23 @@
 				$(this).addClass('btn-primary').addClass('active').removeClass('btn-default');
 				$('input', this).attr('checked', true);        
 			});
+
+			$(document.body).on("click", "button[id*='btnPront']", function() {
+				var arrayId = $(this).attr("id").split('-');
+				var id = arrayId[1];
+				console.log(id);
+				$.ajax({
+					url: "ajax/prontuario.ajax.php?numProntuario=" + id,
+					success: function (data) {
+						console.log(data);
+						var respostas = jQuery.parseJSON(data);
+						console.log(respostas);
+					
+					}
+				});
+				
+			});
+			
 		});
 	</script>
 </body>
