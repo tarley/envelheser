@@ -8,7 +8,7 @@
 	<?php include("includes/header.php"); ?>
 	<style>
 		.ui-autocomplete-loading {
-			background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+		    background: white url("components/jquery-ui/images/ui-anim_basic_16x16.gif") no-repeat scroll 99% center;
 		}
 	</style>
 </head>
@@ -173,8 +173,7 @@
 						});
 					}		
 				}
-			})
-			
+			})			
 			.autocomplete("instance")._renderItem = function(ul, item) {
 				return $("<li>")
 					.append(item.nome + "<br>" + item.NumRg)
