@@ -1,5 +1,5 @@
 <?php
-	require_once 'init.php';	
+	require_once 'init.php';
 	
 	$mysql = new MySQL();
 	$Prontuario = new Prontuario($mysql->link);
@@ -224,13 +224,11 @@
                                     <div id="divQuestionario">
                                     	<div id='divHistoricoProntuarios'>
                                     		<button type="button">Novo</button>
-                                    		<button id="save" type="button">Salvar</button>
                                     	</div>
                                     	<?php 
                                     		MontaGrupos(null);
                                     	?>
-                                    	<button id="save" type="button">Salvar</button>
-                                    </div>
+									</div>
                                 </div>
                              </div>
                          </div>
