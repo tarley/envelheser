@@ -98,11 +98,11 @@ class Prontuario {
 		return $listaOpcoes;		
 	}
 	
-	function getOpcoesCheck($codPergunta) {
-		$query = "SELECT Cod_Item_Check, Des_Item_Check, ";
+	function getOpcoesCheck($codPergunta) {		
+		$query = "SELECT Cod_Item_Check, Des_Item_Check ";
 		$query .= "FROM tb_lista_check_box l ";
 		$query .= "WHERE Cod_Pergunta = $codPergunta";
-		
+				
 		$query = mysqli_query($this->cnn, $query);
 		
 		$listaOpcoes = array();
@@ -176,22 +176,41 @@ class Prontuario {
 		return $listaRespostas;		
 	}
 	
-	function insertRespostas($listaRespostas) {		
+	
+	function insertProntuario($codCliente) {
+		try {		
+			$query = "INSERT INTO tb_prontuario (Dta_Data_Prontuario, Cod_Cliente, Cod_Avaliador, Val_Pontuacao, Val_Tempo_Gasto) ";
+			$query .= "VALUES (now(), $codCliente, NULL, NULL, NULL)";			
+	
+			if (mysqli_query($this->cnn, $query)) {
+				return mysqli_insert_id($this->cnn);
+			}
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}
+	
+	function insertRespostas($codCliente, $listaRespostas) {		
 		$retorno = array();
-		$retorno['Sucesso'] = false;
-		$retorno['Mensagem'] = "";
 		
 		try {
+			
+			$numProntuario = $this->insertProntuario($codCliente);
 			
 			for ($i = 0; $i < sizeof($listaRespostas); $i++) {
 				$r = $listaRespostas[$i];
 				
+				$this->insertResposta($numProntuario, $r['Cod_Pergunta'], $r['Respostas']);
 			}			
 			
 			$retorno['Sucesso'] = true;
 			$retorno['Mensagem'] = "Dados inseridos com sucesso";
+			$retorno['NumProntuario'] = $numProntuario;
 			
 		} catch (Exception $e) {
+			$msg = "Falha ao inserir respostas. Mensagem de erro: " . mysqli_error($this->cnn);
+			$this->log->logError($this,$msg);			
+			
 			$retorno['Sucesso'] = false;			
 			$retorno['Mensagem'] = "Falha ao inserir respostas";
 		}
@@ -199,8 +218,75 @@ class Prontuario {
 		return $retorno;
 	}
 	
-	function insertResposta(){
-		
+	function insertResposta($numProntuario, $codPergunta, $respostas){
+		try {		
+			$desRespAberta = "NULL";
+			$indRespSimNao = "NULL";
+			$desRespQual = "NULL";
+			$desRespQuando = "NULL";
+			$desRespOutros = "NULL";
+			$desRespCite = "NULL";
+			$desRespObs = "NULL";
+			$CodRespCombo = "NULL";
+			$CodRespRadio = "NULL";
+			
+			for ($i = 0; $i < sizeof($respostas); $i++) {
+				$r = $respostas[$i];
+				
+				if($r['TipoPergunta'] == "Ind_Pergunta_Aberta"){
+					$desRespAberta = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_SimNao") {
+					$indRespSimNao = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_Qual") {	
+					$desRespQual = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_Quando") {
+					$desRespQuando = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_Outros") {
+					$desRespOutros = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_Cite") {
+					$desRespCite = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_Observacao") {
+					$desRespObs = $r['Valor'];
+				} else if($r['TipoPergunta'] == "ind_Pergunta_ComboBox") {
+					$CodRespCombo = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_Radio") {
+					$CodRespRadio = $r['Valor'];
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_CheckBox") {	
+					
+				}	
+			}
+			
+			$query = "INSERT INTO tb_resposta ";
+			$query .= "(Num_Prontuario,  ";
+			$query .= "Cod_Pergunta,  ";
+			$query .= "Des_Resposta_Aberta,  ";
+			$query .= "Ind_Resposta_SimNao,  ";
+			$query .= "Des_Resposta_Qual,  ";
+			$query .= "Des_Resposta_Quando,  ";
+			$query .= "Des_Resposta_Outros,  ";
+			$query .= "Des_Resposta_Cite,  ";
+			$query .= "Des_Resposta_Observacao,  ";
+			$query .= "Cod_Resposta_ComboBox,  ";
+			$query .= "Cod_Resposta_Radio) ";
+			$query .= "VALUES ";
+			$query .= "($numProntuario, ";
+			$query .= "$codPergunta,  ";
+			$query .= "$desRespAberta,  ";
+			$query .= "$indRespSimNao,  ";
+			$query .= "$desRespQual,  ";
+			$query .= "$desRespQuando,  ";
+			$query .= "$desRespOutros,  ";
+			$query .= "$desRespCite,  ";
+			$query .= "$desRespObs,  ";
+			$query .= "$CodRespCombo,  ";
+			$query .= "$CodRespRadio);";	
+			
+			if (!mysqli_query($this->cnn, $query))
+				throw new Exception();
+			
+		} catch (Exception $e) {			
+			throw $e;
+		}		
 	}
 	
 }
