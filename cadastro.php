@@ -288,6 +288,24 @@
 		$(document).ready(function() {
 
 			$("#save").click(function() {
+				var obj = [{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
+						
+				$.post( "ajax/prontuario.ajax.php", { CodCliente: 3, listaRespostas: JSON.stringify(obj) }, function(data) {
+					var retorno = jQuery.parseJSON(data);
+
+					if(retorno.Sucesso) {
+						$('#alert .text').append(retorno.Mensagem);
+						$('#alert').addClass("alert-success");
+					} else {
+						$('#alert .text').append(retorno.Mensagem);
+						$('#alert').addClass("alert-danger");
+					}
+
+					$('#alert').show().delay(3000).fadeOut("fast", function() {
+						$('#alert .text').html(""); 
+					}); 					
+				});
+				
 				MontaJSON();
 			});			
 			
