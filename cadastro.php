@@ -38,14 +38,14 @@
 			
 		for($i=0; $i < sizeof($listaPerguntas); $i++)
 		{			
-			echo '<div id='. $listaPerguntas[$i]['Cod_Pergunta'] .' class="form-group clearfix">';
+			echo '<div id="perg-'. $listaPerguntas[$i]['Cod_Pergunta'] .'" class="form-group clearfix">';
 			echo '<div class="col-md-3">';
 			echo '<label style="margin-bottom: 0;">' . $listaPerguntas[$i]['Des_Pergunta'] . '</label>';
 			echo '</div>';
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Aberta']){
 				echo '<div class="col-md-3">';
-				echo '<input id="" type="text" class="form-control">';
+				echo '<input id="Ind_Pergunta_Aberta" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
@@ -53,10 +53,10 @@
 				echo '<div class="col-md-3">
                 	<div class="btn-group btn-toggle text-right" data-toggle="buttons">
                     	<label class="btn btn-primary active">
-                        	<input name="options" value="1" type="radio" checked="checked">Sim
+                        	<input id="Ind_Pergunta_SimNao" name="options" value="1" type="radio" checked="checked">Sim
                         </label>
                         <label class="btn btn-default">
-                        	<input name="options" value="0" type="radio">Não
+                        	<input id="Ind_Pergunta_SimNao" name="options" value="0" type="radio">Não
                         </label>
                     </div>
                 </div>';
@@ -66,35 +66,35 @@
 			if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
 				echo '<div id="divQual" class="col-md-3">';
 				echo '<label>Qual?</label>';
-				echo '<input id="" type="text" class="form-control">';
+				echo '<input id="Ind_Pergunta_Qual" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
 				echo '<div id="divQuando" class="col-md-3">';
 				echo '<label>Quando?</label>';
-				echo '<input id="" type="text" class="form-control">';
+				echo '<input id="Ind_Pergunta_Qual" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
 				echo '<div id="divOutros" class="col-md-3">';
 				echo '<label>Outros:</label>';
-				echo '<input id="" type="text" class="form-control">';
+				echo '<input id="Ind_Pergunta_Outros" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
 				echo '<div id="divCite" class="col-md-3">';
 				echo '<label>Cite:</label>';
-				echo '<input id="" type="text" class="form-control">';
+				echo '<input id="Ind_Pergunta_Cite" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
 				echo '<div id="divObservacao" class="col-md-3">';
 				echo '<label>Observação:</label>';
-				echo '<input id="" type="text" class="form-control">';
+				echo '<input id="Ind_Pergunta_Observacao" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
@@ -103,7 +103,7 @@
 				echo '<select>';
 				$listaOpcoes = $Prontuario->getOpcoesCombo($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<option value="'.$listaOpcoes[$j]['Cod_Item_Combo'].'">'.$listaOpcoes[$j]['Des_Item_Combo'].'</option>';
+					echo '<option id="ind_Pergunta_ComboBox[]" value="'.$listaOpcoes[$j]['Cod_Item_Combo'].'">'.$listaOpcoes[$j]['Des_Item_Combo'].'</option>';
 				}
 				echo '</select>';
 				echo '</div>';
@@ -112,7 +112,7 @@
 			if($listaPerguntas[$i]['Ind_Pergunta_Radio']){
 				$listaOpcoes = $Prontuario->getOpcoesRadio($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<input type="radio" value="'.$listaOpcoes[$j]['Cod_Item_Radio'].'" class="form-control" >';
+					echo '<input id="Ind_Pergunta_Radio[]" type="radio" value="'.$listaOpcoes[$j]['Cod_Item_Radio'].'" class="form-control" >';
 				}
 				echo '</br>';
 			}
@@ -120,7 +120,7 @@
 			if($listaPerguntas[$i]['Ind_Pergunta_CheckBox']){
 				$listaOpcoes = $Prontuario->getOpcoesCheck($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<input type="checkbox" value="'.$listaOpcoes[$j]['Cod_Item_Check'].'" class="form-control" >';
+					echo '<input id="Ind_Pergunta_CheckBox[]" type="checkbox" value="'.$listaOpcoes[$j]['Cod_Item_Check'].'" class="form-control" >';
 				}
 				echo '</br>';
 			}
@@ -288,23 +288,7 @@
 		$(document).ready(function() {
 
 			$("#save").click(function() {
-				var obj = [{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
-		
-				$.post( "ajax/prontuario.ajax.php", { CodCliente: 3, listaRespostas: JSON.stringify(obj) }, function(data) {
-					var retorno = jQuery.parseJSON(data);
-
-					if(retorno.Sucesso) {
-						$('#alert .text').append(retorno.Mensagem);
-						$('#alert').addClass("alert-success");
-					} else {
-						$('#alert .text').append(retorno.Mensagem);
-						$('#alert').addClass("alert-danger");
-					}
-
-					$('#alert').show().delay(3000).fadeOut("fast", function() {
-						$('#alert .text').html(""); 
-					}); 					
-				});
+				MontaJSON();
 			});			
 			
 			$("#nomeCliente").autocomplete({
@@ -368,12 +352,12 @@
 						for(var i=0; i < respostas.length; i++){
 							
 							if(respostas[i].Ind_Pergunta_Aberta == 1 ){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var input = div.find(":text");
 								input.val(respostas[i].Des_Resposta_Aberta);
 							}
 							if(respostas[i].Ind_Pergunta_SimNao == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var radio = div.find(":radio[value=" + respostas[i].Ind_Resposta_SimNao + "]");
 
 								var div = radio.parent().parent();
@@ -385,42 +369,42 @@
 
 							}
 							if(respostas[i].Ind_Pergunta_Qual == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var divQual = div.find("div[id='divQual']");
 								var input = divQual.find(":text");
 								input.val(respostas[i].Des_Resposta_Qual);
 							}
 							if(respostas[i].Ind_Pergunta_Quando == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var divQuando = div.find("#divQuando");
 								var input = divQuando.find(":text");
 								input.val(respostas[i].Des_Resposta_Quando);
 							}
 							if(respostas[i].Ind_Pergunta_Outros == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var divOutros = div.find("#divOutros");
 								var input = divOutros.find(":text");
 								input.val(respostas[i].Des_Resposta_Outros);
 							}
 							if(respostas[i].Ind_Pergunta_Cite == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var divCite = div.find("#divCite");
 								var input = divCite.find(":text");
 								input.val(respostas[i].Des_Resposta_Cite);
 							}
 							if(respostas[i].Ind_Pergunta_Observacao == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var divObs = div.find("#divCite");
 								var input = divObs.find(":text");
 								input.val(respostas[i].Des_Resposta_Observacao);
 							}
 							if(respostas[i].Ind_Pergunta_ComboBox == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var combo = div.find("option[value='" + respostas[i].Cod_Resposta_ComboBox + "']");
 								combo.attr('selected', true);
 							}
 							if(respostas[i].Ind_Pergunta_Radio == 1){
-								var div = $("#divQuestionario").find("div[id='"+ respostas[i].Cod_Pergunta +"']");
+								var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 								var radio = div.find(":radio[value=" + respostas[i].Cod_Resposta_Radio + "]");
 								radio.attr('checked', true);
 								
@@ -432,6 +416,26 @@
 		});
 
 		function MontaJSON(){
+			var obj = [];
+			$("div[id*='perg-']").each(function(){
+				var arrayObj = {};
+				var arrayId = $(this).attr("id").split('-');
+			   	var id = arrayId[1];
+			   	console.log(id);
+			   	arrayObj['Cod_Pergunta'] = id;
+			   	var respostas=[];
+
+				var respostasArray={};
+				respostasArray['TipoPergunta'] = "1";
+				respostasArray['Valor'] = "1";
+
+				respostas.push(respostasArray);
+				
+				arrayObj['Respostas'] = respostas;
+				obj = arrayObj;
+			   	console.log(obj);
+			});
+
 			
 		}
 	</script>
