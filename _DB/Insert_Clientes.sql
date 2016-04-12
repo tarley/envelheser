@@ -23,6 +23,22 @@ INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civi
 VALUES(4, 4, 2, 1, 5, 'Eva Gonçalves dos Anjos', 'F', '1947/05/17', 3, 'R. Santa Inês, 125, Morro das Pedras', 'MG311129');
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3371-8804',5,1);
 
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(2, 3, 4, 3, 1, 'Bruno Sartori', 'M', '1986/05/10', 10, 'Av.Pedro 2, 24, Palmeiras', 'MG24242424');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('9245-8804',6,2);
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(2, 3, 4, 3, 1, 'Carlos Henrique', 'M', '1994/01/10', 0, 'R. B, 171, Londrina', 'MG46789456');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('9145-8804',7,1);
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(2, 3, 4, 3, 1, 'Vitor Alessandro', 'I', '1991/01/10', 3, 'R. Apae, 155, Alto Vera Cruz', 'MG12345564');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('8888-0000',8,2);
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(2, 3, 4, 3, 1, 'Igor Rafael', 'M', '1980/10/5', 1, 'Av. Pedro 2, 171, Centro', 'MG46789456');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('9145-8804',9,1);
+
 --Ater=========================================================================================================================================================================
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
 VALUES(4, 4, 2, 1, 5, 'Rodrigo R.R.', 'M', '1977/03/15', 8, 'R. Caiçara, 222, Alto Caiçara', 'MG12358795'); 
@@ -43,4 +59,11 @@ INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
 VALUES(4, 4, 2, 1, 5, 'Vitoria Monteiro', 'F', '1981/03/16', 1, 'R. Riacho das Pedras, 111, Taquaril', 'MG2245687'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3215-6478',14,1); 
+
+
+
+
+
+
+
 
