@@ -293,7 +293,7 @@
 				var obj = MontaJSON();
 				//[{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
 				var codCliente = $("#codCliente").val();
-				console.log(obj);
+				console.log(JSON.stringify(obj));
 				return;
 				$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
 					var retorno = jQuery.parseJSON(data);
@@ -456,7 +456,6 @@
 				   	objRespostas['TipoPergunta'] = tipoPergunta;
 					
 					if(tipoPergunta == "Ind_Pergunta_SimNao"){
-						console.log($("input:checked", $(this).children()));
 						objRespostas['Valor'] = $("input:checked", $(this)).val();
 					}
 					else{

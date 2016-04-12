@@ -31,6 +31,7 @@ class Prontuario {
 		else
 			$query .= "Cod_Grupo_Superior = " . $codGrupoSuperior . " ";
 		
+		$query .= "AND Ind_Status = 1 ";
 		$query .= "ORDER BY Num_Ordem_Grupo";
 		
 		$query = mysqli_query($this->cnn, $query);
