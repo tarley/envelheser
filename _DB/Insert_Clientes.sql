@@ -82,7 +82,7 @@ INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
 VALUES(2, 1, 1, 3, 2, 'Thiago Silva', 'M', '1985/02/10', 0, 'R.Av Barão Homem de Melo,102,Nova Granda', 'MG1231265');
-INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3378-9852',20,6);
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3378-9852',20,2);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
 VALUES(1, 3, 2, 1, 1, 'Ana Flavia', 'F', '1992/08/23', 0, 'Av. João Cesar de Oliveira, 2013, Eldorado', 'MG24187984');
