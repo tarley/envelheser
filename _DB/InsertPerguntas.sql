@@ -13,22 +13,25 @@ DELIMITER $$
 
     CREATE  PROCEDURE SPInsereGrupo
     (
-        IN P_Nome_Grupo 	 VARCHAR(100),
+        IN P_Nome_Grupo 		 VARCHAR(100),
         IN P_Nome_Grupo_Superior VARCHAR(100),
         IN P_Nome_Questionario   VARCHAR(100),
-        IN P_Numero_Ordem_Grupo  INT
+        IN P_Numero_Ordem_Grupo  INT,
+		IN P_Ind_Status          boolean		
     )
         BEGIN
         
-          DECLARE V_Nome_Grupo		VARCHAR(100);
+          DECLARE V_Nome_Grupo			VARCHAR(100);
           DECLARE V_Cod_Grupo_Superior 	INT;
           DECLARE V_Cod_Questionario 	INT;
           DECLARE V_Numero_Ordem_Grupo 	INT;
+		  DECLARE V_Ind_Status          boolean;
           
           SET V_Nome_Grupo 			:= P_Nome_Grupo;
           SET V_Cod_Grupo_Superior 	:= (SELECT Cod_Grupo FROM TB_Grupo WHERE Nom_Grupo = P_Nome_Grupo_Superior);
           SET V_Cod_Questionario 	:= (SELECT Cod_Questionario FROM TB_Questionario WHERE Des_Questionario = P_Nome_Questionario);
           SET V_Numero_Ordem_Grupo 	:= P_Numero_Ordem_Grupo;
+          SET V_Ind_Status          := P_Ind_Status;
           
           
 	  	 INSERT INTO TB_Grupo
@@ -36,7 +39,8 @@ DELIMITER $$
 		(	Nom_Grupo,
 			Cod_Grupo_Superior,
 			Cod_Questionario,
-			Num_Ordem_Grupo
+			Num_Ordem_Grupo,
+			Ind_Status
 		)
 
          	 VALUES 
@@ -44,7 +48,8 @@ DELIMITER $$
 			V_Nome_Grupo,
 			V_Cod_Grupo_Superior,
 			V_Cod_Questionario,
-			V_Numero_Ordem_Grupo 
+			V_Numero_Ordem_Grupo,
+			V_Ind_Status
 		);
           
         END  $$
@@ -55,46 +60,46 @@ DELIMITER ;
 /*                     CADASTRO DOS GRUPOS                      */ 
 /*==============================================================*/ 
 
-CALL SPInsereGrupo ('Identificação', null, 'Triagem', 1);
+CALL SPInsereGrupo ('Identificação', null, 'Triagem', 1, 1);
 
-CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1);
+CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
 
-			CALL SPInsereGrupo ('História Médica Pregressa', 'Anamnese', 'Triagem', 1);
+			CALL SPInsereGrupo ('História Médica Pregressa', 'Anamnese', 'Triagem', 1, 1);
 
-						CALL SPInsereGrupo ('Sistema Cardiovascular', 'História Médica Pregressa', 'Triagem', 1);
-						CALL SPInsereGrupo ('Sistema Respiratório', 'História Médica Pregressa', 'Triagem', 2);
-						CALL SPInsereGrupo ('Sistema Digestório', 'História Médica Pregressa', 'Triagem', 3);
-						CALL SPInsereGrupo ('Sistema Genitourinário', 'História Médica Pregressa', 'Triagem', 4);
-						CALL SPInsereGrupo ('Sistema Endócrino', 'História Médica Pregressa', 'Triagem', 5);
-						CALL SPInsereGrupo ('Sistema Nervoso Central', 'História Médica Pregressa', 'Triagem', 6);
-						CALL SPInsereGrupo ('Sistema Sensitivo', 'História Médica Pregressa', 'Triagem', 7);
-						CALL SPInsereGrupo ('Sistema Hematopoético', 'História Médica Pregressa', 'Triagem', 8);
-						CALL SPInsereGrupo ('Sistema Ostemuscular', 'História Médica Pregressa', 'Triagem', 9);
+						CALL SPInsereGrupo ('Sistema Cardiovascular', 'História Médica Pregressa', 'Triagem', 1, 1);
+						CALL SPInsereGrupo ('Sistema Respiratório', 'História Médica Pregressa', 'Triagem', 2, 1);
+						CALL SPInsereGrupo ('Sistema Digestório', 'História Médica Pregressa', 'Triagem', 3, 1);
+						CALL SPInsereGrupo ('Sistema Genitourinário', 'História Médica Pregressa', 'Triagem', 4, 1);
+						CALL SPInsereGrupo ('Sistema Endócrino', 'História Médica Pregressa', 'Triagem', 5, 1);
+						CALL SPInsereGrupo ('Sistema Nervoso Central', 'História Médica Pregressa', 'Triagem', 6, 1);
+						CALL SPInsereGrupo ('Sistema Sensitivo', 'História Médica Pregressa', 'Triagem', 7, 1);
+						CALL SPInsereGrupo ('Sistema Hematopoético', 'História Médica Pregressa', 'Triagem', 8, 1);
+						CALL SPInsereGrupo ('Sistema Ostemuscular', 'História Médica Pregressa', 'Triagem', 9, 1);
 
-			CALL SPInsereGrupo ('Histórico de Queda', 'Anamnese', 'Triagem', 2);
+			CALL SPInsereGrupo ('Histórico de Queda', 'Anamnese', 'Triagem', 2, 1);
 
-			CALL SPInsereGrupo ('Histórico Familiar', 'Anamnese', 'Triagem', 3);
+			CALL SPInsereGrupo ('Histórico Familiar', 'Anamnese', 'Triagem', 3, 0);
 
-			CALL SPInsereGrupo ('Hábitos e Vícios', 'Anamnese', 'Triagem', 4);
+			CALL SPInsereGrupo ('Hábitos e Vícios', 'Anamnese', 'Triagem', 4, 0);
 
-CALL SPInsereGrupo ('Necessidades Pisicoespirituais', null, 'Triagem', 2);
+CALL SPInsereGrupo ('Necessidades Pisicoespirituais', null, 'Triagem', 2, 0);
 
-CALL SPInsereGrupo ('Necessidades Psicosociais', null, 'Triagem', 3);
+CALL SPInsereGrupo ('Necessidades Psicosociais', null, 'Triagem', 3, 0);
 
-CALL SPInsereGrupo ('Necessidades Pisicobiológicas', null, 'Triagem', 4);
+CALL SPInsereGrupo ('Necessidades Pisicobiológicas', null, 'Triagem', 4, 0);
 
-CALL SPInsereGrupo ('Exame Físico', null, 'Triagem', 5);
+CALL SPInsereGrupo ('Exame Físico', null, 'Triagem', 5, 0);
 
-CALL SPInsereGrupo ('Coong', null, 'Triagem', 6);
+CALL SPInsereGrupo ('Coong', null, 'Triagem', 6, 0);
 
-CALL SPInsereGrupo ('Exame Físico Objetivo de coong_2', null, 'Triagem', 7);
+CALL SPInsereGrupo ('Exame Físico Objetivo de coong_2', null, 'Triagem', 7, 0);
 
-			CALL SPInsereGrupo ('Sistema Respiratório_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 1);
-			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 2);
-			CALL SPInsereGrupo ('Sistema Gastrintestinal_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 3);
-			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 4);
-			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 5);
-			CALL SPInsereGrupo ('Sistema Genitourinário_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 6);
+			CALL SPInsereGrupo ('Sistema Respiratório_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 1, 0);
+			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 2, 0);
+			CALL SPInsereGrupo ('Sistema Gastrintestinal_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 3, 0);
+			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 4, 0);
+			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 5, 0);
+			CALL SPInsereGrupo ('Sistema Genitourinário_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 6, 0);
 
 
 /*==============================================================*/ 

@@ -1,5 +1,5 @@
 /*==============================================================*/
-/* Inclusão na tabela Cliente                                   */
+/* Inclusão na tabela Cliente                                  */
 /*==============================================================*/
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
@@ -92,7 +92,6 @@ INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civi
 VALUES(4, 1, 3, 2, 1, 'Carolina Perdigão', 'F', '1988/02/08', 2, 'Rua João Gomes Cardoso, 197, Eldorado', 'MG18765494');
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('2564-6299',22,1);
 
-
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
 VALUES(2, 4, 2, 1, 3, 'Maliken Empath', 'M', '1971/07/15', 0, 'Av. José Faria da Rocha, 875, Eldorado', 'MG24876784');
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('98571-9243',23,3);
@@ -104,10 +103,3 @@ INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
 VALUES(2, 4, 2, 3, 1, 'Hagoromo Otsutsuki', 'F', '1968/11/02', 2, 'Av. João Cesar de Oliveira , 6432, Novo Eldorado', 'MG24842375');
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('2557-4982',25,1);
-
-
-
-
-
-
-

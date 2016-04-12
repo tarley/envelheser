@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     06/04/2016 17:49:47                          */
+/* Created on:     11/04/2016 21:23:47                          */
 /*==============================================================*/
 
 
@@ -68,7 +68,8 @@ create table TB_Grupo
    Nom_Grupo            varchar(100) not null,
    Cod_Grupo_Superior   tinyint,
    Cod_Questionario     int,
-   Num_Ordem_Grupo      int
+   Num_Ordem_Grupo      int,
+   Ind_Status           bool
 );
 
 /*==============================================================*/
@@ -153,7 +154,6 @@ create table TB_Questionario
    Des_Questionario     varchar(100) not null
 );
 
-
 /*==============================================================*/
 /* Table: TB_Resposta                                           */
 /*==============================================================*/
@@ -222,7 +222,6 @@ create table TB_Tipo_Telefone
    Cod_Tipo_Telefone    int not null auto_increment PRIMARY KEY,
    Des_Tipo_Telefone    varchar(20)
 );
-
 
 alter table TB_Cliente add constraint FK_Cor_Cliente foreign key (Cod_Cor)
       references TB_Cor (Cod_Cor);
