@@ -40,19 +40,19 @@ VALUES(2, 3, 4, 3, 1, 'Igor Rafael', 'M', '1980/10/5', 1, 'Av. Pedro 2, 171, Cen
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('9145-8804',9,1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Rodrigo R.R.', 'M', '1977/03/15', 8, 'R. Caiçara, 222, Alto Caiçara', 'MG12358795'); 
+VALUES(4, 4, 2, 1, 5, 'Rodrigo R R', 'M', '1977/03/15', 8, 'R. Caiçara, 222, Alto Caiçara', 'MG12358795'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3333-5555',10,1); 
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Calos Sant Luz.', 'M', '1968/06/18', 0, 'R. londrina, 667, Palmital', 'MG2878954'); 
+VALUES(4, 4, 2, 1, 5, 'Calos Sant Luz', 'M', '1968/06/18', 0, 'R. londrina, 667, Palmital', 'MG2878954'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('98898-8777',11,3);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Rafael Vitor.', 'M', '1956/12/05', 2, 'R. Silva Souza, 531, Pampulha', 'MG5478932'); 
+VALUES(4, 4, 2, 1, 5, 'Rafael Vitor', 'M', '1956/12/05', 2, 'R. Silva Souza, 531, Pampulha', 'MG5478932'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3214-5789',12,1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Bruno Henrrique Albuquerque.', 'M', '1945/01/07', 7, 'R. Ouro preto, 1203, Serrano', 'MG1314687'); 
+VALUES(4, 4, 2, 1, 5, 'Bruno Henrrique Albuquerque', 'M', '1945/01/07', 7, 'R. Ouro preto, 1203, Serrano', 'MG1314687'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('97887-5445',13,3); 
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
@@ -83,6 +83,27 @@ INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
 VALUES(2, 1, 1, 3, 2, 'Thiago Silva', 'M', '1985/02/10', 0, 'R.Av Barão Homem de Melo,102,Nova Granda', 'MG1231265');
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3378-9852',20,6);
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(1, 3, 2, 1, 1, 'Ana Flavia', 'F', '1992/08/23', 0, 'Av. João Cesar de Oliveira, 2013, Eldorado', 'MG24187984');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3395-4762',21,1);
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(4, 1, 3, 2, 1, 'Carolina Perdigão', 'F', '1988/02/08', 2, 'Rua João Gomes Cardoso, 197, Eldorado', 'MG18765494');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('2564-6299',22,1);
+
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(2, 4, 2, 1, 3, 'Maliken Empath', 'M', '1971/07/15', 0, 'Av. José Faria da Rocha, 875, Eldorado', 'MG24876784');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('98571-9243',23,3);
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(5, 2, 4, 1, 2, 'Whretched Hag', 'F', '1930/11/02', 9, 'Rua Buganville, 642, Eldorado', 'MG16754328');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('99235-6666',24,3);
+
+INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
+VALUES(2, 4, 2, 3, 1, 'Hagoromo Otsutsuki', 'F', '1968/11/02', 2, 'Av. João Cesar de Oliveira , 6432, Novo Eldorado', 'MG24842375');
+INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('2557-4982',25,1);
 
 
 
