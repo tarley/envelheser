@@ -25,19 +25,19 @@ INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('
 
 --Ater=========================================================================================================================================================================
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Rodrigo R.R.', 'M', '1977/03/15', 6, 'R. Caiçara, 222, Alto Caiçara', 'MG12358795'); 
+VALUES(4, 4, 2, 1, 5, 'Rodrigo R.R.', 'M', '1977/03/15', 8, 'R. Caiçara, 222, Alto Caiçara', 'MG12358795'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3333-5555',10,1); 
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Calos Sant Luz.', 'M', '1968/06/18', 2, 'R. londrina, 667, Palmital', 'MG2878954'); 
+VALUES(4, 4, 2, 1, 5, 'Calos Sant Luz.', 'M', '1968/06/18', 0, 'R. londrina, 667, Palmital', 'MG2878954'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('98898-8777',11,3);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Rafael Vitor.', 'M', '1956/12/05', 8, 'R. Silva Souza, 531, Pampulha', 'MG5478932'); 
+VALUES(4, 4, 2, 1, 5, 'Rafael Vitor.', 'M', '1956/12/05', 2, 'R. Silva Souza, 531, Pampulha', 'MG5478932'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3214-5789',12,1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Bruno Henrrique Albuquerque.', 'M', '1945/01/07', 4, 'R. Ouro preto, 1203, Serrano', 'MG1314687'); 
+VALUES(4, 4, 2, 1, 5, 'Bruno Henrrique Albuquerque.', 'M', '1945/01/07', 7, 'R. Ouro preto, 1203, Serrano', 'MG1314687'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('97887-5445',13,3); 
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
