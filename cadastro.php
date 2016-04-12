@@ -44,19 +44,19 @@
 			echo '</div>';
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Aberta']){
-				echo '<div class="col-md-3">';
-				echo '<input id="Ind_Pergunta_Aberta" type="text" class="form-control">';
+				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Aberta" class="col-md-3">';
+				echo '<input type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_SimNao']){
-				echo '<div class="col-md-3">
+				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_SimNao" class="col-md-3">
                 	<div class="btn-group btn-toggle text-right" data-toggle="buttons">
                     	<label class="btn btn-primary active">
-                        	<input id="Ind_Pergunta_SimNao" name="options" value="1" type="radio" checked="checked">Sim
+                        	<input name="options' . $i . '" value="1" type="radio" checked="checked">Sim
                         </label>
                         <label class="btn btn-default">
-                        	<input id="Ind_Pergunta_SimNao" name="options" value="0" type="radio">Não
+                        	<input name="options' . $i . '" value="0" type="radio">Não
                         </label>
                     </div>
                 </div>';
@@ -64,42 +64,42 @@
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
-				echo '<div id="divQual" class="col-md-3">';
+				echo '<div id="divQual" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Qual" class="col-md-3">';
 				echo '<label>Qual?</label>';
 				echo '<input id="Ind_Pergunta_Qual" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
-				echo '<div id="divQuando" class="col-md-3">';
+				echo '<div id="divQuando" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Quando" class="col-md-3">';
 				echo '<label>Quando?</label>';
 				echo '<input id="Ind_Pergunta_Qual" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
-				echo '<div id="divOutros" class="col-md-3">';
+				echo '<div id="divOutros" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Outros" class="col-md-3">';
 				echo '<label>Outros:</label>';
 				echo '<input id="Ind_Pergunta_Outros" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
-				echo '<div id="divCite" class="col-md-3">';
+				echo '<div id="divCite" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Cite" class="col-md-3">';
 				echo '<label>Cite:</label>';
 				echo '<input id="Ind_Pergunta_Cite" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
-				echo '<div id="divObservacao" class="col-md-3">';
+				echo '<div id="divObservacao" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Observacao" class="col-md-3">';
 				echo '<label>Observação:</label>';
 				echo '<input id="Ind_Pergunta_Observacao" type="text" class="form-control">';
 				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['ind_Pergunta_ComboBox']){
-				echo '<div class="col-md-3">';				
+				echo '<div class="col-md-3" data-tipo="resposta" data-tipopergunta="ind_Pergunta_ComboBox">';				
 				echo '<select>';
 				$listaOpcoes = $Prontuario->getOpcoesCombo($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
@@ -288,9 +288,12 @@
 		$(document).ready(function() {
 
 			$("#save").click(function() {
-				var obj = [{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
-						
-				$.post( "ajax/prontuario.ajax.php", { CodCliente: 3, listaRespostas: JSON.stringify(obj) }, function(data) {
+				var obj = MontaJSON();
+				//[{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
+				var codCliente = $("#codCliente").val();
+				console.log(obj);
+				return;
+				$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
 					var retorno = jQuery.parseJSON(data);
 
 					if(retorno.Sucesso) {
@@ -439,21 +442,51 @@
 				var arrayObj = {};
 				var arrayId = $(this).attr("id").split('-');
 			   	var id = arrayId[1];
-			   	console.log(id);
+			   	//console.log(id);
 			   	arrayObj['Cod_Pergunta'] = id;
+			   	
 			   	var respostas=[];
+			   	
+			   	$("div[data-tipo='resposta']", this).each(function(){
 
-				var respostasArray={};
-				respostasArray['TipoPergunta'] = "1";
-				respostasArray['Valor'] = "1";
+				   	var objRespostas = {};
+				   	var tipoPergunta = $(this).attr("data-tipopergunta");
+				   	objRespostas['TipoPergunta'] = tipoPergunta;
+					
+					if(tipoPergunta == "Ind_Pergunta_SimNao"){
+						objRespostas['Valor'] = $("input:checked", $(this)).val();
+					}
+					else{
+						objRespostas['Valor'] = $("input", $(this)).val();
+					}
 
-				respostas.push(respostasArray);
-				
+// 					else if(tipoPergunta == "Ind_Pergunta_Qual"){
+// 					}
+// 					else if(tipoPergunta == "Ind_Pergunta_Quando"){
+// 					}
+// 					else if(tipoPergunta == "Ind_Pergunta_Outros"){
+// 					}
+// 					else if(tipoPergunta == "Ind_Pergunta_Cite"){
+// 					}
+// 					else if(tipoPergunta == "Ind_Pergunta_Observacao"){
+// 					}
+// 					else if(tipoPergunta == "ind_Pergunta_ComboBox"){
+// 						//to do
+// 					}
+// 					else if(tipoPergunta == "Ind_Pergunta_Radio"){
+// 						//to do
+// 					}
+// 					else if(tipoPergunta == "Ind_Pergunta_CheckBox"){
+// 						//to do
+// 					}
+					respostas.push(objRespostas);
+			   	});
+			   	
 				arrayObj['Respostas'] = respostas;
-				obj = arrayObj;
-			   	console.log(obj);
+				obj.push(arrayObj);
 			});
-
+			
+			return obj;
 			
 		}
 	</script>
