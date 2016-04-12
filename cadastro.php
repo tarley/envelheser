@@ -30,10 +30,10 @@
 		 
 		return $listaGrupos;
 	}
-	
+	$contPergunta = 0;
 	function MontaPerguntas($codGrupo){
 		global $Prontuario;
-		
+		global $contPergunta;
 		$listaPerguntas = $Prontuario->getPerguntas($codGrupo);
 			
 		for($i=0; $i < sizeof($listaPerguntas); $i++)
@@ -50,16 +50,16 @@
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_SimNao']){
-				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_SimNao" class="col-md-3">
-                	<div class="btn-group btn-toggle text-right" data-toggle="buttons">
-                    	<label class="btn btn-primary active">
-                        	<input name="options' . $i . '" value="1" type="radio" checked="checked">Sim
-                        </label>
-                        <label class="btn btn-default">
-                        	<input name="options' . $i . '" value="0" type="radio">Não
-                        </label>
-                    </div>
-                </div>';
+				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_SimNao" class="col-md-3">';
+                echo '<div class="btn-group btn-toggle text-right" data-toggle="buttons">';
+                echo '<label class="btn btn-primary active">';
+                echo '<input name="options' . $contPergunta . '[]" value="1" type="radio" checked="checked">Sim';
+                echo '</label>';
+                echo '<label class="btn btn-default">';
+                echo '<input name="options' . $contPergunta . '[]" value="0" type="radio">Não';
+                echo '</label>';
+                echo '</div>';
+                echo '</div>';
 				echo '</br>';
 			}
 			
@@ -125,6 +125,8 @@
 				echo '</br>';
 			}
 			echo '</div>';
+			
+			$contPergunta++;
 		}
 	}
 	
@@ -454,6 +456,7 @@
 				   	objRespostas['TipoPergunta'] = tipoPergunta;
 					
 					if(tipoPergunta == "Ind_Pergunta_SimNao"){
+						console.log($("input:checked", $(this).children()));
 						objRespostas['Valor'] = $("input:checked", $(this)).val();
 					}
 					else{
