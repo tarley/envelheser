@@ -39,7 +39,6 @@ INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civi
 VALUES(2, 3, 4, 3, 1, 'Igor Rafael', 'M', '1980/10/5', 1, 'Av. Pedro 2, 171, Centro', 'MG46789456');
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('9145-8804',9,1);
 
---Ater=========================================================================================================================================================================
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
 VALUES(4, 4, 2, 1, 5, 'Rodrigo R.R.', 'M', '1977/03/15', 8, 'R. Caiçara, 222, Alto Caiçara', 'MG12358795'); 
 INSERT INTO TB_Telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3333-5555',10,1); 
