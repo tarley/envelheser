@@ -270,17 +270,17 @@ class Prontuario {
 			$query .= "Cod_Resposta_ComboBox,  ";
 			$query .= "Cod_Resposta_Radio) ";
 			$query .= "VALUES ";
-			$query .= "($numProntuario, ";
-			$query .= "$codPergunta,  ";
-			$query .= "$desRespAberta,  ";
-			$query .= "$indRespSimNao,  ";
-			$query .= "$desRespQual,  ";
-			$query .= "$desRespQuando,  ";
-			$query .= "$desRespOutros,  ";
-			$query .= "$desRespCite,  ";
-			$query .= "$desRespObs,  ";
-			$query .= "$CodRespCombo,  ";
-			$query .= "$CodRespRadio);";	
+			$query .= "('".$numProntuario."', ";
+			$query .= "'".$codPergunta."',  ";
+			$query .= "'".$desRespAberta."',  ";
+			$query .= "'".$indRespSimNao."',  ";
+			$query .= "'".$desRespQual."',  ";
+			$query .= "'".$desRespQuando."',  ";
+			$query .= "'".$desRespOutros."',  ";
+			$query .= "'".$desRespCite."',  ";
+			$query .= "'".$desRespObs."',  ";
+			$query .= "'".$CodRespCombo."',  ";
+			$query .= "'".$CodRespRadio."'); ";	
 			
 			if (!mysqli_query($this->cnn, $query))
 				throw new Exception();

@@ -202,7 +202,7 @@
                                 <div class="col-lg-12">
                                     <form role="form">
                                         <div class="form-group col-md-1">
-                                            <label>CÃ³digo</label>
+                                            <label>Código</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-4">
@@ -210,7 +210,7 @@
                                             <input id="nomCliente" class="form-control" disabled>
                                         </div>
 										<div class="form-group col-md-4">
-                                            <label>EndereÃ§o</label>
+                                            <label>Endereço</label>
                                             <input id="enderecoCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-3">
@@ -242,7 +242,7 @@
                                             <input id="corCliente" class="form-control" disabled>
                                         </div>		
                                         <div class="form-group col-md-2">
-                                            <label>OcupaÃ§Ã£o</label>
+                                            <label>Ocupação</label>
                                             <input id="ocupacaoCliente" class="form-control" disabled>
                                         </div>	
                                         <div class="form-group col-md-1">
@@ -265,7 +265,7 @@
 						                    
                     <div class="panel panel-default">
                         <div class="panel-heading"><i class="fa fa-list-alt"></i>
-                            Histï¿½rico Prontuï¿½rio
+                            Histórico Prontuário
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -276,7 +276,7 @@
                                     		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
                                     	</div>	
-                                    	</div>
+									<div>
                                     	<?php 
                                     		MontaGrupos(null);
                                     	?>
@@ -293,22 +293,44 @@
         </div>
         <!-- /#page-wrapper -->		
     </div>
+    	</div>
+    </div>
     <!-- /#wrapper -->
     
 	<?php include("includes/footer.php"); ?>	
 	<script>
 		$(document).ready(function() {
 
+			$("#novo").click(function() {
+				$("#save").removeAttr("disabled");
+				
+				$(':input','#divQuestionario')
+				  .val('')
+			});
+			
+			
 			$("#save").click(function() {
+				var contVazios = 0;
+				$(':text','#divQuestionario').each(function(){
+					if($(this).val() == "")
+						contVazios++;
+				});
+
+				if(contVazios > 0){
+					alert("Preencha todos os campos.");
+					return;
+				}	
+				
 				var obj = MontaJSON();
-				//[{"Cod_Pergunta":"1","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"1"}]},{"Cod_Pergunta":"2","Respostas":[{"TipoPergunta":"Ind_Pergunta_SimNao","Valor":"0"}]},{"Cod_Pergunta":"1000","Respostas":[{"TipoPergunta":"Ind_Pergunta_CheckBox","Valor":[2,3]}]}];
 				var codCliente = $("#codCliente").val();
 				console.log(JSON.stringify(obj));
-				return;
+				
 				$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
 					var retorno = jQuery.parseJSON(data);
-
-					if(retorno.Sucesso) {
+					
+					console.log(retorno.Mensagem)
+					if(retorno.Sucesso == true) {
+						
 						$('#alert .text').append(retorno.Mensagem);
 						$('#alert').addClass("alert-success");
 					} else {
@@ -320,8 +342,6 @@
 						$('#alert .text').html(""); 
 					}); 					
 				});
-				
-				MontaJSON();
 			});			
 			
 			$("#nomeCliente").autocomplete({
@@ -376,6 +396,7 @@
 			});
 
 			$(document.body).on("click", "button[id*='btnPront']", function() {
+				$("#save").attr("disabled", "disabled");
 				var arrayId = $(this).attr("id").split('-');
 				var id = arrayId[1];
 				$.ajax({
@@ -454,7 +475,6 @@
 				var arrayObj = {};
 				var arrayId = $(this).attr("id").split('-');
 			   	var id = arrayId[1];
-			   	//console.log(id);
 			   	arrayObj['Cod_Pergunta'] = id;
 			   	
 			   	var respostas=[];

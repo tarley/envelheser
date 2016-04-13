@@ -8,15 +8,13 @@
 	$prontuario = new Prontuario($mysql->link);
 	
 	if(isset($_GET['numProntuario'])) {
-			
 		$listaRespostas = $prontuario->getRespostas(utf8_decode($_GET['numProntuario']));
 		
 		echo json_encode($listaRespostas);	
 		
 	} elseif (isset($_POST['listaRespostas'])) {		
-		
 		$codCliente = $_POST['CodCliente'];
-		$listaRespostas = json_decode($_POST['listaRespostas'], true);
+		$listaRespostas = json_decode(stripslashes($_POST['listaRespostas']), true);
 		$retorno = $prontuario->insertRespostas($codCliente, $listaRespostas);
 		
 		echo json_encode($retorno);		
