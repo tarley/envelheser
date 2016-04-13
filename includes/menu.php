@@ -12,6 +12,7 @@
 	<!-- /.navbar-header -->
 	<div class="navbar-left">
 		<ul class="nav navbar-nav">
+			<!-- DESATIVADO
 			<li class="menu-principal-li">
 			
 				<a href="#" ><i class="fa fa-list-alt fa-fw"></i>Cadastro</a>
@@ -29,6 +30,7 @@
 			<li class="menu-principal-li">
 				<a href="#" >Teste</a>
 			</li>
+			-->
 		</ul>
 	</div>
 	

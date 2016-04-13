@@ -44,37 +44,44 @@
 			echo '</div>';
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Aberta']){
-				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Aberta" class="col-md-3">';
+				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Aberta" class="col-md-6 nopadding">';
 				echo '<input type="text" class="form-control">';
 				echo '</div>';
-			}
-			
-			if($listaPerguntas[$i]['Ind_Pergunta_SimNao']){
-				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_SimNao" class="col-md-3">';
-                echo '<div class="btn-group btn-toggle text-right" data-toggle="buttons">';
-                echo '<label class="btn btn-primary active">';
-                echo '<input name="options' . $contPergunta . '[]" value="1" type="radio" checked="checked">Sim';
-                echo '</label>';
-                echo '<label class="btn btn-default">';
-                echo '<input name="options' . $contPergunta . '[]" value="0" type="radio">Não';
-                echo '</label>';
-                echo '</div>';
-                echo '</div>';
 				echo '</br>';
 			}
 			
+			if($listaPerguntas[$i]['Ind_Pergunta_SimNao']){
+				echo '<div data-tipo="resposta" data-tipopergunta="Ind_Pergunta_SimNao" class="col-md-1 nopadding">';
+                echo '<div class="btn-group btn-toggle text-right" data-toggle="buttons">';
+                echo '<label class="btn btn-default btn-sm">';
+                echo '<input name="options' . $contPergunta . '[]" value="1" type="radio">Sim';
+                echo '</label>';
+                echo '<label class="btn btn-primary btn-sm active">';
+                echo '<input name="options' . $contPergunta . '[]" value="0" type="radio" checked="checked">Nao';
+                echo '</label>';
+                echo '</div>';
+                echo '</div>';
+				
+			}
+			
 			if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
-				echo '<div id="divQual" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Qual" class="col-md-3">';
-				echo '<label>Qual?</label>';
-				echo '<input id="Ind_Pergunta_Qual" type="text" class="form-control">';
+				echo '<div id="divQual" class="form-horizontal">';
+				echo '<label class="control-label col-md-1">Qual?</label>';
+				echo '<div class="col-md-3">
+						<input id="Ind_Pergunta_Qual" type="text" class="form-control">
+						</div>';
 				echo '</div>';
+				
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
-				echo '<div id="divQuando" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Quando" class="col-md-3">';
-				echo '<label>Quando?</label>';
-				echo '<input id="Ind_Pergunta_Qual" type="text" class="form-control">';
+				echo '<div id="divQuando" class="form-horizontal">';
+				echo '<label class="control-label col-md-1">Quando?</label>';
+				echo '<div class="col-md-3">
+						<input id="Ind_Pergunta_Quando" type="text" class="form-control">
+						</div>';
 				echo '</div>';
+				
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
@@ -82,6 +89,7 @@
 				echo '<label>Outros:</label>';
 				echo '<input id="Ind_Pergunta_Outros" type="text" class="form-control">';
 				echo '</div>';
+				echo '</br>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
@@ -93,7 +101,7 @@
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
 				echo '<div id="divObservacao" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Observacao" class="col-md-3">';
-				echo '<label>Observação:</label>';
+				echo '<label>Observaï¿½ï¿½o:</label>';
 				echo '<input id="Ind_Pergunta_Observacao" type="text" class="form-control">';
 				echo '</div>';
 			}
@@ -167,7 +175,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading"><i class="fa fa-search"></i>
                             Consulta
                         </div>
                         <div class="panel-body">
@@ -186,60 +194,60 @@
                     </div>
                     <!-- /.panel -->
                     <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading"><i class="fa fa-pencil-square-o"></i>
                             Dados Cadastrais
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <form role="form">
-                                        <div class="form-group col-md-2">
-                                            <label>Código</label>
+                                        <div class="form-group col-md-1">
+                                            <label>CÃ³digo</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-4">
                                             <label>Nome</label>
-                                            <input id="nomCliente" class="form-control">
+                                            <input id="nomCliente" class="form-control" disabled>
                                         </div>
-                                        <div class="form-group col-md-4">
+										<div class="form-group col-md-4">
+                                            <label>EndereÃ§o</label>
+                                            <input id="enderecoCliente" class="form-control" disabled>
+                                        </div>
+                                        <div class="form-group col-md-3">
                                             <label>Telefone</label>
-                                            <input id="telCliente" class="form-control">
-                                        </div>								
-										 <div class="form-group col-md-4">
-                                            <label>Cor</label>
-                                            <input id="corCliente" class="form-control">
-                                        </div>	
-                                         <div class="form-group col-md-4">
-                                            <label>Escolaridade</label>
-                                            <input id="escolaridadeCliente" class="form-control">
-                                        </div>	
-                                         <div class="form-group col-md-4">
-                                            <label>Ocupação</label>
-                                            <input id="ocupacaoCliente" class="form-control">
-                                        </div>	
-                                        <div class="form-group col-md-4">
-                                            <label>Estado Civil</label>
-                                            <input id="estadoCivilCliente" class="form-control">
-                                        </div>	
-                                         <div class="form-group col-md-4">
-                                            <label>Naturalidade</label>
-                                            <input id="naturalidadeCliente" class="form-control">
-                                        </div>	
-                                        <div class="form-group col-md-4">
-                                            <label>Sexo</label>
-                                            <input id="sexoCliente" class="form-control">
+                                            <input id="telCliente" class="form-control" disabled>
                                         </div>
-                                        <div class="form-group col-md-4">
+										<div class="form-group col-md-2">
                                             <label>Data de Nascimento</label>
-                                            <input id="dataNascimentoCliente" class="form-control">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label>Número de Filhos</label>
-                                            <input id="numeroFilhosCliente" class="form-control">
+                                            <input id="dataNascimentoCliente" class="form-control" disabled>
                                         </div>	
-                                        <div class="form-group col-md-4">
-                                            <label>Endereço</label>
-                                            <input id="enderecoCliente" class="form-control">
+                                        <div class="form-group col-md-2">
+                                            <label>Estado Civil</label>
+                                            <input id="estadoCivilCliente" class="form-control" disabled>
+                                        </div>	
+                                        <div class="form-group col-md-2">
+                                            <label>Naturalidade</label>
+                                            <input id="naturalidadeCliente" class="form-control" disabled>
+                                        </div>		
+                                        <div class="form-group col-md-2">
+                                            <label>Escolaridade</label>
+                                            <input id="escolaridadeCliente" class="form-control" disabled>
+                                        </div>	
+										<div class="form-group col-md-2">
+                                            <label>Sexo</label>
+                                            <input id="sexoCliente" class="form-control" disabled>
+                                        </div>					
+										<div class="form-group col-md-2">
+                                            <label>Cor</label>
+                                            <input id="corCliente" class="form-control" disabled>
+                                        </div>		
+                                        <div class="form-group col-md-2">
+                                            <label>OcupaÃ§Ã£o</label>
+                                            <input id="ocupacaoCliente" class="form-control" disabled>
+                                        </div>	
+                                        <div class="form-group col-md-1">
+                                            <label>Filhos</label>
+                                            <input id="numeroFilhosCliente" class="form-control" disabled>
                                         </div>
                                     </form>
                                 </div>
@@ -256,16 +264,18 @@
 					</div>
 						                    
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Histórico Prontuário
+                        <div class="panel-heading"><i class="fa fa-list-alt"></i>
+                            Histï¿½rico Prontuï¿½rio
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div id="divQuestionario">
-                                    	<div id='divHistoricoProntuarios'>
-                                    		<button type="button">Novo</button>
-                                    		<button id="save" type="button">Salvar</button>
+                                    	<div>
+                                    		<button type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
+                                    		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                                    		<div id='divHistoricoProntuarios' class="btn-group">
+                                    	</div>	
                                     	</div>
                                     	<?php 
                                     		MontaGrupos(null);
@@ -340,7 +350,7 @@
 									
 								if(cliente.prontuario.length != 0){
 									for(var i=0; i < cliente.prontuario.length; i++){
-										var divButton = ("<button type='button' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
+										var divButton = ("<button type='button' class='btn btn-default' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
 										$("#divHistoricoProntuarios").append(divButton);
 									}
 								}				
