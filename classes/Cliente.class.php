@@ -69,7 +69,9 @@ class Cliente {
 		$query = "SELECT Num_Prontuario, ";
 		$query .= "DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Data_Prontuario ";
 		$query .= "FROM TB_Prontuario ";
-		$query .= "WHERE Cod_Cliente = $codCliente";
+		$query .= "WHERE Cod_Cliente = $codCliente ";
+		$query .= "ORDER BY Dta_Data_Prontuario DESC ";
+		$query .= "LIMIT 5";
 		
 		$query = mysqli_query($this->cnn, $query);
 		

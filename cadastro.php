@@ -65,7 +65,7 @@
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
-				echo '<div id="divQual" class="form-horizontal">';
+				echo '<div id="divQual" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Qual" class="form-horizontal">';
 				echo '<label class="control-label col-md-1">Qual?</label>';
 				echo '<div class="col-md-3">
 						<input id="Ind_Pergunta_Qual" type="text" class="form-control">
@@ -75,7 +75,7 @@
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
-				echo '<div id="divQuando" class="form-horizontal">';
+				echo '<div id="divQuando" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Quando" class="form-horizontal">';
 				echo '<label class="control-label col-md-1">Quando?</label>';
 				echo '<div class="col-md-3">
 						<input id="Ind_Pergunta_Quando" type="text" class="form-control">
@@ -310,16 +310,16 @@
 			
 			
 			$("#save").click(function() {
-				var contVazios = 0;
-				$(':text','#divQuestionario').each(function(){
-					if($(this).val() == "")
-						contVazios++;
-				});
+// 				var contVazios = 0;
+// 				$(':text','#divQuestionario').each(function(){
+// 					if($(this).val() == "")
+// 						contVazios++;
+// 				});
 
-				if(contVazios > 0){
-					alert("Preencha todos os campos.");
-					return;
-				}	
+// 				if(contVazios > 0){
+// 					alert("Preencha todos os campos.");
+// 					return;
+// 				}	
 				
 				var obj = MontaJSON();
 				var codCliente = $("#codCliente").val();
@@ -330,9 +330,10 @@
 					
 					console.log(retorno.Mensagem)
 					if(retorno.Sucesso == true) {
-						
 						$('#alert .text').append(retorno.Mensagem);
 						$('#alert').addClass("alert-success");
+						
+						
 					} else {
 						$('#alert .text').append(retorno.Mensagem);
 						$('#alert').addClass("alert-danger");
