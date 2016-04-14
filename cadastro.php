@@ -263,7 +263,7 @@
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 					</div>
 						                    
-                    <div class="panel panel-default">
+                    <div id="divHistPront" class="panel panel-default" style="display: none;">
                         <div class="panel-heading"><i class="fa fa-list-alt"></i>
                             Histórico Prontuário
                         </div>
@@ -394,6 +394,8 @@
 								$("#dataNascimentoCliente").val(cliente.dataNascimento);	
 								$("#numeroFilhosCliente").val(cliente.numeroFilhos);
 								$("#enderecoCliente").val(cliente.endereco);
+
+								$("#divHistPront").show();
 									
 								if(cliente.prontuario.length != 0){
 									for(var i=0; i < cliente.prontuario.length; i++){
