@@ -325,6 +325,7 @@
 				console.log(JSON.stringify(obj));
 				
 				$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
+					console.log(data);
 					var retorno = jQuery.parseJSON(data);
 					
 					console.log(retorno.Mensagem)
@@ -547,6 +548,7 @@
 				   	objRespostas['TipoPergunta'] = tipoPergunta;
 					
 					if(tipoPergunta == "Ind_Pergunta_SimNao"){
+						console.log($("input:checked", $(this)).val());
 						objRespostas['Valor'] = $("input:checked", $(this)).val();
 					}
 					else{
