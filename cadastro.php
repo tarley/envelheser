@@ -304,7 +304,7 @@
 			$("#novo").click(function() {
 				$("#save").removeAttr("disabled");
 				
-				$(':input','#divQuestionario')
+				$(':text','#divQuestionario')
 				  .val('')
 			});
 			
@@ -326,6 +326,7 @@
 				console.log(JSON.stringify(obj));
 				
 				$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
+					console.log(data);
 					var retorno = jQuery.parseJSON(data);
 					
 					console.log(retorno.Mensagem)
@@ -337,26 +338,21 @@
 							url: "ajax/cliente.ajax.php?codigo=" + retorno.CodCliente,
 							success: function (data) {
 								var cliente = jQuery.parseJSON(data);
-								$("#codCliente").val(cliente.codigo);
-								$("#telCliente").val(cliente.telefone);	
-								
-								$("#nomCliente").val(cliente.nome);
-								$("#corCliente").val(cliente.cor);
-								$("#escolaridadeCliente").val(cliente.escolaridade);	
-								$("#ocupacaoCliente").val(cliente.ocupacao);		
-								$("#estadoCivilCliente").val(cliente.estadoCivil);	
-								$("#naturalidadeCliente").val(cliente.naturalidade);	
-								$("#sexoCliente").val(cliente.sexo);	
-								$("#dataNascimentoCliente").val(cliente.dataNascimento);	
-								$("#numeroFilhosCliente").val(cliente.numeroFilhos);
-								$("#enderecoCliente").val(cliente.endereco);
 
 								$("#divHistoricoProntuarios").empty();
 								
 								if(cliente.prontuario.length != 0){
 									for(var i=0; i < cliente.prontuario.length; i++){
-										var divButton = ("<button type='button' class='btn btn-default' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
-										$("#divHistoricoProntuarios").append(divButton);
+										var btn = $("<button type='button'>");
+										btn.prop("id", "btnPront-" + cliente.prontuario[i].NumProntuario);
+										btn.html(cliente.prontuario[i].DtaProntuario);
+
+										if(cliente.prontuario[i].NumProntuario == retorno.NumProntuario)
+											btn.addClass("btn btn-primary");
+										else
+											btn.addClass("btn btn-default");
+										
+										$("#divHistoricoProntuarios").append(btn);
 									}
 								}				
 							}
@@ -515,6 +511,7 @@
 				   	objRespostas['TipoPergunta'] = tipoPergunta;
 					
 					if(tipoPergunta == "Ind_Pergunta_SimNao"){
+						console.log($("input:checked", $(this)).val());
 						objRespostas['Valor'] = $("input:checked", $(this)).val();
 					}
 					else{
