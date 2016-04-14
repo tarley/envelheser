@@ -303,11 +303,10 @@
 
 			$("#novo").click(function() {
 				$("#save").removeAttr("disabled");
+				$("button[id*='btnPront']").attr("class", "btn btn-default");
 				
-				$(':input','#divQuestionario')
-				  .val('')
-			});
-			
+				LimpaCampos();
+			});			
 			
 			$("#save").click(function() {
 // 				var contVazios = 0;
@@ -372,6 +371,9 @@
 				source: "ajax/cliente.ajax.php",
 				minLength: 2,
 				select: function(event, ui) {					
+
+					LimpaProntuario();
+					LimpaCampos();
 					
 					if(ui.item) {
 						$.ajax({
@@ -493,12 +495,40 @@
 							}
 						}
 					}
-				});
-
-
-				
+				});				
 			});
 		});
+
+		function LimpaProntuario() {
+			$("#divHistoricoProntuarios").html("");
+		}
+
+		function LimpaCampos() {
+
+			$("div[data-tipo='resposta'] input[type='text']").val("");
+			
+			$("div[data-tipopergunta='Ind_Pergunta_SimNao']").each(function(){					
+
+				var optSim = $("input[type='radio'][value=1]", $(this));
+				var lblSim = optSim.parent();
+				
+				var optNao = $("input[type='radio'][value=0]", $(this));
+				var lblNao = optNao.parent();
+				
+				optSim.removeAttr("checked");
+				optSim.prop("checked", false);
+				
+				lblSim.removeClass("btn-primary");
+				lblSim.removeClass("active");
+				lblSim.addClass("btn-default");
+				
+				optNao.attr("checked", "checked");
+				optNao.prop("checked", true);
+				lblNao.removeClass("btn-default");
+				lblNao.addClass("btn-primary");					
+				lblNao.addClass("active");					
+			});
+		}		
 
 		function MontaJSON(){
 			var obj = [];
