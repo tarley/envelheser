@@ -207,6 +207,7 @@ class Prontuario {
 			$retorno['Sucesso'] = true;
 			$retorno['Mensagem'] = "Dados inseridos com sucesso";
 			$retorno['NumProntuario'] = $numProntuario;
+			$retorno['CodCliente'] = $codCliente;
 			
 		} catch (Exception $e) {
 			$msg = "Falha ao inserir respostas. Mensagem de erro: " . mysqli_error($this->cnn);

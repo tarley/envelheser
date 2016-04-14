@@ -272,7 +272,7 @@
                                 <div class="col-lg-12">
                                     <div id="divQuestionario">
                                     	<div>
-                                    		<button type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
+                                    		<button id="novo" type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
                                     		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
                                     	</div>	
@@ -332,7 +332,35 @@
 					if(retorno.Sucesso == true) {
 						$('#alert .text').append(retorno.Mensagem);
 						$('#alert').addClass("alert-success");
-						
+
+						$.ajax({
+							url: "ajax/cliente.ajax.php?codigo=" + retorno.CodCliente,
+							success: function (data) {
+								var cliente = jQuery.parseJSON(data);
+								$("#codCliente").val(cliente.codigo);
+								$("#telCliente").val(cliente.telefone);	
+								
+								$("#nomCliente").val(cliente.nome);
+								$("#corCliente").val(cliente.cor);
+								$("#escolaridadeCliente").val(cliente.escolaridade);	
+								$("#ocupacaoCliente").val(cliente.ocupacao);		
+								$("#estadoCivilCliente").val(cliente.estadoCivil);	
+								$("#naturalidadeCliente").val(cliente.naturalidade);	
+								$("#sexoCliente").val(cliente.sexo);	
+								$("#dataNascimentoCliente").val(cliente.dataNascimento);	
+								$("#numeroFilhosCliente").val(cliente.numeroFilhos);
+								$("#enderecoCliente").val(cliente.endereco);
+
+								$("#divHistoricoProntuarios").empty();
+								
+								if(cliente.prontuario.length != 0){
+									for(var i=0; i < cliente.prontuario.length; i++){
+										var divButton = ("<button type='button' class='btn btn-default' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
+										$("#divHistoricoProntuarios").append(divButton);
+									}
+								}				
+							}
+						});
 						
 					} else {
 						$('#alert .text').append(retorno.Mensagem);
