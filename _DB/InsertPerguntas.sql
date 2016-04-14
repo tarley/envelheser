@@ -92,14 +92,14 @@ CALL SPInsereGrupo ('Exame Físico', null, 'Triagem', 5, 0);
 
 CALL SPInsereGrupo ('Coong', null, 'Triagem', 6, 0);
 
-CALL SPInsereGrupo ('Exame Físico Objetivo de coong_2', null, 'Triagem', 7, 0);
+CALL SPInsereGrupo ('Exame Físico Objetivo De Coong_2', null, 'Triagem', 7, 0);
 
-			CALL SPInsereGrupo ('Sistema Respiratório_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 1, 0);
-			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 2, 0);
-			CALL SPInsereGrupo ('Sistema Gastrintestinal_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 3, 0);
-			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 4, 0);
-			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 5, 0);
-			CALL SPInsereGrupo ('Sistema Genitourinário_2', 'Exame Físico Objetivo de coong 2', 'Triagem', 6, 0);
+			CALL SPInsereGrupo ('Sistema Respiratório_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 1, 0);
+			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 2, 0);
+			CALL SPInsereGrupo ('Sistema Gastrintestinal_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 3, 0);
+			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 4, 0);
+			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 5, 0);
+			CALL SPInsereGrupo ('Sistema Genitourinário_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 6, 0);
 
 
 /*==============================================================*/ 
@@ -269,11 +269,11 @@ CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Angina', 4);
 CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Prótese Valvar', 5);
 CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Sopro', 6);
 CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Arritmias', 7);
-CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Cirurgias Cardiacas', 8);
+CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Cirurgias Cardíacas', 8);
 CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Marca-Passo', 9);
 CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Doença de Chagas', 10);
 CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Prolapso de Válvula Mitral', 11);
-CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Febre Reumática com Cardiopatia', 12);
+CALL SPInserePergunta ('Sistema Cardiovascular', 1, 'Febre Reumática Com Cardiopatia', 12);
 
 /*===================================*/ 
 /*          Respiratório             */ 
@@ -285,7 +285,7 @@ CALL SPInserePergunta ('Sistema Respiratório', 1, 'Bronquite', 3);
 CALL SPInserePergunta ('Sistema Respiratório', 1, 'Fibrose Cística', 4);
 CALL SPInserePergunta ('Sistema Respiratório', 1, 'Tuberculose', 5);
 CALL SPInserePergunta ('Sistema Respiratório', 1, 'Enfisema', 6);
-CALL SPInserePergunta ('Sistema Respiratório', 1, 'Dificuldade para respirar', 7);
+CALL SPInserePergunta ('Sistema Respiratório', 1, 'Dificuldade Para Respirar', 7);
 CALL SPInserePergunta ('Sistema Respiratório', 1, 'Sinusite', 8);
 CALL SPInserePergunta ('Sistema Respiratório', 1, 'Tosse Crônica', 9);
 CALL SPInserePergunta ('Sistema Respiratório', 1, 'DPOC', 10);
@@ -296,7 +296,7 @@ CALL SPInserePergunta ('Sistema Respiratório', 1, 'DPOC', 10);
 
 CALL SPInserePergunta ('Sistema Digestório', 1, 'Azia', 1);
 CALL SPInserePergunta ('Sistema Digestório', 1, 'Gastrite', 2);
-CALL SPInserePergunta ('Sistema Digestório', 1, 'Úlsera', 3);
+CALL SPInserePergunta ('Sistema Digestório', 1, 'Úlcera', 3);
 CALL SPInserePergunta ('Sistema Digestório', 1, 'Hepatite', 4);
 CALL SPInserePergunta ('Sistema Digestório', 1, 'Cirrose', 5);
 CALL SPInserePergunta ('Sistema Digestório', 1, 'Icterícia', 6);
@@ -315,14 +315,14 @@ CALL SPInserePergunta ('Sistema Genitourinário', 1, 'Insuficiência Renal', 1);
 CALL SPInserePergunta ('Sistema Genitourinário', 1, 'Cálculos', 2);
 CALL SPInserePergunta ('Sistema Genitourinário', 1, 'Doenças Sexualmente Transmissíveis', 3);
 CALL SPInserePergunta ('Sistema Genitourinário', 1, 'Incontinência', 4);
-CALL SPInserePergunta ('Sistema Genitourinário', 1, 'Infecção de Urina', 5);
+CALL SPInserePergunta ('Sistema Genitourinário', 1, 'Infecção De Urina', 5);
 
 /*===================================*/ 
 /*          Endócrino                */ 
 /*===================================*/ 
 
 CALL SPInserePergunta ('Sistema Endócrino', 1, 'Diabetes', 1);
-CALL SPInserePergunta ('Sistema Endócrino', 1, 'Distúrbios de Tireoide', 2);
+CALL SPInserePergunta ('Sistema Endócrino', 1, 'Distúrbios De Tireoide', 2);
 CALL SPInserePergunta ('Sistema Endócrino', 1, 'Distúrbio Hipofisário', 3);
 CALL SPInserePergunta ('Sistema Endócrino', 1, 'Hipoglicemia', 4);
 
@@ -353,7 +353,7 @@ CALL SPInserePergunta ('Sistema Nervoso Central', 1, 'Emocional', 17);
 /*          Sensitivo                */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Sensitivo', 1, 'Cagueira', 1);
+CALL SPInserePergunta ('Sistema Sensitivo', 1, 'Cegueira', 1);
 CALL SPInserePergunta ('Sistema Sensitivo', 1, 'Glaucoma', 2);
 CALL SPInserePergunta ('Sistema Sensitivo', 1, 'Conjutivite', 3);
 CALL SPInserePergunta ('Sistema Sensitivo', 1, 'Úlcera', 4);
@@ -370,8 +370,8 @@ CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Anemia', 1);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Tranfusões', 2);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Sangramento Nasal', 3);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Equimoses', 4);
-CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Alterações de coagulação', 5);
-CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Suscentibilidade à infecções', 6);
+CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Alterações De Coagulação', 5);
+CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Suscentibilidade a Infecções', 6);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'linfadenopatia', 7);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Hermofilia', 8);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Leucemia', 9);
@@ -381,21 +381,21 @@ CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Leucemia', 9);
 /*===================================*/ 
 
 CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Fraturas', 1);
-CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Cirurgias ortopédicas', 2);
-CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Uso de Prótese ou Órtese', 3);
+CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Cirurgias Ortopédicas', 2);
+CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Uso De Prótese Ou Órtese', 3);
 
 /*===================================*/ 
 /*          Histórico de queda       */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Histórico de Queda', 1, 'Quedas nos últimos 12 meses', 1);
+CALL SPInserePergunta ('Histórico de Queda', 1, 'Quedas Nos Últimos 12 Meses', 1);
 
 /*===================================*/ 
 /*              Anamnese             */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Anamnese', 3, 'Qual a Queixa princial?', 1);
-CALL SPInserePergunta ('Anamnese', 3, 'História Médica', 2);
+CALL SPInserePergunta ('Anamnese', 3, 'Qual a Queixa Princial?', 1);
+CALL SPInserePergunta ('Anamnese', 3, 'História Medicamentosa', 2);
 CALL SPInserePergunta ('Anamnese', 3, 'História da Moléstia Atual', 3);
 CALL SPInserePergunta ('Anamnese', 8, 'Alergias?', 4);
 CALL SPInserePergunta ('Anamnese', 7, 'Tem ou teve doença infecto-contagiosa?', 5);
