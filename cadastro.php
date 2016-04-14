@@ -503,6 +503,37 @@
 			});
 		}		
 
+		function LimpaProntuario() {
+			$("#divHistoricoProntuarios").html("");
+		}
+
+		function LimpaCampos() {
+
+			$("div[data-tipo='resposta'] input[type='text']").val("");
+			
+			$("div[data-tipopergunta='Ind_Pergunta_SimNao']").each(function(){					
+
+				var optSim = $("input[type='radio'][value=1]", $(this));
+				var lblSim = optSim.parent();
+				
+				var optNao = $("input[type='radio'][value=0]", $(this));
+				var lblNao = optNao.parent();
+				
+				optSim.removeAttr("checked");
+				optSim.prop("checked", false);
+				
+				lblSim.removeClass("btn-primary");
+				lblSim.removeClass("active");
+				lblSim.addClass("btn-default");
+				
+				optNao.attr("checked", "checked");
+				optNao.prop("checked", true);
+				lblNao.removeClass("btn-default");
+				lblNao.addClass("btn-primary");					
+				lblNao.addClass("active");					
+			});
+		}		
+
 		function MontaJSON(){
 			var obj = [];
 			$("div[id*='perg-']").each(function(){
