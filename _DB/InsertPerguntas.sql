@@ -74,7 +74,7 @@ CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
 						CALL SPInsereGrupo ('Sistema Nervoso Central', 'História Médica Pregressa', 'Triagem', 6, 1);
 						CALL SPInsereGrupo ('Sistema Sensitivo', 'História Médica Pregressa', 'Triagem', 7, 1);
 						CALL SPInsereGrupo ('Sistema Hematopoético', 'História Médica Pregressa', 'Triagem', 8, 1);
-						CALL SPInsereGrupo ('Sistema Ostemuscular', 'História Médica Pregressa', 'Triagem', 9, 1);
+						CALL SPInsereGrupo ('Sistema Osteomuscular', 'História Médica Pregressa', 'Triagem', 9, 1);
 
 			CALL SPInsereGrupo ('Histórico de Queda', 'Anamnese', 'Triagem', 2, 1);
 
@@ -82,11 +82,11 @@ CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
 
 			CALL SPInsereGrupo ('Hábitos e Vícios', 'Anamnese', 'Triagem', 4, 0);
 
-CALL SPInsereGrupo ('Necessidades Pisicoespirituais', null, 'Triagem', 2, 0);
+CALL SPInsereGrupo ('Necessidades Psicoespirituais', null, 'Triagem', 2, 0);
 
 CALL SPInsereGrupo ('Necessidades Psicosociais', null, 'Triagem', 3, 0);
 
-CALL SPInsereGrupo ('Necessidades Pisicobiológicas', null, 'Triagem', 4, 0);
+CALL SPInsereGrupo ('Necessidades Psicobiológicas', null, 'Triagem', 4, 0);
 
 CALL SPInsereGrupo ('Exame Físico', null, 'Triagem', 5, 0);
 
@@ -96,10 +96,10 @@ CALL SPInsereGrupo ('Exame Físico Objetivo De Coong_2', null, 'Triagem', 7, 0);
 
 			CALL SPInsereGrupo ('Sistema Respiratório_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 1, 0);
 			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 2, 0);
-			CALL SPInsereGrupo ('Sistema Gastrintestinal_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 3, 0);
+			CALL SPInsereGrupo ('Sistema Gastrointestinal_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 3, 0);
 			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 4, 0);
 			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 5, 0);
-			CALL SPInsereGrupo ('Sistema Genitourinário_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 6, 0);
+			CALL SPInsereGrupo ('Sistema Geniturinário_2', 'Exame Físico Objetivo De Coong 2', 'Triagem', 6, 0);
 
 
 /*==============================================================*/ 
@@ -371,18 +371,18 @@ CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Tranfusões', 2);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Sangramento Nasal', 3);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Equimoses', 4);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Alterações De Coagulação', 5);
-CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Suscentibilidade a Infecções', 6);
-CALL SPInserePergunta ('Sistema Hematopoético', 1, 'linfadenopatia', 7);
-CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Hermofilia', 8);
+CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Suscetibilidade à Infecções', 6);
+CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Linfadenopatia', 7);
+CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Hemofilia', 8);
 CALL SPInserePergunta ('Sistema Hematopoético', 1, 'Leucemia', 9);
 
 /*===================================*/ 
-/*          Ostemuscular             */ 
+/*          Osteomuscular             */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Fraturas', 1);
-CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Cirurgias Ortopédicas', 2);
-CALL SPInserePergunta ('Sistema Ostemuscular', 1, 'Uso De Prótese Ou Órtese', 3);
+CALL SPInserePergunta ('Sistema Osteomuscular', 1, 'Fraturas', 1);
+CALL SPInserePergunta ('Sistema Osteomuscular', 1, 'Cirurgias Ortopédicas', 2);
+CALL SPInserePergunta ('Sistema Osteomuscular', 1, 'Uso De Prótese Ou Órtese', 3);
 
 /*===================================*/ 
 /*          Histórico de queda       */ 
@@ -394,14 +394,14 @@ CALL SPInserePergunta ('Histórico de Queda', 1, 'Quedas Nos Últimos 12 Meses',
 /*              Anamnese             */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Anamnese', 3, 'Qual a Queixa Princial?', 1);
+CALL SPInserePergunta ('Anamnese', 3, 'Qual a Queixa Principal?', 1);
 CALL SPInserePergunta ('Anamnese', 3, 'História Medicamentosa', 2);
 CALL SPInserePergunta ('Anamnese', 3, 'História da Moléstia Atual', 3);
 CALL SPInserePergunta ('Anamnese', 8, 'Alergias?', 4);
 CALL SPInserePergunta ('Anamnese', 7, 'Tem ou teve doença infecto-contagiosa?', 5);
 CALL SPInserePergunta ('Anamnese', 6, 'Já esteve internado ou se submeteu a alguma cirurgia, tratamento com radioterapia e quimioterapia?', 6);
 CALL SPInserePergunta ('Anamnese', 3, 'Última consulta - Época e motivo', 7);
-CALL SPInserePergunta ('Anamnese', 7, 'Medicamentos em uso preescrito atual ou nos últimos 6 meses?', 8);
+CALL SPInserePergunta ('Anamnese', 7, 'Medicamentos em uso prescrito atual ou nos últimos 6 meses?', 8);
 
 /*==============================================================*/
 /* Inclusão na tabela Escolaridade                              */
