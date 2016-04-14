@@ -2,8 +2,8 @@
 /*                  INSERT DOS QUESTIONÁRIOS                    */ 
 /*==============================================================*/ 
 
-INSERT INTO TB_Questionario (Des_Questionario) VALUES ('Triagem');
-INSERT INTO TB_Questionario (Des_Questionario) VALUES ('Fisioterapia');
+INSERT INTO tb_questionario (Des_Questionario) VALUES ('Triagem');
+INSERT INTO tb_questionario (Des_Questionario) VALUES ('Fisioterapia');
 
 /*==============================================================*/ 
 /*           CRIAÇÃO DA PROCEDURE DE REGISTRAR GRUPOS           */ 
@@ -28,13 +28,13 @@ DELIMITER $$
 	  DECLARE V_Ind_Status          boolean;
           
           SET V_Nome_Grupo 		:= P_Nome_Grupo;
-          SET V_Cod_Grupo_Superior 	:= (SELECT Cod_Grupo FROM TB_Grupo WHERE Nom_Grupo = P_Nome_Grupo_Superior);
-          SET V_Cod_Questionario 	:= (SELECT Cod_Questionario FROM TB_Questionario WHERE Des_Questionario = P_Nome_Questionario);
+          SET V_Cod_Grupo_Superior 	:= (SELECT Cod_Grupo FROM tb_grupo WHERE Nom_Grupo = P_Nome_Grupo_Superior);
+          SET V_Cod_Questionario 	:= (SELECT Cod_Questionario FROM tb_questionario WHERE Des_Questionario = P_Nome_Questionario);
           SET V_Numero_Ordem_Grupo 	:= P_Numero_Ordem_Grupo;
           SET V_Ind_Status              := P_Ind_Status;
           
           
-	  	 INSERT INTO TB_Grupo
+	  	 INSERT INTO tb_grupo
 
 		(	Nom_Grupo,
 			Cod_Grupo_Superior,
@@ -146,7 +146,7 @@ DELIMITER $$
             SET  V_Pergunta_CheckBox   := P_Pergunta_CheckBox;
           
           
-	  	 INSERT INTO TB_Tipo_Pergunta
+	  	 INSERT INTO tb_tipo_pergunta
 
 		(	Ind_Pergunta_Aberta,
    			Ind_Pergunta_SimNao,
@@ -227,13 +227,13 @@ DELIMITER $$
           DECLARE V_Des_Pergunta         VARCHAR(150);
           DECLARE V_Num_Ordem_Pergunta   INT;
           
-          SET V_Cod_Grupo 	     	 := (SELECT Cod_Grupo FROM TB_Grupo WHERE Nom_Grupo = P_Nome_Grupo );
+          SET V_Cod_Grupo 	     	 := (SELECT Cod_Grupo FROM tb_grupo WHERE Nom_Grupo = P_Nome_Grupo );
           SET V_Cod_Tipo_Pergunta    := P_Cod_Tipo_Pergunta;
           SET V_Des_Pergunta         := P_Des_Pergunta;
           SET V_Num_Ordem_Pergunta   := P_Num_Ordem_Pergunta;
           
           
-	  	 INSERT INTO TB_Pergunta
+	  	 INSERT INTO tb_pergunta
 
 		(	Cod_Grupo,
    			Cod_Tipo_Pergunta,
@@ -407,79 +407,79 @@ CALL SPInserePergunta ('Anamnese', 7, 'Medicamentos em uso prescrito atual ou no
 /* Inclusão na tabela Escolaridade                              */
 /*==============================================================*/
 
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('2º Ano Primário');
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('6ª Série');
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('3ª Gráu');
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('3ª Primario');
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('Fundamental Completo');
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('Fundamental Incompleto');
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('Superior Completo');
-INSERT INTO	TB_Escolaridade (Nom_Escolaridade) VALUES ('Superior Incompleto');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('2º Ano Primário');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('6ª Série');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3ª Gráu');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3ª Primario');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Fundamental Completo');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Fundamental Incompleto');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Superior Completo');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Superior Incompleto');
 
 /*==============================================================*/
 /* Inclusão na tabela Naturalidade                              */
 /*==============================================================*/
 
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Itamanandiba');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('São José Jacuri');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Itamuri');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Bom Despacho');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Belo Horizonte');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Divinópolis');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Conselheiro Lafaiete');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Cláudio');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Sabará');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Santa Lúzia');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Carmopolis de Minas');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Alto Rio Doce');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Abaeté');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Brumadinho');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Caeté');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Viçosa');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Virginópolis');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Uberaba');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Uberlândia');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Timóteo');
-INSERT INTO	TB_Naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamanandiba');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('São José Jacuri');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamuri');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Bom Despacho');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Belo Horizonte');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Divinópolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Conselheiro Lafaiete');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Cláudio');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Sabará');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Santa Lúzia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Carmopolis de Minas');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Alto Rio Doce');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Abaeté');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Brumadinho');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Caeté');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Viçosa');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Virginópolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberaba');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberlândia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Timóteo');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
 
 
 /*==============================================================*/
 /* Inclusão na tabela Ocupação                                  */
 /*==============================================================*/
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Doméstica');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Salgadeiro');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Aposentado');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Análista de Sistemas');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Autônomo');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Desempregado');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Diarista');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Advogado');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Táxista');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Médico');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Estudante');
-INSERT INTO	TB_Ocupacao (Nom_Ocupacao) VALUES ('Programador');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Doméstica');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Salgadeiro');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Aposentado');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Análista de Sistemas');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Autônomo');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Desempregado');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Diarista');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Advogado');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Táxista');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Médico');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Estudante');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Programador');
 
 /*==============================================================*/
 /* Inclusão na tabela Estado Civil                              */
 /*==============================================================*/
-INSERT INTO	TB_Estado_Civil (Nom_Estado_Civil) VALUES ('Casado');
-INSERT INTO	TB_Estado_Civil (Nom_Estado_Civil) VALUES ('Solteiro');
-INSERT INTO	TB_Estado_Civil (Nom_Estado_Civil) VALUES ('Viúvo');
-INSERT INTO	TB_Estado_Civil (Nom_Estado_Civil) VALUES ('Divorciado');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Casado');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Solteiro');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Viúvo');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Divorciado');
 
 /*==============================================================*/
 /* Inclusão na tabela Tipo telefone                             */
 /*==============================================================*/
-INSERT INTO	TB_Tipo_Telefone (Des_Tipo_Telefone) VALUES ('Residencial');
-INSERT INTO	TB_Tipo_Telefone (Des_Tipo_Telefone) VALUES ('Comercial');
-INSERT INTO	TB_Tipo_Telefone (Des_Tipo_Telefone) VALUES ('Celular');
+INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Residencial');
+INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Comercial');
+INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Celular');
 
 /*==============================================================*/
 /* Inclusão na tabela Cor                                       */
 /*==============================================================*/
-INSERT INTO	TB_Cor (Nom_Cor) VALUES ('Negro');
-INSERT INTO	TB_Cor (Nom_Cor) VALUES ('Moreno');
-INSERT INTO	TB_Cor (Nom_Cor) VALUES ('Branco');
-INSERT INTO	TB_Cor (Nom_Cor) VALUES ('Pardo');
-INSERT INTO	TB_Cor (Nom_Cor) VALUES ('Indefinido');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Negro');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Moreno');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Branco');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Pardo');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Indefinido');
