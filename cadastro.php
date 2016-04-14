@@ -307,6 +307,9 @@
 				
 				LimpaCampos();
 			});			
+				$(':text','#divQuestionario')
+				  .val('')
+			});
 			
 			$("#save").click(function() {
 // 				var contVazios = 0;
