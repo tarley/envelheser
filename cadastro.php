@@ -422,6 +422,10 @@
 
 			$(document.body).on("click", "button[id*='btnPront']", function() {
 				$("#save").attr("disabled", "disabled");
+
+				$("button[id*='btnPront']").attr("class", "btn btn-default");
+				$(this).attr("class", "btn btn-primary");
+				
 				var arrayId = $(this).attr("id").split('-');
 				var id = arrayId[1];
 				$.ajax({
@@ -491,6 +495,9 @@
 						}
 					}
 				});
+
+
+				
 			});
 		});
 
