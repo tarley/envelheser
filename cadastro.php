@@ -65,7 +65,7 @@
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Qual']){
-				echo '<div id="divQual" class="form-horizontal">';
+				echo '<div id="divQual" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Qual" class="form-horizontal">';
 				echo '<label class="control-label col-md-1">Qual?</label>';
 				echo '<div class="col-md-3">
 						<input id="Ind_Pergunta_Qual" type="text" class="form-control">
@@ -75,7 +75,7 @@
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Quando']){
-				echo '<div id="divQuando" class="form-horizontal">';
+				echo '<div id="divQuando" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Quando" class="form-horizontal">';
 				echo '<label class="control-label col-md-1">Quando?</label>';
 				echo '<div class="col-md-3">
 						<input id="Ind_Pergunta_Quando" type="text" class="form-control">
@@ -272,7 +272,7 @@
                                 <div class="col-lg-12">
                                     <div id="divQuestionario">
                                     	<div>
-                                    		<button type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
+                                    		<button id="novo" type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
                                     		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
                                     	</div>	
@@ -309,29 +309,54 @@
 			});			
 			
 			$("#save").click(function() {
-				var contVazios = 0;
-				$(':text','#divQuestionario').each(function(){
-					if($(this).val() == "")
-						contVazios++;
-				});
+// 				var contVazios = 0;
+// 				$(':text','#divQuestionario').each(function(){
+// 					if($(this).val() == "")
+// 						contVazios++;
+// 				});
 
-				if(contVazios > 0){
-					alert("Preencha todos os campos.");
-					return;
-				}	
+// 				if(contVazios > 0){
+// 					alert("Preencha todos os campos.");
+// 					return;
+// 				}	
 				
 				var obj = MontaJSON();
 				var codCliente = $("#codCliente").val();
 				console.log(JSON.stringify(obj));
 				
 				$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
+					console.log(data);
 					var retorno = jQuery.parseJSON(data);
 					
 					console.log(retorno.Mensagem)
 					if(retorno.Sucesso == true) {
-						
 						$('#alert .text').append(retorno.Mensagem);
 						$('#alert').addClass("alert-success");
+
+						$.ajax({
+							url: "ajax/cliente.ajax.php?codigo=" + retorno.CodCliente,
+							success: function (data) {
+								var cliente = jQuery.parseJSON(data);
+
+								$("#divHistoricoProntuarios").empty();
+								
+								if(cliente.prontuario.length != 0){
+									for(var i=0; i < cliente.prontuario.length; i++){
+										var btn = $("<button type='button'>");
+										btn.prop("id", "btnPront-" + cliente.prontuario[i].NumProntuario);
+										btn.html(cliente.prontuario[i].DtaProntuario);
+
+										if(cliente.prontuario[i].NumProntuario == retorno.NumProntuario)
+											btn.addClass("btn btn-primary");
+										else
+											btn.addClass("btn btn-default");
+										
+										$("#divHistoricoProntuarios").append(btn);
+									}
+								}				
+							}
+						});
+						
 					} else {
 						$('#alert .text').append(retorno.Mensagem);
 						$('#alert').addClass("alert-danger");
@@ -401,6 +426,10 @@
 
 			$(document.body).on("click", "button[id*='btnPront']", function() {
 				$("#save").attr("disabled", "disabled");
+
+				$("button[id*='btnPront']").attr("class", "btn btn-default");
+				$(this).attr("class", "btn btn-primary");
+				
 				var arrayId = $(this).attr("id").split('-');
 				var id = arrayId[1];
 				$.ajax({
@@ -479,38 +508,6 @@
 
 		function LimpaCampos() {
 
-
-			$("div[data-tipo='resposta'] input[type='text']").val("");
-			
-			$("div[data-tipopergunta='Ind_Pergunta_SimNao']").each(function(){					
-
-				var optSim = $("input[type='radio'][value=1]", $(this));
-				var lblSim = optSim.parent();
-				
-				var optNao = $("input[type='radio'][value=0]", $(this));
-				var lblNao = optNao.parent();
-				
-				optSim.removeAttr("checked");
-				optSim.prop("checked", false);
-				
-				lblSim.removeClass("btn-primary");
-				lblSim.removeClass("active");
-				lblSim.addClass("btn-default");
-				
-				optNao.attr("checked", "checked");
-				optNao.prop("checked", true);
-				lblNao.removeClass("btn-default");
-				lblNao.addClass("btn-primary");					
-				lblNao.addClass("active");					
-			});
-		}		
-
-		function LimpaProntuario() {
-			$("#divHistoricoProntuarios").html("");
-		}
-
-		function LimpaCampos() {
-
 			$("div[data-tipo='resposta'] input[type='text']").val("");
 			
 			$("div[data-tipopergunta='Ind_Pergunta_SimNao']").each(function(){					
@@ -553,6 +550,7 @@
 				   	objRespostas['TipoPergunta'] = tipoPergunta;
 					
 					if(tipoPergunta == "Ind_Pergunta_SimNao"){
+						console.log($("input:checked", $(this)).val());
 						objRespostas['Valor'] = $("input:checked", $(this)).val();
 					}
 					else{
