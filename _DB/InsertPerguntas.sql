@@ -204,6 +204,9 @@ DELIMITER ;
 	
 	/*SimNão - Quando - 8*/
 	CALL SPInsereTipoPergunta(0,1,0,1,0,0,0,0,0,0);
+	
+	/*SimNão - Observação - 9*/
+	CALL SPInsereTipoPergunta(0,1,0,0,0,0,1,0,0,0);
 
 
 /*==============================================================*/ 
