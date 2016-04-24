@@ -101,7 +101,7 @@
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
 				echo '<div id="divObservacao" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Observacao" class="col-md-3">';
-				echo '<label>Observaï¿½ï¿½o:</label>';
+				echo '<label>ObservaÃ§Ã£o:</label>';
 				echo '<input id="Ind_Pergunta_Observacao" type="text" class="form-control">';
 				echo '</div>';
 			}
@@ -202,7 +202,7 @@
                                 <div class="col-lg-12">
                                     <form role="form">
                                         <div class="form-group col-md-1">
-                                            <label>Código</label>
+                                            <label>CÃ³digo</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-4">
@@ -210,7 +210,7 @@
                                             <input id="nomCliente" class="form-control" disabled>
                                         </div>
 										<div class="form-group col-md-4">
-                                            <label>Endereço</label>
+                                            <label>EndereÃ§o</label>
                                             <input id="enderecoCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-3">
@@ -242,7 +242,7 @@
                                             <input id="corCliente" class="form-control" disabled>
                                         </div>		
                                         <div class="form-group col-md-2">
-                                            <label>Ocupação</label>
+                                            <label>OcupaÃ§Ã£o</label>
                                             <input id="ocupacaoCliente" class="form-control" disabled>
                                         </div>	
                                         <div class="form-group col-md-1">
@@ -265,28 +265,41 @@
 						                    
                     <div id="divHistPront" class="panel panel-default" style="display: none;">
                         <div class="panel-heading"><i class="fa fa-list-alt"></i>
-                            Histórico Prontuário
+                            HistÃ³rico ProntuÃ¡rio
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div id="divQuestionario">
+                                    <div id="divQuestionario">										                                    	
                                     	<div>
                                     		<button id="novo" type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
                                     		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
-                                    	</div>	
-									<div>
+                                    	</div>
+							                <div id="divMontaProntruario" class="panel panel-default" style="display: none;">
+							                <div class="panel-body">
+							                            <div class="row">
+							                                <div class="col-lg-12">	
+																<div>
+							                                    	<?php 
+							                                    		MontaGrupos(null);
+							                                    	?>
+							                                    </div>
+							                                </div>
+							                             </div>
+							                         </div>                                    
+							                </div>	
+<!-- 									<div> -->
                                     	<?php 
-                                    		MontaGrupos(null);
-                                    	?>
-                                    </div>
+//                                     		MontaGrupos(null);
+//                                     	?>
+<!--                                     </div> -->
                                 </div>
                              </div>
                          </div>
-                     </div>
-                                    
+                     </div>                                    
                 </div>
+                
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
@@ -304,6 +317,8 @@
 			$("#novo").click(function() {
 				$("#save").removeAttr("disabled");
 				$("button[id*='btnPront']").attr("class", "btn btn-default");
+				$("#divHistPront").show();
+				$("#divMontaProntruario").show();
 				
 				LimpaCampos();
 			});			
@@ -352,6 +367,7 @@
 											btn.addClass("btn btn-default");
 										
 										$("#divHistoricoProntuarios").append(btn);
+										
 									}
 								}				
 							}
@@ -401,6 +417,7 @@
 									for(var i=0; i < cliente.prontuario.length; i++){
 										var divButton = ("<button type='button' class='btn btn-default' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
 										$("#divHistoricoProntuarios").append(divButton);
+										
 									}
 								}				
 							}
@@ -422,6 +439,7 @@
 			   
 				$(this).addClass('btn-primary').addClass('active').removeClass('btn-default');
 				$('input', this).attr('checked', true);        
+				
 			});
 
 			$(document.body).on("click", "button[id*='btnPront']", function() {
@@ -429,6 +447,7 @@
 
 				$("button[id*='btnPront']").attr("class", "btn btn-default");
 				$(this).attr("class", "btn btn-primary");
+				$("#divMontaProntruario").show();
 				
 				var arrayId = $(this).attr("id").split('-');
 				var id = arrayId[1];
