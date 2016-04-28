@@ -1,6 +1,7 @@
+
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     11/04/2016 21:23:47                          */
+/* Created on:     26/04/2016 20:38:30                          */
 /*==============================================================*/
 
 
@@ -10,7 +11,11 @@
 create table tb_avaliador
 (
    Cod_Avaliador        int not null auto_increment PRIMARY KEY,
-   Nom_Avaliador        varchar(100) not null
+   Nom_Avaliador        varchar(100) not null,
+   Cod_Especialidade    int,
+   Des_Email            varchar(100),
+   Des_Login            varchar(100),
+   Des_Senha            varchar(15)
 );
 
 /*==============================================================*/
@@ -19,10 +24,10 @@ create table tb_avaliador
 create table tb_cliente
 (
    Cod_Cliente          int not null auto_increment PRIMARY KEY,
-   Nom_Cliente          varchar(100) not null,
+   Nom_Cliente          varchar(200) not null,
    Dta_Nascimento       datetime not null,
-   Num_Rg               varchar(15),
-   Des_Endereco         varchar(150) not null,
+   Num_Rg               varchar(20),
+   Des_Endereco         varchar(200) not null,
    Ind_Sexo             char(1) not null,
    Num_Filhos           tinyint not null,
    Cod_Cor              tinyint,
@@ -51,6 +56,15 @@ create table tb_escolaridade
 );
 
 /*==============================================================*/
+/* Table: tb_especialidade                                      */
+/*==============================================================*/
+create table tb_especialidade
+(
+   Cod_Especialidade    int not null auto_increment PRIMARY KEY,
+   Nom_Especialidade    char(100) not null
+);
+
+/*==============================================================*/
 /* Table: tb_estado_civil                                       */
 /*==============================================================*/
 create table tb_estado_civil
@@ -70,6 +84,30 @@ create table tb_grupo
    Cod_Questionario     int,
    Num_Ordem_Grupo      int,
    Ind_Status           bool
+);
+
+/*==============================================================*/
+/* Table: tb_historia_medicamentosa                             */
+/*==============================================================*/
+create table tb_historia_medicamentosa
+(
+   Cod_Historia_Medicamentosa int not null auto_increment PRIMARY KEY,
+   Num_Prontuario       int,
+   Cod_Medicamento      int,
+   Ind_Resposta_Medicamento bool
+);
+
+/*==============================================================*/
+/* Table: tb_imagem                                             */
+/*==============================================================*/
+create table tb_imagem
+(
+   Cod_Imagem           int not null auto_increment PRIMARY KEY,
+   Num_Prontuario       int,
+   Nom_Imagem           varchar(100),
+   Des_Imagem           varchar(150),
+   Dta_Upload           datetime,
+   Des_Diretorio        varchar(255)
 );
 
 /*==============================================================*/
@@ -100,6 +138,16 @@ create table tb_lista_radio
    Cod_Item_Radio       smallint not null auto_increment PRIMARY KEY,
    Des_Item_Radio       varchar(50) not null,
    Cod_Pergunta         smallint
+);
+
+/*==============================================================*/
+/* Table: tb_medicamento                                        */
+/*==============================================================*/
+create table tb_medicamento
+(
+   Cod_Medicamento      int not null auto_increment PRIMARY KEY,
+   Cod_Grupo            tinyint,
+   Nom_Medicamento      varchar(100) not null
 );
 
 /*==============================================================*/
@@ -162,13 +210,13 @@ create table tb_resposta
    Cod_Resposta_Prontuario smallint not null auto_increment PRIMARY KEY,
    Num_Prontuario       int not null,
    Cod_Pergunta         smallint not null,
-   Des_Resposta_Aberta  varchar(200),
+   Des_Resposta_Aberta  varchar(255),
    Ind_Resposta_SimNao  bool,
-   Des_Resposta_Qual    varchar(100),
-   Des_Resposta_Quando  varchar(100),
-   Des_Resposta_Outros  varchar(100),
-   Des_Resposta_Cite    varchar(100),
-   Des_Resposta_Observacao varchar(100),
+   Des_Resposta_Qual    varchar(255),
+   Des_Resposta_Quando  varchar(255),
+   Des_Resposta_Outros  varchar(255),
+   Des_Resposta_Cite    varchar(255),
+   Des_Resposta_Observacao varchar(255),
    Cod_Resposta_ComboBox smallint,
    Cod_Resposta_Radio   smallint
 );
@@ -211,7 +259,8 @@ create table tb_tipo_pergunta
    Ind_Pergunta_Observacao bool,
    ind_Pergunta_ComboBox bool,
    Ind_Pergunta_Radio   bool,
-   Ind_Pergunta_CheckBox bool
+   Ind_Pergunta_CheckBox bool,
+   Des_Tipo_Perguntas   varchar(100)
 );
 
 /*==============================================================*/
@@ -223,8 +272,11 @@ create table tb_tipo_telefone
    Des_Tipo_Telefone    varchar(20)
 );
 
+alter table tb_avaliador add constraint FK_FK_Especialidade_Avaliador foreign key (Cod_Especialidade)
+      references tb_especialidade (Cod_Especialidade);
+
 alter table tb_cliente add constraint FK_Cor_Cliente foreign key (Cod_Cor)
-      references tb_Cor (Cod_Cor);
+      references tb_cor (Cod_Cor);
 
 alter table tb_cliente add constraint FK_Escolaridade_Cliente foreign key (Cod_Escolaridade)
       references tb_escolaridade (Cod_Escolaridade);
@@ -244,6 +296,15 @@ alter table tb_grupo add constraint FK_Questionario_Grupo foreign key (Cod_Quest
 alter table tb_grupo add constraint FK_Sub_Grupo_De_Algum_Grupo foreign key (Cod_Grupo_Superior)
       references tb_grupo (Cod_Grupo);
 
+alter table tb_historia_medicamentosa add constraint FK_FK_Medicamento_Historia_Medicamentosa foreign key (Cod_Medicamento)
+      references tb_medicamento (Cod_Medicamento);
+
+alter table tb_historia_medicamentosa add constraint FK_FK_Prontuario_Historia foreign key (Num_Prontuario)
+      references tb_prontuario (Num_Prontuario);
+
+alter table tb_imagem add constraint FK_FK_Prontuario_Imagem foreign key (Num_Prontuario)
+      references tb_prontuario (Num_Prontuario);
+
 alter table tb_lista_check_box add constraint FK_Pergunta_Check_Box foreign key (Cod_Pergunta)
       references tb_pergunta (Cod_Pergunta);
 
@@ -252,6 +313,9 @@ alter table tb_lista_combo_box add constraint FK_Pergunta_ComboBox foreign key (
 
 alter table tb_lista_radio add constraint FK_Pergunta_Radio foreign key (Cod_Pergunta)
       references tb_pergunta (Cod_Pergunta);
+
+alter table tb_medicamento add constraint FK_FK_Grupo_Medicamento foreign key (Cod_Grupo)
+      references tb_grupo (Cod_Grupo);
 
 alter table tb_pergunta add constraint FK_Grupo_Pergunta foreign key (Cod_Grupo)
       references tb_grupo (Cod_Grupo);
