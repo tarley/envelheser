@@ -7,31 +7,31 @@ class MySQL {
 	var $log;
 
 	/*
-	* Variável de conexão
+	* VariÃ¡vel de conexÃ£o
 	*/
 	var $link;
 
 	/**
-	* Carrega configurações e conecta ao BD
+	* Carrega configuraÃ§Ãµes e conecta ao BD
 	*/
 	function MySQL() {
 		$this->log = new Logger();
 		$this->link = mysqli_connect(HOSTNAME, DB_USER, DB_PASSWORD); //Conecta ao BD
-
-		if(!$this->link) //Verifica a conexão
+		
+		if(!$this->link) //Verifica a conexï¿½o
 		{
-			$msg = "Não foi possível conectar ao Banco de Dados: " .mysqli_error($this->link);
+			$msg = "NÃ£o foi possÃ­vel conectar ao Banco de Dados: " .mysqli_error($this->link);
 			$this->log->logError($this, $msg);
 		}
 		elseif(!mysqli_select_db($this->link, DB_NAME)) //Seleciona o banco
 		{
-			$msg = "Não foi possível selecionar o Banco de Dados: " .mysqli_error($this->link);
+			$msg = "NÃ£o foi possÃ­vel selecionar o Banco de Dados: " .mysqli_error($this->link);
 			$this->log->logError($this, $msg);
 		}
 	}
 
 	/**
-	* Fecha conexão com BD
+	* Fecha conexÃ£o com BD
 	*/
 	function disconect() {
 		return mysqli_close($this->link);

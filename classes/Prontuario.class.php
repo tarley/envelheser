@@ -2,17 +2,17 @@
 
 class Prontuario {
 	/*
-	 * Instância de Logger
+	 * Instï¿½ncia de Logger
 	 */
 	var $log;
 	
 	/*
-	 * Instância da conexão com o Banco
+	 * Instï¿½ncia da conexï¿½o com o Banco
 	 */
 	var $cnn;
 	
 	/**
-	 * Cria instancia de Logger para gerenciar exceções.
+	 * Cria instancia de Logger para gerenciar exceï¿½ï¿½es.
 	 */
 	function Prontuario($cnn) {
 		$this->log = new Logger();
@@ -45,6 +45,7 @@ class Prontuario {
 		return $listaGrupos;
 	}
 	
+	//retornar count com a quantidade de categorias relacionadas Ã  pergunta
 	function getPerguntas($codGrupo){
 		$query = "SELECT Cod_Pergunta, Des_Pergunta, ";
 		$query .= "p.Cod_Tipo_Pergunta, Ind_Pergunta_Aberta, Ind_Pergunta_SimNao, ";
@@ -129,6 +130,26 @@ class Prontuario {
 		}
 		
 		return $listaRespostas;
+	}
+	
+	function getCategoriasCombo($codPergunta){
+		$query = "SELECT Cod_Medicamento, Nom_Medicamento ";
+		$query .= "FROM tb_medicamento m ";
+		$query .= "WHERE Cod_Grupo = $codGrupo ";
+	
+		$query = mysqli_query($this->cnn, $query);
+	
+		$listaMedicamentos = array();
+	
+		while($list  = mysqli_fetch_assoc($query)) {
+			$listaMedicamentos[] = $list;
+		}
+	
+		return $listaMedicamentos;
+	}
+	
+	function getOpcoesMultiCombo($codCategoiaCombo){
+	
 	}
 	
 	function getRespostas($numProntuario) {
