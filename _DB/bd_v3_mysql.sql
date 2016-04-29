@@ -1,7 +1,6 @@
-
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     26/04/2016 20:38:30                          */
+/* Created on:     28/04/2016 22:21:01                          */
 /*==============================================================*/
 
 
@@ -16,6 +15,15 @@ create table tb_avaliador
    Des_Email            varchar(100),
    Des_Login            varchar(100),
    Des_Senha            varchar(15)
+);
+
+/*==============================================================*/
+/* Table: tb_categoria_combo                                    */
+/*==============================================================*/
+create table tb_categoria_combo
+(
+   Cod_Categoria_Combo  int not null auto_increment PRIMARY KEY,
+   Des_Categoria        char(100) not null
 );
 
 /*==============================================================*/
@@ -87,17 +95,6 @@ create table tb_grupo
 );
 
 /*==============================================================*/
-/* Table: tb_historia_medicamentosa                             */
-/*==============================================================*/
-create table tb_historia_medicamentosa
-(
-   Cod_Historia_Medicamentosa int not null auto_increment PRIMARY KEY,
-   Num_Prontuario       int,
-   Cod_Medicamento      int,
-   Ind_Resposta_Medicamento bool
-);
-
-/*==============================================================*/
 /* Table: tb_imagem                                             */
 /*==============================================================*/
 create table tb_imagem
@@ -116,8 +113,8 @@ create table tb_imagem
 create table tb_lista_check_box
 (
    Cod_Item_Check       smallint not null auto_increment PRIMARY KEY,
-   Cod_Pergunta         smallint,
-   Des_Item_Check       varchar(50) not null
+   Des_Item_Check       varchar(50) not null,
+   Cod_Pergunta         smallint
 );
 
 /*==============================================================*/
@@ -131,6 +128,17 @@ create table tb_lista_combo_box
 );
 
 /*==============================================================*/
+/* Table: tb_lista_multi_combo                                  */
+/*==============================================================*/
+create table tb_lista_multi_combo
+(
+   Cod_Item_Multi_Combo int not null auto_increment PRIMARY KEY,
+   Des_Item_Multi_Combo char(100) not null,
+   Cod_Pergunta         smallint,
+   Cod_Categoria_Combo  int
+);
+
+/*==============================================================*/
 /* Table: tb_lista_radio                                        */
 /*==============================================================*/
 create table tb_lista_radio
@@ -138,16 +146,6 @@ create table tb_lista_radio
    Cod_Item_Radio       smallint not null auto_increment PRIMARY KEY,
    Des_Item_Radio       varchar(50) not null,
    Cod_Pergunta         smallint
-);
-
-/*==============================================================*/
-/* Table: tb_medicamento                                        */
-/*==============================================================*/
-create table tb_medicamento
-(
-   Cod_Medicamento      int not null auto_increment PRIMARY KEY,
-   Cod_Grupo            tinyint,
-   Nom_Medicamento      varchar(100) not null
 );
 
 /*==============================================================*/
@@ -234,6 +232,17 @@ create table tb_resposta_checkbox
 );
 
 /*==============================================================*/
+/* Table: tb_resposta_multi_combo                               */
+/*==============================================================*/
+create table tb_resposta_multi_combo
+(
+   Cod_Resposta_Multi_Combo smallint not null auto_increment PRIMARY KEY,
+   Num_Prontuario       int,
+   Cod_Pergunta         smallint,
+   Cod_Item_Multi_Combo int
+);
+
+/*==============================================================*/
 /* Table: tb_telefone                                           */
 /*==============================================================*/
 create table tb_telefone
@@ -260,6 +269,7 @@ create table tb_tipo_pergunta
    ind_Pergunta_ComboBox bool,
    Ind_Pergunta_Radio   bool,
    Ind_Pergunta_CheckBox bool,
+   Ind_Pergunta_Multi_Combo bool,
    Des_Tipo_Perguntas   varchar(100)
 );
 
@@ -296,12 +306,6 @@ alter table tb_grupo add constraint FK_Questionario_Grupo foreign key (Cod_Quest
 alter table tb_grupo add constraint FK_Sub_Grupo_De_Algum_Grupo foreign key (Cod_Grupo_Superior)
       references tb_grupo (Cod_Grupo);
 
-alter table tb_historia_medicamentosa add constraint FK_FK_Medicamento_Historia_Medicamentosa foreign key (Cod_Medicamento)
-      references tb_medicamento (Cod_Medicamento);
-
-alter table tb_historia_medicamentosa add constraint FK_FK_Prontuario_Historia foreign key (Num_Prontuario)
-      references tb_prontuario (Num_Prontuario);
-
 alter table tb_imagem add constraint FK_FK_Prontuario_Imagem foreign key (Num_Prontuario)
       references tb_prontuario (Num_Prontuario);
 
@@ -311,11 +315,14 @@ alter table tb_lista_check_box add constraint FK_Pergunta_Check_Box foreign key 
 alter table tb_lista_combo_box add constraint FK_Pergunta_ComboBox foreign key (Cod_Pergunta)
       references tb_pergunta (Cod_Pergunta);
 
-alter table tb_lista_radio add constraint FK_Pergunta_Radio foreign key (Cod_Pergunta)
+alter table tb_lista_multi_combo add constraint FK_FK_Categoria_Multi_Combo foreign key (Cod_Categoria_Combo)
+      references tb_categoria_combo (Cod_Categoria_Combo);
+
+alter table tb_lista_multi_combo add constraint FK_FK_Lista_Multi_Combo foreign key (Cod_Pergunta)
       references tb_pergunta (Cod_Pergunta);
 
-alter table tb_medicamento add constraint FK_FK_Grupo_Medicamento foreign key (Cod_Grupo)
-      references tb_grupo (Cod_Grupo);
+alter table tb_lista_radio add constraint FK_Pergunta_Radio foreign key (Cod_Pergunta)
+      references tb_pergunta (Cod_Pergunta);
 
 alter table tb_pergunta add constraint FK_Grupo_Pergunta foreign key (Cod_Grupo)
       references tb_grupo (Cod_Grupo);
@@ -335,18 +342,28 @@ alter table tb_resposta add constraint FK_Pergunta_Resposta foreign key (Cod_Per
 alter table tb_resposta add constraint FK_Prontuario_Resposta foreign key (Num_Prontuario)
       references tb_prontuario (Num_Prontuario);
 
-alter table tb_resposta_checkbox add constraint FK_CheckBox_Lista foreign key (Cod_Item_Check)
-      references tb_lista_check_box (Cod_Item_Check);
-
 alter table tb_resposta_checkbox add constraint FK_Pergunta_Resposta_CheckBox foreign key (Cod_Pergunta)
       references tb_pergunta (Cod_Pergunta);
 
 alter table tb_resposta_checkbox add constraint FK_Prontuario_Resposta_CheckBox foreign key (Num_Prontuario)
       references tb_prontuario (Num_Prontuario);
 
+alter table tb_resposta_checkbox add constraint FK_CheckBox_Lista foreign key (Cod_Item_Check)
+      references tb_lista_check_box (Cod_Item_Check);
+
+alter table tb_resposta_multi_combo add constraint FK_FK_Pergunta_Resposta_Multi_Combo foreign key (Cod_Pergunta)
+      references tb_pergunta (Cod_Pergunta);
+
+alter table tb_resposta_multi_combo add constraint FK_FK_Prontuario_Resposta_Multi_Combo foreign key (Num_Prontuario)
+      references tb_prontuario (Num_Prontuario);
+
+alter table tb_resposta_multi_combo add constraint FK_FK_Resposta_Multi_Combo_Lista foreign key (Cod_Item_Multi_Combo)
+      references tb_lista_multi_combo (Cod_Item_Multi_Combo);
+
 alter table tb_telefone add constraint FK_Telefone_Cliente foreign key (Cod_Cliente)
       references tb_cliente (Cod_Cliente);
 
 alter table tb_telefone add constraint FK_Tipo_Telefone foreign key (Cod_Tipo_Telefone)
       references tb_tipo_telefone (Cod_Tipo_Telefone);
+
 
