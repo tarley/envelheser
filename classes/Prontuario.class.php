@@ -51,7 +51,8 @@ class Prontuario {
 		$query .= "p.Cod_Tipo_Pergunta, Ind_Pergunta_Aberta, Ind_Pergunta_SimNao, ";
 		$query .= "Ind_Pergunta_Qual, Ind_Pergunta_Quando, Ind_Pergunta_Outros, ";
 		$query .= "Ind_Pergunta_Cite, Ind_Pergunta_Observacao, ind_Pergunta_ComboBox, ";
-		$query .= "Ind_Pergunta_Radio, Ind_Pergunta_CheckBox ";
+		$query .= "Ind_Pergunta_Radio, Ind_Pergunta_CheckBox, ";
+		$query .= "(SELECT COUNT(Cod_Item_Multi_Combo) FROM tb_lista_multi_combo WHERE Cod_Pergunta = p.Cod_Pergunta) ";
 		$query .= "FROM tb_pergunta p ";
 		$query .= "INNER JOIN tb_tipo_pergunta t ON (p.Cod_Tipo_Pergunta = t.Cod_Tipo_Pergunta) ";
 		$query .= "WHERE Cod_Grupo = $codGrupo ";
@@ -132,24 +133,36 @@ class Prontuario {
 		return $listaRespostas;
 	}
 	
-	function getCategoriasCombo($codPergunta){
-		$query = "SELECT Cod_Medicamento, Nom_Medicamento ";
-		$query .= "FROM tb_medicamento m ";
-		$query .= "WHERE Cod_Grupo = $codGrupo ";
+	function getOpcoesMultiCombo($codPergunta){
+		$query = "SELECT Cod_Item_Multi_Combo, Des_Item_Multi_Combo ";
+		$query .= "FROM tb_lista_multi_combo ";
+		$query .= "WHERE Cod_Pergunta = $codPergunta";
+		
+		$query = mysqli_query($this->cnn, $query);
+		
+		$listaOpcoes = array();
+		
+		while($list  = mysqli_fetch_assoc($query)) {
+			$listaOpcoes[] = $list;
+		}
+		
+		return $listaOpcoes;
+	}
+	
+	function getOpcoesMultiComboByCategoria($codCategoiaCombo){
+		$query = "SELECT Cod_Item_Multi_Combo, Des_Item_Multi_Combo ";
+		$query .= "FROM tb_lista_multi_combo ";
+		$query .= "WHERE Cod_Categoria_Combo = $codCategoiaCombo";
 	
 		$query = mysqli_query($this->cnn, $query);
 	
-		$listaMedicamentos = array();
+		$listaOpcoes = array();
 	
 		while($list  = mysqli_fetch_assoc($query)) {
-			$listaMedicamentos[] = $list;
+			$listaOpcoes[] = $list;
 		}
 	
-		return $listaMedicamentos;
-	}
-	
-	function getOpcoesMultiCombo($codCategoiaCombo){
-	
+		return $listaOpcoes;
 	}
 	
 	function getRespostas($numProntuario) {
