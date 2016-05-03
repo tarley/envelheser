@@ -47,7 +47,7 @@
 			$jsonPront .= ($jsonPront != "") ? "," : "";
 			$jsonPront .= "{";
 			$jsonPront .= "\"NumProntuario\": " .$pront[$i]['Num_Prontuario'] . ", ";
-			$jsonPront .= "\"DtaProntuario\": \"" .$pront[$i]['Dta_Data_Prontuario'] . "\" ";
+			$jsonPront .= "\"DtaProntuario\": \"" .$pront[$i]['Dta_Prontuario'] . "\" ";
 			$jsonPront .= "}";
 		}
 		

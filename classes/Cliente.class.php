@@ -2,17 +2,17 @@
 
 class Cliente {
 	/*
-	* Instância de Logger
+	* Instï¿½ncia de Logger
 	*/
 	var $log;
 	
 	/*
-	 * Instância da conexão com o Banco
+	 * Instï¿½ncia da conexï¿½o com o Banco
 	 */
 	var $cnn;	
 	
 	/**
-	* Cria instancia de Logger para gerenciar exceções.
+	* Cria instancia de Logger para gerenciar exceï¿½ï¿½es.
 	*/
 	function Cliente($cnn) {
 		$this->log = new Logger();
@@ -20,7 +20,7 @@ class Cliente {
 	}
 	
 	/**
-	* Retorna a lista de clientes baseada no nome passado pelo parâmetro
+	* Retorna a lista de clientes baseada no nome passado pelo parï¿½metro
 	*/	
 	function getLista($input) {
 		$query = "SELECT Cod_Cliente, Nom_Cliente, Num_Rg ";
@@ -38,7 +38,7 @@ class Cliente {
 	}
 	
 	/**
-	* Retorna os dados do cliente de acordo com o codigo passado pelo parâmetro
+	* Retorna os dados do cliente de acordo com o codigo passado pelo parï¿½metro
 	*/	
 	function getDados($codCliente) {		
 
@@ -67,7 +67,7 @@ class Cliente {
 	 */
 	function getProntuarios($codCliente) {
 		$query = "SELECT Num_Prontuario, ";
-		$query .= "DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Data_Prontuario ";
+		$query .= "DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Prontuario ";
 		$query .= "FROM TB_Prontuario ";
 		$query .= "WHERE Cod_Cliente = $codCliente ";
 		$query .= "ORDER BY Dta_Data_Prontuario DESC ";
