@@ -266,7 +266,7 @@ create table tb_tipo_pergunta
    Ind_Pergunta_Outros  bool,
    Ind_Pergunta_Cite    bool,
    Ind_Pergunta_Observacao bool,
-   ind_Pergunta_ComboBox bool,
+   Ind_Pergunta_ComboBox bool,
    Ind_Pergunta_Radio   bool,
    Ind_Pergunta_CheckBox bool,
    Ind_Pergunta_Multi_Combo bool,
