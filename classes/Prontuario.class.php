@@ -50,9 +50,9 @@ class Prontuario {
 		$query = "SELECT Cod_Pergunta, Des_Pergunta, ";
 		$query .= "p.Cod_Tipo_Pergunta, Ind_Pergunta_Aberta, Ind_Pergunta_SimNao, ";
 		$query .= "Ind_Pergunta_Qual, Ind_Pergunta_Quando, Ind_Pergunta_Outros, ";
-		$query .= "Ind_Pergunta_Cite, Ind_Pergunta_Observacao, ind_Pergunta_ComboBox, ";
-		$query .= "Ind_Pergunta_Radio, Ind_Pergunta_CheckBox, ";
-		$query .= "(SELECT COUNT(Cod_Item_Multi_Combo) FROM tb_lista_multi_combo WHERE Cod_Pergunta = p.Cod_Pergunta) ";
+		$query .= "Ind_Pergunta_Cite, Ind_Pergunta_Observacao, Ind_Pergunta_ComboBox, ";
+		$query .= "Ind_Pergunta_Radio, Ind_Pergunta_CheckBox, Ind_Pergunta_Multi_Combo, ";
+		$query .= "(SELECT COUNT(Cod_Item_Multi_Combo) FROM tb_lista_multi_combo WHERE Cod_Categoria_Combo IS NOT NULL AND Cod_Pergunta = p.Cod_Pergunta) ";
 		$query .= "FROM tb_pergunta p ";
 		$query .= "INNER JOIN tb_tipo_pergunta t ON (p.Cod_Tipo_Pergunta = t.Cod_Tipo_Pergunta) ";
 		$query .= "WHERE Cod_Grupo = $codGrupo ";
@@ -86,7 +86,7 @@ class Prontuario {
 	}
 	
 	function getOpcoesCombo($codPergunta) {
-		$query = "SELECT Cod_Item_Combo, Des_Item_Combo, ";
+		$query = "SELECT Cod_Item_Combo, Des_Item_Combo ";
 		$query .= "FROM tb_lista_combo_box l ";
 		$query .= "WHERE Cod_Pergunta = $codPergunta";
 		
@@ -149,10 +149,10 @@ class Prontuario {
 		return $listaOpcoes;
 	}
 	
-	function getOpcoesMultiComboByCategoria($codCategoiaCombo){
+	function getOpcoesMultiComboByCategoria($codCategoriaCombo){
 		$query = "SELECT Cod_Item_Multi_Combo, Des_Item_Multi_Combo ";
 		$query .= "FROM tb_lista_multi_combo ";
-		$query .= "WHERE Cod_Categoria_Combo = $codCategoiaCombo";
+		$query .= "WHERE Cod_Categoria_Combo = $codCategoriaCombo";
 	
 		$query = mysqli_query($this->cnn, $query);
 	
@@ -163,6 +163,22 @@ class Prontuario {
 		}
 	
 		return $listaOpcoes;
+	}
+	
+	function getRespostasMultiCombo($numProntuario, $codPergunta) {
+		$query = "SELECT Cod_Item_Multi_Combo ";
+		$query .= "FROM tb_resposta_multi_combo r ";
+		$query .= "WHERE Cod_Pergunta = $codPergunta AND Num_Prontuario = $numProntuario";
+	
+		$query = mysqli_query($this->cnn, $query);
+	
+		$listaRespostas = array();
+	
+		while($list  = mysqli_fetch_assoc($query)) {
+			$listaRespostas[] = $list;
+		}
+	
+		return $listaRespostas;
 	}
 	
 	function getRespostas($numProntuario) {
@@ -187,9 +203,10 @@ class Prontuario {
 		$query .= "t.Ind_Pergunta_Outros, ";
 		$query .= "t.Ind_Pergunta_Cite, ";
 		$query .= "t.Ind_Pergunta_Observacao, ";
-		$query .= "t.ind_Pergunta_ComboBox, ";
+		$query .= "t.Ind_Pergunta_ComboBox, ";
 		$query .= "t.Ind_Pergunta_Radio, ";
-		$query .= "t.Ind_Pergunta_CheckBox ";
+		$query .= "t.Ind_Pergunta_CheckBox, ";
+		$query .= "t.Ind_Pergunta_Multi_Combo ";
 		$query .= "FROM tb_resposta AS r ";
 		$query .= "INNER JOIN tb_pergunta AS p ON (r.Cod_Pergunta = p.Cod_Pergunta) ";
 		$query .= "INNER JOIN tb_tipo_pergunta AS t ON p.Cod_Tipo_Pergunta = t.Cod_Tipo_Pergunta ";
@@ -203,6 +220,9 @@ class Prontuario {
 			
 			if($list['Ind_Pergunta_CheckBox']) {
 				$list['Lista_Resposta_CheckBox'] = $this->getRespostasCheck($list['Num_Prontuario'], $list['Cod_Pergunta']);
+			}
+			else if($list['Ind_Pergunta_Multi_Combo']) {
+				$list['Lista_Resposta_Multi_Combo'] = $this->getRespostasMultiCombo($list['Num_Prontuario'], $list['Cod_Pergunta']);
 			}
 			
 			$listaRespostas[] = $list;
@@ -283,12 +303,20 @@ class Prontuario {
 					$desRespCite = $r['Valor'];
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_Observacao") {
 					$desRespObs = $r['Valor'];
-				} else if($r['TipoPergunta'] == "ind_Pergunta_ComboBox") {
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_ComboBox") {
 					$CodRespCombo = $r['Valor'];
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_Radio") {
 					$CodRespRadio = $r['Valor'];
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_CheckBox") {	
-					
+					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
+						$r = $r['Valor'][$i];
+						insertRespostaCheckBox($numProntuario, $codPergunta, $r);
+					}
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_Multi_Combo") {	
+					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
+						$r = $r['Valor'][$i];
+						insertRespostaMultiCombo($numProntuario, $codPergunta, $r);
+					}
 				}	
 			}
 			
@@ -323,6 +351,46 @@ class Prontuario {
 		} catch (Exception $e) {			
 			throw $e;
 		}		
+	}
+	
+	function insertRespostaCheckBox($numProntuario, $codPergunta, $Cod_Item_Check){
+		try {
+			$query = "INSERT INTO tb_resposta_checkbox ";
+			$query .= "(Num_Prontuario,  ";
+			$query .= "Cod_Pergunta,  ";
+			$query .= "Cod_Item_Check,  ";
+			$query .= "Ind_CheckBox)  ";
+			$query .= "VALUES ";
+			$query .= "('".$numProntuario."', ";
+			$query .= "'".$codPergunta."',  ";
+			$query .= "'".$Cod_Item_Check."',  ";
+			$query .= "'".'true'."';  ";
+				
+			if (!mysqli_query($this->cnn, $query))
+				throw new Exception();
+		} catch (Exception $e) {			
+			throw $e;
+		}	
+	}
+	
+	function insertRespostaMultiCombo($numProntuario, $codPergunta, $Cod_Item_Multi_Combo){
+		try {
+			$query = "INSERT INTO tb_resposta_multi_combo ";
+			$query .= "(Num_Prontuario,  ";
+			$query .= "Cod_Pergunta,  ";
+			$query .= "Cod_Item_Multi_Combo) ";
+			$query .= "VALUES ";
+			$query .= "('".$numProntuario."', ";
+			$query .= "'".$codPergunta."',  ";
+			$query .= "'".$Cod_Item_Multi_Combo."',  ";
+			$query .= "'".'true'."';  ";
+			
+			if (!mysqli_query($this->cnn, $query))
+				throw new Exception();
+			
+		} catch (Exception $e) {
+			throw $e;
+		}
 	}
 	
 }
