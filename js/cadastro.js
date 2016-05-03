@@ -10,18 +10,9 @@ $(document).ready(function() {
 	});			
 	
 	$("#save").click(function() {
-// 				var contVazios = 0;
-// 				$(':text','#divQuestionario').each(function(){
-// 					if($(this).val() == "")
-// 						contVazios++;
-// 				});
-
-// 				if(contVazios > 0){
-// 					alert("Preencha todos os campos.");
-// 					return;
-// 				}	
 		
 		var obj = MontaJSON();
+		
 		var codCliente = $("#codCliente").val();
 		console.log(JSON.stringify(obj));
 		
@@ -193,7 +184,8 @@ $(document).ready(function() {
 					if(respostas[i].Ind_Pergunta_ComboBox == 1){
 						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 						var combo = div.find("option[value='" + respostas[i].Cod_Resposta_ComboBox + "']");
-						combo.attr('selected', true);
+						combo.prop('selected', true);
+						combo.attr('selected', 'selected');
 					}
 					if(respostas[i].Ind_Pergunta_Radio == 1){
 						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
@@ -236,6 +228,8 @@ function LimpaCampos() {
 		lblNao.addClass("btn-primary");					
 		lblNao.addClass("active");					
 	});
+	
+	//Limpar Dropdown
 }		
 
 function MontaJSON(){
@@ -255,10 +249,12 @@ function MontaJSON(){
 		   	objRespostas['TipoPergunta'] = tipoPergunta;
 			
 			if(tipoPergunta == "Ind_Pergunta_SimNao"){
-				console.log($("input:checked", $(this)).val());
+				//console.log($("input:checked", $(this)).val());
 				objRespostas['Valor'] = $("input:checked", $(this)).val();
 			}
-			else{
+			else if(tipoPergunta == "Ind_Pergunta_ComboBox") {
+				objRespostas['Valor'] = $("option:selected", $(this)).val();
+			} else {
 				objRespostas['Valor'] = $("input", $(this)).val();
 			}
 
@@ -272,7 +268,7 @@ function MontaJSON(){
 // 					}
 // 					else if(tipoPergunta == "Ind_Pergunta_Observacao"){
 // 					}
-// 					else if(tipoPergunta == "ind_Pergunta_ComboBox"){
+// 					else if(tipoPergunta == "Ind_Pergunta_ComboBox"){
 // 						//to do
 // 					}
 // 					else if(tipoPergunta == "Ind_Pergunta_Radio"){
