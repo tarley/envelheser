@@ -2,17 +2,17 @@
 
 class Cor{
 	/*
-	 * Instância de Logger
+	 * Instï¿½ncia de Logger
 	 */
 	var $log;
 	
 	/*
-	 * Instância da conexão com o Banco
+	 * Instï¿½ncia da conexï¿½o com o Banco
 	 */
 	var $cnn;
 	
 	/**
-	 * Cria instancia de Logger para gerenciar exceções.
+	 * Cria instancia de Logger para gerenciar exceï¿½ï¿½es.
 	 */
 	function Cor($cnn) {
 		$this->log = new Logger();
@@ -22,7 +22,7 @@ class Cor{
 	/**
 	 * Retorna a lista de cor 
 	 */
-	function getLista($input) {
+	function getLista() {
 		$query = "SELECT Cod_Cor, Nom_Cor ";
 		$query .= "FROM tb_cor ";
 	

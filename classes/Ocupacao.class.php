@@ -2,17 +2,17 @@
 
 class Ocupacao{
 	/*
-	 * Instância de Logger
+	 * Instï¿½ncia de Logger
 	 */
 	var $log;
 	
 	/*
-	 * Instância da conexão com o Banco
+	 * Instï¿½ncia da conexï¿½o com o Banco
 	 */
 	var $cnn;
 	
 	/**
-	 * Cria instancia de Logger para gerenciar exceções.
+	 * Cria instancia de Logger para gerenciar exceï¿½ï¿½es.
 	 */
 	function Ocupacao($cnn) {
 		$this->log = new Logger();
@@ -20,9 +20,9 @@ class Ocupacao{
 	}
 	
 	/**
-	 * Retorna a lista de ocupações
+	 * Retorna a lista de ocupaï¿½ï¿½es
 	 */
-	function getLista($input) {
+	function getLista() {
 		$query = "SELECT Cod_Ocupacao, Nom_Ocupacao ";
 		$query .= "FROM tb_ocupacao ";
 	

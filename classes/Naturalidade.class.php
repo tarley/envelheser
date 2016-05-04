@@ -2,17 +2,17 @@
 
 class Naturalidade{
 	/*
-	 * Instância de Logger
+	 * Instï¿½ncia de Logger
 	 */
 	var $log;
 	
 	/*
-	 * Instância da conexão com o Banco
+	 * Instï¿½ncia da conexï¿½o com o Banco
 	 */
 	var $cnn;
 	
 	/**
-	 * Cria instancia de Logger para gerenciar exceções.
+	 * Cria instancia de Logger para gerenciar exceï¿½ï¿½es.
 	 */
 	function Naturalidade($cnn) {
 		$this->log = new Logger();
@@ -22,7 +22,7 @@ class Naturalidade{
 	/**
 	 * Retorna a lista de naturalidades
 	 */
-	function getLista($input) {
+	function getLista() {
 		$query = "SELECT Cod_Naturalidade, Nom_Naturalidade ";
 		$query .= "FROM tb_naturalidade ";
 	

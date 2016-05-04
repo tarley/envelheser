@@ -2,17 +2,17 @@
 
 class Escolaridade{
 	/*
-	 * Instância de Logger
+	 * Instï¿½ncia de Logger
 	 */
 	var $log;
 	
 	/*
-	 * Instância da conexão com o Banco
+	 * Instï¿½ncia da conexï¿½o com o Banco
 	 */
 	var $cnn;
 	
 	/**
-	 * Cria instancia de Logger para gerenciar exceções.
+	 * Cria instancia de Logger para gerenciar exceï¿½ï¿½es.
 	 */
 	function Escolaridade($cnn) {
 		$this->log = new Logger();
@@ -22,7 +22,7 @@ class Escolaridade{
 	/**
 	 * Retorna a lista de escolaridade 
 	 */
-	function getLista($input) {
+	function getLista() {
 		$query = "SELECT Cod_Escolaridade, Nom_Escolaridade ";
 		$query .= "FROM tb_escolaridade ";
 	
