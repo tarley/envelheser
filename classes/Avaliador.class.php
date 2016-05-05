@@ -62,10 +62,19 @@ class Avaliador{
 			$query .= "VALUES ($nomAvaliador, $codEspecialidade, $desEmail, $desLogin, $desSenha)";
 		
 			if (mysqli_query($this->cnn, $query)) {
-				return mysqli_insert_id($this->cnn);
+				$codAvaliador = mysqli_insert_id($this->cnn);
+				
+				$retorno['Sucesso'] = true;
+				$retorno['Mensagem'] = "Dados inseridos com sucesso";
+				$retorno['CodAvaliador'] = $codAvaliador;
 			}
+			
 		} catch (Exception $e) {
-			throw $e;
+			$msg = "Falha ao inserir avaliador. Mensagem de erro: " . mysqli_error($this->cnn);
+			$this->log->logError($this,$msg);			
+			
+			$retorno['Sucesso'] = false;			
+			$retorno['Mensagem'] = "Falha ao inserir respostas";
 		}
 	}
 	
@@ -78,21 +87,39 @@ class Avaliador{
 			$query .= "WHERE Cod_Avaliador = $codAvaliador";
 		
 			if (mysqli_query($this->cnn, $query)) {
-				return 1;
-			}
-			else {
-				return 0;
+				$retorno['Sucesso'] = true;
+				$retorno['Mensagem'] = "Dados inseridos com sucesso";
 			}
 		} catch (Exception $e) {
-			throw $e;
+			$msg = "Falha ao excluir avaliador. Mensagem de erro: " . mysqli_error($this->cnn);
+			$this->log->logError($this,$msg);			
+			
+			$retorno['Sucesso'] = false;			
+			$retorno['Mensagem'] = "Falha ao excluir avaliador";
 		}
 	}
 	
 	/**
 	 * Atualiza os dados de um avaliador
 	 */
-	function Update($codAvaliador){
-	
+	function Update($codAvaliador, $nomAvaliador, $codEspecialidade, $desEmail, $desLogin, $desSenha){
+		try {
+			$query = "UPDATE tb_avaliador SET Nom_Avaliador = $nomAvaliador, Cod_Especialidade = $codEspecialidade, ";
+			$query .= "Des_Email = $desEmail, Des_Login = $desLogin, Des_Senha = $desSenha) ";
+			$query .= "WHERE Cod_Avaliador = $codAvaliador";
+			
+			if (mysqli_query($this->cnn, $query)) {
+				$retorno['Sucesso'] = true;
+				$retorno['Mensagem'] = "Dados atualizados com sucesso";
+				$retorno['CodAvaliador'] = $codAvaliador;
+			}
+		} catch (Exception $e) {
+			$msg = "Falha ao atualizar avaliador. Mensagem de erro: " . mysqli_error($this->cnn);
+			$this->log->logError($this,$msg);			
+			
+			$retorno['Sucesso'] = false;			
+			$retorno['Mensagem'] = "Falha ao atualizar avaliador";
+		}
 	}
 }
 ?>

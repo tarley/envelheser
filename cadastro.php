@@ -136,6 +136,24 @@
 				}
 				echo '</br>';
 			}
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){
+			
+				
+				echo '<div class="col-md-3 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Multi_Combo">';
+				
+				$listaOpcoes = $Prontuario->getOpcoesCombo($listaPerguntas[$i]['Cod_Pergunta']);
+				
+				echo '<select class="form-control">';
+				echo '<option  id="Ind_Pergunta_ComboBox[]" value="" >Selecione</option>';
+				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+					echo '<option id="Ind_Pergunta_ComboBox[]" value="'.$listaOpcoes[$j]['Cod_Item_Combo'].'">'.$listaOpcoes[$j]['Des_Item_Combo'].'</option>';
+				}
+				echo '</select>';
+				echo '</div>';				
+				
+			}
+			
 			echo '</div>';
 			
 			$contPergunta++;

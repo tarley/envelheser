@@ -207,6 +207,8 @@ function LimpaCampos() {
 
 	$("div[data-tipo='resposta'] input[type='text']").val("");
 	
+	$("div[data-tipo='resposta'] select").val("");
+	
 	$("div[data-tipopergunta='Ind_Pergunta_SimNao']").each(function(){					
 
 		var optSim = $("input[type='radio'][value=1]", $(this));
@@ -228,8 +230,6 @@ function LimpaCampos() {
 		lblNao.addClass("btn-primary");					
 		lblNao.addClass("active");					
 	});
-	
-	//Limpar Dropdown
 }		
 
 function MontaJSON(){
