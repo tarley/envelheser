@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+<nav class="navbar navbar-default navbar-static-top custom-navbar" role="navigation" style="margin-bottom: 0">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 			<span class="sr-only">Toggle navigation</span>
@@ -7,30 +7,20 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="index.html">Projeto EnvelheSer</a>
+		<a class="navbar-brand" href="index.html"><img src="images/logo.png" width="200px"></a>
 	</div>
 	<!-- /.navbar-header -->
-	<div class="navbar-left">
-		<ul class="nav navbar-nav">
-			<!-- DESATIVADO
-			<li class="menu-principal-li">
+	<div class="navbar-collapse collapse navbar-left">
+		<ul class="nav">
 			
-				<a href="#" ><i class="fa fa-list-alt fa-fw"></i>Cadastro</a>
-				
+			<li class="menu-principal-li">
+				<a href="clienteVis.php" ><i class="fa fa-list-alt"></i> Pacientes</a>
 			</li>
 			<li class="menu-principal-li">
-				<a href="#" >Teste</a>
+				<a href="avaliadorVis.php" ><i class="fa fa-user-md"></i> Avaliadores</a>
 			</li>
-			<li class="menu-principal-li">
-				<a href="#" >Teste</a>
-			</li>
-			<li class="menu-principal-li">
-				<a href="#" >Teste</a>
-			</li>
-			<li class="menu-principal-li">
-				<a href="#" >Teste</a>
-			</li>
-			-->
+			
+			
 		</ul>
 	</div>
 	
