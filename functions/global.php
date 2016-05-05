@@ -1,20 +1,24 @@
 <?php
 // Hello world 
 /**
-* Função para carregar automaticamente todas as classes padrão
+* Funï¿½ï¿½o para carregar automaticamente todas as classes padrï¿½o
 * Ver: http://php.net/manual/pt_BR/function.autoload.php.
-* Nossas classes estão na pasta classes/.
-* O nome do arquivo deverá ser class-NomeDaClasse.php.
+* Nossas classes estï¿½o na pasta classes/.
+* O nome do arquivo deverï¿½ ser class-NomeDaClasse.php.
 * Por exemplo: para a classe TutsupMVC, o arquivo vai chamar class-TutsupMVC.php
 */
 function __autoload($class_name) {
 	$file = ABSPATH . '/classes/' . $class_name . '.class.php';
 	
 	if ( ! file_exists( $file ) ) {
-		echo "Classe " . $class_name . " não encontrada.";
+		echo "Classe " . $class_name . " nï¿½o encontrada.";
 		die();
 	}
 	
 	// Inclui o arquivo da classe
     require_once $file;
+}
+
+function utf8(&$entry) {
+	$entry = iconv('Windows-1250', 'UTF-8', $entry);
 }
