@@ -136,6 +136,24 @@
 				}
 				echo '</br>';
 			}
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){
+			
+				
+				echo '<div class="col-md-3 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Multi_Combo">';
+				
+				$listaOpcoes = $Prontuario->getOpcoesCombo($listaPerguntas[$i]['Cod_Pergunta']);
+				
+				echo '<select class="form-control">';
+				echo '<option  id="Ind_Pergunta_ComboBox[]" value="" >Selecione</option>';
+				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+					echo '<option id="Ind_Pergunta_ComboBox[]" value="'.$listaOpcoes[$j]['Cod_Item_Combo'].'">'.$listaOpcoes[$j]['Des_Item_Combo'].'</option>';
+				}
+				echo '</select>';
+				echo '</div>';				
+				
+			}
+			
 			echo '</div>';
 			
 			$contPergunta++;
@@ -206,7 +224,7 @@
                                 <div class="col-lg-12">
                                     <form role="form">
                                         <div class="form-group col-md-1">
-                                            <label>C�digo</label>
+                                            <label>Código</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-4">
@@ -214,7 +232,7 @@
                                             <input id="nomCliente" class="form-control" disabled>
                                         </div>
 										<div class="form-group col-md-4">
-                                            <label>Endere�o</label>
+                                            <label>Endereço</label>
                                             <input id="enderecoCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-3">
@@ -246,7 +264,7 @@
                                             <input id="corCliente" class="form-control" disabled>
                                         </div>		
                                         <div class="form-group col-md-2">
-                                            <label>Ocupa��o</label>
+                                            <label>Ocupação</label>
                                             <input id="ocupacaoCliente" class="form-control" disabled>
                                         </div>	
                                         <div class="form-group col-md-1">
