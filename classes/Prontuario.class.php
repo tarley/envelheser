@@ -133,10 +133,11 @@ class Prontuario {
 		return $listaRespostas;
 	}
 	
-	function getOpcoesMultiCombo($codPergunta){
-		$query = "SELECT Cod_Item_Multi_Combo, Des_Item_Multi_Combo ";
-		$query .= "FROM tb_lista_multi_combo ";
-		$query .= "WHERE Cod_Pergunta = $codPergunta";
+	function getCategoriaMultiCombo($codPergunta){
+		$query = "SELECT Cod_Categoria_Combo, Des_Categoria ";
+		$query .= "FROM tb_categoria_combo ";
+		$query .= "WHERE Cod_Categoria_Combo IN ";
+		$query .= "(SELECT Cod_Categoria_Combo FROM tb_lista_multi_combo WHERE Cod_Pergunta = $codPergunta)";
 		
 		$query = mysqli_query($this->cnn, $query);
 		
