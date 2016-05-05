@@ -206,7 +206,7 @@
                                 <div class="col-lg-12">
                                     <form role="form">
                                         <div class="form-group col-md-1">
-                                            <label>C�digo</label>
+                                            <label>Código</label>
                                             <input id="codCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-4">
@@ -214,7 +214,7 @@
                                             <input id="nomCliente" class="form-control" disabled>
                                         </div>
 										<div class="form-group col-md-4">
-                                            <label>Endere�o</label>
+                                            <label>Endereço</label>
                                             <input id="enderecoCliente" class="form-control" disabled>
                                         </div>
                                         <div class="form-group col-md-3">
@@ -246,7 +246,7 @@
                                             <input id="corCliente" class="form-control" disabled>
                                         </div>		
                                         <div class="form-group col-md-2">
-                                            <label>Ocupa��o</label>
+                                            <label>Ocupação</label>
                                             <input id="ocupacaoCliente" class="form-control" disabled>
                                         </div>	
                                         <div class="form-group col-md-1">
