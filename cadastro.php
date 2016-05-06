@@ -113,9 +113,9 @@
 				$listaOpcoes = $Prontuario->getOpcoesCombo($listaPerguntas[$i]['Cod_Pergunta']);
 				
 				echo '<select class="form-control">';
-				echo '<option  id="Ind_Pergunta_ComboBox[]" value="" >Selecione</option>';
+				echo '<option value="">Selecione</option>';
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<option id="Ind_Pergunta_ComboBox[]" value="'.$listaOpcoes[$j]['Cod_Item_Combo'].'">'.$listaOpcoes[$j]['Des_Item_Combo'].'</option>';
+					echo '<option value="'.$listaOpcoes[$j]['Cod_Item_Combo'].'">'.$listaOpcoes[$j]['Des_Item_Combo'].'</option>';
 				}
 				echo '</select>';
 				echo '</div>';
@@ -136,6 +136,28 @@
 				}
 				echo '</br>';
 			}
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){
+			
+				echo '<div data-multi="0">';
+				echo '<div class="col-md-3" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Multi_Combo" style="padding-left: 0;">';
+				
+				$listaOpcoes = $Prontuario->getCategoriaMultiCombo($listaPerguntas[$i]['Cod_Pergunta']);
+				
+				echo '<select class="form-control">';
+				echo '<option value="" >Selecione</option>';
+				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+					echo '<option value="'.$listaOpcoes[$j]['Cod_Categoria_Combo'].'">'.$listaOpcoes[$j]['Des_Categoria'].'</option>';
+				}
+				echo '</select>';
+				echo '</div>';
+				
+				echo '<div data-itens="0"></div>';
+				
+				echo '</div>';
+				
+			}
+			
 			echo '</div>';
 			
 			$contPergunta++;

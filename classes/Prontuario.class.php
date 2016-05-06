@@ -39,6 +39,7 @@ class Prontuario {
 		$listaGrupos = array();
 	
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaGrupos[] = $list;
 		}
 	
@@ -62,7 +63,8 @@ class Prontuario {
 		
 		$listaPerguntas = array();
 		
-		while($list  = mysqli_fetch_assoc($query)) {
+		while($list  = mysqli_fetch_assoc($query)) {			
+			array_walk($list, 'utf8');
 			$listaPerguntas[] = $list;
 		}
 		
@@ -79,6 +81,7 @@ class Prontuario {
 		$listaOpcoes = array();
 		
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaOpcoes[] = $list;
 		}
 		
@@ -95,6 +98,7 @@ class Prontuario {
 		$listaOpcoes = array();
 		
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaOpcoes[] = $list;
 		}
 		
@@ -111,6 +115,7 @@ class Prontuario {
 		$listaOpcoes = array();
 		
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaOpcoes[] = $list;
 		}
 		
@@ -127,6 +132,7 @@ class Prontuario {
 		$listaRespostas = array();
 		
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaRespostas[] = $list;
 		}
 		
@@ -144,6 +150,7 @@ class Prontuario {
 		$listaOpcoes = array();
 		
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaOpcoes[] = $list;
 		}
 		
@@ -160,6 +167,7 @@ class Prontuario {
 		$listaOpcoes = array();
 	
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaOpcoes[] = $list;
 		}
 	
@@ -176,6 +184,7 @@ class Prontuario {
 		$listaRespostas = array();
 	
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			$listaRespostas[] = $list;
 		}
 	
@@ -218,6 +227,7 @@ class Prontuario {
 		$listaRespostas = array();
 		
 		while($list  = mysqli_fetch_assoc($query)) {
+			array_walk($list, 'utf8');
 			
 			if($list['Ind_Pergunta_CheckBox']) {
 				$list['Lista_Resposta_CheckBox'] = $this->getRespostasCheck($list['Num_Prontuario'], $list['Cod_Pergunta']);
