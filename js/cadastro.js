@@ -197,6 +197,48 @@ $(document).ready(function() {
 			}
 		});				
 	});
+	
+	$("div[data-tipopergunta='Ind_Pergunta_Multi_Combo'] select").change(function(){
+		var codCategoria = $(this).val();
+		var divPai = $(this).parent().parent();
+		
+		var divItem = $("div[data-itens]", divPai);
+		divItem.html("");
+		
+		if(codCategoria != "") {		
+			$.ajax({
+				url: "ajax/prontuario.ajax.php?codCategoria=" + codCategoria,
+				success: function (data) {
+					var itens = jQuery.parseJSON(data);
+					
+					var div = $("<div>");
+					div.attr("class", "col-md-3");
+					div.attr("data-tipo", "resposta");
+					div.attr("data-tipopergunta", "Ind_Pergunta_Multi_Combo");
+					div.attr("data-tipo", "resposta");				
+					div.attr("style", "padding-right: 0");
+					
+					var select = $("<select>");
+					select.attr("class", "form-control");
+					div.append(select);				
+					
+					var opt = $("<option>");
+					opt.val("");
+					opt.text("Selecione");
+					select.append(opt);
+					
+					for (var i = 0; i < itens.length; i++) {				
+						var op = $("<option>");
+						op.val(itens[i].Cod_Item_Multi_Combo);
+						op.text(itens[i].Des_Item_Multi_Combo);
+						select.append(op);					
+					}
+	
+					divItem.append(div);
+				}
+			});
+		}
+	});
 });
 
 function LimpaProntuario() {

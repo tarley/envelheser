@@ -18,6 +18,11 @@
 		$retorno = $prontuario->insertRespostas($codCliente, $listaRespostas);
 		
 		echo json_encode($retorno);		
+		
+	} else if(isset($_GET['codCategoria'])){
+		$listaItens = $prontuario->getOpcoesMultiComboByCategoria(utf8_decode($_GET['codCategoria']));
+		
+		echo json_encode($listaItens);		
 	}
 		
 	//Este trecho deve ficar sempre no fim do arquivo
