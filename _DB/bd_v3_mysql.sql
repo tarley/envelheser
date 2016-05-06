@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     28/04/2016 22:21:01                          */
+/* Created on:     06/05/2016 00:17:18                          */
 /*==============================================================*/
 
 
@@ -14,7 +14,7 @@ create table tb_avaliador
    Cod_Especialidade    int,
    Des_Email            varchar(100),
    Des_Login            varchar(100),
-   Des_Senha            varchar(15)
+   Des_Senha            varchar(200)
 );
 
 /*==============================================================*/
@@ -23,7 +23,7 @@ create table tb_avaliador
 create table tb_categoria_combo
 (
    Cod_Categoria_Combo  int not null auto_increment PRIMARY KEY,
-   Des_Categoria        char(100) not null
+   Des_Categoria        varchar(100) not null
 );
 
 /*==============================================================*/
@@ -133,7 +133,7 @@ create table tb_lista_combo_box
 create table tb_lista_multi_combo
 (
    Cod_Item_Multi_Combo int not null auto_increment PRIMARY KEY,
-   Des_Item_Multi_Combo char(100) not null,
+   Des_Item_Multi_Combo varchar(100) not null,
    Cod_Pergunta         smallint,
    Cod_Categoria_Combo  int
 );
@@ -365,5 +365,3 @@ alter table tb_telefone add constraint FK_Telefone_Cliente foreign key (Cod_Clie
 
 alter table tb_telefone add constraint FK_Tipo_Telefone foreign key (Cod_Tipo_Telefone)
       references tb_tipo_telefone (Cod_Tipo_Telefone);
-
-
