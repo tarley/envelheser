@@ -27,7 +27,7 @@
 						<div class="input-group col-md-6 vert-offset-bottom-1">
 							<input id="nomeCliente" class="form-control"
 								placeholder="Pesquisar"> <span class="input-group-btn">
-								<button id="btnBuscaCliente" class="btn btn-default">
+								<button type="button" id="btnBuscaCliente" class="btn btn-default">
 									<span class="glyphicon glyphicon-search"></span>
 								</button>
 								<button type="reset" class="btn btn-danger" value="Reset">
