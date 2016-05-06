@@ -1,6 +1,6 @@
 <?php
 /**
-* Configuração geral
+* ConfiguraÃ§Ã£o geral
 */
  
 // Caminho para a raiz
@@ -12,20 +12,20 @@ define( 'HOSTNAME', 'localhost' );
 // Nome do DB
 define( 'DB_NAME', 'bd_envelheser' );
  
-// Usuário do DB
+// UsuÃ¡rio do DB
 define( 'DB_USER', 'root' );
  
 // Senha do DB
 define( 'DB_PASSWORD', '' );
  
-// Se você estiver desenvolvendo, modifique o valor para true
+// Se vocÃª estiver desenvolvendo, modifique o valor para true
 define( 'DEBUG', true );
  
 /**
-* Não edite daqui em diante
+* NÃ£o edite daqui em diante
 */
  
-// Carrega o loader, que vai carregar a aplicação inteira
+// Carrega o loader, que vai carregar a aplicaÃ§Ã£o inteira
 require_once ABSPATH . '/loader.php';
 
 ?>
