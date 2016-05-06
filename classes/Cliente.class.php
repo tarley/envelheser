@@ -2,12 +2,12 @@
 
 class Cliente {
 	/*
-	* Inst�ncia de Logger
+	* Instancia de Logger
 	*/
 	var $log;
 	
 	/*
-	 * Inst�ncia da conex�o com o Banco
+	 * Instancia da conexão com o Banco
 	 */
 	var $cnn;	
 	
@@ -20,10 +20,12 @@ class Cliente {
 	}
 	
 	/**
-	* Retorna a lista de clientes baseada no nome passado pelo par�metro
+	* Retorna a lista de clientes baseada no nome passado pelo parametro
 	*/	
 	function getLista($input) {
-		$query = "SELECT Cod_Cliente, Nom_Cliente, Num_Rg ";
+		$query = "SELECT Cod_Cliente, Nom_Cliente, Num_Rg, ";
+		$query .= "(SELECT Num_Telefone FROM tb_telefone WHERE Cod_Cliente = c.Cod_Cliente LIMIT 1) as NumTelefone, ";
+		$query .= "(SELECT DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Prontuario FROM tb_prontuario WHERE Cod_Cliente = c.Cod_Cliente ORDER BY Dta_Data_Prontuario DESC LIMIT 1) as DtaUltimoAtendimento ";
 		$query .= "FROM tb_cliente c WHERE nom_cliente LIKE '%$input%' or Num_Rg LIKE '%$input%' ";
 		
 		$query = mysqli_query($this->cnn, $query);
@@ -38,7 +40,7 @@ class Cliente {
 	}
 	
 	/**
-	* Retorna os dados do cliente de acordo com o codigo passado pelo par�metro
+	* Retorna os dados do cliente de acordo com o codigo passado pelo parametro
 	*/	
 	function getDados($codCliente) {		
 
@@ -68,12 +70,16 @@ class Cliente {
 	function getProntuarios($codCliente) {
 		$query = "SELECT Num_Prontuario, ";
 		$query .= "DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Prontuario ";
-		$query .= "FROM TB_Prontuario ";
+		$query .= "FROM tb_prontuario ";
 		$query .= "WHERE Cod_Cliente = $codCliente ";
 		$query .= "ORDER BY Dta_Data_Prontuario DESC ";
 		$query .= "LIMIT 5";
 		
 		$query = mysqli_query($this->cnn, $query);
+		
+		if(!$query) {
+			exit;
+		}
 		
 		$listaProntuario = array();
 		

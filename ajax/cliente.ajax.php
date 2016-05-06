@@ -10,14 +10,16 @@
 	if(isset($_GET['term'])) {		
 		$retorno = "";
 		
-		$lista = $cliente->getLista(utf8_decode($_GET['term']));		
+		$lista = $cliente->getLista(utf8_decode($_GET['term']));
+		
 		for($i = 0; $i < sizeOf($lista); $i++) {
-			
 			$retorno .= ($retorno != "") ? "," : "";
 			$retorno .= "{";
 			$retorno .= "\"codigo\": " . $lista[$i]["Cod_Cliente"] . ", ";
 			$retorno .= "\"nome\": \"" . $lista[$i]["Nom_Cliente"] . "\", ";
-			$retorno .= "\"NumRg\": \"" . $lista[$i]["Num_Rg"] . "\"";
+			$retorno .= "\"NumRg\": \"" . $lista[$i]["Num_Rg"] . "\", ";
+			$retorno .= "\"NumTelefone\": \"" . $lista[$i]["NumTelefone"] . "\", ";
+			$retorno .= "\"DtaUltimoAtendimento\": \"" . $lista[$i]["DtaUltimoAtendimento"] . "\"";
 			$retorno .= "}";
 		}
 		
