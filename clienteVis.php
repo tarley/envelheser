@@ -41,7 +41,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="table-responsive table-bordered">
-									<table class="table vert-offset-bottom-0">
+									<table id="tablePaciente" class="table vert-offset-bottom-0">
 										<thead>
 											<tr>
 												<th class="col-md-1 text-center">Cod.:</th>
