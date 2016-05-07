@@ -1,12 +1,12 @@
 <?php
 class Avaliador{
 	/*
-	 * Inst�ncia de Logger
+	 * Instância de Logger
 	 */
 	var $log;
 	
 	/*
-	 * Inst�ncia da conex�o com o Banco
+	 * Instância da conex�o com o Banco
 	 */
 	var $cnn;
 	
@@ -57,6 +57,9 @@ class Avaliador{
 	 * Insere os dados de um avaliador
 	 */
 	function Insert($nomAvaliador, $codEspecialidade, $desEmail, $desLogin, $desSenha){
+		
+		$retorno = array();
+		
 		try {
 			$query = "INSERT INTO tb_avaliador (Nom_Avaliador, Cod_Especialidade, Des_Email, Des_Login, Des_Senha) ";
 			$query .= "VALUES ($nomAvaliador, $codEspecialidade, $desEmail, $desLogin, $desSenha)";
@@ -76,12 +79,17 @@ class Avaliador{
 			$retorno['Sucesso'] = false;			
 			$retorno['Mensagem'] = "Falha ao inserir respostas";
 		}
+		
+		return $retorno;
 	}
 	
 	/**
 	 * Deleta os dados de um avaliador
 	 */
 	function Delete($codAvaliador){
+		
+		$retorno = array();
+		
 		try {
 			$query = "DELETE FROM tb_avaliador ";
 			$query .= "WHERE Cod_Avaliador = $codAvaliador";
@@ -97,12 +105,17 @@ class Avaliador{
 			$retorno['Sucesso'] = false;			
 			$retorno['Mensagem'] = "Falha ao excluir avaliador";
 		}
+		
+		return $retorno;
 	}
 	
 	/**
 	 * Atualiza os dados de um avaliador
 	 */
 	function Update($codAvaliador, $nomAvaliador, $codEspecialidade, $desEmail, $desLogin, $desSenha){
+		
+		$retorno = array();
+		
 		try {
 			$query = "UPDATE tb_avaliador SET Nom_Avaliador = $nomAvaliador, Cod_Especialidade = $codEspecialidade, ";
 			$query .= "Des_Email = $desEmail, Des_Login = $desLogin, Des_Senha = $desSenha) ";
@@ -120,6 +133,8 @@ class Avaliador{
 			$retorno['Sucesso'] = false;			
 			$retorno['Mensagem'] = "Falha ao atualizar avaliador";
 		}
+		
+		return $retorno;
 	}
 }
 ?>
