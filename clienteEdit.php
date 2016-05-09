@@ -283,42 +283,36 @@
                                     		<button id="novo" type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
                                     		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
-                                    	</div>
+                                    		</div>
 							                <div id="divMontaProntruario" class="panel panel-default" style="display: none;">
-							                <div class="panel-body">
-							                            <div class="row">
-							                                <div class="col-lg-12">	
-																<div>
-							                                    	<?php 
-							                                    		MontaGrupos(null);
-							                                    	?>
-							                                    </div>
-							                                </div>
-							                             </div>
-							                         </div>                                    
-							                </div>	
-<!-- 									<div> -->
-                                    	<?php 
-//                                     		MontaGrupos(null);
-//                                     	?>
-<!--                                     </div> -->
-                                </div>
-                             </div>
-                         </div>
-                     </div>                                    
-                </div>
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-lg-12">	
+															<div>
+																<?php 
+																	MontaGrupos(null);
+																?>
+															</div>
+														</div>
+													 </div>
+												 </div>                              
+											</div>
+	                                	</div>
+	                             	</div>
+	                         	</div>
+	                     	</div>                                    
+	                	</div>
                 
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->		
-    </div>
+                	<!-- /.col-lg-12 -->
+            		</div>
+        		</div>
+    		</div>
+            <!-- /.row -->        				
     	</div>
+		<!-- /#page-wrapper -->    		
     </div>
-    <!-- /#wrapper -->
-    
+    <!-- /#wrapper -->    
 	<?php include("includes/footer.php"); ?>	
-	<script src="js/cadastro.js"></script>
+	<script src="js/clienteEdit.js"></script>
 </body>
 </html>
