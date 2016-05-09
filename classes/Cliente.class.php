@@ -22,15 +22,17 @@ class Cliente {
 	/**
 	* Retorna a lista de clientes baseada no nome passado pelo parametro
 	*/	
-	function getLista($input) {
+	function getLista($input, $sortColumn = "", $sortOrder = "ASC") {
 		$query = "SELECT Cod_Cliente, Nom_Cliente, Num_Rg, ";
 		$query .= "(SELECT Num_Telefone FROM tb_telefone WHERE Cod_Cliente = c.Cod_Cliente LIMIT 1) as NumTelefone, ";
 		$query .= "(SELECT DATE_FORMAT(Dta_Data_Prontuario, '%d/%m/%Y') AS Dta_Prontuario FROM tb_prontuario WHERE Cod_Cliente = c.Cod_Cliente ORDER BY Dta_Data_Prontuario DESC LIMIT 1) as DtaUltimoAtendimento ";
 		$query .= "FROM tb_cliente c ";
 		
-		if(isset($input)) {			
+		if($input != "")			
 			$query .= "WHERE nom_cliente LIKE '%$input%' or Num_Rg LIKE '%$input%' ";
-		}
+		
+		if($sortColumn != "")
+			$query .= "ORDER BY " . $sortColumn . " " . $sortOrder . " ";
 		
 		$query = mysqli_query($this->cnn, $query);
 

@@ -1,5 +1,37 @@
 $(document).ready(function() {
+	
+	if($.urlParam('idCliente') != null) {
+		$.ajax({
+			url: "ajax/cliente.ajax.php?codigo=" + $.urlParam('idCliente'),
+			success: function (data) {
+				var cliente = jQuery.parseJSON(data);
+				$("#codCliente").val(cliente.codigo);
+				$("#telCliente").val(cliente.telefone);	
+				
+				$("#nomCliente").val(cliente.nome);
+				$("#corCliente").val(cliente.cor);
+				$("#escolaridadeCliente").val(cliente.escolaridade);	
+				$("#ocupacaoCliente").val(cliente.ocupacao);		
+				$("#estadoCivilCliente").val(cliente.estadoCivil);	
+				$("#naturalidadeCliente").val(cliente.naturalidade);	
+				$("#sexoCliente").val(cliente.sexo);	
+				$("#dataNascimentoCliente").val(cliente.dataNascimento);	
+				$("#numeroFilhosCliente").val(cliente.numeroFilhos);
+				$("#enderecoCliente").val(cliente.endereco);
 
+				$("#divHistPront").show();
+					
+				if(cliente.prontuario.length != 0){
+					for(var i=0; i < cliente.prontuario.length; i++){
+						var divButton = ("<button type='button' class='btn btn-default' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
+						$("#divHistoricoProntuarios").append(divButton);
+						
+					}
+				}				
+			}
+		});			
+	}
+	
 	$("#novo").click(function() {
 		$("#save").removeAttr("disabled");
 		$("button[id*='btnPront']").attr("class", "btn btn-default");
@@ -61,52 +93,52 @@ $(document).ready(function() {
 		});
 	});			
 	
-	$("#nomeCliente").autocomplete({
-		source: "ajax/cliente.ajax.php",
-		minLength: 2,
-		select: function(event, ui) {					
-
-			LimpaProntuario();
-			LimpaCampos();
-			
-			if(ui.item) {
-				$.ajax({
-					url: "ajax/cliente.ajax.php?codigo=" + ui.item.codigo,
-					success: function (data) {
-						var cliente = jQuery.parseJSON(data);
-						$("#codCliente").val(cliente.codigo);
-						$("#telCliente").val(cliente.telefone);	
-						
-						$("#nomCliente").val(cliente.nome);
-						$("#corCliente").val(cliente.cor);
-						$("#escolaridadeCliente").val(cliente.escolaridade);	
-						$("#ocupacaoCliente").val(cliente.ocupacao);		
-						$("#estadoCivilCliente").val(cliente.estadoCivil);	
-						$("#naturalidadeCliente").val(cliente.naturalidade);	
-						$("#sexoCliente").val(cliente.sexo);	
-						$("#dataNascimentoCliente").val(cliente.dataNascimento);	
-						$("#numeroFilhosCliente").val(cliente.numeroFilhos);
-						$("#enderecoCliente").val(cliente.endereco);
-
-						$("#divHistPront").show();
-							
-						if(cliente.prontuario.length != 0){
-							for(var i=0; i < cliente.prontuario.length; i++){
-								var divButton = ("<button type='button' class='btn btn-default' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
-								$("#divHistoricoProntuarios").append(divButton);
-								
-							}
-						}				
-					}
-				});
-			}		
-		}
-	})			
-	.autocomplete("instance")._renderItem = function(ul, item) {
-		return $("<li>")
-			.append(item.nome + "<br><span class='ui-autocomplete-rg'>" + item.NumRg + "</span>")
-			.appendTo(ul);
-	};	
+//	$("#nomeCliente").autocomplete({
+//		source: "ajax/cliente.ajax.php",
+//		minLength: 2,
+//		select: function(event, ui) {					
+//
+//			LimpaProntuario();
+//			LimpaCampos();
+//			
+//			if(ui.item) {
+//				$.ajax({
+//					url: "ajax/cliente.ajax.php?codigo=" + ui.item.codigo,
+//					success: function (data) {
+//						var cliente = jQuery.parseJSON(data);
+//						$("#codCliente").val(cliente.codigo);
+//						$("#telCliente").val(cliente.telefone);	
+//						
+//						$("#nomCliente").val(cliente.nome);
+//						$("#corCliente").val(cliente.cor);
+//						$("#escolaridadeCliente").val(cliente.escolaridade);	
+//						$("#ocupacaoCliente").val(cliente.ocupacao);		
+//						$("#estadoCivilCliente").val(cliente.estadoCivil);	
+//						$("#naturalidadeCliente").val(cliente.naturalidade);	
+//						$("#sexoCliente").val(cliente.sexo);	
+//						$("#dataNascimentoCliente").val(cliente.dataNascimento);	
+//						$("#numeroFilhosCliente").val(cliente.numeroFilhos);
+//						$("#enderecoCliente").val(cliente.endereco);
+//
+//						$("#divHistPront").show();
+//							
+//						if(cliente.prontuario.length != 0){
+//							for(var i=0; i < cliente.prontuario.length; i++){
+//								var divButton = ("<button type='button' class='btn btn-default' id='btnPront-" + cliente.prontuario[i].NumProntuario + "'>" + cliente.prontuario[i].DtaProntuario);
+//								$("#divHistoricoProntuarios").append(divButton);
+//								
+//							}
+//						}				
+//					}
+//				});
+//			}		
+//		}
+//	})			
+//	.autocomplete("instance")._renderItem = function(ul, item) {
+//		return $("<li>")
+//			.append(item.nome + "<br><span class='ui-autocomplete-rg'>" + item.NumRg + "</span>")
+//			.appendTo(ul);
+//	};	
 
 	$('.btn-toggle .btn').click(function() {
 		var div = $(this).parent();

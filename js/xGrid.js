@@ -101,10 +101,10 @@
                 var text = (col.title) ? col.title : col.field;
                 var cell = $("<th>");
 
-                if (settings.sorting && settings.sorting.enabled && col.field) {
+                if (settings.sorting && settings.sorting.enabled && col.sortColumn) {
                     var link = $("<a>");
                     link.prop("href", "#");
-                    link.attr("data-field", col.field);
+                    link.attr("data-field", col.sortColumn);
                     link.attr("data-dir", "ASC");
                     link.text(text);
                     link.click(changeSort);

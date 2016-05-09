@@ -1,7 +1,8 @@
 <!-- jQuery -->
 <!-- alteracao--> 
 <!--<script src="components/jquery/dist/jquery.min.js"></script> -->
-<script src="components/jquery/jquery-2.2.1.min.js"></script>	
+<script src="components/jquery/jquery-2.2.1.min.js"></script>
+	
 <script src="components/jquery-ui/jquery-ui.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
@@ -12,3 +13,5 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/sb-admin-2.js"></script>
+
+<script src="js/util.js"></script>

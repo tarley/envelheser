@@ -28,9 +28,11 @@
 	} else if(isset($_GET['lista'])) {
 		$retorno = "";	
 		
-		$term = (isset($_POST['term'])) ? $_POST['term'] : "";
+		$filtro = (isset($_POST['filtro'])) ? utf8_decode($_POST['filtro']) : "";
+		$sortColumn = (isset($_POST['sortColumn'])) ? $_POST['sortColumn'] : "";
+		$sortOrder = (isset($_POST['sortOrder'])) ? $_POST['sortOrder'] : "";
 		
-		$lista = $cliente->getLista($term);
+		$lista = $cliente->getLista($filtro, $sortColumn, $sortOrder);
 
 		for($i = 0; $i < sizeOf($lista); $i++) {
 			$retorno .= ($retorno != "") ? "," : "";

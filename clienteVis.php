@@ -22,24 +22,23 @@
 				<div class="panel-heading">
 					<i class="fa fa-user"></i> Pacientes
 				</div>
-				<div class="panel-body">
-					<form>
-						<div class="input-group col-md-6 vert-offset-bottom-1">
-							<input id="nomeCliente" class="form-control"
-								placeholder="Pesquisar"> <span class="input-group-btn">
-								<button type="button" id="btnBuscaCliente" class="btn btn-default">
-									<span class="glyphicon glyphicon-search"></span>
-								</button>
-								<button type="reset" class="btn btn-danger" value="Reset">
-									<span class="glyphicon glyphicon-remove"></span>
-								</button>
-							</span>
-						</div>
-					</form>
+				<div class="panel-body">					
+					<div class="input-group col-md-6 vert-offset-bottom-1">
+						<input id="nomeCliente" class="form-control"
+							placeholder="Pesquisar"> <span class="input-group-btn">
+							<button type="button" id="btnBuscaCliente" class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+							<button id="btnLimpar" type="reset" class="btn btn-danger" value="Reset">
+								<span class="glyphicon glyphicon-remove"></span>
+							</button>
+						</span>
+					</div>					
 					<div>
 
 						<div class="row">
 							<div class="col-md-12">
+								<!--
 								<div class="table-responsive table-bordered">
 									<table id="tablePaciente" class="table vert-offset-bottom-0">
 										<thead>
@@ -80,7 +79,7 @@
 										</tbody>
 									</table>
 								</div>
-								
+								 -->
 								
 								<br />
 								<div id="grid2" class="table-responsive table-bordered">
@@ -115,8 +114,8 @@
                url: "ajax/cliente.ajax.php?lista"
            },
            columns: [
-               { field: "codigo", title: "Código", attributes: [{ "class": "col-md-1 text-center" }] },
-               { field: "nome", title: "Nome", attributes: [{ "class": "" }] },
+               { field: "codigo", title: "Código", sortColumn: "Cod_Cliente", attributes: [{ "class": "col-md-1 text-center" }] },
+               { field: "nome", title: "Nome", sortColumn: "Nom_Cliente", attributes: [{ "class": "" }] },
                { field: "NumRg", title: "RG", attributes: [{ "class": "text-center" }] },
                { field: "NumTelefone", title: "Telefone", attributes: [{ "class": "text-center" }] },
                { field: "DtaUltimoAtendimento", title: "Última consulta", attributes: [{ "class": "text-center" }] },
@@ -146,14 +145,14 @@
 //                    }
 //                }
            ],
-           lineClick: {
+           //lineClick: {
                //controller: "Usuario",
                //action: "Manage",
                //keyField: "IdUsuario",
-               url: "cadastro.php?idCliente={#codigo}",
-               cellsWithoutClick: [5],
+               //url: "cadastro.php?idCliente={#codigo}",
+               //cellsWithoutClick: [5],
                //onClick: LineClick
-           },
+           //},
 //            pager: {
 //                allowPageSize: false,
 //                allowRefresh: true,
@@ -195,8 +194,8 @@
         }
 
         $("#btnBuscaCliente").click(function () {
-        	var term = $("#nomeCliente").val()            
-            $("#grid2").xGrid("filter", "term=" + term);
+        	var filtro = $("#nomeCliente").val();            
+            $("#grid2").xGrid("filter", "filtro=" + filtro);
         });
 
         $("#btnReload").click(function () {
@@ -204,8 +203,12 @@
         });
 
         $(document.body).on("click", "button[data-id]", function() {
-            var id = $(this).attr("data-id");
-            window.location= "cadastro.php?idCliente=" + id;
+            window.location= "clienteEdit.php?idCliente=" + $(this).attr("data-id");
+        });
+
+        $("#btnLimpar").click(function(){
+        	$("#nomeCliente").val("");
+        	$("#grid2").xGrid("filter", "filtro=");
         });
     </script>	
 	
