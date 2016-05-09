@@ -1,0 +1,106 @@
+    $("#grid").xGrid({
+        gridAttributes: [{ "class": "grid-view" }],
+        headerAttributes: [{ "class": "grid-view-header" }],
+        rowAttributes: [{ "class": "grid-view-row" }],
+        rowAltAttributes: [{ "class": "grid-view-row-alt" }],
+        
+        dataSource: {
+            url: "ajax/cliente.ajax.php?lista"
+        },
+        
+        columns: [
+            { field: "codigo", title: "Código", sortColumn: "Cod_Cliente", attributes: [{ "class": "col-md-1 text-center" }] },
+            { field: "nome", title: "Nome", sortColumn: "Nom_Cliente", attributes: [{ "class": "" }] },
+            { field: "NumRg", title: "RG", attributes: [{ "class": "text-center" }] },
+            { field: "NumTelefone", title: "Telefone", attributes: [{ "class": "text-center" }] },
+            { field: "DtaUltimoAtendimento", title: "Última consulta", attributes: [{ "class": "text-center" }] },
+            { 
+                title: "Selecionar", 
+                attributes: [{ "class": "col-md-1 text-center" }],
+                template: "<button data-id='{#codigo}' type='button' class='btn btn-warning btn-sm'><i class='fa fa-wrench'></i> Editar</button>" 
+            },            
+            { field: "DataCadastro", title: "Data Cadastro", type: "date", format: "dd/MM/yyyy", attributes: [{ "class": "text-center" }] },
+			{
+				title: "Ações",
+				attributes: [{ "class": "text-center" }],
+				
+				//EX01
+				template: "<div>Ola {#Nome}</div>"
+				
+				//EX02
+				template: $("#actionsTemplate").html()
+			},
+			{
+				title: "Excluir",
+				command: {
+					toolTip: "Excluir Registro",
+					confirm: "Tem certeza que deseja excluir o registro?",
+					attributes: [{ "class": "ico-delete" }]
+
+					//EX01
+					onCall: Remove, //Função JavaScript
+
+					//EX02
+					keyField: "IdUsuario",
+					controller: "Usuario",
+					action: "Remove",
+				}
+			}
+        ],
+        
+		lineClick: {
+			cellsWithoutClick: [5],
+		
+			//EX01
+			controller: "Usuario",
+			action: "Manage",
+			keyField: "IdUsuario",
+		
+			//EX02
+			url: "cadastro.php?idCliente={#codigo}",
+		
+			//EX03
+			onClick: LineClick //Função JavaScript
+		},
+		
+		pager: {
+			allowPageSize: false,
+			allowRefresh: true,
+			attributes: [{ "class": "grid-view-pager" }]
+		},
+		
+		sorting: {
+			enabled: true
+			defaultSortColumn: "Nome"
+			defaultSortOrder: "DESC"
+		},
+		
+		onRowDataBound: RowDataBound //Função JavaScript
+
+     });
+
+     function RowDataBound(data, row) {
+         console.log(data);
+         console.log(row);
+     }
+
+     function LineClick(e) {
+         console.log(e.data);
+     }
+
+     function Remove(e) {
+     	console.log(e.data);
+     }
+
+     $("#btnFiltro").click(function () {
+     	var filtro = $("#txtFiltro").val();            
+         $("#grid").xGrid("filter", "filtro=" + filtro);
+     });
+
+     $("#btnReload").click(function () {
+         $("#grid").xGrid("reload");
+     });
+
+     $("#grid").on("click", "button[data-id]", function() {
+         window.location= "clienteEdit.php?idCliente=" + $(this).attr("data-id");
+     });

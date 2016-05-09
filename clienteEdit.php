@@ -170,21 +170,6 @@
 <html lang="en">
 <head>
 	<?php include("includes/header.php"); ?>
-	<style>
-		.ui-autocomplete-loading {
-		    background: white url("components/jquery-ui/images/ui-anim_basic_16x16.gif") no-repeat scroll 99% center;
-		}
-		
-		.ui-autocomplete-rg {
-			font-style: italic;
-			font-size: 10pt;
-		}
-		
-		.ui-autocomplete-rg {
-			font-style: italic;
-			font-size: 10pt;
-		}
-	</style>
 </head>
 <body>
     <div id="wrapper">

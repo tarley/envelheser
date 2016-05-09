@@ -1,39 +1,44 @@
 $(document).ready(function() {
-//	$("#btnBuscaCliente").click(function() {
-//		var cliente = $("#nomeCliente").val();	
-//		$.ajax({
-//			url: "ajax/cliente.ajax.php?term=" + cliente,
-//			success: function (data) {
-//				var cliente = jQuery.parseJSON(data);
-//				
-//				var tbody = $("#tablePaciente tbody");
-//				tbody.empty();
-//				
-//				if(cliente.length != 0){
-//					for(var i=0; i < cliente.length; i++){
-//						console.log(cliente[i]);
-//						var tr = $('<tr></tr>');
-//						var tdCod = $('<td class="text-center">' + cliente[i].codigo + '</td>');
-//						var tdNome = $('<td>' + cliente[i].nome + '</td>');
-//						var tdRg = $('<td class="text-center">' + cliente[i].NumRg + '</td>');
-//						var tdTelefone = $('<td class="text-center">' + cliente[i].NumTelefone + '</td>');
-//						var tdUltimaConsulta = $('<td class="text-center">' + cliente[i].DtaUltimoAtendimento + '</td>');
-//						var tdEditar = $('<td></td>');
-//						var divEditar = $('<div class="col-md-1 text-center"></div>');
-//						var btnEditar  = $('<button id="#" type="button" class="btn btn-warning btn-sm"><i class="fa fa-wrench"></i> Editar</button>');
-//						divEditar.append(btnEditar);
-//						tdEditar.append(divEditar);
-//						tr.append(tdCod);
-//						tr.append(tdNome);
-//						tr.append(tdRg);
-//						tr.append(tdTelefone);
-//						tr.append(tdUltimaConsulta);
-//						tr.append(tdEditar);
-//						tbody.append(tr);
-//					}
-//				}
-//			
-//			}
-//		});
-//	});
+
+	$("#gridCliente").xGrid({
+	    gridAttributes: [{ "class": "table vert-offset-bottom-0" }],
+	    
+	    dataSource: {
+	        url: "ajax/cliente.ajax.php?lista"
+	    },
+	    
+	    columns: [
+	        { field: "codigo", title: "Código", sortColumn: "Cod_Cliente", attributes: [{ "class": "col-md-1 text-center" }] },
+	        { field: "nome", title: "Nome", sortColumn: "Nom_Cliente", attributes: [{ "class": "" }] },
+	        { field: "NumRg", title: "RG", attributes: [{ "class": "text-center" }] },
+	        { field: "NumTelefone", title: "Telefone", attributes: [{ "class": "text-center" }] },
+	        { field: "DtaUltimoAtendimento", title: "Última consulta", attributes: [{ "class": "text-center" }] },
+	        { 
+	            title: "Selecionar", 
+	            attributes: [{ "class": "col-md-1 text-center" }],
+	            template: "<button data-id='{#codigo}' type='button' class='btn btn-warning btn-sm'><i class='fa fa-wrench'></i> Editar</button>" 
+	        }
+	    ],
+	
+	    sorting: {
+	        enabled: true
+	        //defaultSortColumn: "Nome"
+	        //defaultSortOrder: "DESC"
+	    }
+	});    
+
+	$("#gridCliente").on("click", "button[data-id]", function() {
+	    window.location= "clienteEdit.php?idCliente=" + $(this).attr("data-id");
+	});    
+
+	$("#btnFiltro").click(function () {
+		var filtro = $("#txtFiltro").val();            
+		$("#gridCliente").xGrid("filter", "filtro=" + filtro);
+	});
+
+	$("#btnLimpar").click(function(){
+		$("#txtFiltro").val("");
+		$("#gridCliente").xGrid("filter", "filtro=");
+	});	
+	
 });
