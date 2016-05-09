@@ -264,25 +264,25 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div id="divQuestionario">										                                    	
-                                    	<div>
+                                    	<div style="padding-bottom: 10px">
                                     		<button id="novo" type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
                                     		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
                                     		</div>
-							                <div id="divMontaProntruario" class="panel panel-default" style="display: none;">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-lg-12">	
-															<div>
-																<?php 
-																	MontaGrupos(null);
-																?>
-															</div>
+	                                	</div>                                    		
+						                <div id="divMontaProntruario" class="panel panel-default" style="display: none;">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-lg-12">	
+														<div>
+															<?php 
+																MontaGrupos(null);
+															?>
 														</div>
-													 </div>
-												 </div>                              
-											</div>
-	                                	</div>
+													</div>
+												 </div>
+											 </div>                              
+										</div>
 	                             	</div>
 	                         	</div>
 	                     	</div>                                    

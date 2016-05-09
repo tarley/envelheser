@@ -1,3 +1,4 @@
+<script type="text/javascript">    
     $("#grid").xGrid({
         gridAttributes: [{ "class": "grid-view" }],
         headerAttributes: [{ "class": "grid-view-header" }],
@@ -104,3 +105,12 @@
      $("#grid").on("click", "button[data-id]", function() {
          window.location= "clienteEdit.php?idCliente=" + $(this).attr("data-id");
      });
+</script>
+<script id="actionsTemplate" type="text/xGrid-tmpl">
+    <div class="div-acao-main">
+        <a href="#" class="btn-acao">Ações</a>
+        <div id="content{#IdUsuario}" class="div-acao-content">
+            <a href="/Usuario/Manage/{#IdUsuario}" target="_blank" class="acao">Ação 01</a>
+        </div>
+    </div>
+</script>     
