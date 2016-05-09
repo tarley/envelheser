@@ -80,7 +80,14 @@
 										</tbody>
 									</table>
 								</div>
-
+								
+								<!--
+								<br />
+								<div id="grid2" class="table-responsive table-bordered">
+									
+								</div>
+								-->
+								
 							</div>
 
 						</div>
@@ -96,6 +103,105 @@
     
 	<?php include("includes/footer.php"); ?>
 	<script src="js/clienteVis.js"></script>
+	
+	<script src="js/xGrid.js"></script>	
+    <script type="text/javascript">
+        $("#grid2").xGrid({
+           gridAttributes: [{ "class": "table vert-offset-bottom-0" }],
+           //headerAttributes: [{ "class": "grid-view-header" }],
+           //rowAttributes: [{ "class": "grid-view-row" }],
+           //rowAltAttributes: [{ "class": "grid-view-row-alt" }],
+           dataSource: {
+               url: "ajax/cliente.ajax.php?lista"
+           },
+           columns: [
+               { field: "codigo", title: "Código", attributes: [{ "class": "col-md-1 text-center" }] },
+               { field: "nome", title: "Nome", attributes: [{ "class": "" }] },
+               { field: "NumRg", title: "RG", attributes: [{ "class": "text-center" }] },
+               { field: "NumTelefone", title: "Telefone", attributes: [{ "class": "text-center" }] },
+               { field: "DtaUltimoAtendimento", title: "Última consulta", attributes: [{ "class": "text-center" }] },
+               { 
+                   title: "Selecionar", 
+                   attributes: [{ "class": "col-md-1 text-center" }],
+                   template: "<button id='#' type='button' class='btn btn-warning btn-sm'><i class='fa fa-wrench'></i> Editar</button>" 
+               },
+               
+               //{ field: "DataCadastro", title: "Data Cadastro", type: "date", format: "dd/MM/yyyy", attributes: [{ "class": "text-center" }] },
+//                {
+//                    title: "Ações",
+//                    attributes: [{ "class": "halign-center" }],
+//                    //template: "<div>Ola {#Nome}</div>"
+//                    template: $("#actionsTemplate").html()
+//                },
+//                {
+//                    title: "Excluir",
+//                    command: {
+//                        keyField: "IdUsuario",
+//                        onCall: Remove,
+//                        toolTip: "Excluir Registro",
+//                        //controller: "Usuario",
+//                        //action: "Remove",
+//                        //confirm: "Tem certeza que deseja excluir o registro?",
+//                        attributes: [{ "class": "ico-delete" }]
+//                    }
+//                }
+           ],
+           lineClick: {
+               controller: "Usuario",
+               action: "Manage",
+               keyField: "IdUsuario",
+               cellsWithoutClick: [4, 5],
+               //onClick: LineClick
+           },
+//            pager: {
+//                allowPageSize: false,
+//                allowRefresh: true,
+//                attributes: [{ "class": "grid-view-pager" }]
+//            },
+
+           sorting: {
+               enabled: true
+               //defaultSortColumn: "Nome"
+               //defaultSortOrder: "DESC"
+           },
+
+           onRowDataBound: RowDataBound
+
+        });
+
+        function RowDataBound(data, row) {
+            console.log(data);
+        }
+
+        function LineClick(e) {
+            console.log(e.data);
+        }
+
+        function Remove(e) {
+            if (confirm("Tem certeza que deseja excluir o registro?")) {
+                $.ajax({
+                    url: "/Usuario/Remove/" + e.data.key,
+                    success: function (data) {
+                        if (data.Sucesso) {
+                            $(e.data.row).remove();
+                            $("#grid").xGrid("reload");
+                        }
+
+                        alert(data.Mensagem);
+                    }
+                });
+            }
+        }
+
+        $("#btnFilter").click(function () {
+            $("#grid").xGrid("filter", $("#frmFiltro").serialize());
+        });
+
+        $("#btnReload").click(function () {
+            $("#grid").xGrid("reload");
+        });
+    </script>	
+	
 	</div>
 </body>
 </html>

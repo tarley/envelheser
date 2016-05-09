@@ -24,6 +24,22 @@
 		}
 		
 		echo "[" . $retorno . "]";
+	} else if(isset($_GET['lista'])) {
+		$retorno = "";		
+		$lista = $cliente->getLista('');
+
+		for($i = 0; $i < sizeOf($lista); $i++) {
+			$retorno .= ($retorno != "") ? "," : "";
+			$retorno .= "{";
+			$retorno .= "\"codigo\": " . $lista[$i]["Cod_Cliente"] . ", ";
+			$retorno .= "\"nome\": \"" . $lista[$i]["Nom_Cliente"] . "\", ";
+			$retorno .= "\"NumRg\": \"" . $lista[$i]["Num_Rg"] . "\", ";
+			$retorno .= "\"NumTelefone\": \"" . $lista[$i]["NumTelefone"] . "\", ";
+			$retorno .= "\"DtaUltimoAtendimento\": \"" . $lista[$i]["DtaUltimoAtendimento"] . "\"";
+			$retorno .= "}";
+		}	
+		
+		echo "{ \"Collection\": ["  . $retorno . "]}";
 		
 	} else if(isset($_GET['codigo'])) {
 		$dados = $cliente->getDados($_GET['codigo']);
