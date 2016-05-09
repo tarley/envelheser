@@ -5,6 +5,7 @@
 </head>
 
 <body class="login-back">
+<?php include("includes/loading.php");?>
 
 	<div class="container vert-offset-top-2">
 			<div class="row">
