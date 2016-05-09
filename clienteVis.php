@@ -81,12 +81,12 @@
 									</table>
 								</div>
 								
-								<!--
+								
 								<br />
 								<div id="grid2" class="table-responsive table-bordered">
 									
 								</div>
-								-->
+								
 								
 							</div>
 
@@ -123,7 +123,7 @@
                { 
                    title: "Selecionar", 
                    attributes: [{ "class": "col-md-1 text-center" }],
-                   template: "<button id='#' type='button' class='btn btn-warning btn-sm'><i class='fa fa-wrench'></i> Editar</button>" 
+                   template: "<button data-id='{#codigo}' type='button' class='btn btn-warning btn-sm'><i class='fa fa-wrench'></i> Editar</button>" 
                },
                
                //{ field: "DataCadastro", title: "Data Cadastro", type: "date", format: "dd/MM/yyyy", attributes: [{ "class": "text-center" }] },
@@ -147,10 +147,11 @@
 //                }
            ],
            lineClick: {
-               controller: "Usuario",
-               action: "Manage",
-               keyField: "IdUsuario",
-               cellsWithoutClick: [4, 5],
+               //controller: "Usuario",
+               //action: "Manage",
+               //keyField: "IdUsuario",
+               url: "cadastro.php?idCliente={#codigo}",
+               cellsWithoutClick: [5],
                //onClick: LineClick
            },
 //            pager: {
@@ -184,7 +185,7 @@
                     success: function (data) {
                         if (data.Sucesso) {
                             $(e.data.row).remove();
-                            $("#grid").xGrid("reload");
+                            $("#grid2").xGrid("reload");
                         }
 
                         alert(data.Mensagem);
@@ -193,12 +194,18 @@
             }
         }
 
-        $("#btnFilter").click(function () {
-            $("#grid").xGrid("filter", $("#frmFiltro").serialize());
+        $("#btnBuscaCliente").click(function () {
+        	var term = $("#nomeCliente").val()            
+            $("#grid2").xGrid("filter", "term=" + term);
         });
 
         $("#btnReload").click(function () {
-            $("#grid").xGrid("reload");
+            $("#grid2").xGrid("reload");
+        });
+
+        $(document.body).on("click", "button[data-id]", function() {
+            var id = $(this).attr("data-id");
+            window.location= "cadastro.php?idCliente=" + id;
         });
     </script>	
 	

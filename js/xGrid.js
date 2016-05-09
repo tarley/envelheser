@@ -182,11 +182,14 @@
                             var key = rowData[settings.lineClick.keyField];
                             var controller = settings.lineClick.controller;
                             var action = settings.lineClick.action;
+                            var url = replaceTemplateKeys(settings.lineClick.url, rowData) ;
 
                             if (settings.lineClick.onClick && $.isFunction(settings.lineClick.onClick))
                                 cell.click({ key: key, row: row }, settings.lineClick.onClick);
                             else if (controller && action)
                                 column.attributes = addAttribute(column.attributes, "onclick", "window.location='/" + controller + "/" + action + "/" + key + "'", true);
+                            else if(url)
+                            	column.attributes = addAttribute(column.attributes, "onclick", "window.location='" + url + "'", true);
 
                             column.attributes = addAttribute(column.attributes, "style", "cursor: pointer;", false);
                         }

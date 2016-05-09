@@ -24,9 +24,13 @@
 		}
 		
 		echo "[" . $retorno . "]";
+		
 	} else if(isset($_GET['lista'])) {
-		$retorno = "";		
-		$lista = $cliente->getLista('');
+		$retorno = "";	
+		
+		$term = (isset($_POST['term'])) ? $_POST['term'] : "";
+		
+		$lista = $cliente->getLista($term);
 
 		for($i = 0; $i < sizeOf($lista); $i++) {
 			$retorno .= ($retorno != "") ? "," : "";
