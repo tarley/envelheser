@@ -1,0 +1,6 @@
+/*==============================================================*/  
+/*                  INSERT DOS QUESTIONÁRIOS                    */  
+/*==============================================================*/  
+
+INSERT INTO tb_questionario (Des_Questionario) VALUES ('Triagem'); 
+INSERT INTO tb_questionario (Des_Questionario) VALUES ('Fisioterapia'); 

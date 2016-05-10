@@ -1,0 +1,6 @@
+/*==============================================================*/
+/*                 CADASTRO DE TIPOS DE TELEFONE                */
+/*==============================================================*/
+INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Residencial');
+INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Comercial');
+INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Celular');

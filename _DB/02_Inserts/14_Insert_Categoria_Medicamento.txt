@@ -1,0 +1,13 @@
+/*==============================================================*/
+/*           CADASTRO DE CATEGORIAS DE MEDICAMENTOS             */
+/*==============================================================*/
+
+ CALL SPInsereCategoriaMedicamento ('Antihipertensivos');
+ CALL SPInsereCategoriaMedicamento ('Hipoglicimiantes');
+ CALL SPInsereCategoriaMedicamento ('Cardiotônicos');
+ CALL SPInsereCategoriaMedicamento ('Ansiolíticos');
+ CALL SPInsereCategoriaMedicamento ('Antidepressivos');
+ CALL SPInsereCategoriaMedicamento ('Diuréticos');
+ CALL SPInsereCategoriaMedicamento ('Antiagregante Plaquetário');
+ CALL SPInsereCategoriaMedicamento ('Hormônio Tireoidiano');
+ CALL SPInsereCategoriaMedicamento ('Anticonvulsivantes');

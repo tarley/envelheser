@@ -1,0 +1,38 @@
+/*==============================================================*/ 
+/*       CRIAÇÃO DA PROCEDURE DE REGISTRAR LISTA DE RADIO       */ 
+/*==============================================================*/ 
+
+DELIMITER $$
+
+    CREATE  PROCEDURE SPInsereListaRadio
+    (
+   	IN P_Descricao_Item 	  	VARCHAR(50),
+	IN P_Descricao_Pergunta	  	VARCHAR(150)
+
+    )
+        BEGIN
+        
+          DECLARE V_Descricao_Item 	VARCHAR(50);
+          DECLARE V_Cod_Pergunta 	SMALLINT;
+          
+          SET V_Descricao_Item 	    	:= P_Descricao_Item;
+          SET V_Cod_Pergunta   		:= (SELECT Cod_Pergunta FROM tb_pergunta WHERE Des_Pergunta = P_Descricao_Pergunta);
+          
+          
+	  	 INSERT INTO tb_lista_radio
+
+		(	Des_Item_Radio,
+			Cod_Pergunta
+   			
+		)
+
+         	 VALUES 
+		(	
+			V_Descricao_Item,
+			V_Cod_Pergunta
+			
+		);
+          
+        END  $$
+        
+DELIMITER ;

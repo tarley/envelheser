@@ -1,0 +1,8 @@
+/*==============================================================*/
+/*                           CADASTRO DE COR                    */
+/*==============================================================*/
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Negro');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Moreno');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Branco');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Pardo');
+INSERT INTO	tb_cor (Nom_Cor) VALUES ('Indefinido');

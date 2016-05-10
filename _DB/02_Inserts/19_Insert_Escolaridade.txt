@@ -1,0 +1,12 @@
+/*==============================================================*/
+/*                    CADASTRO DE ESCOLARIDADE                  */
+/*==============================================================*/
+
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('2º Ano Primário');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('6ª Série');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3ª Gráu');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3ª Primario');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Fundamental Completo');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Fundamental Incompleto');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Superior Completo');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Superior Incompleto');

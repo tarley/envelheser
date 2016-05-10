@@ -1,0 +1,48 @@
+/*==============================================================*/
+/*                    CADASTRO DE MEDICAMENTOS                  */
+/*==============================================================*/
+
+CALL SPInsereMedicamento ('Captopril 25 mg', 'História Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Atenolol 25 mg', 'História Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Losartana 50 mg', 'História Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Enalapril 10 mg', 'História Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Propranolol 40 mg', 'História Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 5 mg', 'História Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 10 mg', 'História Medicamentosa', 'Antihipertensivos');
+
+CALL SPInsereMedicamento ('Metformina 500 mg', 'História Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Metformina 850 mg', 'História Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Glibenclamida 5 mg', 'História Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Insulina Humana NPH 100UI/Ml', 'História Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Insulina Regular', 'História Medicamentosa', 'Hipoglicimiantes');
+
+CALL SPInsereMedicamento ('Digoxina 0,25mg', 'História Medicamentosa', 'Cardiotônicos');
+CALL SPInsereMedicamento ('Carvedilol 3,125 mg', 'História Medicamentosa', 'Cardiotônicos');
+CALL SPInsereMedicamento ('Carvedilol 6,25 mg', 'História Medicamentosa', 'Cardiotônicos');
+CALL SPInsereMedicamento ('Carvedilol 12,5 mg', 'História Medicamentosa', 'Cardiotônicos');
+CALL SPInsereMedicamento ('Carvedilol 25 mg', 'História Medicamentosa', 'Cardiotônicos');
+
+CALL SPInsereMedicamento ('Diazepam 5 mg', 'História Medicamentosa', 'Ansiolíticos');
+CALL SPInsereMedicamento ('Clomipramina 10 mg', 'História Medicamentosa', 'Ansiolíticos');
+CALL SPInsereMedicamento ('Clomipramina 25 mg', 'História Medicamentosa', 'Ansiolíticos');
+CALL SPInsereMedicamento ('Clonazepam 0,5 mg', 'História Medicamentosa', 'Ansiolíticos');
+CALL SPInsereMedicamento ('Clonazepam 2 mg', 'História Medicamentosa', 'Ansiolíticos');
+CALL SPInsereMedicamento ('Bromazepam 3 mg', 'História Medicamentosa', 'Ansiolíticos');
+CALL SPInsereMedicamento ('Bromazepam 6 mg', 'História Medicamentosa', 'Ansiolíticos');
+
+CALL SPInsereMedicamento ('Amitriptilina 25 mg', 'História Medicamentosa', 'Antidepressivos');
+CALL SPInsereMedicamento ('Fluoxetina 20 mg', 'História Medicamentosa', 'Antidepressivos');
+
+CALL SPInsereMedicamento ('Furosemida 40 mg', 'História Medicamentosa', 'Diuréticos');
+CALL SPInsereMedicamento ('Espironolactona 25 mg', 'História Medicamentosa', 'Diuréticos');
+CALL SPInsereMedicamento ('Espironolactona 100 mg', 'História Medicamentosa', 'Diuréticos');
+CALL SPInsereMedicamento ('Hidroclorotiazida 12,5 mg', 'História Medicamentosa', 'Diuréticos');
+CALL SPInsereMedicamento ('Hidroclorotiazida 25 mg', 'História Medicamentosa', 'Diuréticos');
+
+CALL SPInsereMedicamento ('Carbamazepina 200 mg', 'História Medicamentosa', 'Antiagregante Plaquetário');
+CALL SPInsereMedicamento ('Clonazepam 2 mg', 'História Medicamentosa', 'Antiagregante Plaquetário');
+CALL SPInsereMedicamento ('Ácido Valpróico 250 mg', 'História Medicamentosa', 'Antiagregante Plaquetário');
+
+CALL SPInsereMedicamento ('Levotiroxina (Puran T4)', 'História Medicamentosa', 'Hormônio Tireoidiano');
+
+CALL SPInsereMedicamento ('AAS 100 mg', 'História Medicamentosa', 'Anticonvulsivantes');

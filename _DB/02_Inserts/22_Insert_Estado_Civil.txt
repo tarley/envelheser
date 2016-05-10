@@ -1,0 +1,7 @@
+/*==============================================================*/
+/*                     CADASTRO DE DE ESTADO CIVIL              */
+/*==============================================================*/
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Casado');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Solteiro');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Viúvo');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Divorciado');

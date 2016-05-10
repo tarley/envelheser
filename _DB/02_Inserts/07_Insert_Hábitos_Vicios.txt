@@ -1,0 +1,21 @@
+/*==============================================================*/
+/*     	CADASTRO DE PERGUNTAS GRUPO HÁBITOS E VÍCIOS     	*/
+/*==============================================================*/
+CALL SPInserePergunta ('Tabagismo', 1, 1, 'Tabagismo');
+CALL SPInserePergunta ('Tabagismo', 3, 2, 'Por quanto tempo usou?');
+CALL SPInserePergunta ('Tabagismo', 3, 3, 'Quantidade/Frequência:');
+CALL SPInserePergunta ('Tabagismo', 3, 4, 'Há quanto tempo parou?');
+
+CALL SPInserePergunta ('Etilismo', 1, 1, 'Etilismo');
+CALL SPInserePergunta ('Etilismo', 3, 2, 'Tipo:');
+CALL SPInserePergunta ('Etilismo', 3, 3, 'Quantidade:');
+CALL SPInserePergunta ('Etilismo', 3, 4, 'Frequência:');
+CALL SPInserePergunta ('Etilismo', 3, 5, 'Tempo:');
+
+CALL SPInserePergunta ('Drogas Ilícitas', 1, 1, 'Drogas Ilícitas');
+CALL SPInserePergunta ('Drogas Ilícitas', 3, 2, 'Tipo:');
+CALL SPInserePergunta ('Drogas Ilícitas', 3, 3, 'Quantidade:');
+CALL SPInserePergunta ('Drogas Ilícitas', 3, 4, 'Frequência:');
+CALL SPInserePergunta ('Drogas Ilícitas', 3, 5, 'Tempo:');
+
+CALL SPInserePergunta ('Hábitos e Vícios', 3, 1, 'Outros Hábitos e vícios:');

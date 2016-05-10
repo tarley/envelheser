@@ -1,0 +1,35 @@
+/*==============================================================*/ 
+/* CRIAÇÃO DA PROCEDURE DE REGISTRAR CATEGORIA DE MEDICAMENTOS  */ 
+/*==============================================================*/ 
+
+DELIMITER $$
+
+    CREATE  PROCEDURE SPInsereCategoriaMedicamento
+    (
+   	IN P_Descricao_Categoria 	  	VARCHAR(100)
+
+    )
+        BEGIN
+        
+          DECLARE V_Descricao_Categoria 	VARCHAR(100);
+          
+          
+          SET V_Descricao_Categoria 	    	:= P_Descricao_Categoria;
+          
+          
+          
+	  	 INSERT INTO tb_categoria_combo
+
+		(	Des_Categoria
+   			
+		)
+
+         	 VALUES 
+		(	
+			V_Descricao_Categoria
+			
+		);
+          
+        END  $$
+        
+DELIMITER ;

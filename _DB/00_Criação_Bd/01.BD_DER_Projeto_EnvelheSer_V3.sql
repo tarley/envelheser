@@ -365,3 +365,4 @@ alter table tb_telefone add constraint FK_Telefone_Cliente foreign key (Cod_Clie
 
 alter table tb_telefone add constraint FK_Tipo_Telefone foreign key (Cod_Tipo_Telefone)
       references tb_tipo_telefone (Cod_Tipo_Telefone);
+

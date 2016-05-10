@@ -1,0 +1,45 @@
+/*==============================================================*/ 
+/*          CRIAÇÃO DA PROCEDURE DE REGISTRAR MEDICAMENTOS      */ 
+/*==============================================================*/ 
+
+DELIMITER $$
+
+    CREATE  PROCEDURE SPInsereMedicamento
+    (
+   	IN P_Nome_Medicamento 	  	VARCHAR(100),
+   	IN P_Des_Pergunta    	  	VARCHAR(150),
+	IN P_Nome_Categoria_Medicamento VARCHAR(100)
+
+    )
+        BEGIN
+        
+          DECLARE V_Nome_Medicamento 	 	VARCHAR(100);
+          DECLARE V_Cod_Pergunta    	 	SMALLINT;
+	  DECLARE V_Cod_Categoria_Medicamento   INT;
+          
+          
+          SET V_Nome_Medicamento 	    := P_Nome_Medicamento;
+          SET V_Cod_Pergunta    	    := (SELECT Cod_Pergunta FROM tb_pergunta WHERE Des_Pergunta = P_Des_Pergunta );
+	  SET V_Cod_Categoria_Medicamento   := (SELECT Cod_Categoria_Combo FROM tb_categoria_combo WHERE Des_Categoria = P_Nome_Categoria_Medicamento );
+          
+          
+          
+	  	 INSERT INTO tb_lista_multi_combo
+
+		(	Des_Item_Multi_Combo,
+   			Cod_Pergunta,
+			Cod_Categoria_Combo
+   			
+		)
+
+         	 VALUES 
+		(	
+			V_Nome_Medicamento,
+			V_Cod_Pergunta,
+			V_Cod_Categoria_Medicamento
+			
+		);
+          
+        END  $$
+        
+DELIMITER ;

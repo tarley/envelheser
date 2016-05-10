@@ -1,0 +1,73 @@
+/*==============================================================*/ 
+/*                     CADASTRO DOS GRUPOS                      */ 
+/*==============================================================*/ 
+
+CALL SPInsereGrupo ('Identificação', null, 'Triagem', 1, 0);
+
+CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
+
+			CALL SPInsereGrupo ('História Médica Pregressa', 'Anamnese', 'Triagem', 1, 1);
+
+						CALL SPInsereGrupo ('Sistema Cardiovascular', 'História Médica Pregressa', 'Triagem', 1, 1);
+						CALL SPInsereGrupo ('Sistema Respiratório', 'História Médica Pregressa', 'Triagem', 2, 1);
+						CALL SPInsereGrupo ('Sistema Digestório', 'História Médica Pregressa', 'Triagem', 3, 1);
+						CALL SPInsereGrupo ('Sistema Genitourinário', 'História Médica Pregressa', 'Triagem', 4, 1);
+						CALL SPInsereGrupo ('Sistema Endócrino', 'História Médica Pregressa', 'Triagem', 5, 1);
+						CALL SPInsereGrupo ('Sistema Nervoso Central', 'História Médica Pregressa', 'Triagem', 6, 1);
+						CALL SPInsereGrupo ('Sistema Sensitivo', 'História Médica Pregressa', 'Triagem', 7, 1);
+						CALL SPInsereGrupo ('Sistema Hematopoético', 'História Médica Pregressa', 'Triagem', 8, 1);
+						CALL SPInsereGrupo ('Sistema Osteomuscular', 'História Médica Pregressa', 'Triagem', 9, 1);
+
+			CALL SPInsereGrupo ('Histórico de Queda', 'Anamnese', 'Triagem', 2, 1);
+
+			CALL SPInsereGrupo ('Histórico Familiar', 'Anamnese', 'Triagem', 3, 1);
+
+			CALL SPInsereGrupo ('Histórico Social', 'Anamnese', 'Triagem', 4, 1);
+
+			CALL SPInsereGrupo ('Hábitos e Vícios', 'Anamnese', 'Triagem', 5, 1);
+
+				CALL SPInsereGrupo ('Tabagismo', 'Hábitos e Vícios', 'Triagem', 1, 1);
+
+				CALL SPInsereGrupo ('Etilismo', 'Hábitos e Vícios', 'Triagem', 2, 1);
+
+				CALL SPInsereGrupo ('Drogas Ilícitas', 'Hábitos e Vícios', 'Triagem', 3, 1);
+
+CALL SPInsereGrupo ('Necessidades Psicoespirituais', null, 'Triagem', 2, 1);
+
+CALL SPInsereGrupo ('Necessidades Psicosociais', null, 'Triagem', 3, 1);
+
+	CALL SPInsereGrupo ('Interação Social', 'Necessidades Psicosociais', 'Triagem', 1, 1);
+
+	CALL SPInsereGrupo ('Recreação/Lazer/Criatividade', 'Necessidades Psicosociais', 'Triagem', 2, 1);
+
+CALL SPInsereGrupo ('Necessidades Psicobiológicas', null, 'Triagem', 4, 1);
+
+	CALL SPInsereGrupo ('Cuidado Corporal', 'Necessidades Psicobiológicas', 'Triagem', 1, 1);
+
+	CALL SPInsereGrupo ('Hábito de Sono e Repouso', 'Necessidades Psicobiológicas', 'Triagem', 2, 1);
+	
+	CALL SPInsereGrupo ('Exercício', 'Necessidades Psicobiológicas', 'Triagem', 3, 1);
+
+	CALL SPInsereGrupo ('Eliminação Intestinal', 'Necessidades Psicobiológicas', 'Triagem', 4, 1);
+	
+	CALL SPInsereGrupo ('Terapêutica', 'Necessidades Psicobiológicas', 'Triagem', 5, 1);
+
+	CALL SPInsereGrupo ('Sexualidade', 'Necessidades Psicobiológicas', 'Triagem', 6, 1);
+
+CALL SPInsereGrupo ('Exame Físico', null, 'Triagem', 5, 1);
+
+CALL SPInsereGrupo ('Coong', null, 'Triagem', 6, 1);
+
+CALL SPInsereGrupo ('Exame Físico Objetivo de coong_2', null, 'Triagem', 7, 1);
+
+			CALL SPInsereGrupo ('Sistema Respiratório_2', 'Exame Físico Objetivo de coong_2', 'Triagem', 1, 1);
+
+			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame Físico Objetivo de coong_2', 'Triagem', 2, 1);
+
+			CALL SPInsereGrupo ('Sistema Gastrointestinal_2', 'Exame Físico Objetivo de coong_2', 'Triagem', 3, 1);
+
+			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame Físico Objetivo de coong_2', 'Triagem', 4, 1);
+
+			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame Físico Objetivo de coong_2', 'Triagem', 5, 1);
+
+			CALL SPInsereGrupo ('Sistema Geniturinário_2', 'Exame Físico Objetivo de coong_2', 'Triagem', 6, 1);

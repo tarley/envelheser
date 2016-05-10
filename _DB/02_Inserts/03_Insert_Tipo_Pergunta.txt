@@ -1,0 +1,26 @@
+/*==============================================================*/
+/*           	CADASTRO DOS TIPOS DE PERGUNTAS            	*/
+/*==============================================================*/
+CALL SPInsereTipoPergunta(0,1,0,0,0,0,0,0,0,0,0,'SimNão');
+CALL SPInsereTipoPergunta(0,0,1,0,0,0,0,0,0,0,0,'Qual');
+CALL SPInsereTipoPergunta(1,0,0,0,0,0,0,0,0,0,0,'Aberta');
+CALL SPInsereTipoPergunta(0,0,0,1,0,0,0,0,0,0,0,'Quando');
+CALL SPInsereTipoPergunta(1,1,1,0,0,0,0,0,0,0,0,'Aberta - SimNao - Qual');
+CALL SPInsereTipoPergunta(0,1,1,1,0,0,0,0,0,0,0,'SimNao - Qual - Quando');
+CALL SPInsereTipoPergunta(0,1,1,0,0,0,0,0,0,0,0,'SimNao - Qual');
+CALL SPInsereTipoPergunta(0,1,0,1,0,0,0,0,0,0,0,'SimNao - Quando');
+CALL SPInsereTipoPergunta(0,1,0,0,0,0,1,0,0,0,0,'SimNao - Observação');
+CALL SPInsereTipoPergunta(0,0,0,0,0,0,1,0,0,1,0,'CheckBox - Observação');
+CALL SPInsereTipoPergunta(0,0,0,0,0,0,1,0,0,0,1,'MultiCombo - Observação');
+CALL SPInsereTipoPergunta(0,0,0,0,0,0,0,0,0,0,1,'MultiCombo');
+CALL SPInsereTipoPergunta(0,0,0,0,1,0,0,0,0,0,0,'Outros');
+CALL SPInsereTipoPergunta(1,1,0,0,0,0,0,0,0,0,0,'SimNao - Aberta');
+CALL SPInsereTipoPergunta(0,1,0,0,1,0,0,1,0,0,0,'SimNão - ComboBox - Outros');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,1,0,0,0,'SimNão - ComboBox - Cite');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,0,0,'SimNão - Cite');
+CALL SPInsereTipoPergunta(0,0,0,0,0,0,0,0,1,0,0,'Radio');
+CALL SPInsereTipoPergunta(0,0,0,0,0,1,0,0,1,0,0,'Radio - Cite');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,1,0,0,'SimNão - Radio - Cite');
+CALL SPInsereTipoPergunta(1,0,0,0,0,0,1,0,0,1,0,'CheckBox - Aberta - Observação');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,1,0,'SimNão - CheckBox - Cite');
+CALL SPInsereTipoPergunta(0,0,0,0,0,1,0,0,0,1,0,'CheckBox - Cite');

@@ -1,0 +1,26 @@
+/*==============================================================*/
+/*                  CADASTRO DE NATURALIDADE                    */
+/*==============================================================*/
+
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamanandiba');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('São José Jacuri');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamuri');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Bom Despacho');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Belo Horizonte');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Divinópolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Conselheiro Lafaiete');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Cláudio');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Sabará');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Santa Lúzia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Carmopolis de Minas');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Alto Rio Doce');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Abaeté');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Brumadinho');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Caeté');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Viçosa');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Virginópolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberaba');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberlândia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Timóteo');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');

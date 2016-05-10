@@ -1,0 +1,15 @@
+/*==============================================================*/
+/*                    CADASTRO DE DE OCUPAÇÃO                   */
+/*==============================================================*/
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Doméstica');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Salgadeiro');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Aposentado');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Análista de Sistemas');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Autônomo');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Desempregado');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Diarista');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Advogado');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Táxista');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Médico');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Estudante');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Programador');

@@ -1,0 +1,23 @@
+/*==============================================================*/
+/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOBIOLÓGICAS   */
+/*==============================================================*/
+
+CALL SPInserePergunta ('Cuidado Corporal', 17, 1, 'Déficit prévio no auto cuidado: Higiene corporal');
+CALL SPInserePergunta ('Cuidado Corporal', 17, 2, 'Déficit prévio no auto cuidado: Higiene oral');
+
+CALL SPInserePergunta ('Hábito de Sono e Repouso', 22, 1, 'Tem dificuldade para dormir?');
+
+CALL SPInserePergunta ('Exercício', 7, 1, 'Exercício');
+
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 1, 'Frequência vezes/dia:');
+CALL SPInserePergunta ('Eliminação Intestinal', 7, 2, 'Déficit prévio no auto cuidado:');
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 3, 'Coloração');
+CALL SPInserePergunta ('Eliminação Intestinal', 1, 4, 'Odor');
+CALL SPInserePergunta ('Eliminação Intestinal', 1, 5, 'Dor');
+CALL SPInserePergunta ('Eliminação Intestinal', 1, 6, 'Constipação');
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 7, 'Quantidade:');
+
+CALL SPInserePergunta ('Terapêutica', 9, 1, 'Segue orientações prévias relacionadas á saúde?');
+
+CALL SPInserePergunta ('Sexualidade', 16, 1, 'Dados de interesse clínico');
+

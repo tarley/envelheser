@@ -1,0 +1,85 @@
+/*==============================================================*/ 
+/*     CRIAÇÃO DA PROCEDURE PARA REGISTRAR TIPO DE PERGUNTAS    */ 
+/*==============================================================*/ 
+
+DELIMITER $$
+
+    CREATE  PROCEDURE SPInsereTipoPergunta
+    (
+        IN  P_Pergunta_Aberta  		bool,
+        IN  P_Pergunta_SimNao  		bool,
+        IN  P_Pergunta_Qual    		bool,
+        IN  P_Pergunta_Quando  		bool,
+        IN  P_Pergunta_Outros  		bool,
+        IN  P_Pergunta_Cite    		bool,
+        IN  P_Pergunta_Observacao 	bool,
+        IN  P_Pergunta_ComboBox 	bool,
+        IN  P_Pergunta_Radio   		bool,
+        IN  P_Pergunta_CheckBox 	bool,
+	IN  P_Pergunta_MultiCombo 	bool,
+	IN  P_Des_Tipo_Pergunta 	VARCHAR(100)
+    )
+        BEGIN
+        
+            DECLARE  V_Pergunta_Aberta  	bool;
+            DECLARE  V_Pergunta_SimNao  	bool;
+            DECLARE  V_Pergunta_Qual    	bool;
+            DECLARE  V_Pergunta_Quando  	bool;
+            DECLARE  V_Pergunta_Outros  	bool;
+            DECLARE  V_Pergunta_Cite    	bool;
+            DECLARE  V_Pergunta_Observacao 	bool;
+            DECLARE  V_Pergunta_ComboBox 	bool;
+            DECLARE  V_Pergunta_Radio   	bool;
+            DECLARE  V_Pergunta_CheckBox 	bool;
+	    DECLARE  V_Pergunta_MultiCombo 	bool;
+	    DECLARE  V_Des_Tipo_Pergunta 	VARCHAR(100);
+          
+            SET  V_Pergunta_Aberta     := P_Pergunta_Aberta;
+            SET  V_Pergunta_SimNao     := P_Pergunta_SimNao;
+            SET  V_Pergunta_Qual       := P_Pergunta_Qual;
+            SET  V_Pergunta_Quando     := P_Pergunta_Quando;
+            SET  V_Pergunta_Outros     := P_Pergunta_Outros;
+            SET  V_Pergunta_Cite       := P_Pergunta_Cite;
+            SET  V_Pergunta_Observacao := P_Pergunta_Observacao;
+            SET  V_Pergunta_ComboBox   := P_Pergunta_ComboBox;
+            SET  V_Pergunta_Radio      := P_Pergunta_Radio;
+            SET  V_Pergunta_CheckBox   := P_Pergunta_CheckBox;
+	    SET  V_Pergunta_MultiCombo := P_Pergunta_MultiCombo;
+	    SET  V_Des_Tipo_Pergunta   := P_Des_Tipo_Pergunta;
+          
+          
+	  	 INSERT INTO tb_tipo_pergunta
+
+		(	Ind_Pergunta_Aberta,
+   			Ind_Pergunta_SimNao,
+   			Ind_Pergunta_Qual,
+   			Ind_Pergunta_Quando,
+   			Ind_Pergunta_Outros,
+   			Ind_Pergunta_Cite,
+   			Ind_Pergunta_Observacao,
+   			ind_Pergunta_ComboBox,
+  			Ind_Pergunta_Radio,
+   			Ind_Pergunta_CheckBox,
+			Ind_Pergunta_Multi_Combo,
+			Des_Tipo_Perguntas
+		)
+
+         	 VALUES 
+		(	
+			V_Pergunta_Aberta,   
+			V_Pergunta_SimNao,
+			V_Pergunta_Qual,
+			V_Pergunta_Quando,
+			V_Pergunta_Outros,
+			V_Pergunta_Cite, 
+			V_Pergunta_Observacao,
+			V_Pergunta_ComboBox,
+			V_Pergunta_Radio,
+			V_Pergunta_CheckBox,
+			V_Pergunta_MultiCombo,
+	    		V_Des_Tipo_Pergunta
+		);
+          
+        END  $$
+        
+DELIMITER ;

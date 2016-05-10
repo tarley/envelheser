@@ -1,0 +1,19 @@
+/*==============================================================*/
+/*   CADASTRO DE PERGUNTAS GRUPO COONG 2                        */
+/*==============================================================*/
+
+CALL SPInserePergunta ('Sistema Respiratório_2', 10, 1, 'Tórax:');
+CALL SPInserePergunta ('Sistema Respiratório_2', 10, 2, 'Auscultura Pulmonar:');
+
+CALL SPInserePergunta ('Sistema Cardiovascular_2', 10, 1, 'Pulsos:');
+CALL SPInserePergunta ('Sistema Cardiovascular_2', 10, 2, 'Auscultura Pulmonar.:');
+
+CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 1, 'Abdome:');
+CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 2, 'Auscultura:');
+CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 3, 'Percussão:');
+
+CALL SPInserePergunta ('Membros Superiores MMSS_2', 10, 1, 'Membros Superiores (MMSS):');
+
+CALL SPInserePergunta ('Membros Inferiores MMII_2', 10, 1, 'Membros Inferiores (MMII):');
+
+CALL SPInserePergunta ('Sistema Geniturinário_2', 10, 1, 'Sistema Geniturinário:');
