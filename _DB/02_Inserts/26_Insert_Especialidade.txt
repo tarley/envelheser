@@ -1,0 +1,8 @@
+/*==============================================================*/
+/*                      CADASTRO DE ESPECIALIDADES              */
+/*==============================================================*/
+
+INSERT INTO tb_especialidade (Nom_Especialidade) VALUES ('Psicologia');
+INSERT INTO tb_especialidade (Nom_Especialidade) VALUES ('Odontologia');
+INSERT INTO tb_especialidade (Nom_Especialidade) VALUES ('Fisioterapia');
+INSERT INTO tb_especialidade (Nom_Especialidade) VALUES ('Enfermagem');
