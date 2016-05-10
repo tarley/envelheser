@@ -21,11 +21,17 @@ class Avaliador{
 	/**
 	 * Retorna a lista de todos avaliadores cadastrados
 	 */
-	function getLista(){
-		$query = "SELECT Cod_Avaliador, Nom_Avaliador, Cod_Especialidade, Nom_Especialidade, Des_Email, Des_Login ";
+	function getLista($input, $sortColumn = "", $sortOrder = "ASC"){
+		$query = "SELECT Cod_Avaliador, Nom_Avaliador, a.Cod_Especialidade, Nom_Especialidade, Des_Email, Des_Login ";
 		$query .= "FROM tb_avaliador a ";
 		$query .= "LEFT JOIN tb_especialidade e ON (a.Cod_Especialidade = e.Cod_Especialidade) ";
 		
+		if($input != "")
+			$query .= "WHERE nom_avaliador LIKE '%$input%' ";
+		
+		if($sortColumn != "")
+			$query .= "ORDER BY " . $sortColumn . " " . $sortOrder . " ";
+			
 		$query = mysqli_query($this->cnn, $query);
 		
 		$listaAvaliadores = array();
