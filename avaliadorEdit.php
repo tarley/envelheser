@@ -15,6 +15,9 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+            
+            
+            <!--  -->
             	
                     <div class="panel panel-default">
                         <div class="panel-heading"><i class="fa fa-pencil-square-o"></i>
@@ -43,21 +46,21 @@
                                         </div>						
                                         <div class="form-group col-md-5">
                                             <label>E-mail</label>
-                                            <input type="email" class="form-control">
+                                            <input id="emailAvaliador" type="email" class="form-control">
                                         </div>
 										<div class="form-group col-md-4">
                                             <label>Login</label>
-                                            <input id="login" class="form-control">
+                                            <input id="loginAvaliador" class="form-control">
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label>Senha</label>
-                                            <input id="senha" class="form-control">
+                                            <input id="senhaAvaliador" class="form-control">
                                         </div>	
                                         
                                          <div class="form-group col-md-3 col-md-offset-9 vert-offset-top-1">
                                     		<div class="pull-right">
-                                    		<button id="#" type="button" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>		
-                                    		<button id="#" type="button" class="btn btn-danger"><i class="fa fa-times-circle"></i> Cancelar</button>
+                                    		<button id="btnSalvar" type="button" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>		
+                                    		<button id="btnCancelar" type="button" class="btn btn-danger"><i class="fa fa-times-circle"></i> Cancelar</button>
                                			</div>
                                			</div>
                                			
@@ -86,7 +89,7 @@
     </div>
     	
     <!-- /#wrapper -->
-    
-	<?php include("includes/footer.php"); ?>	
+	<?php include("includes/footer.php"); ?>
+	<script src="js/avaliadorEdit.js"></script>	
 </body>
 </html>

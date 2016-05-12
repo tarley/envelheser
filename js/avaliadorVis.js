@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	$("#gridAvaliador").xGrid({
 	    gridAttributes: [{ "class": "table vert-offset-bottom-0" }],
 	    
