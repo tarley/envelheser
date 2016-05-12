@@ -27,6 +27,21 @@
 		}
 	
 		echo "{ \"Collection\": ["  . $retorno . "]}";
+		
+	} else if(isset($_GET['codigo'])) {
+		$dados = $avaliador->getDados($_GET['codigo']);
+		
+		$retorno = "{";
+		$retorno .= "\"codigo\": " . $dados['Cod_Avaliador'] . ", ";
+		$retorno .= "\"nome\": \"" . $dados['Nom_Avaliador'] . "\", ";
+		$retorno .= "\"codEspecialidade\": \"" . $dados['Cod_Especialidade'] . "\", ";
+		$retorno .= "\"nomEspecialidade\": \"" . $dados['Nom_Especialidade'] . "\", ";
+		$retorno .= "\"desEmail\": \"" . $dados['Des_Email'] . "\", ";
+		$retorno .= "\"desLogin\": \"" . $dados['Des_Login'] . "\"";
+		
+		$retorno .= "}";
+		
+		echo $retorno;
 	}
 	
 	//Este trecho deve ficar sempre no fim do arquivo

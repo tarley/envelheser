@@ -47,7 +47,7 @@ class Avaliador{
 	 * Retorna os dados de um avaliador
 	 */
 	function getDados($codAvaliador){
-		$query = "SELECT Cod_Avaliador, Nom_Avaliador, Cod_Especialidade, Nom_Especialidade, Des_Email, Des_Login ";
+		$query = "SELECT Cod_Avaliador, Nom_Avaliador, a.Cod_Especialidade, Nom_Especialidade, Des_Email, Des_Login ";
 		$query .= "FROM tb_avaliador a ";
 		$query .= "LEFT JOIN tb_especialidade e ON (a.Cod_Especialidade = e.Cod_Especialidade) ";
 		$query .= "WHERE Cod_Avaliador = $codAvaliador";
