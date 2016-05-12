@@ -569,7 +569,7 @@ CALL SPInserePergunta ('Sistema Digestório', 9, 12, 'Colite');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 1, 'Insuficiência Renal');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 2, 'Cálculos');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 3, 'Doenças Sexualmente Transmissíveis');
-CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência');
+CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência Urinária');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 5, 'Infecção De Urina');
 
 /*===================================*/ 
