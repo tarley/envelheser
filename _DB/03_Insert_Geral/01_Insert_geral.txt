@@ -695,7 +695,7 @@ CALL SPInserePergunta ('Drogas Ilícitas', 3, 3, 'Quantidade:');
 CALL SPInserePergunta ('Drogas Ilícitas', 3, 4, 'Frequência:');
 CALL SPInserePergunta ('Drogas Ilícitas', 3, 5, 'Tempo:');
 
-CALL SPInserePergunta ('Hábitos e Vícios', 3, 1, 'Outros Hábitos e vícios:');
+CALL SPInserePergunta ('Hábitos e Vícios', 3, 6, 'Outros Hábitos e vícios:');
 
 /*==============================================================*/
 /* CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOESPIRITUAIS    */
