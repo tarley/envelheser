@@ -281,29 +281,48 @@ function MontaJSON(){
 			}
 			else if(tipoPergunta == "Ind_Pergunta_ComboBox") {
 				objRespostas['Valor'] = $("option:selected", $(this)).val();
-			} else {
+			} 
+			else if(tipoPergunta == "Ind_Pergunta_Aberta"){
 				objRespostas['Valor'] = $("input", $(this)).val();
 			}
-
-// 					else if(tipoPergunta == "Ind_Pergunta_Qual"){
-// 					}
-// 					else if(tipoPergunta == "Ind_Pergunta_Quando"){
-// 					}
-// 					else if(tipoPergunta == "Ind_Pergunta_Outros"){
-// 					}
-// 					else if(tipoPergunta == "Ind_Pergunta_Cite"){
-// 					}
-// 					else if(tipoPergunta == "Ind_Pergunta_Observacao"){
-// 					}
-// 					else if(tipoPergunta == "Ind_Pergunta_ComboBox"){
-// 						//to do
-// 					}
-// 					else if(tipoPergunta == "Ind_Pergunta_Radio"){
-// 						//to do
-// 					}
-// 					else if(tipoPergunta == "Ind_Pergunta_CheckBox"){
-// 						//to do
-// 					}
+			else if(tipoPergunta == "Ind_Pergunta_Qual"){
+				objRespostas['Valor'] = $("input", $(this)).val();
+			}
+			else if(tipoPergunta == "Ind_Pergunta_Quando"){
+				objRespostas['Valor'] = $("input", $(this)).val();
+			}
+			else if(tipoPergunta == "Ind_Pergunta_Outros"){
+				objRespostas['Valor'] = $("input", $(this)).val();
+			}
+			else if(tipoPergunta == "Ind_Pergunta_Cite"){
+				objRespostas['Valor'] = $("input", $(this)).val();
+			}
+			else if(tipoPergunta == "Ind_Pergunta_Observacao"){
+				objRespostas['Valor'] = $("input", $(this)).val();
+			}
+			else if(tipoPergunta == "Ind_Pergunta_ComboBox"){
+				objRespostas['Valor'] = $("input:select", $(this)).val();
+			}
+			else if(tipoPergunta == "Ind_Pergunta_Radio"){
+				var radio = $("input:checked", $(this)).val();
+				
+				if(radio != null)
+					objRespostas['Valor'] = $("input:checked", $(this)).val();
+				else
+					objRespostas['Valor'] = "";
+			}
+			else if(tipoPergunta == "Ind_Pergunta_CheckBox"){
+				var values = [];
+				$("input:checked", $(this)).each(function(){
+					values.push($(this).val());
+				});
+				objRespostas['Valor'] = values;
+			}
+			else if(tipoPergunta == "Ind_Pergunta_Multi_Combo"){
+				var values = [];
+				
+				objRespostas['Valor'] = values;
+			}
 			respostas.push(objRespostas);
 	   	});
 	   	

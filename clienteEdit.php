@@ -41,7 +41,7 @@
 		{			
 			echo '<div id="perg-'. $listaPerguntas[$i]['Cod_Pergunta'] .'" class="form-group clearfix">';
 			echo '<div class="col-md-3">';
-			echo '<label style="margin-bottom: 0;">' . $listaPerguntas[$i]['Des_Pergunta'] . '</label>';
+			echo '<label style="margin-bottom: 10;">' . $listaPerguntas[$i]['Des_Pergunta'] . '</label>';
 			echo '</div>';
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Aberta']){
@@ -85,28 +85,6 @@
 				
 			}
 			
-			if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
-				echo '<div id="divOutros" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Outros" class="col-md-3">';
-				echo '<label>Outros:</label>';
-				echo '<input id="Ind_Pergunta_Outros" type="text" class="form-control">';
-				echo '</div>';
-				echo '</br>';
-			}
-			
-			if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
-				echo '<div id="divCite" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Cite" class="col-md-3">';
-				echo '<label>Cite:</label>';
-				echo '<input id="Ind_Pergunta_Cite" type="text" class="form-control">';
-				echo '</div>';
-			}
-			
-			if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
-				echo '<div id="divObservacao" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Observacao" class="col-md-3">';
-				echo '<label>Observação:</label>';
-				echo '<input id="Ind_Pergunta_Observacao" type="text" class="form-control">';
-				echo '</div>';
-			}
-			
 			if($listaPerguntas[$i]['Ind_Pergunta_ComboBox']){
 				echo '<div class="col-md-3 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_ComboBox">';				
 				
@@ -121,20 +99,60 @@
 				echo '</div>';
 			}
 			
+			if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
+				echo '<div id="divOutros" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Outros" class="form-horizontal">';
+				echo '<label class="control-label col-md-1 nopadding">Outros:</label>';
+				echo '<div class="col-md-3">
+					  <input id="Ind_Pergunta_Outros" type="text" class="form-control">
+					  </div>';
+				echo '</div>';
+			
+			}
+				
+			if($listaPerguntas[$i]['Ind_Pergunta_Observacao']){
+				echo '<div id="divObservacao" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Observacao">';
+				echo '<label class="control-label col-md-1 nopadding">Observação:</label>';
+				echo '<div class="col-md-5">
+						<input id="Ind_Pergunta_Observacao" type="text" class="form-control">
+						</div>';
+				echo '</div>';
+			}
+			
+			if($listaPerguntas[$i]['Ind_Pergunta_Cite']){
+				echo '<div id="divCite" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Cite" class="form-horizontal">';
+				echo '<label class="control-label col-md-1 nopadding">Cite:</label>';
+				echo '<div class="col-md-3">
+					  <input id="Ind_Pergunta_Cite" type="text" class="form-control">
+					  </div>';
+				echo '</div>';
+			}
+			
 			if($listaPerguntas[$i]['Ind_Pergunta_Radio']){
+				echo '<div class="col-md-9 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Radio">';
+				
 				$listaOpcoes = $Prontuario->getOpcoesRadio($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<input id="Ind_Pergunta_Radio[]" type="radio" value="'.$listaOpcoes[$j]['Cod_Item_Radio'].'" class="form-control" >';
+					echo '<div class="col-md-6 nopadding">';
+					echo '<label class="control-label col-md-2">' . $listaOpcoes[$j]['Des_Item_Radio'] . '</label>';
+					echo '<input id="Ind_Pergunta_Radio[]" name="Ind_Pergunta_Radio[]" type="radio" value="'.$listaOpcoes[$j]['Cod_Item_Radio'].'" class="form-horizontal" >';
+					echo '</div>';
 				}
-				echo '</br>';
+				
+				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_CheckBox']){
+				
+				echo '<div class="col-md-12 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_CheckBox">';
+				
 				$listaOpcoes = $Prontuario->getOpcoesCheck($listaPerguntas[$i]['Cod_Pergunta']);
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<input id="Ind_Pergunta_CheckBox[]" type="checkbox" value="'.$listaOpcoes[$j]['Cod_Item_Check'].'" class="form-control" >';
+					echo '<div class="col-md-12 nopadding">';
+					echo '<label class="control-label col-md-2">' . $listaOpcoes[$j]['Des_Item_Check'] . '</label>';
+					echo '<input id="Ind_Pergunta_CheckBox[]" type="checkbox" value="'.$listaOpcoes[$j]['Cod_Item_Check'].'"class="form-horizontal" >';
+					echo '</div>';
 				}
-				echo '</br>';
+				echo '</div>';
 			}
 			
 			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){

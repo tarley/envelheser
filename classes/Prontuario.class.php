@@ -72,7 +72,7 @@ class Prontuario {
 	}
 	
 	function getOpcoesRadio($codPergunta) {
-		$query = "SELECT Cod_Item_Radio, Des_Item_Radio, ";
+		$query = "SELECT Cod_Item_Radio, Des_Item_Radio ";
 		$query .= "FROM tb_lista_radio l ";
 		$query .= "WHERE Cod_Pergunta = $codPergunta";
 		
@@ -319,15 +319,15 @@ class Prontuario {
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_Radio") {
 					$CodRespRadio = $r['Valor'];
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_CheckBox") {	
-					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
-						$r = $r['Valor'][$i];
-						insertRespostaCheckBox($numProntuario, $codPergunta, $r);
-					}
+// 					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
+// 						$a = $r['Valor'][$i];
+// 						$this->insertRespostaCheckBox($numProntuario, $codPergunta, $a);
+// 					}
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_Multi_Combo") {	
-					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
-						$r = $r['Valor'][$i];
-						insertRespostaMultiCombo($numProntuario, $codPergunta, $r);
-					}
+// 					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
+// 						$r = $r['Valor'][$i];
+// 						$this->insertRespostaMultiCombo($numProntuario, $codPergunta, $r);
+// 					}
 				}	
 			}
 			
