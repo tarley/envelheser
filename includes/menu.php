@@ -19,6 +19,9 @@
 			<li class="menu-principal-li">
 				<a href="avaliadorVis.php" ><i class="fa fa-user-md"></i> Avaliadores</a>
 			</li>
+			<li class="menu-principal-li">
+				<a href="fundadores.php" ><i class="fa fa-user-md"></i> Fundadores</a>
+			</li>
 			
 			
 		</ul>
