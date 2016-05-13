@@ -555,12 +555,9 @@ CALL SPInserePergunta ('Sistema Digestório', 9, 3, 'Úlcera');
 CALL SPInserePergunta ('Sistema Digestório', 9, 4, 'Hepatite');
 CALL SPInserePergunta ('Sistema Digestório', 9, 5, 'Cirrose');
 CALL SPInserePergunta ('Sistema Digestório', 9, 6, 'Icterícia');
-CALL SPInserePergunta ('Sistema Digestório', 9, 7, 'Anorexia Nervosa');
-CALL SPInserePergunta ('Sistema Digestório', 9, 8, 'Bulimia');
-CALL SPInserePergunta ('Sistema Digestório', 9, 9, 'Diarréia Persistente');
-CALL SPInserePergunta ('Sistema Digestório', 9, 10, 'Constipação Intestinal');
-CALL SPInserePergunta ('Sistema Digestório', 9, 11, 'Refluxo');
-CALL SPInserePergunta ('Sistema Digestório', 9, 12, 'Colite');
+CALL SPInserePergunta ('Sistema Digestório', 9, 7, 'Diarréia Persistente');
+CALL SPInserePergunta ('Sistema Digestório', 9, 8, 'Constipação Intestinal');
+CALL SPInserePergunta ('Sistema Digestório', 9, 9, 'Refluxo');
 
 /*===================================*/ 
 /*          Genitourinário           */ 
@@ -569,7 +566,7 @@ CALL SPInserePergunta ('Sistema Digestório', 9, 12, 'Colite');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 1, 'Insuficiência Renal');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 2, 'Cálculos');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 3, 'Doenças Sexualmente Transmissíveis');
-CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência Urinária');
+CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 5, 'Infecção De Urina');
 
 /*===================================*/ 
@@ -604,20 +601,18 @@ CALL SPInserePergunta ('Sistema Nervoso Central', 9, 13, 'Epilepsia');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 14, 'Sindrome do Pânico');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 15, 'Derrame');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'Cefaléia Intensa');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 17, 'Emocional');
 
 /*===================================*/ 
 /*          Sensitivo                */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 1, 'Cegueira');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 2, 'Glaucoma');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, 'Conjutivite');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 4, 'Úlcera');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'Auditivo');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 6, 'Hanseníase');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 7, 'Agnosia');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 8, 'Gustativo');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 1, 'Glaucoma');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 2, 'Conjutivite');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, 'Úlcera');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 4, 'Auditivo');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'Hanseníase');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 6, 'Agnosia');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 7, 'Gustativo');
 
 /*===================================*/ 
 /*          Hematopoético            */ 
@@ -727,12 +722,10 @@ CALL SPInserePergunta ('Hábito de Sono e Repouso', 22, 1, 'Tem dificuldade para
 CALL SPInserePergunta ('Exercício', 7, 1, 'Exercício');
 
 CALL SPInserePergunta ('Eliminação Intestinal', 3, 1, 'Frequência vezes/dia:');
-CALL SPInserePergunta ('Eliminação Intestinal', 7, 2, 'Déficit prévio no auto cuidado:');
-CALL SPInserePergunta ('Eliminação Intestinal', 3, 3, 'Coloração');
-CALL SPInserePergunta ('Eliminação Intestinal', 1, 4, 'Odor');
-CALL SPInserePergunta ('Eliminação Intestinal', 1, 5, 'Dor');
-CALL SPInserePergunta ('Eliminação Intestinal', 1, 6, 'Constipação');
-CALL SPInserePergunta ('Eliminação Intestinal', 3, 7, 'Quantidade:');
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 2, 'Coloração:');
+CALL SPInserePergunta ('Eliminação Intestinal', 1, 3, 'Odor:');
+CALL SPInserePergunta ('Eliminação Intestinal', 1, 4, 'Dor:');
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 5, 'Quantidade:');
 
 CALL SPInserePergunta ('Terapêutica', 9, 1, 'Segue orientações prévias relacionadas á saúde?');
 
