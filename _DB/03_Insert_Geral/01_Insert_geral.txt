@@ -654,7 +654,7 @@ CALL SPInserePergunta ('Sistema Osteomuscular', 8, 11,'Fraturas');
 /*          Histórico de queda       */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Histórico de Queda', 9, 1, 'Quedas Nos Últimos 92 Meses');
+CALL SPInserePergunta ('Histórico de Queda', 9, 1, 'Quedas Nos Últimos 12 Meses');
 
 /*===================================*/ 
 /*              Anamnese             */ 
