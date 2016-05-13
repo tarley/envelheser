@@ -1035,6 +1035,7 @@ CALL SPInsereListaCombo ('Ateu','Realiza alguma atividade religiosa-espiritual?'
 CALL SPInsereListaCombo ('Cadamblé','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Mormo','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Testemunhas de Jeová','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Espírita','Realiza alguma atividade religiosa-espiritual?');
 
 /*==============================================================*/ 
 /*                    CADASTRO DE LISTA RADIO                   */ 
