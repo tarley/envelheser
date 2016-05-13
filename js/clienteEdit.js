@@ -48,7 +48,7 @@ $(document).ready(function() {
 		var obj = MontaJSON();
 		
 		var codCliente = $("#codCliente").val();
-		console.log(JSON.stringify(obj));
+		//console.log(JSON.stringify(obj));
 		
 		$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
 			console.log(data);
@@ -179,6 +179,18 @@ $(document).ready(function() {
 						var radio = div.find(":radio[value=" + respostas[i].Cod_Resposta_Radio + "]");
 						radio.attr('checked', true);
 						
+					}					
+					if(respostas[i].Ind_Pergunta_Multi_Combo == 1){		
+						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
+						var select = div.find(".chosen-select");
+						
+						var itens = [];
+						for (var j = 0; j < respostas[i].Lista_Resposta_Multi_Combo.length; j++) {
+							itens.push(respostas[i].Lista_Resposta_Multi_Combo[j].Cod_Item_Multi_Combo);
+						}
+						
+						select.val(itens);
+						select.trigger("chosen:updated");
 					}
 				}
 			}
@@ -195,6 +207,9 @@ function LimpaCampos() {
 	$("div[data-tipo='resposta'] input[type='text']").val("");
 	
 	$("div[data-tipo='resposta'] select").val("");
+	
+	$("div[data-tipo='resposta'] .chosen-select").val("");
+	$("div[data-tipo='resposta'] .chosen-select").trigger("chosen:updated");
 	
 	$("div[data-tipopergunta='Ind_Pergunta_SimNao']").each(function(){					
 
@@ -279,10 +294,14 @@ function MontaJSON(){
 				objRespostas['Valor'] = values;
 			}
 			else if(tipoPergunta == "Ind_Pergunta_Multi_Combo"){
-				var values = [];
+				var values = [];				
+				var itens = $('.chosen-select', $(this)).chosen().val();
 				
-				//$('.chosen-select', $(this)).chosen().val();
-
+				for (var i = 0; i < itens.length; i++) {
+					if(itens[i] != "")
+						values.push(itens[i]);
+				}
+				objRespostas['Valor'] = values;
 			}
 			respostas.push(objRespostas);
 	   	});
