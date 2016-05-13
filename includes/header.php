@@ -14,18 +14,20 @@
 <!-- Social Buttons CSS -->
 <link href="components/bootstrap-social/bootstrap-social.css" rel="stylesheet">
 
-<!-- Custom CSS -->
-<link href="css/sb-admin-2.css" rel="stylesheet">
-
 <!-- Custom Fonts -->
 <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <!-- jQuery UI CSS -->
 <link rel="stylesheet" href="components/jquery-ui/jquery-ui.css">
 
+<!-- Bootstrap Chosen CSS -->
+<link href="components/bootstrap-chosen/bootstrap-chosen.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/sb-admin-2.css" rel="stylesheet">
+
 <!-- Complemento CSS -->
 <link href="css/complemento.css" rel="stylesheet">
-
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

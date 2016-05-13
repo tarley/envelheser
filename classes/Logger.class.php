@@ -8,10 +8,15 @@ class Logger {
 
 	/**
 	* Inicializa logger e cria arquivo txt
-	* caso não exista.
+	* caso nï¿½o exista.
 	*/
 	function Logger() {
+		$logPath = ABSPATH . "/log/";
 		$errorfile = "err_" . date("Ymd") . ".txt";
+		
+		if(!is_dir($logPath))
+			mkdir($logPath);
+		
 		$this->error = fopen(ABSPATH . "/log/" . $errorfile, "a");
 	}
 

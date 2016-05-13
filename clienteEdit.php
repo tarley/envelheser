@@ -155,25 +155,27 @@
 				echo '</div>';
 			}
 			
-			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){
-			
-				echo '<div data-multi="0">';
-				echo '<div class="col-md-3" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Multi_Combo" style="padding-left: 0;">';
+			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){		
+				
+				echo '<div class="col-md-3 col-lg-3 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Multi_Combo">';
 				
 				$listaOpcoes = $Prontuario->getCategoriaMultiCombo($listaPerguntas[$i]['Cod_Pergunta']);
 				
-				echo '<select class="form-control">';
-				echo '<option value="" >Selecione</option>';
+				echo '<select data-placeholder="Selecione" class="chosen-select" style="width: 300px" multiple>';
+				echo '<option value=""></option>';
+				
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<option value="'.$listaOpcoes[$j]['Cod_Categoria_Combo'].'">'.$listaOpcoes[$j]['Des_Categoria'].'</option>';
+					echo '<optgroup label="' . $listaOpcoes[$j]['Des_Categoria'] . '">';
+					
+					$listaItens = $Prontuario->getOpcoesMultiComboByCategoria($listaOpcoes[$j]['Cod_Categoria_Combo']);
+					
+					for ($k = 0; $k < sizeof($listaItens); $k++) {
+						echo '<option value="'.$listaItens[$k]['Cod_Item_Multi_Combo'].'">'.$listaItens[$k]['Des_Item_Multi_Combo'].'</option>';
+					}
 				}
+				
 				echo '</select>';
-				echo '</div>';
-				
-				echo '<div data-itens="0"></div>';
-				
-				echo '</div>';
-				
+				echo '</div>';				
 			}
 			
 			echo '</div>';
@@ -308,9 +310,9 @@
                 
                 	<!-- /.col-lg-12 -->
             		</div>
-        		</div>
-    		</div>
-            <!-- /.row -->        				
+        		</div>    		
+        	</div>
+            <!-- /.row -->    
     	</div>
 		<!-- /#page-wrapper -->    		
     </div>
