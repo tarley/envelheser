@@ -12,7 +12,7 @@ CALL SPInserePergunta ('Sistema Cardiovascular', 9, 3, 'Pressão Arterial');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 4, 'Angina');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 5, 'Prótese Valvar');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 6, 'Sopro');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 7, 'Arritmias');inc
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 7, 'Arritmias');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 8, 'Cirurgias Cardíacas');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 9, 'Marca-Passo');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'Doença de Chagas');
@@ -44,12 +44,9 @@ CALL SPInserePergunta ('Sistema Digestório', 9, 3, 'Úlcera');
 CALL SPInserePergunta ('Sistema Digestório', 9, 4, 'Hepatite');
 CALL SPInserePergunta ('Sistema Digestório', 9, 5, 'Cirrose');
 CALL SPInserePergunta ('Sistema Digestório', 9, 6, 'Icterícia');
-CALL SPInserePergunta ('Sistema Digestório', 9, 7, 'Anorexia Nervosa');
-CALL SPInserePergunta ('Sistema Digestório', 9, 8, 'Bulimia');
-CALL SPInserePergunta ('Sistema Digestório', 9, 9, 'Diarréia Persistente');
-CALL SPInserePergunta ('Sistema Digestório', 9, 10, 'Constipação Intestinal');
-CALL SPInserePergunta ('Sistema Digestório', 9, 11, 'Refluxo');
-CALL SPInserePergunta ('Sistema Digestório', 9, 12, 'Colite');
+CALL SPInserePergunta ('Sistema Digestório', 9, 7, 'Diarréia Persistente');
+CALL SPInserePergunta ('Sistema Digestório', 9, 8, 'Constipação Intestinal');
+CALL SPInserePergunta ('Sistema Digestório', 9, 9, 'Refluxo');
 
 /*===================================*/ 
 /*          Genitourinário           */ 
@@ -93,20 +90,17 @@ CALL SPInserePergunta ('Sistema Nervoso Central', 9, 13, 'Epilepsia');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 14, 'Sindrome do Pânico');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 15, 'Derrame');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'Cefaléia Intensa');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 17, 'Emocional');
 
 /*===================================*/ 
 /*          Sensitivo                */ 
 /*===================================*/ 
-
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 1, 'Cegueira');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 2, 'Glaucoma');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, 'Conjutivite');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 4, 'Úlcera');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'Auditivo');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 6, 'Hanseníase');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 7, 'Agnosia');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 8, 'Gustativo');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 1, 'Glaucoma');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 2, 'Conjutivite');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, 'Úlcera');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 4, 'Auditivo');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'Hanseníase');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 6, 'Agnosia');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 7, 'Gustativo');
 
 /*===================================*/ 
 /*          Hematopoético            */ 
