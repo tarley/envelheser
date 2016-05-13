@@ -1,21 +1,21 @@
 /*==============================================================*/
-/*     	CADASTRO DE PERGUNTAS GRUPO H¡BITOS E VÕCIOS     	*/
+/*     	CADASTRO DE PERGUNTAS GRUPO H√ÅBITOS E V√çCIOS     	*/
 /*==============================================================*/
 CALL SPInserePergunta ('Tabagismo', 1, 1, 'Tabagismo');
 CALL SPInserePergunta ('Tabagismo', 3, 2, 'Por quanto tempo usou?');
-CALL SPInserePergunta ('Tabagismo', 3, 3, 'Quantidade/FrequÍncia:');
-CALL SPInserePergunta ('Tabagismo', 3, 4, 'H· quanto tempo parou?');
+CALL SPInserePergunta ('Tabagismo', 3, 3, 'Quantidade/Frequ√™ncia:');
+CALL SPInserePergunta ('Tabagismo', 3, 4, 'H√° quanto tempo parou?');
 
 CALL SPInserePergunta ('Etilismo', 1, 1, 'Etilismo');
 CALL SPInserePergunta ('Etilismo', 3, 2, 'Tipo:');
 CALL SPInserePergunta ('Etilismo', 3, 3, 'Quantidade:');
-CALL SPInserePergunta ('Etilismo', 3, 4, 'FrequÍncia:');
+CALL SPInserePergunta ('Etilismo', 3, 4, 'Frequ√™ncia:');
 CALL SPInserePergunta ('Etilismo', 3, 5, 'Tempo:');
 
-CALL SPInserePergunta ('Drogas IlÌcitas', 1, 1, 'Drogas IlÌcitas');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 2, 'Tipo:');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 3, 'Quantidade:');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 4, 'FrequÍncia:');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 5, 'Tempo:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 1, 1, 'Drogas Il√≠citas');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 2, 'Tipo:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 3, 'Quantidade:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 4, 'Frequ√™ncia:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 5, 'Tempo:');
 
-CALL SPInserePergunta ('H·bitos e VÌcios', 3, 1, 'Outros H·bitos e vÌcios:');
+CALL SPInserePergunta ('H√°bitos e V√≠cios', 3, 6, 'Outros H√°bitos e v√≠cios:');
