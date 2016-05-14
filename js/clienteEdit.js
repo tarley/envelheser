@@ -43,7 +43,9 @@ $(document).ready(function() {
 		LimpaCampos();
 	});			
 	
-	$("#save").click(function() {
+	$("#save").click(function() {		
+		
+		$("#loader").show();
 		
 		var obj = MontaJSON();
 		
@@ -51,10 +53,10 @@ $(document).ready(function() {
 		//console.log(JSON.stringify(obj));
 		
 		$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
-			console.log(data);
+			//console.log(data);
 			var retorno = jQuery.parseJSON(data);
 			
-			console.log(retorno.Mensagem)
+			//console.log(retorno.Mensagem)
 			if(retorno.Sucesso == true) {
 				$('#alert .text').append(retorno.Mensagem);
 				$('#alert').addClass("alert-success");
@@ -78,7 +80,7 @@ $(document).ready(function() {
 									btn.addClass("btn btn-default");
 								
 								$("#divHistoricoProntuarios").append(btn);
-								
+								$("#save").attr("disabled", "disabled");
 							}
 						}				
 					}
@@ -91,7 +93,9 @@ $(document).ready(function() {
 
 			$('#alert').show().delay(3000).fadeOut("fast", function() {
 				$('#alert .text').html(""); 
-			}); 					
+			}); 
+			
+			$("#loader").hide();
 		});
 	});			
 
