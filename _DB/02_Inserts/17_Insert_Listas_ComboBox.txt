@@ -2,16 +2,14 @@
 /*                       CADASTRO DE LISTA COMBOBOX             */ 
 /*==============================================================*/
 
-CALL SPInsereListaCombo ('Ativa','Dados de interesse cl√≠nico');
-CALL SPInsereListaCombo ('Inativa','Dados de interesse cl√≠nico');
-CALL SPInsereListaCombo ('Perda de libido','Dados de interesse cl√≠nico');
-CALL SPInsereListaCombo ('Doloroso','Dados de interesse cl√≠nico');
+CALL SPInsereListaCombo ('Ativa','Dados de interesse clÌnico');
+CALL SPInsereListaCombo ('Inativa','Dados de interesse clÌnico');
+CALL SPInsereListaCombo ('Perda de libido','Dados de interesse clÌnico');
+CALL SPInsereListaCombo ('Doloroso','Dados de interesse clÌnico');
 
-CALL SPInsereListaCombo ('Cat√≥lico','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('Evang√©lico','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('CatÛlico','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('EvangÈlico','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Umbanda','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Ateu','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('Cadambl√©','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('Mormo','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('Testemunhas de Jeov√°','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('Esp√≠rita','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('CandomblÈ','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('EspÌrita','Realiza alguma atividade religiosa-espiritual?');
