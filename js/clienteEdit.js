@@ -43,18 +43,20 @@ $(document).ready(function() {
 		LimpaCampos();
 	});			
 	
-	$("#save").click(function() {
+	$("#save").click(function() {		
+		
+		$("#loader").show();
 		
 		var obj = MontaJSON();
 		
 		var codCliente = $("#codCliente").val();
-		//console.log(JSON.stringify(obj));
+		console.log(JSON.stringify(obj));
 		
 		$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
-			console.log(data);
+			//console.log(data);
 			var retorno = jQuery.parseJSON(data);
 			
-			console.log(retorno.Mensagem)
+			//console.log(retorno.Mensagem)
 			if(retorno.Sucesso == true) {
 				$('#alert .text').append(retorno.Mensagem);
 				$('#alert').addClass("alert-success");
@@ -78,7 +80,7 @@ $(document).ready(function() {
 									btn.addClass("btn btn-default");
 								
 								$("#divHistoricoProntuarios").append(btn);
-								
+								$("#save").attr("disabled", "disabled");
 							}
 						}				
 					}
@@ -91,7 +93,9 @@ $(document).ready(function() {
 
 			$('#alert').show().delay(3000).fadeOut("fast", function() {
 				$('#alert .text').html(""); 
-			}); 					
+			}); 
+			
+			$("#loader").hide();
 		});
 	});			
 
@@ -108,11 +112,10 @@ $(document).ready(function() {
 
 	$(document.body).on("click", "button[id*='btnPront']", function() {
 		$("#save").attr("disabled", "disabled");
-
 		$("button[id*='btnPront']").attr("class", "btn btn-default");
 		$(this).attr("class", "btn btn-primary");
 		$("#divMontaProntruario").show();
-		
+		LimpaCampos();
 		var arrayId = $(this).attr("id").split('-');
 		var id = arrayId[1];
 		$.ajax({
@@ -120,7 +123,7 @@ $(document).ready(function() {
 			success: function (data) {
 				var respostas = jQuery.parseJSON(data);
 				for(var i=0; i < respostas.length; i++){
-					
+										
 					if(respostas[i].Ind_Pergunta_Aberta == 1 ){
 						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 						var input = div.find(":text");
@@ -164,7 +167,7 @@ $(document).ready(function() {
 					}
 					if(respostas[i].Ind_Pergunta_Observacao == 1){
 						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
-						var divObs = div.find("#divCite");
+						var divObs = div.find("#divObservacao");
 						var input = divObs.find(":text");
 						input.val(respostas[i].Des_Resposta_Observacao);
 					}
@@ -177,9 +180,20 @@ $(document).ready(function() {
 					if(respostas[i].Ind_Pergunta_Radio == 1){
 						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 						var radio = div.find(":radio[value=" + respostas[i].Cod_Resposta_Radio + "]");
-						radio.attr('checked', true);
+						radio.prop('checked', true);
 						
-					}					
+					}	
+					if(respostas[i].Ind_Pergunta_CheckBox == 1){
+						
+						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
+						
+						for (var j = 0; j < respostas[i].Lista_Resposta_Check_Box.length; j++) {
+							var check = div.find(":checkbox[value='" + respostas[i].Lista_Resposta_Check_Box[j].Cod_Item_Check + "']");
+							console.log(check);
+							check.prop("checked", "checked");
+						}
+					}	
+					
 					if(respostas[i].Ind_Pergunta_Multi_Combo == 1){		
 						var div = $("#divQuestionario").find("div[id='perg-"+ respostas[i].Cod_Pergunta +"']");
 						var select = div.find(".chosen-select");
@@ -210,6 +224,14 @@ function LimpaCampos() {
 	
 	$("div[data-tipo='resposta'] .chosen-select").val("");
 	$("div[data-tipo='resposta'] .chosen-select").trigger("chosen:updated");
+	
+	$("div[data-tipo='resposta'] :checkbox").each(function(){
+		$(this).removeAttr("checked");
+	});
+	
+	$("div[data-tipo='resposta'] :radio").each(function(){
+		$(this).removeAttr("checked");
+	});
 	
 	$("div[data-tipopergunta='Ind_Pergunta_SimNao']").each(function(){					
 
@@ -291,7 +313,11 @@ function MontaJSON(){
 				$("input:checked", $(this)).each(function(){
 					values.push($(this).val());
 				});
-				objRespostas['Valor'] = values;
+				
+				if(values.length > 0)
+					objRespostas['Valor'] = values;
+				else
+					objRespostas['Valor'] = "";
 			}
 			else if(tipoPergunta == "Ind_Pergunta_Multi_Combo"){
 				var values = [];				
@@ -301,7 +327,10 @@ function MontaJSON(){
 					if(itens[i] != "")
 						values.push(itens[i]);
 				}
-				objRespostas['Valor'] = values;
+				if(values.length > 0)
+					objRespostas['Valor'] = values;
+				else
+					objRespostas['Valor'] = "";
 			}
 			respostas.push(objRespostas);
 	   	});

@@ -230,7 +230,7 @@ class Prontuario {
 			array_walk($list, 'utf8');
 			
 			if($list['Ind_Pergunta_CheckBox']) {
-				$list['Lista_Resposta_CheckBox'] = $this->getRespostasCheck($list['Num_Prontuario'], $list['Cod_Pergunta']);
+				$list['Lista_Resposta_Check_Box'] = $this->getRespostasCheck($list['Num_Prontuario'], $list['Cod_Pergunta']);
 			}
 			else if($list['Ind_Pergunta_Multi_Combo']) {
 				$list['Lista_Resposta_Multi_Combo'] = $this->getRespostasMultiCombo($list['Num_Prontuario'], $list['Cod_Pergunta']);
@@ -318,18 +318,23 @@ class Prontuario {
 					$CodRespCombo = $r['Valor'];
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_Radio") {
 					$CodRespRadio = $r['Valor'];
-				} else if($r['TipoPergunta'] == "Ind_Pergunta_CheckBox") {	
-// 					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
-// 						$a = $r['Valor'][$i];
-// 						$this->insertRespostaCheckBox($numProntuario, $codPergunta, $a);
-// 					}
+				} else if($r['TipoPergunta'] == "Ind_Pergunta_CheckBox") {
+					if(is_array($r['Valor'])){
+						for ($j = 0; $j < sizeof($r['Valor']); $j++) {
+							$Cod_Item_Check = $r['Valor'][$j];
+							$this->insertRespostaCheckBox($numProntuario, $codPergunta, $Cod_Item_Check);
+						}
+					}
 				} else if($r['TipoPergunta'] == "Ind_Pergunta_Multi_Combo") {	
-// 					for ($i = 0; $i < sizeof($r['Valor']); $i++) {
-// 						$r = $r['Valor'][$i];
-// 						$this->insertRespostaMultiCombo($numProntuario, $codPergunta, $r);
-// 					}
+					if(is_array($r['Valor'])){
+						for ($j = 0; $j < sizeof($r['Valor']); $j++) {
+							$Cod_Item_Multi_Combo = $r['Valor'][$j];
+							$this->insertRespostaMultiCombo($numProntuario, $codPergunta, $Cod_Item_Multi_Combo);
+						}
+					}
 				}	
 			}
+			
 			
 			$query = "INSERT INTO tb_resposta ";
 			$query .= "(Num_Prontuario,  ";
@@ -372,10 +377,10 @@ class Prontuario {
 			$query .= "Cod_Item_Check,  ";
 			$query .= "Ind_CheckBox)  ";
 			$query .= "VALUES ";
-			$query .= "('".$numProntuario."', ";
-			$query .= "'".$codPergunta."',  ";
-			$query .= "'".$Cod_Item_Check."',  ";
-			$query .= "'".'true'."';  ";
+			$query .= "(".$numProntuario.", ";
+			$query .= $codPergunta.",  ";
+			$query .= $Cod_Item_Check.",  ";
+			$query .= "true);  ";
 				
 			if (!mysqli_query($this->cnn, $query))
 				throw new Exception();
@@ -391,10 +396,9 @@ class Prontuario {
 			$query .= "Cod_Pergunta,  ";
 			$query .= "Cod_Item_Multi_Combo) ";
 			$query .= "VALUES ";
-			$query .= "('".$numProntuario."', ";
-			$query .= "'".$codPergunta."',  ";
-			$query .= "'".$Cod_Item_Multi_Combo."',  ";
-			$query .= "'".'true'."';  ";
+			$query .= "(".$numProntuario.", ";
+			$query .= $codPergunta.",  ";
+			$query .= $Cod_Item_Multi_Combo.");  ";
 			
 			if (!mysqli_query($this->cnn, $query))
 				throw new Exception();
