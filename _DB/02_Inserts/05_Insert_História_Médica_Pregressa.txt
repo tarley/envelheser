@@ -1,5 +1,5 @@
 /*==============================================================*/ 
-/*                    HISTÓRIA MÉDICA PREGRESSA                 */ 
+/*                    HISTÃ“RIA MÃ‰DICA PREGRESSA                 */ 
 /*==============================================================*/ 
 
 /*===================================*/ 
@@ -7,66 +7,66 @@
 /*===================================*/ 
 
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 1, 'Infarto');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 2, 'Insuficiência Cardíaca');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 3, 'Pressão Arterial');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 2, 'InsuficiÃªncia CardÃ­aca');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 3, 'PressÃ£o Arterial');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 4, 'Angina');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 5, 'Prótese Valvar');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 5, 'PrÃ³tese Valvar');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 6, 'Sopro');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 7, 'Arritmias');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 8, 'Cirurgias Cardíacas');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 8, 'Cirurgias CardÃ­acas');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 9, 'Marca-Passo');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'Doença de Chagas');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 11, 'Prolapso de Válvula Mitral');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 12, 'Febre Reumática Com Cardiopatia');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'DoenÃ§a de Chagas');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 11, 'Prolapso de VÃ¡lvula Mitral');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 12, 'Febre ReumÃ¡tica Com Cardiopatia');
 
 /*===================================*/ 
-/*          Respiratório             */ 
+/*          RespiratÃ³rio             */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Respiratório', 9, 1, 'Pneumonia');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 2, 'Asma');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 3, 'Bronquite');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 4, 'Fibrose Cística');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 5, 'Tuberculose');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 6, 'Enfisema');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 7, 'Sinusite');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 8, 'Tosse Crônica');
-CALL SPInserePergunta ('Sistema Respiratório', 9, 9, 'Doença Pulmonar Obstrutiva Crônica');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 1, 'Pneumonia');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 2, 'Asma');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 3, 'Bronquite');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 4, 'Fibrose CÃ­stica');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 5, 'Tuberculose');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 6, 'Enfisema');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 7, 'Sinusite');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 8, 'Tosse CrÃ´nica');
+CALL SPInserePergunta ('Sistema RespiratÃ³rio', 9, 9, 'DoenÃ§a Pulmonar Obstrutiva CrÃ´nica');
 
 /*===================================*/ 
-/*          Digestório               */ 
+/*          DigestÃ³rio               */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Digestório', 9, 1, 'Azia');
-CALL SPInserePergunta ('Sistema Digestório', 9, 2, 'Gastrite');
-CALL SPInserePergunta ('Sistema Digestório', 9, 3, 'Úlcera');
-CALL SPInserePergunta ('Sistema Digestório', 9, 4, 'Hepatite');
-CALL SPInserePergunta ('Sistema Digestório', 9, 5, 'Cirrose');
-CALL SPInserePergunta ('Sistema Digestório', 9, 6, 'Icterícia');
-CALL SPInserePergunta ('Sistema Digestório', 9, 7, 'Diarréia Persistente');
-CALL SPInserePergunta ('Sistema Digestório', 9, 8, 'Constipação Intestinal');
-CALL SPInserePergunta ('Sistema Digestório', 9, 9, 'Refluxo');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 1, 'Azia');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 2, 'Gastrite');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 3, 'Ãšlcera');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 4, 'Hepatite');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 5, 'Cirrose');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 6, 'IcterÃ­cia');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 7, 'DiarrÃ©ia Persistente');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 8, 'ConstipaÃ§Ã£o Intestinal');
+CALL SPInserePergunta ('Sistema DigestÃ³rio', 9, 9, 'Refluxo');
 
 /*===================================*/ 
-/*          Genitourinário           */ 
+/*          GenitourinÃ¡rio           */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Genitourinário', 9, 1, 'Insuficiência Renal');
-CALL SPInserePergunta ('Sistema Genitourinário', 9, 2, 'Cálculos Renais');
-CALL SPInserePergunta ('Sistema Genitourinário', 9, 3, 'Doenças Sexualmente Transmissíveis');
-CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência Urinária');
-CALL SPInserePergunta ('Sistema Genitourinário', 9, 5, 'Infecção De Urina');
+CALL SPInserePergunta ('Sistema GenitourinÃ¡rio', 9, 1, 'InsuficiÃªncia Renal');
+CALL SPInserePergunta ('Sistema GenitourinÃ¡rio', 9, 2, 'CÃ¡lculos Renais');
+CALL SPInserePergunta ('Sistema GenitourinÃ¡rio', 9, 3, 'DoenÃ§as Sexualmente TransmissÃ­veis');
+CALL SPInserePergunta ('Sistema GenitourinÃ¡rio', 9, 4, 'IncontinÃªncia UrinÃ¡ria');
+CALL SPInserePergunta ('Sistema GenitourinÃ¡rio', 9, 5, 'InfecÃ§Ã£o De Urina');
 
 /*===================================*/ 
-/*          Endócrino                */ 
+/*          EndÃ³crino                */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Endócrino', 9, 1, 'Diabetes');
-CALL SPInserePergunta ('Sistema Endócrino', 9, 2, 'Distúrbios De Tireoide');
-CALL SPInserePergunta ('Sistema Endócrino', 9, 3, 'Distúrbio Hipofisário');
-CALL SPInserePergunta ('Sistema Endócrino', 9, 4, 'Hipotiroidismo');
-CALL SPInserePergunta ('Sistema Endócrino', 9, 5, 'Hipertiroidismo');
-CALL SPInserePergunta ('Sistema Endócrino', 9, 6, 'Hipoglicemia');
+CALL SPInserePergunta ('Sistema EndÃ³crino', 9, 1, 'Diabetes');
+CALL SPInserePergunta ('Sistema EndÃ³crino', 9, 2, 'DistÃºrbios De Tireoide');
+CALL SPInserePergunta ('Sistema EndÃ³crino', 9, 3, 'DistÃºrbio HipofisÃ¡rio');
+CALL SPInserePergunta ('Sistema EndÃ³crino', 9, 4, 'Hipotiroidismo');
+CALL SPInserePergunta ('Sistema EndÃ³crino', 9, 5, 'Hipertiroidismo');
+CALL SPInserePergunta ('Sistema EndÃ³crino', 9, 6, 'Hipoglicemia');
 
 
 /*===================================*/ 
@@ -74,21 +74,21 @@ CALL SPInserePergunta ('Sistema Endócrino', 9, 6, 'Hipoglicemia');
 /*===================================*/ 
 
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 1, 'Aneurisma');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 2, 'Demência');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 2, 'DemÃªncia');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 3, 'Alzheimer');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 4, 'Parkinson');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 5, 'Fobia');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 6, 'Insônia');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 7, 'Convulsôes');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 6, 'InsÃ´nia');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 7, 'ConvulsÃ´es');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 8, 'Desmaios');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 9, 'Perda de Conciência');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 9, 'Perda de ConciÃªncia');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 10, 'Paralisia Cerebral');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 11, 'Trauma Crânio Encefálico');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 12, 'Distúrbios Sensoriais');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 11, 'Trauma CrÃ¢nio EncefÃ¡lico');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 12, 'DistÃºrbios Sensoriais');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 13, 'Epilepsia');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 14, 'Sindrome do Pânico');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 14, 'Sindrome do PÃ¢nico');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 15, 'Derrame');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'Cefaléia Intensa');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'CefalÃ©ia Intensa');
 
 /*===================================*/ 
 /*          Sensitivo                */ 
@@ -96,58 +96,58 @@ CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'Cefaléia Intensa');
 
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 1, 'Glaucoma');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 2, 'Conjutivite');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, 'Úlcera');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, 'Ãšlcera');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 4, 'Auditivo');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'Hanseníase');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'HansenÃ­ase');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 6, 'Agnosia');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 7, 'Gustativo');
 
 /*===================================*/ 
-/*          Hematopoético            */ 
+/*          HematopoÃ©tico            */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 1, 'Anemia');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 2, 'Tranfusões');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 3, 'Sangramento Nasal');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 4, 'Equimoses');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 5, 'Alterações De Coagulação');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 6, 'Suscetibilidade à Infecções');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 7, 'Linfadenopatia');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 8, 'Hemofilia');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 9, 'Leucemia');
-CALL SPInserePergunta ('Sistema Hematopoético', 9, 10,'Anemia Falciforme');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 1, 'Anemia');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 2, 'TranfusÃµes');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 3, 'Sangramento Nasal');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 4, 'Equimoses');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 5, 'AlteraÃ§Ãµes De CoagulaÃ§Ã£o');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 6, 'Suscetibilidade Ã  InfecÃ§Ãµes');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 7, 'Linfadenopatia');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 8, 'Hemofilia');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 9, 'Leucemia');
+CALL SPInserePergunta ('Sistema HematopoÃ©tico', 9, 10,'Anemia Falciforme');
 
 /*===================================*/ 
 /*          Osteomuscular            */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 1, 'Cirurgias Ortopédicas');
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 2, 'Uso de Prótese ');
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 3, 'Uso De Órtese');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 1, 'Cirurgias OrtopÃ©dicas');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 2, 'Uso de PrÃ³tese ');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 3, 'Uso De Ã“rtese');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 4, 'Fibromialgia');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 5, 'Osteoporose');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 6, 'Osteopenia');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 7, 'Osteoartrose');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 8, 'Lombalgia');
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 9, 'Hérnia de disco');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 9, 'HÃ©rnia de disco');
 CALL SPInserePergunta ('Sistema Osteomuscular', 8, 10,'Quedas');
 CALL SPInserePergunta ('Sistema Osteomuscular', 8, 11,'Fraturas');
 
 /*===================================*/ 
-/*          Histórico de queda       */ 
+/*          HistÃ³rico de queda       */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Histórico de Queda', 9, 1, 'Quedas Nos Últimos 12 Meses');
+CALL SPInserePergunta ('HistÃ³rico de Queda', 9, 1, 'Quedas Nos Ãšltimos 12 Meses');
 
 /*===================================*/ 
 /*              Anamnese             */ 
 /*===================================*/ 
 
 CALL SPInserePergunta ('Anamnese', 3,  1, 'Qual a Queixa Principal?');
-CALL SPInserePergunta ('Anamnese', 12, 2, 'História Medicamentosa');
-CALL SPInserePergunta ('Anamnese', 3,  3, 'História da Moléstia Atual');
+CALL SPInserePergunta ('Anamnese', 12, 2, 'HistÃ³ria Medicamentosa');
+CALL SPInserePergunta ('Anamnese', 3,  3, 'HistÃ³ria da MolÃ©stia Atual');
 CALL SPInserePergunta ('Anamnese', 24, 4, 'Alergias?');
-CALL SPInserePergunta ('Anamnese', 10, 5, 'Tem ou teve doença infecto-contagiosa?');
-CALL SPInserePergunta ('Anamnese', 6,  6, 'Já esteve internado ou se submeteu a alguma cirurgia, tratamento com radioterapia e quimioterapia?');
-CALL SPInserePergunta ('Anamnese', 3,  7, 'Última consulta - Época e motivo');
-CALL SPInserePergunta ('Anamnese', 7,  8, 'Medicamentos em uso prescrito atual ou nos últimos 6 meses?');
+CALL SPInserePergunta ('Anamnese', 10, 5, 'Tem ou teve doenÃ§a infecto-contagiosa?');
+CALL SPInserePergunta ('Anamnese', 6,  6, 'JÃ¡ esteve internado ou se submeteu a alguma cirurgia, tratamento com radioterapia e quimioterapia?');
+CALL SPInserePergunta ('Anamnese', 3,  7, 'Ãšltima consulta - Ã‰poca e motivo');
+CALL SPInserePergunta ('Anamnese', 7,  8, 'Medicamentos em uso prescrito atual ou nos Ãºltimos 6 meses?');

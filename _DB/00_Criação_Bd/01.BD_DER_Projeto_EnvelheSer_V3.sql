@@ -206,17 +206,17 @@ create table tb_questionario
 create table tb_resposta
 (
    Cod_Resposta_Prontuario smallint not null auto_increment PRIMARY KEY,
-   Num_Prontuario       int not null,
-   Cod_Pergunta         smallint not null,
-   Des_Resposta_Aberta  varchar(255),
-   Ind_Resposta_SimNao  bool,
-   Des_Resposta_Qual    varchar(255),
-   Des_Resposta_Quando  varchar(255),
-   Des_Resposta_Outros  varchar(255),
-   Des_Resposta_Cite    varchar(255),
+   Num_Prontuario      	   int not null,
+   Cod_Pergunta            smallint not null,
+   Des_Resposta_Aberta     varchar(255),
+   Ind_Resposta_SimNao     bool,
+   Des_Resposta_Qual       varchar(255),
+   Des_Resposta_Quando     varchar(255),
+   Des_Resposta_Outros     varchar(255),
+   Des_Resposta_Cite       varchar(255),
    Des_Resposta_Observacao varchar(255),
-   Cod_Resposta_ComboBox smallint,
-   Cod_Resposta_Radio   smallint
+   Cod_Resposta_ComboBox   smallint,
+   Cod_Resposta_Radio      smallint
 );
 
 /*==============================================================*/
@@ -225,10 +225,10 @@ create table tb_resposta
 create table tb_resposta_checkbox
 (
    Cod_Resposta_CheckBox smallint not null auto_increment PRIMARY KEY,
-   Num_Prontuario       int,
-   Cod_Pergunta         smallint,
-   Cod_Item_Check       smallint,
-   Ind_CheckBox         bool
+   Num_Prontuario        int,
+   Cod_Pergunta          smallint,
+   Cod_Item_Check        smallint,
+   Ind_CheckBox          bool
 );
 
 /*==============================================================*/
@@ -237,9 +237,9 @@ create table tb_resposta_checkbox
 create table tb_resposta_multi_combo
 (
    Cod_Resposta_Multi_Combo smallint not null auto_increment PRIMARY KEY,
-   Num_Prontuario       int,
-   Cod_Pergunta         smallint,
-   Cod_Item_Multi_Combo int
+   Num_Prontuario       	int,
+   Cod_Pergunta         	smallint,
+   Cod_Item_Multi_Combo 	int
 );
 
 /*==============================================================*/
@@ -258,19 +258,19 @@ create table tb_telefone
 /*==============================================================*/
 create table tb_tipo_pergunta
 (
-   Cod_Tipo_Pergunta    tinyint not null auto_increment PRIMARY KEY,
-   Ind_Pergunta_Aberta  bool,
-   Ind_Pergunta_SimNao  bool,
-   Ind_Pergunta_Qual    bool,
-   Ind_Pergunta_Quando  bool,
-   Ind_Pergunta_Outros  bool,
-   Ind_Pergunta_Cite    bool,
-   Ind_Pergunta_Observacao bool,
-   Ind_Pergunta_ComboBox bool,
-   Ind_Pergunta_Radio   bool,
-   Ind_Pergunta_CheckBox bool,
+   Cod_Tipo_Pergunta    	tinyint not null auto_increment PRIMARY KEY,
+   Ind_Pergunta_Aberta  	bool,
+   Ind_Pergunta_SimNao 		bool,
+   Ind_Pergunta_Qual   	 	bool,
+   Ind_Pergunta_Quando  	bool,
+   Ind_Pergunta_Outros  	bool,
+   Ind_Pergunta_Cite    	bool,
+   Ind_Pergunta_Observacao  bool,
+   Ind_Pergunta_ComboBox 	bool,
+   Ind_Pergunta_Radio   	bool,
+   Ind_Pergunta_CheckBox 	bool,
    Ind_Pergunta_Multi_Combo bool,
-   Des_Tipo_Perguntas   varchar(100)
+   Des_Tipo_Perguntas   	varchar(100)
 );
 
 /*==============================================================*/

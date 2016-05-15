@@ -3,24 +3,24 @@
 /*==============================================================*/
 
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamanandiba');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('S„o JosÈ Jacuri');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('S√£o Jos√© Jacuri');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamuri');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Bom Despacho');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Belo Horizonte');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('DivinÛpolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Divin√≥polis');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Conselheiro Lafaiete');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Cl·udio');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Sabar·');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Santa L˙zia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Cl√°udio');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Sabar√°');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Santa L√∫zia');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Carmopolis de Minas');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Alto Rio Doce');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('AbaetÈ');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Abaet√©');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Brumadinho');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('CaetÈ');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('ViÁosa');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('VirginÛpolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Caet√©');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Vi√ßosa');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Virgin√≥polis');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberaba');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberl‚ndia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberl√¢ndia');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('TimÛteo');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tim√≥teo');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');

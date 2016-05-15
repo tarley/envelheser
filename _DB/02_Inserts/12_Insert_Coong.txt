@@ -2,24 +2,24 @@
 /*   CADASTRO DE PERGUNTAS GRUPO COONG                          */
 /*==============================================================*/
 
-CALL SPInserePergunta ('Coong', 10, 1, 	'Alteração de Pele:');
-CALL SPInserePergunta ('Coong', 10, 2, 	'Alteração de Linfonodos:');
-CALL SPInserePergunta ('Coong', 10, 3, 	'Alteração de ATM:');
-CALL SPInserePergunta ('Coong', 10, 4, 	'Alteração de Lábios:');
-CALL SPInserePergunta ('Coong', 10, 5, 	'Alteração de Mucosa jugal:');
-CALL SPInserePergunta ('Coong', 10, 6, 	'Alteração de Gengiva e mucosa alveolar:');
-CALL SPInserePergunta ('Coong', 10, 7, 	'Alteração de Soalho Bucal:');
-CALL SPInserePergunta ('Coong', 10, 8, 	'Alteração de Língua:');
-CALL SPInserePergunta ('Coong', 10, 9, 	'Alteração de Palato:');
-CALL SPInserePergunta ('Coong', 10, 10,	'Alteração de Orofaringe:');
-CALL SPInserePergunta ('Coong', 10, 11,	'Alteração de Glândulas e ductos salivares:');
-CALL SPInserePergunta ('Coong', 10, 12,	'Alteração de Saliva:');
+CALL SPInserePergunta ('Coong', 10, 1, 	'AlteraÃ§Ã£o de Pele:');
+CALL SPInserePergunta ('Coong', 10, 2, 	'AlteraÃ§Ã£o de Linfonodos:');
+CALL SPInserePergunta ('Coong', 10, 3, 	'AlteraÃ§Ã£o de ATM:');
+CALL SPInserePergunta ('Coong', 10, 4, 	'AlteraÃ§Ã£o de LÃ¡bios:');
+CALL SPInserePergunta ('Coong', 10, 5, 	'AlteraÃ§Ã£o de Mucosa jugal:');
+CALL SPInserePergunta ('Coong', 10, 6, 	'AlteraÃ§Ã£o de Gengiva e mucosa alveolar:');
+CALL SPInserePergunta ('Coong', 10, 7, 	'AlteraÃ§Ã£o de Soalho Bucal:');
+CALL SPInserePergunta ('Coong', 10, 8, 	'AlteraÃ§Ã£o de LÃ­ngua:');
+CALL SPInserePergunta ('Coong', 10, 9, 	'AlteraÃ§Ã£o de Palato:');
+CALL SPInserePergunta ('Coong', 10, 10,	'AlteraÃ§Ã£o de Orofaringe:');
+CALL SPInserePergunta ('Coong', 10, 11,	'AlteraÃ§Ã£o de GlÃ¢ndulas e ductos salivares:');
+CALL SPInserePergunta ('Coong', 10, 12,	'AlteraÃ§Ã£o de Saliva:');
 CALL SPInserePergunta ('Coong', 19, 13,	'Halitose/Tipo de odor');
-CALL SPInserePergunta ('Coong', 18, 14,	'Classificação de Angle:');
+CALL SPInserePergunta ('Coong', 18, 14,	'ClassificaÃ§Ã£o de Angle:');
 CALL SPInserePergunta ('Coong', 18, 15,	'Lateralidade:');
 CALL SPInserePergunta ('Coong', 18, 16,	'Mordida Cruzada:');
 CALL SPInserePergunta ('Coong', 18, 17,	'Guia Anterior:');
-CALL SPInserePergunta ('Coong', 1,  18,	'Portador de Aparelho protético ou ortodôntico:');
-CALL SPInserePergunta ('Coong', 18, 19,	'Se Portador de Aparelho protético:');
+CALL SPInserePergunta ('Coong', 1,  18,	'Portador de Aparelho protÃ©tico ou ortodÃ´ntico:');
+CALL SPInserePergunta ('Coong', 18, 19,	'Se Portador de Aparelho protÃ©tico:');
 CALL SPInserePergunta ('Coong', 3,  20,	'Outros:');
-CALL SPInserePergunta ('Coong', 3,  21,	'Descrição detalhada de alterações:');
+CALL SPInserePergunta ('Coong', 3,  21,	'DescriÃ§Ã£o detalhada de alteraÃ§Ãµes:');

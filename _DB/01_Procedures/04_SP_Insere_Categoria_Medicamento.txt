@@ -1,5 +1,5 @@
 /*==============================================================*/ 
-/* CRIA«√O DA PROCEDURE DE REGISTRAR CATEGORIA DE MEDICAMENTOS  */ 
+/* CRIA√á√ÉO DA PROCEDURE DE REGISTRAR CATEGORIA DE MEDICAMENTOS  */ 
 /*==============================================================*/ 
 
 DELIMITER $$

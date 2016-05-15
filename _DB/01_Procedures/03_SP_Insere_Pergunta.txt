@@ -1,12 +1,12 @@
 /*==============================================================*/ 
-/*          CRIA«√O DA PROCEDURE DE REGISTRAR PERGUNTAS         */ 
+/*          CRIA√á√ÉO DA PROCEDURE DE REGISTRAR PERGUNTAS         */ 
 /*==============================================================*/ 
 
 DELIMITER $$
 
     CREATE  PROCEDURE SPInserePergunta
     (
-   	IN P_Nome_Grupo 	  VARCHAR(100),
+   	IN P_Nome_Grupo 	  	  VARCHAR(100),
    	IN P_Cod_Tipo_Pergunta    TINYINT,
 	IN P_Num_Ordem_Pergunta   INT,
    	IN P_Des_Pergunta         VARCHAR(150)
@@ -17,13 +17,13 @@ DELIMITER $$
         
           DECLARE V_Cod_Grupo            INT;
           DECLARE V_Cod_Tipo_Pergunta    TINYINT;
-	  DECLARE V_Num_Ordem_Pergunta   INT;
+	 	  DECLARE V_Num_Ordem_Pergunta   INT;
           DECLARE V_Des_Pergunta         VARCHAR(150);
           
           
-          SET V_Cod_Grupo 	     := (SELECT Cod_Grupo FROM tb_grupo WHERE Nom_Grupo = P_Nome_Grupo );
+          SET V_Cod_Grupo 	    	 := (SELECT Cod_Grupo FROM tb_grupo WHERE Nom_Grupo = P_Nome_Grupo );
           SET V_Cod_Tipo_Pergunta    := P_Cod_Tipo_Pergunta;
-	  SET V_Num_Ordem_Pergunta   := P_Num_Ordem_Pergunta;
+	 	  SET V_Num_Ordem_Pergunta   := P_Num_Ordem_Pergunta;
           SET V_Des_Pergunta         := P_Des_Pergunta;
           
           

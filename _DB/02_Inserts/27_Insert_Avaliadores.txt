@@ -3,10 +3,10 @@
 /*==============================================================*/
 
 INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Psicologia'), 'jcheringer88@hotmail.com', 'joao', '123', 'Jo„o');
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Psicologia'), 'jcheringer88@hotmail.com', 'joao', '123', 'Jo√£o');
 
 INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Odontologia'), 'fillipedeep@gmail.com', 'filipe', '456', 'Filipe PerpÈtuo');
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Odontologia'), 'fillipedeep@gmail.com', 'filipe', '456', 'Filipe Perp√©tuo');
 
 
 INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 

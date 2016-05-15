@@ -3,4 +3,3 @@
 /*==============================================================*/
 
 CALL SPInserePergunta ('Necessidades Psicoespirituais', 15, 1, 'Realiza alguma atividade religiosa-espiritual?');
-

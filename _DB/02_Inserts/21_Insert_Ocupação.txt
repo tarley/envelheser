@@ -1,15 +1,15 @@
 /*==============================================================*/
-/*                    CADASTRO DE DE OCUPA«√O                   */
+/*                    CADASTRO DE DE OCUPA√á√ÉO                   */
 /*==============================================================*/
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('DomÈstica');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Dom√©stica');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Salgadeiro');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Aposentado');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('An·lista de Sistemas');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('AutÙnomo');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('An√°lista de Sistemas');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Aut√¥nomo');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Desempregado');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Diarista');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Advogado');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('T·xista');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('MÈdico');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('T√°xista');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('M√©dico');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Estudante');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Programador');

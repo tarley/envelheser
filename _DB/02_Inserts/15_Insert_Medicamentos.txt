@@ -2,47 +2,47 @@
 /*                    CADASTRO DE MEDICAMENTOS                  */
 /*==============================================================*/
 
-CALL SPInsereMedicamento ('Captopril 25 mg', 'Hist髍ia Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Atenolol 25 mg', 'Hist髍ia Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Losartana 50 mg', 'Hist髍ia Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Enalapril 10 mg', 'Hist髍ia Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Propranolol 40 mg', 'Hist髍ia Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Anlodipino 5 mg', 'Hist髍ia Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Anlodipino 10 mg', 'Hist髍ia Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Captopril 25 mg', 'Hist贸ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Atenolol 25 mg', 'Hist贸ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Losartana 50 mg', 'Hist贸ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Enalapril 10 mg', 'Hist贸ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Propranolol 40 mg', 'Hist贸ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 5 mg', 'Hist贸ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 10 mg', 'Hist贸ria Medicamentosa', 'Antihipertensivos');
 
-CALL SPInsereMedicamento ('Metformina 500 mg', 'Hist髍ia Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Metformina 850 mg', 'Hist髍ia Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Glibenclamida 5 mg', 'Hist髍ia Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Insulina Humana NPH 100UI/Ml', 'Hist髍ia Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Insulina Regular', 'Hist髍ia Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Metformina 500 mg', 'Hist贸ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Metformina 850 mg', 'Hist贸ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Glibenclamida 5 mg', 'Hist贸ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Insulina Humana NPH 100UI/Ml', 'Hist贸ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Insulina Regular', 'Hist贸ria Medicamentosa', 'Hipoglicimiantes');
 
-CALL SPInsereMedicamento ('Digoxina 0,25mg', 'Hist髍ia Medicamentosa', 'Cardiot鬾icos');
-CALL SPInsereMedicamento ('Carvedilol 3,125 mg', 'Hist髍ia Medicamentosa', 'Cardiot鬾icos');
-CALL SPInsereMedicamento ('Carvedilol 6,25 mg', 'Hist髍ia Medicamentosa', 'Cardiot鬾icos');
-CALL SPInsereMedicamento ('Carvedilol 12,5 mg', 'Hist髍ia Medicamentosa', 'Cardiot鬾icos');
-CALL SPInsereMedicamento ('Carvedilol 25 mg', 'Hist髍ia Medicamentosa', 'Cardiot鬾icos');
+CALL SPInsereMedicamento ('Digoxina 0,25mg', 'Hist贸ria Medicamentosa', 'Cardiot么nicos');
+CALL SPInsereMedicamento ('Carvedilol 3,125 mg', 'Hist贸ria Medicamentosa', 'Cardiot么nicos');
+CALL SPInsereMedicamento ('Carvedilol 6,25 mg', 'Hist贸ria Medicamentosa', 'Cardiot么nicos');
+CALL SPInsereMedicamento ('Carvedilol 12,5 mg', 'Hist贸ria Medicamentosa', 'Cardiot么nicos');
+CALL SPInsereMedicamento ('Carvedilol 25 mg', 'Hist贸ria Medicamentosa', 'Cardiot么nicos');
 
-CALL SPInsereMedicamento ('Diazepam 5 mg', 'Hist髍ia Medicamentosa', 'Ansiol韙icos');
-CALL SPInsereMedicamento ('Clomipramina 10 mg', 'Hist髍ia Medicamentosa', 'Ansiol韙icos');
-CALL SPInsereMedicamento ('Clomipramina 25 mg', 'Hist髍ia Medicamentosa', 'Ansiol韙icos');
-CALL SPInsereMedicamento ('Clonazepam 0,5 mg', 'Hist髍ia Medicamentosa', 'Ansiol韙icos');
-CALL SPInsereMedicamento ('Clonazepam 2 mg', 'Hist髍ia Medicamentosa', 'Ansiol韙icos');
-CALL SPInsereMedicamento ('Bromazepam 3 mg', 'Hist髍ia Medicamentosa', 'Ansiol韙icos');
-CALL SPInsereMedicamento ('Bromazepam 6 mg', 'Hist髍ia Medicamentosa', 'Ansiol韙icos');
+CALL SPInsereMedicamento ('Diazepam 5 mg', 'Hist贸ria Medicamentosa', 'Ansiol铆ticos');
+CALL SPInsereMedicamento ('Clomipramina 10 mg', 'Hist贸ria Medicamentosa', 'Ansiol铆ticos');
+CALL SPInsereMedicamento ('Clomipramina 25 mg', 'Hist贸ria Medicamentosa', 'Ansiol铆ticos');
+CALL SPInsereMedicamento ('Clonazepam 0,5 mg', 'Hist贸ria Medicamentosa', 'Ansiol铆ticos');
+CALL SPInsereMedicamento ('Clonazepam 2 mg', 'Hist贸ria Medicamentosa', 'Ansiol铆ticos');
+CALL SPInsereMedicamento ('Bromazepam 3 mg', 'Hist贸ria Medicamentosa', 'Ansiol铆ticos');
+CALL SPInsereMedicamento ('Bromazepam 6 mg', 'Hist贸ria Medicamentosa', 'Ansiol铆ticos');
 
-CALL SPInsereMedicamento ('Amitriptilina 25 mg', 'Hist髍ia Medicamentosa', 'Antidepressivos');
-CALL SPInsereMedicamento ('Fluoxetina 20 mg', 'Hist髍ia Medicamentosa', 'Antidepressivos');
+CALL SPInsereMedicamento ('Amitriptilina 25 mg', 'Hist贸ria Medicamentosa', 'Antidepressivos');
+CALL SPInsereMedicamento ('Fluoxetina 20 mg', 'Hist贸ria Medicamentosa', 'Antidepressivos');
 
-CALL SPInsereMedicamento ('Furosemida 40 mg', 'Hist髍ia Medicamentosa', 'Diur閠icos');
-CALL SPInsereMedicamento ('Espironolactona 25 mg', 'Hist髍ia Medicamentosa', 'Diur閠icos');
-CALL SPInsereMedicamento ('Espironolactona 100 mg', 'Hist髍ia Medicamentosa', 'Diur閠icos');
-CALL SPInsereMedicamento ('Hidroclorotiazida 12,5 mg', 'Hist髍ia Medicamentosa', 'Diur閠icos');
-CALL SPInsereMedicamento ('Hidroclorotiazida 25 mg', 'Hist髍ia Medicamentosa', 'Diur閠icos');
+CALL SPInsereMedicamento ('Furosemida 40 mg', 'Hist贸ria Medicamentosa', 'Diur茅ticos');
+CALL SPInsereMedicamento ('Espironolactona 25 mg', 'Hist贸ria Medicamentosa', 'Diur茅ticos');
+CALL SPInsereMedicamento ('Espironolactona 100 mg', 'Hist贸ria Medicamentosa', 'Diur茅ticos');
+CALL SPInsereMedicamento ('Hidroclorotiazida 12,5 mg', 'Hist贸ria Medicamentosa', 'Diur茅ticos');
+CALL SPInsereMedicamento ('Hidroclorotiazida 25 mg', 'Hist贸ria Medicamentosa', 'Diur茅ticos');
 
-CALL SPInsereMedicamento ('Carbamazepina 200 mg', 'Hist髍ia Medicamentosa', 'Antiagregante Plaquet醨io');
-CALL SPInsereMedicamento ('Clonazepam 2 mg', 'Hist髍ia Medicamentosa', 'Antiagregante Plaquet醨io');
-CALL SPInsereMedicamento ('羉ido Valpr骾co 250 mg', 'Hist髍ia Medicamentosa', 'Antiagregante Plaquet醨io');
+CALL SPInsereMedicamento ('Carbamazepina 200 mg', 'Hist贸ria Medicamentosa', 'Antiagregante Plaquet谩rio');
+CALL SPInsereMedicamento ('Clonazepam 2 mg', 'Hist贸ria Medicamentosa', 'Antiagregante Plaquet谩rio');
+CALL SPInsereMedicamento ('脕cido Valpr贸ico 250 mg', 'Hist贸ria Medicamentosa', 'Antiagregante Plaquet谩rio');
 
-CALL SPInsereMedicamento ('Levotiroxina (Puran T4)', 'Hist髍ia Medicamentosa', 'Horm鬾io Tireoidiano');
+CALL SPInsereMedicamento ('Levotiroxina (Puran T4)', 'Hist贸ria Medicamentosa', 'Horm么nio Tireoidiano');
 
-CALL SPInsereMedicamento ('AAS 100 mg', 'Hist髍ia Medicamentosa', 'Anticonvulsivantes');
+CALL SPInsereMedicamento ('AAS 100 mg', 'Hist贸ria Medicamentosa', 'Anticonvulsivantes');

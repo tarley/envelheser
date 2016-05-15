@@ -4,10 +4,10 @@
 
  CALL SPInsereCategoriaMedicamento ('Antihipertensivos');
  CALL SPInsereCategoriaMedicamento ('Hipoglicimiantes');
- CALL SPInsereCategoriaMedicamento ('CardiotÙnicos');
- CALL SPInsereCategoriaMedicamento ('AnsiolÌticos');
+ CALL SPInsereCategoriaMedicamento ('Cardiot√¥nicos');
+ CALL SPInsereCategoriaMedicamento ('Ansiol√≠ticos');
  CALL SPInsereCategoriaMedicamento ('Antidepressivos');
- CALL SPInsereCategoriaMedicamento ('DiurÈticos');
- CALL SPInsereCategoriaMedicamento ('Antiagregante Plaquet·rio');
- CALL SPInsereCategoriaMedicamento ('HormÙnio Tireoidiano');
+ CALL SPInsereCategoriaMedicamento ('Diur√©ticos');
+ CALL SPInsereCategoriaMedicamento ('Antiagregante Plaquet√°rio');
+ CALL SPInsereCategoriaMedicamento ('Horm√¥nio Tireoidiano');
  CALL SPInsereCategoriaMedicamento ('Anticonvulsivantes');

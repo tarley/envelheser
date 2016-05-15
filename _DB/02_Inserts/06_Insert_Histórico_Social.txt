@@ -1,5 +1,5 @@
 /*==============================================================*/
-/*     	CADASTRO DE PERGUNTAS GRUPO HISTÓRICO SOCIAL            */
+/*     	CADASTRO DE PERGUNTAS GRUPO HISTÃ“RICO SOCIAL            */
 /*==============================================================*/
 
-CALL SPInserePergunta ('Histórico Social', 3, 1, 'Moradia, estrutura da casa, trabalho, alimentação e saneamento:');
+CALL SPInserePergunta ('HistÃ³rico Social', 3, 1, 'Moradia, estrutura da casa, trabalho, alimentaÃ§Ã£o e saneamento:');

@@ -1,5 +1,5 @@
 /*==============================================================*/ 
-/*           CRIA«√O DA PROCEDURE DE REGISTRAR GRUPOS           */ 
+/*           CRIA√á√ÉO DA PROCEDURE DE REGISTRAR GRUPOS           */ 
 /*==============================================================*/
 
 DELIMITER $$
@@ -50,7 +50,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/ 
-/*     CRIA«√O DA PROCEDURE PARA REGISTRAR TIPO DE PERGUNTAS    */ 
+/*     CRIA√á√ÉO DA PROCEDURE PARA REGISTRAR TIPO DE PERGUNTAS    */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -136,7 +136,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/ 
-/*          CRIA«√O DA PROCEDURE DE REGISTRAR PERGUNTAS         */ 
+/*          CRIA√á√ÉO DA PROCEDURE DE REGISTRAR PERGUNTAS         */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -188,7 +188,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/ 
-/* CRIA«√O DA PROCEDURE DE REGISTRAR CATEGORIA DE MEDICAMENTOS  */ 
+/* CRIA√á√ÉO DA PROCEDURE DE REGISTRAR CATEGORIA DE MEDICAMENTOS  */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -224,7 +224,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/ 
-/*          CRIA«√O DA PROCEDURE DE REGISTRAR MEDICAMENTOS      */ 
+/*          CRIA√á√ÉO DA PROCEDURE DE REGISTRAR MEDICAMENTOS      */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -270,7 +270,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/ 
-/*       CRIA«√O DA PROCEDURE DE REGISTRAR LISTA DE CHECKBOX    */ 
+/*       CRIA√á√ÉO DA PROCEDURE DE REGISTRAR LISTA DE CHECKBOX    */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -309,7 +309,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/ 
-/*       CRIA«√O DA PROCEDURE DE REGISTRAR LISTA DE COMBO       */ 
+/*       CRIA√á√ÉO DA PROCEDURE DE REGISTRAR LISTA DE COMBO       */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -348,7 +348,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/ 
-/*       CRIA«√O DA PROCEDURE DE REGISTRAR LISTA DE RADIO       */ 
+/*       CRIA√á√ÉO DA PROCEDURE DE REGISTRAR LISTA DE RADIO       */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -387,7 +387,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*==============================================================*/  
-/*                  INSERT DOS QUESTION¡RIOS                    */  
+/*                  INSERT DOS QUESTION√ÅRIOS                    */  
 /*==============================================================*/  
 
 INSERT INTO tb_questionario (Des_Questionario) VALUES ('Triagem'); 
@@ -398,80 +398,80 @@ INSERT INTO tb_questionario (Des_Questionario) VALUES ('Fisioterapia');
 /*                     CADASTRO DOS GRUPOS                      */ 
 /*==============================================================*/ 
 
-CALL SPInsereGrupo ('IdentificaÁ„o', null, 'Triagem', 1, 0);
+CALL SPInsereGrupo ('Identifica√ß√£o', null, 'Triagem', 1, 0);
 
 CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
 
-			CALL SPInsereGrupo ('HistÛria MÈdica Pregressa', 'Anamnese', 'Triagem', 1, 1);
+			CALL SPInsereGrupo ('Hist√≥ria M√©dica Pregressa', 'Anamnese', 'Triagem', 1, 1);
 
-						CALL SPInsereGrupo ('Sistema Cardiovascular', 'HistÛria MÈdica Pregressa', 'Triagem', 1, 1);
-						CALL SPInsereGrupo ('Sistema RespiratÛrio', 'HistÛria MÈdica Pregressa', 'Triagem', 2, 1);
-						CALL SPInsereGrupo ('Sistema DigestÛrio', 'HistÛria MÈdica Pregressa', 'Triagem', 3, 1);
-						CALL SPInsereGrupo ('Sistema Genitourin·rio', 'HistÛria MÈdica Pregressa', 'Triagem', 4, 1);
-						CALL SPInsereGrupo ('Sistema EndÛcrino', 'HistÛria MÈdica Pregressa', 'Triagem', 5, 1);
-						CALL SPInsereGrupo ('Sistema Nervoso Central', 'HistÛria MÈdica Pregressa', 'Triagem', 6, 1);
-						CALL SPInsereGrupo ('Sistema Sensitivo', 'HistÛria MÈdica Pregressa', 'Triagem', 7, 1);
-						CALL SPInsereGrupo ('Sistema HematopoÈtico', 'HistÛria MÈdica Pregressa', 'Triagem', 8, 1);
-						CALL SPInsereGrupo ('Sistema Osteomuscular', 'HistÛria MÈdica Pregressa', 'Triagem', 9, 1);
+						CALL SPInsereGrupo ('Sistema Cardiovascular', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 1, 1);
+						CALL SPInsereGrupo ('Sistema Respirat√≥rio', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 2, 1);
+						CALL SPInsereGrupo ('Sistema Digest√≥rio', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 3, 1);
+						CALL SPInsereGrupo ('Sistema Genitourin√°rio', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 4, 1);
+						CALL SPInsereGrupo ('Sistema End√≥crino', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 5, 1);
+						CALL SPInsereGrupo ('Sistema Nervoso Central', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 6, 1);
+						CALL SPInsereGrupo ('Sistema Sensitivo', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 7, 1);
+						CALL SPInsereGrupo ('Sistema Hematopo√©tico', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 8, 1);
+						CALL SPInsereGrupo ('Sistema Osteomuscular', 'Hist√≥ria M√©dica Pregressa', 'Triagem', 9, 1);
 
-			CALL SPInsereGrupo ('HistÛrico de Queda', 'Anamnese', 'Triagem', 2, 1);
+			CALL SPInsereGrupo ('Hist√≥rico de Queda', 'Anamnese', 'Triagem', 2, 1);
 
-			CALL SPInsereGrupo ('HistÛrico Familiar', 'Anamnese', 'Triagem', 3, 1);
+			CALL SPInsereGrupo ('Hist√≥rico Familiar', 'Anamnese', 'Triagem', 3, 1);
 
-			CALL SPInsereGrupo ('HistÛrico Social', 'Anamnese', 'Triagem', 4, 1);
+			CALL SPInsereGrupo ('Hist√≥rico Social', 'Anamnese', 'Triagem', 4, 1);
 
-			CALL SPInsereGrupo ('H·bitos e VÌcios', 'Anamnese', 'Triagem', 5, 1);
+			CALL SPInsereGrupo ('H√°bitos e V√≠cios', 'Anamnese', 'Triagem', 5, 1);
 
-				CALL SPInsereGrupo ('Tabagismo', 'H·bitos e VÌcios', 'Triagem', 1, 1);
+				CALL SPInsereGrupo ('Tabagismo', 'H√°bitos e V√≠cios', 'Triagem', 1, 1);
 
-				CALL SPInsereGrupo ('Etilismo', 'H·bitos e VÌcios', 'Triagem', 2, 1);
+				CALL SPInsereGrupo ('Etilismo', 'H√°bitos e V√≠cios', 'Triagem', 2, 1);
 
-				CALL SPInsereGrupo ('Drogas IlÌcitas', 'H·bitos e VÌcios', 'Triagem', 3, 1);
+				CALL SPInsereGrupo ('Drogas Il√≠citas', 'H√°bitos e V√≠cios', 'Triagem', 3, 1);
 
 CALL SPInsereGrupo ('Necessidades Psicoespirituais', null, 'Triagem', 2, 1);
 
 CALL SPInsereGrupo ('Necessidades Psicosociais', null, 'Triagem', 3, 1);
 
-	CALL SPInsereGrupo ('InteraÁ„o Social', 'Necessidades Psicosociais', 'Triagem', 1, 1);
+	CALL SPInsereGrupo ('Intera√ß√£o Social', 'Necessidades Psicosociais', 'Triagem', 1, 1);
 
-	CALL SPInsereGrupo ('RecreaÁ„o/Lazer/Criatividade', 'Necessidades Psicosociais', 'Triagem', 2, 1);
+	CALL SPInsereGrupo ('Recrea√ß√£o/Lazer/Criatividade', 'Necessidades Psicosociais', 'Triagem', 2, 1);
 
-CALL SPInsereGrupo ('Necessidades PsicobiolÛgicas', null, 'Triagem', 4, 1);
+CALL SPInsereGrupo ('Necessidades Psicobiol√≥gicas', null, 'Triagem', 4, 1);
 
-	CALL SPInsereGrupo ('Cuidado Corporal', 'Necessidades PsicobiolÛgicas', 'Triagem', 1, 1);
+	CALL SPInsereGrupo ('Cuidado Corporal', 'Necessidades Psicobiol√≥gicas', 'Triagem', 1, 1);
 
-	CALL SPInsereGrupo ('H·bito de Sono e Repouso', 'Necessidades PsicobiolÛgicas', 'Triagem', 2, 1);
+	CALL SPInsereGrupo ('H√°bito de Sono e Repouso', 'Necessidades Psicobiol√≥gicas', 'Triagem', 2, 1);
 	
-	CALL SPInsereGrupo ('ExercÌcio', 'Necessidades PsicobiolÛgicas', 'Triagem', 3, 1);
+	CALL SPInsereGrupo ('Exerc√≠cio', 'Necessidades Psicobiol√≥gicas', 'Triagem', 3, 1);
 
-	CALL SPInsereGrupo ('EliminaÁ„o Intestinal', 'Necessidades PsicobiolÛgicas', 'Triagem', 4, 1);
+	CALL SPInsereGrupo ('Elimina√ß√£o Intestinal', 'Necessidades Psicobiol√≥gicas', 'Triagem', 4, 1);
 	
-	CALL SPInsereGrupo ('TerapÍutica', 'Necessidades PsicobiolÛgicas', 'Triagem', 5, 1);
+	CALL SPInsereGrupo ('Terap√™utica', 'Necessidades Psicobiol√≥gicas', 'Triagem', 5, 1);
 
-	CALL SPInsereGrupo ('Sexualidade', 'Necessidades PsicobiolÛgicas', 'Triagem', 6, 1);
+	CALL SPInsereGrupo ('Sexualidade', 'Necessidades Psicobiol√≥gicas', 'Triagem', 6, 1);
 
-CALL SPInsereGrupo ('Exame FÌsico', null, 'Triagem', 5, 1);
+CALL SPInsereGrupo ('Exame F√≠sico', null, 'Triagem', 5, 1);
 
 CALL SPInsereGrupo ('Coong', null, 'Triagem', 6, 1);
 
-CALL SPInsereGrupo ('Exame FÌsico Objetivo de coong_2', null, 'Triagem', 7, 1);
+CALL SPInsereGrupo ('Exame F√≠sico Objetivo de coong_2', null, 'Triagem', 7, 1);
 
-			CALL SPInsereGrupo ('Sistema RespiratÛrio_2', 'Exame FÌsico Objetivo de coong_2', 'Triagem', 1, 1);
+			CALL SPInsereGrupo ('Sistema Respirat√≥rio_2', 'Exame F√≠sico Objetivo de coong_2', 'Triagem', 1, 1);
 
-			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame FÌsico Objetivo de coong_2', 'Triagem', 2, 1);
+			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame F√≠sico Objetivo de coong_2', 'Triagem', 2, 1);
 
-			CALL SPInsereGrupo ('Sistema Gastrointestinal_2', 'Exame FÌsico Objetivo de coong_2', 'Triagem', 3, 1);
+			CALL SPInsereGrupo ('Sistema Gastrointestinal_2', 'Exame F√≠sico Objetivo de coong_2', 'Triagem', 3, 1);
 
-			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame FÌsico Objetivo de coong_2', 'Triagem', 4, 1);
+			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame F√≠sico Objetivo de coong_2', 'Triagem', 4, 1);
 
-			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame FÌsico Objetivo de coong_2', 'Triagem', 5, 1);
+			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame F√≠sico Objetivo de coong_2', 'Triagem', 5, 1);
 
-			CALL SPInsereGrupo ('Sistema Geniturin·rio_2', 'Exame FÌsico Objetivo de coong_2', 'Triagem', 6, 1);
+			CALL SPInsereGrupo ('Sistema Geniturin√°rio_2', 'Exame F√≠sico Objetivo de coong_2', 'Triagem', 6, 1);
 
 /*==============================================================*/
 /*           	CADASTRO DOS TIPOS DE PERGUNTAS            	*/
 /*==============================================================*/
-CALL SPInsereTipoPergunta(0,1,0,0,0,0,0,0,0,0,0,'SimN„o');
+CALL SPInsereTipoPergunta(0,1,0,0,0,0,0,0,0,0,0,'SimN√£o');
 CALL SPInsereTipoPergunta(0,0,1,0,0,0,0,0,0,0,0,'Qual');
 CALL SPInsereTipoPergunta(1,0,0,0,0,0,0,0,0,0,0,'Aberta');
 CALL SPInsereTipoPergunta(0,0,0,1,0,0,0,0,0,0,0,'Quando');
@@ -479,39 +479,39 @@ CALL SPInsereTipoPergunta(1,1,1,0,0,0,0,0,0,0,0,'Aberta - SimNao - Qual');
 CALL SPInsereTipoPergunta(0,1,1,1,0,0,0,0,0,0,0,'SimNao - Qual - Quando');
 CALL SPInsereTipoPergunta(0,1,1,0,0,0,0,0,0,0,0,'SimNao - Qual');
 CALL SPInsereTipoPergunta(0,1,0,1,0,0,0,0,0,0,0,'SimNao - Quando');
-CALL SPInsereTipoPergunta(0,1,0,0,0,0,1,0,0,0,0,'SimNao - ObservaÁ„o');
-CALL SPInsereTipoPergunta(0,0,0,0,0,0,1,0,0,1,0,'CheckBox - ObservaÁ„o');
-CALL SPInsereTipoPergunta(0,0,0,0,0,0,1,0,0,0,1,'MultiCombo - ObservaÁ„o');
+CALL SPInsereTipoPergunta(0,1,0,0,0,0,1,0,0,0,0,'SimNao - Observa√ß√£o');
+CALL SPInsereTipoPergunta(0,0,0,0,0,0,1,0,0,1,0,'CheckBox - Observa√ß√£o');
+CALL SPInsereTipoPergunta(0,0,0,0,0,0,1,0,0,0,1,'MultiCombo - Observa√ß√£o');
 CALL SPInsereTipoPergunta(0,0,0,0,0,0,0,0,0,0,1,'MultiCombo');
 CALL SPInsereTipoPergunta(0,0,0,0,1,0,0,0,0,0,0,'Outros');
 CALL SPInsereTipoPergunta(1,1,0,0,0,0,0,0,0,0,0,'SimNao - Aberta');
-CALL SPInsereTipoPergunta(0,1,0,0,1,0,0,1,0,0,0,'SimN„o - ComboBox - Outros');
-CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,1,0,0,0,'SimN„o - ComboBox - Cite');
-CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,0,0,'SimN„o - Cite');
+CALL SPInsereTipoPergunta(0,1,0,0,1,0,0,1,0,0,0,'SimN√£o - ComboBox - Outros');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,1,0,0,0,'SimN√£o - ComboBox - Cite');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,0,0,'SimN√£o - Cite');
 CALL SPInsereTipoPergunta(0,0,0,0,0,0,0,0,1,0,0,'Radio');
 CALL SPInsereTipoPergunta(0,0,0,0,0,1,0,0,1,0,0,'Radio - Cite');
-CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,1,0,0,'SimN„o - Radio - Cite');
-CALL SPInsereTipoPergunta(1,0,0,0,0,0,1,0,0,1,0,'CheckBox - Aberta - ObservaÁ„o');
-CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,1,0,'SimN„o - CheckBox - Cite');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,1,0,0,'SimN√£o - Radio - Cite');
+CALL SPInsereTipoPergunta(1,0,0,0,0,0,1,0,0,1,0,'CheckBox - Aberta - Observa√ß√£o');
+CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,1,0,'SimN√£o - CheckBox - Cite');
 CALL SPInsereTipoPergunta(0,0,0,0,0,1,0,0,0,1,0,'CheckBox - Cite');
-CALL SPInsereTipoPergunta(0,1,1,0,0,0,0,0,0,1,0,'SimN„o - CheckBox - Qual');
+CALL SPInsereTipoPergunta(0,1,1,0,0,0,0,0,0,1,0,'SimN√£o - CheckBox - Qual');
 
 
 /*==============================================================*/
-/*     	CADASTRO DE PERGUNTAS GRUPO HIST”RICO FAMILIAR     	*/
+/*     	CADASTRO DE PERGUNTAS GRUPO HIST√ìRICO FAMILIAR     	*/
 /*==============================================================*/
-CALL SPInserePergunta ('HistÛrico Familiar', 7, 1, 'H· alguma doenÁa predominante em sua famÌlia?');
-CALL SPInserePergunta ('HistÛrico Familiar', 1, 2, 'Pais vivos? ');
-CALL SPInserePergunta ('HistÛrico Familiar', 3, 3, 'Causa da Morte: ');
-CALL SPInserePergunta ('HistÛrico Familiar', 3, 4, 'N˙mero de irm„os? ');
-CALL SPInserePergunta ('HistÛrico Familiar', 3, 5, 'Mortos? ');
-CALL SPInserePergunta ('HistÛrico Familiar', 3, 6, 'Causa da Morte: ');
-CALL SPInserePergunta ('HistÛrico Familiar', 3, 7, 'N˙mero de filhos?');
-CALL SPInserePergunta ('HistÛrico Familiar', 3, 8, 'Mortos? ');
-CALL SPInserePergunta ('HistÛrico Familiar', 3, 9, 'Causa da Morte: ');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 7, 1, 'H√° alguma doen√ßa predominante em sua fam√≠lia?');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 1, 2, 'Pais vivos? ');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 3, 3, 'Causa da Morte: ');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 3, 4, 'N√∫mero de irm√£os? ');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 3, 5, 'Mortos? ');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 3, 6, 'Causa da Morte: ');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 3, 7, 'N√∫mero de filhos?');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 3, 8, 'Mortos? ');
+CALL SPInserePergunta ('Hist√≥rico Familiar', 3, 9, 'Causa da Morte: ');
 
 /*==============================================================*/ 
-/*                    HIST”RIA M…DICA PREGRESSA                 */ 
+/*                    HIST√ìRIA M√âDICA PREGRESSA                 */ 
 /*==============================================================*/ 
 
 /*===================================*/ 
@@ -519,66 +519,66 @@ CALL SPInserePergunta ('HistÛrico Familiar', 3, 9, 'Causa da Morte: ');
 /*===================================*/ 
 
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 1, 'Infarto');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 2, 'InsuficiÍncia CardÌaca');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 3, 'Press„o Arterial');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 2, 'Insufici√™ncia Card√≠aca');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 3, 'Press√£o Arterial');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 4, 'Angina');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 5, 'PrÛtese Valvar');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 5, 'Pr√≥tese Valvar');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 6, 'Sopro');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 7, 'Arritmias');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 8, 'Cirurgias CardÌacas');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 8, 'Cirurgias Card√≠acas');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 9, 'Marca-Passo');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'DoenÁa de Chagas');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 11, 'Prolapso de V·lvula Mitral');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 12, 'Febre Reum·tica Com Cardiopatia');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'Doen√ßa de Chagas');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 11, 'Prolapso de V√°lvula Mitral');
+CALL SPInserePergunta ('Sistema Cardiovascular', 9, 12, 'Febre Reum√°tica Com Cardiopatia');
 
 /*===================================*/ 
-/*          RespiratÛrio             */ 
+/*          Respirat√≥rio             */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 1, 'Pneumonia');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 2, 'Asma');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 3, 'Bronquite');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 4, 'Fibrose CÌstica');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 5, 'Tuberculose');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 6, 'Enfisema');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 7, 'Sinusite');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 8, 'Tosse CrÙnica');
-CALL SPInserePergunta ('Sistema RespiratÛrio', 9, 9, 'DoenÁa Pulmonar Obstrutiva CrÙnica');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 1, 'Pneumonia');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 2, 'Asma');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 3, 'Bronquite');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 4, 'Fibrose C√≠stica');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 5, 'Tuberculose');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 6, 'Enfisema');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 7, 'Sinusite');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 8, 'Tosse Cr√¥nica');
+CALL SPInserePergunta ('Sistema Respirat√≥rio', 9, 9, 'Doen√ßa Pulmonar Obstrutiva Cr√¥nica');
 
 /*===================================*/ 
-/*          DigestÛrio               */ 
+/*          Digest√≥rio               */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 1, 'Azia');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 2, 'Gastrite');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 3, '⁄lcera');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 4, 'Hepatite');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 5, 'Cirrose');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 6, 'IcterÌcia');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 7, 'DiarrÈia Persistente');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 8, 'ConstipaÁ„o Intestinal');
-CALL SPInserePergunta ('Sistema DigestÛrio', 9, 9, 'Refluxo');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 1, 'Azia');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 2, 'Gastrite');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 3, '√ölcera');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 4, 'Hepatite');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 5, 'Cirrose');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 6, 'Icter√≠cia');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 7, 'Diarr√©ia Persistente');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 8, 'Constipa√ß√£o Intestinal');
+CALL SPInserePergunta ('Sistema Digest√≥rio', 9, 9, 'Refluxo');
 
 /*===================================*/ 
-/*          Genitourin·rio           */ 
+/*          Genitourin√°rio           */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Genitourin·rio', 9, 1, 'InsuficiÍncia Renal');
-CALL SPInserePergunta ('Sistema Genitourin·rio', 9, 2, 'C·lculos Renais');
-CALL SPInserePergunta ('Sistema Genitourin·rio', 9, 3, 'DoenÁas Sexualmente TransmissÌveis');
-CALL SPInserePergunta ('Sistema Genitourin·rio', 9, 4, 'IncontinÍncia Urin·ria');
-CALL SPInserePergunta ('Sistema Genitourin·rio', 9, 5, 'InfecÁ„o De Urina');
+CALL SPInserePergunta ('Sistema Genitourin√°rio', 9, 1, 'Insufici√™ncia Renal');
+CALL SPInserePergunta ('Sistema Genitourin√°rio', 9, 2, 'C√°lculos Renais');
+CALL SPInserePergunta ('Sistema Genitourin√°rio', 9, 3, 'Doen√ßas Sexualmente Transmiss√≠veis');
+CALL SPInserePergunta ('Sistema Genitourin√°rio', 9, 4, 'Incontin√™ncia Urin√°ria');
+CALL SPInserePergunta ('Sistema Genitourin√°rio', 9, 5, 'Infec√ß√£o De Urina');
 
 /*===================================*/ 
-/*          EndÛcrino                */ 
+/*          End√≥crino                */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema EndÛcrino', 9, 1, 'Diabetes');
-CALL SPInserePergunta ('Sistema EndÛcrino', 9, 2, 'Dist˙rbios De Tireoide');
-CALL SPInserePergunta ('Sistema EndÛcrino', 9, 3, 'Dist˙rbio Hipofis·rio');
-CALL SPInserePergunta ('Sistema EndÛcrino', 9, 4, 'Hipotiroidismo');
-CALL SPInserePergunta ('Sistema EndÛcrino', 9, 5, 'Hipertiroidismo');
-CALL SPInserePergunta ('Sistema EndÛcrino', 9, 6, 'Hipoglicemia');
+CALL SPInserePergunta ('Sistema End√≥crino', 9, 1, 'Diabetes');
+CALL SPInserePergunta ('Sistema End√≥crino', 9, 2, 'Dist√∫rbios De Tireoide');
+CALL SPInserePergunta ('Sistema End√≥crino', 9, 3, 'Dist√∫rbio Hipofis√°rio');
+CALL SPInserePergunta ('Sistema End√≥crino', 9, 4, 'Hipotiroidismo');
+CALL SPInserePergunta ('Sistema End√≥crino', 9, 5, 'Hipertiroidismo');
+CALL SPInserePergunta ('Sistema End√≥crino', 9, 6, 'Hipoglicemia');
 
 
 /*===================================*/ 
@@ -586,21 +586,21 @@ CALL SPInserePergunta ('Sistema EndÛcrino', 9, 6, 'Hipoglicemia');
 /*===================================*/ 
 
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 1, 'Aneurisma');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 2, 'DemÍncia');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 2, 'Dem√™ncia');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 3, 'Alzheimer');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 4, 'Parkinson');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 5, 'Fobia');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 6, 'InsÙnia');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 7, 'ConvulsÙes');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 6, 'Ins√¥nia');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 7, 'Convuls√¥es');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 8, 'Desmaios');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 9, 'Perda de ConciÍncia');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 9, 'Perda de Conci√™ncia');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 10, 'Paralisia Cerebral');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 11, 'Trauma Cr‚nio Encef·lico');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 12, 'Dist˙rbios Sensoriais');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 11, 'Trauma Cr√¢nio Encef√°lico');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 12, 'Dist√∫rbios Sensoriais');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 13, 'Epilepsia');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 14, 'Sindrome do P‚nico');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 14, 'Sindrome do P√¢nico');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 15, 'Derrame');
-CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'CefalÈia Intensa');
+CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'Cefal√©ia Intensa');
 
 /*===================================*/ 
 /*          Sensitivo                */ 
@@ -608,89 +608,89 @@ CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'CefalÈia Intensa');
 
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 1, 'Glaucoma');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 2, 'Conjutivite');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, '⁄lcera');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 3, '√ölcera');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 4, 'Auditivo');
-CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'HansenÌase');
+CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'Hansen√≠ase');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 6, 'Agnosia');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 7, 'Gustativo');
 
 /*===================================*/ 
-/*          HematopoÈtico            */ 
+/*          Hematopo√©tico            */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 1, 'Anemia');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 2, 'Tranfusıes');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 3, 'Sangramento Nasal');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 4, 'Equimoses');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 5, 'AlteraÁıes De CoagulaÁ„o');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 6, 'Suscetibilidade ‡ InfecÁıes');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 7, 'Linfadenopatia');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 8, 'Hemofilia');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 9, 'Leucemia');
-CALL SPInserePergunta ('Sistema HematopoÈtico', 9, 10,'Anemia Falciforme');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 1, 'Anemia');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 2, 'Tranfus√µes');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 3, 'Sangramento Nasal');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 4, 'Equimoses');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 5, 'Altera√ß√µes De Coagula√ß√£o');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 6, 'Suscetibilidade √† Infec√ß√µes');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 7, 'Linfadenopatia');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 8, 'Hemofilia');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 9, 'Leucemia');
+CALL SPInserePergunta ('Sistema Hematopo√©tico', 9, 10,'Anemia Falciforme');
 
 /*===================================*/ 
 /*          Osteomuscular            */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 1, 'Cirurgias OrtopÈdicas');
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 2, 'Uso de PrÛtese ');
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 3, 'Uso De ”rtese');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 1, 'Cirurgias Ortop√©dicas');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 2, 'Uso de Pr√≥tese ');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 3, 'Uso De √ìrtese');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 4, 'Fibromialgia');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 5, 'Osteoporose');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 6, 'Osteopenia');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 7, 'Osteoartrose');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 8, 'Lombalgia');
-CALL SPInserePergunta ('Sistema Osteomuscular', 9, 9, 'HÈrnia de disco');
+CALL SPInserePergunta ('Sistema Osteomuscular', 9, 9, 'H√©rnia de disco');
 CALL SPInserePergunta ('Sistema Osteomuscular', 8, 10,'Quedas');
 CALL SPInserePergunta ('Sistema Osteomuscular', 8, 11,'Fraturas');
 
 /*===================================*/ 
-/*          HistÛrico de queda       */ 
+/*          Hist√≥rico de queda       */ 
 /*===================================*/ 
 
-CALL SPInserePergunta ('HistÛrico de Queda', 9, 1, 'Quedas Nos ⁄ltimos 12 Meses');
+CALL SPInserePergunta ('Hist√≥rico de Queda', 9, 1, 'Quedas Nos √öltimos 12 Meses');
 
 /*===================================*/ 
 /*              Anamnese             */ 
 /*===================================*/ 
 
 CALL SPInserePergunta ('Anamnese', 3,  1, 'Qual a Queixa Principal?');
-CALL SPInserePergunta ('Anamnese', 12, 2, 'HistÛria Medicamentosa');
-CALL SPInserePergunta ('Anamnese', 3,  3, 'HistÛria da MolÈstia Atual');
+CALL SPInserePergunta ('Anamnese', 12, 2, 'Hist√≥ria Medicamentosa');
+CALL SPInserePergunta ('Anamnese', 3,  3, 'Hist√≥ria da Mol√©stia Atual');
 CALL SPInserePergunta ('Anamnese', 24, 4, 'Alergias?');
-CALL SPInserePergunta ('Anamnese', 10, 5, 'Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInserePergunta ('Anamnese', 6,  6, 'J· esteve internado ou se submeteu a alguma cirurgia, tratamento com radioterapia e quimioterapia?');
-CALL SPInserePergunta ('Anamnese', 3,  7, '⁄ltima consulta - …poca e motivo');
-CALL SPInserePergunta ('Anamnese', 7,  8, 'Medicamentos em uso prescrito atual ou nos ˙ltimos 6 meses?');
+CALL SPInserePergunta ('Anamnese', 10, 5, 'Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInserePergunta ('Anamnese', 6,  6, 'J√° esteve internado ou se submeteu a alguma cirurgia, tratamento com radioterapia e quimioterapia?');
+CALL SPInserePergunta ('Anamnese', 3,  7, '√öltima consulta - √âpoca e motivo');
+CALL SPInserePergunta ('Anamnese', 7,  8, 'Medicamentos em uso prescrito atual ou nos √∫ltimos 6 meses?');
 
 /*==============================================================*/
-/*     	CADASTRO DE PERGUNTAS GRUPO HIST”RICO SOCIAL            */
+/*     	CADASTRO DE PERGUNTAS GRUPO HIST√ìRICO SOCIAL            */
 /*==============================================================*/
 
-CALL SPInserePergunta ('HistÛrico Social', 3, 1, 'Moradia, estrutura da casa, trabalho, alimentaÁ„o e saneamento:');
+CALL SPInserePergunta ('Hist√≥rico Social', 3, 1, 'Moradia, estrutura da casa, trabalho, alimenta√ß√£o e saneamento:');
 
 /*==============================================================*/
-/*     	CADASTRO DE PERGUNTAS GRUPO H¡BITOS E VÕCIOS     	*/
+/*     	CADASTRO DE PERGUNTAS GRUPO H√ÅBITOS E V√çCIOS     	*/
 /*==============================================================*/
 CALL SPInserePergunta ('Tabagismo', 1, 1, 'Tabagismo');
 CALL SPInserePergunta ('Tabagismo', 3, 2, 'Por quanto tempo usou?');
-CALL SPInserePergunta ('Tabagismo', 3, 3, 'Quantidade/FrequÍncia:');
-CALL SPInserePergunta ('Tabagismo', 3, 4, 'H· quanto tempo parou?');
+CALL SPInserePergunta ('Tabagismo', 3, 3, 'Quantidade/Frequ√™ncia:');
+CALL SPInserePergunta ('Tabagismo', 3, 4, 'H√° quanto tempo parou?');
 
 CALL SPInserePergunta ('Etilismo', 1, 1, 'Etilismo');
 CALL SPInserePergunta ('Etilismo', 3, 2, 'Tipo:');
 CALL SPInserePergunta ('Etilismo', 3, 3, 'Quantidade:');
-CALL SPInserePergunta ('Etilismo', 3, 4, 'FrequÍncia:');
+CALL SPInserePergunta ('Etilismo', 3, 4, 'Frequ√™ncia:');
 CALL SPInserePergunta ('Etilismo', 3, 5, 'Tempo:');
 
-CALL SPInserePergunta ('Drogas IlÌcitas', 1, 1, 'Drogas IlÌcitas');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 2, 'Tipo:');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 3, 'Quantidade:');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 4, 'FrequÍncia:');
-CALL SPInserePergunta ('Drogas IlÌcitas', 3, 5, 'Tempo:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 1, 1, 'Drogas Il√≠citas');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 2, 'Tipo:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 3, 'Quantidade:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 4, 'Frequ√™ncia:');
+CALL SPInserePergunta ('Drogas Il√≠citas', 3, 5, 'Tempo:');
 
-CALL SPInserePergunta ('H·bitos e VÌcios', 3, 1, 'Outros H·bitos e vÌcios:');
+CALL SPInserePergunta ('H√°bitos e V√≠cios', 3, 1, 'Outros H√°bitos e v√≠cios:');
 
 /*==============================================================*/
 /* CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOESPIRITUAIS    */
@@ -703,93 +703,93 @@ CALL SPInserePergunta ('Necessidades Psicoespirituais', 15, 1, 'Realiza alguma a
 /*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOSOCIAIS      */
 /*==============================================================*/
 
-CALL SPInserePergunta ('InteraÁ„o Social', 22, 1, 'ParticipaÁ„o em atividades:');
-CALL SPInserePergunta ('InteraÁ„o Social', 17, 2, 'IntegraÁ„o com a famÌlia:');
-CALL SPInserePergunta ('InteraÁ„o Social', 3, 3, 'Pessoas de maior afinidade:');
+CALL SPInserePergunta ('Intera√ß√£o Social', 22, 1, 'Participa√ß√£o em atividades:');
+CALL SPInserePergunta ('Intera√ß√£o Social', 17, 2, 'Integra√ß√£o com a fam√≠lia:');
+CALL SPInserePergunta ('Intera√ß√£o Social', 3, 3, 'Pessoas de maior afinidade:');
 
-CALL SPInserePergunta ('RecreaÁ„o/Lazer/Criatividade', 23, 1, 'RecreaÁ„o/Lazer/Criatividade');
+CALL SPInserePergunta ('Recrea√ß√£o/Lazer/Criatividade', 23, 1, 'Recrea√ß√£o/Lazer/Criatividade');
 
 
 /*==============================================================*/
-/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOBIOL”GICAS   */
+/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOBIOL√ìGICAS   */
 /*==============================================================*/
 
-CALL SPInserePergunta ('Cuidado Corporal', 17, 1, 'DÈficit prÈvio no auto cuidado: Higiene corporal');
-CALL SPInserePergunta ('Cuidado Corporal', 17, 2, 'DÈficit prÈvio no auto cuidado: Higiene oral');
+CALL SPInserePergunta ('Cuidado Corporal', 17, 1, 'D√©ficit pr√©vio no auto cuidado: Higiene corporal');
+CALL SPInserePergunta ('Cuidado Corporal', 17, 2, 'D√©ficit pr√©vio no auto cuidado: Higiene oral');
 
-CALL SPInserePergunta ('H·bito de Sono e Repouso', 22, 1, 'Tem dificuldade para dormir?');
+CALL SPInserePergunta ('H√°bito de Sono e Repouso', 22, 1, 'Tem dificuldade para dormir?');
 
-CALL SPInserePergunta ('ExercÌcio', 7, 1, 'ExercÌcio');
+CALL SPInserePergunta ('Exerc√≠cio', 7, 1, 'Exerc√≠cio');
 
-CALL SPInserePergunta ('EliminaÁ„o Intestinal', 3, 1, 'FrequÍncia vezes/dia:');
-CALL SPInserePergunta ('EliminaÁ„o Intestinal', 3, 2, 'ColoraÁ„o');
-CALL SPInserePergunta ('EliminaÁ„o Intestinal', 1, 3, 'Odor');
-CALL SPInserePergunta ('EliminaÁ„o Intestinal', 1, 4, 'Dor');
-CALL SPInserePergunta ('EliminaÁ„o Intestinal', 3, 5, 'Quantidade:');
+CALL SPInserePergunta ('Elimina√ß√£o Intestinal', 3, 1, 'Frequ√™ncia vezes/dia:');
+CALL SPInserePergunta ('Elimina√ß√£o Intestinal', 3, 2, 'Colora√ß√£o');
+CALL SPInserePergunta ('Elimina√ß√£o Intestinal', 1, 3, 'Odor');
+CALL SPInserePergunta ('Elimina√ß√£o Intestinal', 1, 4, 'Dor');
+CALL SPInserePergunta ('Elimina√ß√£o Intestinal', 3, 5, 'Quantidade:');
 
-CALL SPInserePergunta ('TerapÍutica', 9, 1, 'Segue orientaÁıes prÈvias relacionadas · sa˙de?');
+CALL SPInserePergunta ('Terap√™utica', 9, 1, 'Segue orienta√ß√µes pr√©vias relacionadas √° sa√∫de?');
 
-CALL SPInserePergunta ('Sexualidade', 16, 1, 'Dados de interesse clÌnico');
+CALL SPInserePergunta ('Sexualidade', 16, 1, 'Dados de interesse cl√≠nico');
 
 /*=============================================================*/
-/*          	CADASTRO DE PERGUNTAS GRUPO EXAME FÕSICO       */
+/*          	CADASTRO DE PERGUNTAS GRUPO EXAME F√çSICO       */
 /*=============================================================*/
-CALL SPInserePergunta ('Exame FÌsico', 3, 1, 'P.A:');
-CALL SPInserePergunta ('Exame FÌsico', 3, 2, 'Temperatura:');
-CALL SPInserePergunta ('Exame FÌsico', 3, 3, 'Pulso:');
-CALL SPInserePergunta ('Exame FÌsico', 3, 4, 'RespiraÁ„o:');
-CALL SPInserePergunta ('Exame FÌsico', 18,5, 'F·cies:');
-CALL SPInserePergunta ('Exame FÌsico', 3, 6, 'IMC:');
-CALL SPInserePergunta ('Exame FÌsico', 3, 7, 'Peso:');
-CALL SPInserePergunta ('Exame FÌsico', 3, 8, 'Altura:');
+CALL SPInserePergunta ('Exame F√≠sico', 3, 1, 'P.A:');
+CALL SPInserePergunta ('Exame F√≠sico', 3, 2, 'Temperatura:');
+CALL SPInserePergunta ('Exame F√≠sico', 3, 3, 'Pulso:');
+CALL SPInserePergunta ('Exame F√≠sico', 3, 4, 'Respira√ß√£o:');
+CALL SPInserePergunta ('Exame F√≠sico', 18,5, 'F√°cies:');
+CALL SPInserePergunta ('Exame F√≠sico', 3, 6, 'IMC:');
+CALL SPInserePergunta ('Exame F√≠sico', 3, 7, 'Peso:');
+CALL SPInserePergunta ('Exame F√≠sico', 3, 8, 'Altura:');
 
 
 /*==============================================================*/
 /*   CADASTRO DE PERGUNTAS GRUPO COONG                          */
 /*==============================================================*/
 
-CALL SPInserePergunta ('Coong', 10, 1, 	'AlteraÁ„o de Pele:');
-CALL SPInserePergunta ('Coong', 10, 2, 	'AlteraÁ„o de Linfonodos:');
-CALL SPInserePergunta ('Coong', 10, 3, 	'AlteraÁ„o de ATM:');
-CALL SPInserePergunta ('Coong', 10, 4, 	'AlteraÁ„o de L·bios:');
-CALL SPInserePergunta ('Coong', 10, 5, 	'AlteraÁ„o de Mucosa jugal:');
-CALL SPInserePergunta ('Coong', 10, 6, 	'AlteraÁ„o de Gengiva e mucosa alveolar:');
-CALL SPInserePergunta ('Coong', 10, 7, 	'AlteraÁ„o de Soalho Bucal:');
-CALL SPInserePergunta ('Coong', 10, 8, 	'AlteraÁ„o de LÌngua:');
-CALL SPInserePergunta ('Coong', 10, 9, 	'AlteraÁ„o de Palato:');
-CALL SPInserePergunta ('Coong', 10, 10,	'AlteraÁ„o de Orofaringe:');
-CALL SPInserePergunta ('Coong', 10, 11,	'AlteraÁ„o de Gl‚ndulas e ductos salivares:');
-CALL SPInserePergunta ('Coong', 10, 12,	'AlteraÁ„o de Saliva:');
+CALL SPInserePergunta ('Coong', 10, 1, 	'Altera√ß√£o de Pele:');
+CALL SPInserePergunta ('Coong', 10, 2, 	'Altera√ß√£o de Linfonodos:');
+CALL SPInserePergunta ('Coong', 10, 3, 	'Altera√ß√£o de ATM:');
+CALL SPInserePergunta ('Coong', 10, 4, 	'Altera√ß√£o de L√°bios:');
+CALL SPInserePergunta ('Coong', 10, 5, 	'Altera√ß√£o de Mucosa jugal:');
+CALL SPInserePergunta ('Coong', 10, 6, 	'Altera√ß√£o de Gengiva e mucosa alveolar:');
+CALL SPInserePergunta ('Coong', 10, 7, 	'Altera√ß√£o de Soalho Bucal:');
+CALL SPInserePergunta ('Coong', 10, 8, 	'Altera√ß√£o de L√≠ngua:');
+CALL SPInserePergunta ('Coong', 10, 9, 	'Altera√ß√£o de Palato:');
+CALL SPInserePergunta ('Coong', 10, 10,	'Altera√ß√£o de Orofaringe:');
+CALL SPInserePergunta ('Coong', 10, 11,	'Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
+CALL SPInserePergunta ('Coong', 10, 12,	'Altera√ß√£o de Saliva:');
 CALL SPInserePergunta ('Coong', 19, 13,	'Halitose/Tipo de odor');
-CALL SPInserePergunta ('Coong', 18, 14,	'ClassificaÁ„o de Angle:');
+CALL SPInserePergunta ('Coong', 18, 14,	'Classifica√ß√£o de Angle:');
 CALL SPInserePergunta ('Coong', 18, 15,	'Lateralidade:');
 CALL SPInserePergunta ('Coong', 18, 16,	'Mordida Cruzada:');
 CALL SPInserePergunta ('Coong', 18, 17,	'Guia Anterior:');
-CALL SPInserePergunta ('Coong', 1,  18,	'Portador de Aparelho protÈtico ou ortodÙntico:');
-CALL SPInserePergunta ('Coong', 18, 19,	'Se Portador de Aparelho protÈtico:');
+CALL SPInserePergunta ('Coong', 1,  18,	'Portador de Aparelho prot√©tico ou ortod√¥ntico:');
+CALL SPInserePergunta ('Coong', 18, 19,	'Se Portador de Aparelho prot√©tico:');
 CALL SPInserePergunta ('Coong', 3,  20,	'Outros:');
-CALL SPInserePergunta ('Coong', 3,  21,	'DescriÁ„o detalhada de alteraÁıes:');
+CALL SPInserePergunta ('Coong', 3,  21,	'Descri√ß√£o detalhada de altera√ß√µes:');
 
 
 /*==============================================================*/
 /*   CADASTRO DE PERGUNTAS GRUPO COONG 2                        */
 /*==============================================================*/
 
-CALL SPInserePergunta ('Sistema RespiratÛrio_2', 10, 1, 'TÛrax:');
-CALL SPInserePergunta ('Sistema RespiratÛrio_2', 10, 2, 'Auscultura Pulmonar:');
+CALL SPInserePergunta ('Sistema Respirat√≥rio_2', 10, 1, 'T√≥rax:');
+CALL SPInserePergunta ('Sistema Respirat√≥rio_2', 10, 2, 'Auscultura Pulmonar:');
 
 CALL SPInserePergunta ('Sistema Cardiovascular_2', 10, 1, 'Pulsos:');
 CALL SPInserePergunta ('Sistema Cardiovascular_2', 10, 2, 'Auscultura Pulmonar.:');
 
 CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 1, 'Abdome:');
 CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 2, 'Auscultura:');
-CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 3, 'Percuss„o:');
+CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 3, 'Percuss√£o:');
 
 CALL SPInserePergunta ('Membros Superiores MMSS_2', 10, 1, 'Membros Superiores (MMSS):');
 
 CALL SPInserePergunta ('Membros Inferiores MMII_2', 10, 1, 'Membros Inferiores (MMII):');
 
-CALL SPInserePergunta ('Sistema Geniturin·rio_2', 10, 1, 'Sistema Geniturin·rio:');
+CALL SPInserePergunta ('Sistema Geniturin√°rio_2', 10, 1, 'Sistema Geniturin√°rio:');
 
 
 /*==============================================================*/
@@ -798,174 +798,174 @@ CALL SPInserePergunta ('Sistema Geniturin·rio_2', 10, 1, 'Sistema Geniturin·rio:
 
  CALL SPInsereCategoriaMedicamento ('Antihipertensivos');
  CALL SPInsereCategoriaMedicamento ('Hipoglicimiantes');
- CALL SPInsereCategoriaMedicamento ('CardiotÙnicos');
- CALL SPInsereCategoriaMedicamento ('AnsiolÌticos');
+ CALL SPInsereCategoriaMedicamento ('Cardiot√¥nicos');
+ CALL SPInsereCategoriaMedicamento ('Ansiol√≠ticos');
  CALL SPInsereCategoriaMedicamento ('Antidepressivos');
- CALL SPInsereCategoriaMedicamento ('DiurÈticos');
- CALL SPInsereCategoriaMedicamento ('Antiagregante Plaquet·rio');
- CALL SPInsereCategoriaMedicamento ('HormÙnio Tireoidiano');
+ CALL SPInsereCategoriaMedicamento ('Diur√©ticos');
+ CALL SPInsereCategoriaMedicamento ('Antiagregante Plaquet√°rio');
+ CALL SPInsereCategoriaMedicamento ('Horm√¥nio Tireoidiano');
  CALL SPInsereCategoriaMedicamento ('Anticonvulsivantes');
 
 /*==============================================================*/
 /*                    CADASTRO DE MEDICAMENTOS                  */
 /*==============================================================*/
 
-CALL SPInsereMedicamento ('Captopril 25 mg', 'HistÛria Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Atenolol 25 mg', 'HistÛria Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Losartana 50 mg', 'HistÛria Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Enalapril 10 mg', 'HistÛria Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Propranolol 40 mg', 'HistÛria Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Anlodipino 5 mg', 'HistÛria Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Anlodipino 10 mg', 'HistÛria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Captopril 25 mg', 'Hist√≥ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Atenolol 25 mg', 'Hist√≥ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Losartana 50 mg', 'Hist√≥ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Enalapril 10 mg', 'Hist√≥ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Propranolol 40 mg', 'Hist√≥ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 5 mg', 'Hist√≥ria Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 10 mg', 'Hist√≥ria Medicamentosa', 'Antihipertensivos');
 
-CALL SPInsereMedicamento ('Metformina 500 mg', 'HistÛria Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Metformina 850 mg', 'HistÛria Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Glibenclamida 5 mg', 'HistÛria Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Insulina Humana NPH 100UI/Ml', 'HistÛria Medicamentosa', 'Hipoglicimiantes');
-CALL SPInsereMedicamento ('Insulina Regular', 'HistÛria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Metformina 500 mg', 'Hist√≥ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Metformina 850 mg', 'Hist√≥ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Glibenclamida 5 mg', 'Hist√≥ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Insulina Humana NPH 100UI/Ml', 'Hist√≥ria Medicamentosa', 'Hipoglicimiantes');
+CALL SPInsereMedicamento ('Insulina Regular', 'Hist√≥ria Medicamentosa', 'Hipoglicimiantes');
 
-CALL SPInsereMedicamento ('Digoxina 0,25mg', 'HistÛria Medicamentosa', 'CardiotÙnicos');
-CALL SPInsereMedicamento ('Carvedilol 3,125 mg', 'HistÛria Medicamentosa', 'CardiotÙnicos');
-CALL SPInsereMedicamento ('Carvedilol 6,25 mg', 'HistÛria Medicamentosa', 'CardiotÙnicos');
-CALL SPInsereMedicamento ('Carvedilol 12,5 mg', 'HistÛria Medicamentosa', 'CardiotÙnicos');
-CALL SPInsereMedicamento ('Carvedilol 25 mg', 'HistÛria Medicamentosa', 'CardiotÙnicos');
+CALL SPInsereMedicamento ('Digoxina 0,25mg', 'Hist√≥ria Medicamentosa', 'Cardiot√¥nicos');
+CALL SPInsereMedicamento ('Carvedilol 3,125 mg', 'Hist√≥ria Medicamentosa', 'Cardiot√¥nicos');
+CALL SPInsereMedicamento ('Carvedilol 6,25 mg', 'Hist√≥ria Medicamentosa', 'Cardiot√¥nicos');
+CALL SPInsereMedicamento ('Carvedilol 12,5 mg', 'Hist√≥ria Medicamentosa', 'Cardiot√¥nicos');
+CALL SPInsereMedicamento ('Carvedilol 25 mg', 'Hist√≥ria Medicamentosa', 'Cardiot√¥nicos');
 
-CALL SPInsereMedicamento ('Diazepam 5 mg', 'HistÛria Medicamentosa', 'AnsiolÌticos');
-CALL SPInsereMedicamento ('Clomipramina 10 mg', 'HistÛria Medicamentosa', 'AnsiolÌticos');
-CALL SPInsereMedicamento ('Clomipramina 25 mg', 'HistÛria Medicamentosa', 'AnsiolÌticos');
-CALL SPInsereMedicamento ('Clonazepam 0,5 mg', 'HistÛria Medicamentosa', 'AnsiolÌticos');
-CALL SPInsereMedicamento ('Clonazepam 2 mg', 'HistÛria Medicamentosa', 'AnsiolÌticos');
-CALL SPInsereMedicamento ('Bromazepam 3 mg', 'HistÛria Medicamentosa', 'AnsiolÌticos');
-CALL SPInsereMedicamento ('Bromazepam 6 mg', 'HistÛria Medicamentosa', 'AnsiolÌticos');
+CALL SPInsereMedicamento ('Diazepam 5 mg', 'Hist√≥ria Medicamentosa', 'Ansiol√≠ticos');
+CALL SPInsereMedicamento ('Clomipramina 10 mg', 'Hist√≥ria Medicamentosa', 'Ansiol√≠ticos');
+CALL SPInsereMedicamento ('Clomipramina 25 mg', 'Hist√≥ria Medicamentosa', 'Ansiol√≠ticos');
+CALL SPInsereMedicamento ('Clonazepam 0,5 mg', 'Hist√≥ria Medicamentosa', 'Ansiol√≠ticos');
+CALL SPInsereMedicamento ('Clonazepam 2 mg', 'Hist√≥ria Medicamentosa', 'Ansiol√≠ticos');
+CALL SPInsereMedicamento ('Bromazepam 3 mg', 'Hist√≥ria Medicamentosa', 'Ansiol√≠ticos');
+CALL SPInsereMedicamento ('Bromazepam 6 mg', 'Hist√≥ria Medicamentosa', 'Ansiol√≠ticos');
 
-CALL SPInsereMedicamento ('Amitriptilina 25 mg', 'HistÛria Medicamentosa', 'Antidepressivos');
-CALL SPInsereMedicamento ('Fluoxetina 20 mg', 'HistÛria Medicamentosa', 'Antidepressivos');
+CALL SPInsereMedicamento ('Amitriptilina 25 mg', 'Hist√≥ria Medicamentosa', 'Antidepressivos');
+CALL SPInsereMedicamento ('Fluoxetina 20 mg', 'Hist√≥ria Medicamentosa', 'Antidepressivos');
 
-CALL SPInsereMedicamento ('Furosemida 40 mg', 'HistÛria Medicamentosa', 'DiurÈticos');
-CALL SPInsereMedicamento ('Espironolactona 25 mg', 'HistÛria Medicamentosa', 'DiurÈticos');
-CALL SPInsereMedicamento ('Espironolactona 100 mg', 'HistÛria Medicamentosa', 'DiurÈticos');
-CALL SPInsereMedicamento ('Hidroclorotiazida 12,5 mg', 'HistÛria Medicamentosa', 'DiurÈticos');
-CALL SPInsereMedicamento ('Hidroclorotiazida 25 mg', 'HistÛria Medicamentosa', 'DiurÈticos');
+CALL SPInsereMedicamento ('Furosemida 40 mg', 'Hist√≥ria Medicamentosa', 'Diur√©ticos');
+CALL SPInsereMedicamento ('Espironolactona 25 mg', 'Hist√≥ria Medicamentosa', 'Diur√©ticos');
+CALL SPInsereMedicamento ('Espironolactona 100 mg', 'Hist√≥ria Medicamentosa', 'Diur√©ticos');
+CALL SPInsereMedicamento ('Hidroclorotiazida 12,5 mg', 'Hist√≥ria Medicamentosa', 'Diur√©ticos');
+CALL SPInsereMedicamento ('Hidroclorotiazida 25 mg', 'Hist√≥ria Medicamentosa', 'Diur√©ticos');
 
-CALL SPInsereMedicamento ('Carbamazepina 200 mg', 'HistÛria Medicamentosa', 'Antiagregante Plaquet·rio');
-CALL SPInsereMedicamento ('Clonazepam 2 mg', 'HistÛria Medicamentosa', 'Antiagregante Plaquet·rio');
-CALL SPInsereMedicamento ('¡cido ValprÛico 250 mg', 'HistÛria Medicamentosa', 'Antiagregante Plaquet·rio');
+CALL SPInsereMedicamento ('Carbamazepina 200 mg', 'Hist√≥ria Medicamentosa', 'Antiagregante Plaquet√°rio');
+CALL SPInsereMedicamento ('Clonazepam 2 mg', 'Hist√≥ria Medicamentosa', 'Antiagregante Plaquet√°rio');
+CALL SPInsereMedicamento ('√Åcido Valpr√≥ico 250 mg', 'Hist√≥ria Medicamentosa', 'Antiagregante Plaquet√°rio');
 
-CALL SPInsereMedicamento ('Levotiroxina (Puran T4)', 'HistÛria Medicamentosa', 'HormÙnio Tireoidiano');
+CALL SPInsereMedicamento ('Levotiroxina (Puran T4)', 'Hist√≥ria Medicamentosa', 'Horm√¥nio Tireoidiano');
 
-CALL SPInsereMedicamento ('AAS 100 mg', 'HistÛria Medicamentosa', 'Anticonvulsivantes');
+CALL SPInsereMedicamento ('AAS 100 mg', 'Hist√≥ria Medicamentosa', 'Anticonvulsivantes');
 
 /*==============================================================*/ 
 /*                       CADASTRO DE LISTA CHECKBOX             */ 
 /*==============================================================*/
 
-CALL SPInsereListaCheckBox ('¡caros e poeira','Alergias?');
+CALL SPInsereListaCheckBox ('√Åcaros e poeira','Alergias?');
 CALL SPInsereListaCheckBox ('Alimentares','Alergias?');
 CALL SPInsereListaCheckBox ('Medicamentos','Alergias?');
 CALL SPInsereListaCheckBox ('Picada de inseto','Alergias?');
 CALL SPInsereListaCheckBox ('Plantas','Alergias?');
 
-CALL SPInsereListaCheckBox ('Varicela','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Sarampo','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('RubÈola','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Herpes','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Gripe','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Conjutivite','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Tuberculose','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Caxumba','Tem ou teve doenÁa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Hepatite','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Varicela','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Sarampo','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Rub√©ola','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Herpes','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Gripe','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Conjutivite','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Tuberculose','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Caxumba','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Hepatite','Tem ou teve doen√ßa infecto-contagiosa?');
 
-CALL SPInsereListaCheckBox ('Grupo de idosos','ParticipaÁ„o em atividades:');
-CALL SPInsereListaCheckBox ('Hidrogin·stica','ParticipaÁ„o em atividades:');
-CALL SPInsereListaCheckBox ('DanÁa','ParticipaÁ„o em atividades:');
-CALL SPInsereListaCheckBox ('Grupo religioso','ParticipaÁ„o em atividades:');
+CALL SPInsereListaCheckBox ('Grupo de idosos','Participa√ß√£o em atividades:');
+CALL SPInsereListaCheckBox ('Hidrogin√°stica','Participa√ß√£o em atividades:');
+CALL SPInsereListaCheckBox ('Dan√ßa','Participa√ß√£o em atividades:');
+CALL SPInsereListaCheckBox ('Grupo religioso','Participa√ß√£o em atividades:');
 
-CALL SPInsereListaCheckBox ('Televis„o','RecreaÁ„o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('M˙sica','RecreaÁ„o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Computador','RecreaÁ„o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Revistas','RecreaÁ„o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Livros','RecreaÁ„o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Trabalhos manuais','RecreaÁ„o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Jogos','RecreaÁ„o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Outros','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Televis√£o','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('M√∫sica','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Computador','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Revistas','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Livros','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Trabalhos manuais','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Jogos','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Outros','Recrea√ß√£o/Lazer/Criatividade');
 
-CALL SPInsereListaCheckBox ('InsÙnia','Tem dificuldade para dormir?');
+CALL SPInsereListaCheckBox ('Ins√¥nia','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Sonambulismo','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Inverte dia com a noite','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Medo noturno','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Outros','Tem dificuldade para dormir?');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Pele:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Pele:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Pele:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Pele:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Pele:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Pele:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Pele:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Pele:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Linfonodos:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Linfonodos:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Linfonodos:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Linfonodos:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de ATM:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de ATM:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de ATM:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de ATM:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de ATM:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de ATM:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de ATM:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de ATM:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de L·bios:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de L·bios:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de L·bios:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de L·bios:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de L√°bios:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de L√°bios:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de L√°bios:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de L√°bios:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Mucosa jugal:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Mucosa jugal:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Mucosa jugal:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Mucosa jugal:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Gengiva e mucosa alveolar:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Gengiva e mucosa alveolar:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Gengiva e mucosa alveolar:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Gengiva e mucosa alveolar:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Soalho Bucal:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Soalho Bucal:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Soalho Bucal:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Soalho Bucal:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de LÌngua:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de LÌngua:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de LÌngua:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de LÌngua:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de L√≠ngua:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de L√≠ngua:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de L√≠ngua:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de L√≠ngua:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Palato:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Palato:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Palato:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Palato:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Palato:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Palato:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Palato:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Palato:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Orofaringe:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Orofaringe:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Orofaringe:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Orofaringe:');
 
-CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
-CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
-CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
-CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
 
-CALL SPInsereListaCheckBox ('Fluida','AlteraÁ„o de Saliva:');
-CALL SPInsereListaCheckBox ('Viscosa','AlteraÁ„o de Saliva:');
-CALL SPInsereListaCheckBox ('Quantidade','AlteraÁ„o de Saliva:');
-CALL SPInsereListaCheckBox ('HipersalivaÁ„o','AlteraÁ„o de Saliva:');
+CALL SPInsereListaCheckBox ('Fluida','Altera√ß√£o de Saliva:');
+CALL SPInsereListaCheckBox ('Viscosa','Altera√ß√£o de Saliva:');
+CALL SPInsereListaCheckBox ('Quantidade','Altera√ß√£o de Saliva:');
+CALL SPInsereListaCheckBox ('Hipersaliva√ß√£o','Altera√ß√£o de Saliva:');
 
-CALL SPInsereListaCheckBox ('SimÈtrico','TÛrax:');
-CALL SPInsereListaCheckBox ('AssimÈtrico','TÛrax:');
-CALL SPInsereListaCheckBox ('Expansibilidade Normal','TÛrax:');
-CALL SPInsereListaCheckBox ('Expansibilidade DiminuÌda','TÛrax:');
-CALL SPInsereListaCheckBox ('PresenÁa de FrÍmitos','TÛrax:');
+CALL SPInsereListaCheckBox ('Sim√©trico','T√≥rax:');
+CALL SPInsereListaCheckBox ('Assim√©trico','T√≥rax:');
+CALL SPInsereListaCheckBox ('Expansibilidade Normal','T√≥rax:');
+CALL SPInsereListaCheckBox ('Expansibilidade Diminu√≠da','T√≥rax:');
+CALL SPInsereListaCheckBox ('Presen√ßa de Fr√™mitos','T√≥rax:');
 
 CALL SPInsereListaCheckBox ('MVF','Auscultura Pulmonar:');
 CALL SPInsereListaCheckBox ('MVA','Auscultura Pulmonar:');
 CALL SPInsereListaCheckBox ('Roncos','Auscultura Pulmonar:');
-CALL SPInsereListaCheckBox ('SÌbilos','Auscultura Pulmonar:');
-CALL SPInsereListaCheckBox ('CrepitaÁ„o','Auscultura Pulmonar:');
+CALL SPInsereListaCheckBox ('S√≠bilos','Auscultura Pulmonar:');
+CALL SPInsereListaCheckBox ('Crepita√ß√£o','Auscultura Pulmonar:');
 CALL SPInsereListaCheckBox ('Estertores','Auscultura Pulmonar:');
 
 CALL SPInsereListaCheckBox ('Regular','Pulsos:');
@@ -981,70 +981,70 @@ CALL SPInsereListaCheckBox ('BNRNF\2T','Auscultura Pulmonar.:');
 CALL SPInsereListaCheckBox ('Plano','Abdome:');
 CALL SPInsereListaCheckBox ('Globoso','Abdome:');
 CALL SPInsereListaCheckBox ('Normotenso','Abdome:');
-CALL SPInsereListaCheckBox ('Fl·cido ‡ PalpaÁ„o','Abdome:');
-CALL SPInsereListaCheckBox ('Resistente ‡ PalpaÁ„o','Abdome:');
+CALL SPInsereListaCheckBox ('Fl√°cido √† Palpa√ß√£o','Abdome:');
+CALL SPInsereListaCheckBox ('Resistente √† Palpa√ß√£o','Abdome:');
 
-CALL SPInsereListaCheckBox ('PresenÁa de RHA','Auscultura:');
-CALL SPInsereListaCheckBox ('AusÍncia de RHA','Auscultura:');
+CALL SPInsereListaCheckBox ('Presen√ßa de RHA','Auscultura:');
+CALL SPInsereListaCheckBox ('Aus√™ncia de RHA','Auscultura:');
 
-CALL SPInsereListaCheckBox ('Tip‚nico','Percuss„o:');
-CALL SPInsereListaCheckBox ('MaciÁo','Percuss„o:');
-CALL SPInsereListaCheckBox ('SubmaciÁo','Percuss„o:');
-CALL SPInsereListaCheckBox ('Endolar','Percuss„o:');
-CALL SPInsereListaCheckBox ('Outros','Percuss„o:');
+CALL SPInsereListaCheckBox ('Tip√¢nico','Percuss√£o:');
+CALL SPInsereListaCheckBox ('Maci√ßo','Percuss√£o:');
+CALL SPInsereListaCheckBox ('Submaci√ßo','Percuss√£o:');
+CALL SPInsereListaCheckBox ('Endolar','Percuss√£o:');
+CALL SPInsereListaCheckBox ('Outros','Percuss√£o:');
 
-CALL SPInsereListaCheckBox ('Sensibilidade e ForÁa Motora Preservada','Membros Superiores (MMSS):');
-CALL SPInsereListaCheckBox ('PresenÁa de Lesıes','Membros Superiores (MMSS):');
+CALL SPInsereListaCheckBox ('Sensibilidade e For√ßa Motora Preservada','Membros Superiores (MMSS):');
+CALL SPInsereListaCheckBox ('Presen√ßa de Les√µes','Membros Superiores (MMSS):');
 CALL SPInsereListaCheckBox ('Paresia','Membros Superiores (MMSS):');
 CALL SPInsereListaCheckBox ('Plegia','Membros Superiores (MMSS):');
 CALL SPInsereListaCheckBox ('Edema','Membros Superiores (MMSS):');
 
-CALL SPInsereListaCheckBox ('Sensibilidade e ForÁa Motora Preservada','Membros Inferiores (MMII):');
+CALL SPInsereListaCheckBox ('Sensibilidade e For√ßa Motora Preservada','Membros Inferiores (MMII):');
 CALL SPInsereListaCheckBox ('Paresia','Membros Inferiores (MMII):');
 CALL SPInsereListaCheckBox ('Plegia','Membros Inferiores (MMII):');
 CALL SPInsereListaCheckBox ('Edema','Membros Inferiores (MMII):');
 
-CALL SPInsereListaCheckBox ('Sem AlteraÁıes AnatÙmicas','Sistema Geniturin·rio:');
-CALL SPInsereListaCheckBox ('MicÁ„o Espont‚nea','Sistema Geniturin·rio:');
-CALL SPInsereListaCheckBox ('SVD','Sistema Geniturin·rio:');
-CALL SPInsereListaCheckBox ('IrrigaÁ„o Vesical','Sistema Geniturin·rio:');
-CALL SPInsereListaCheckBox ('IncontinÍncia','Sistema Geniturin·rio:');
-CALL SPInsereListaCheckBox ('PresenÁa de Anomalia','Sistema Geniturin·rio:');
-CALL SPInsereListaCheckBox ('Lesıes nos ”rg„os Vesicais','Sistema Geniturin·rio:');
+CALL SPInsereListaCheckBox ('Sem Altera√ß√µes Anat√¥micas','Sistema Geniturin√°rio:');
+CALL SPInsereListaCheckBox ('Mic√ß√£o Espont√¢nea','Sistema Geniturin√°rio:');
+CALL SPInsereListaCheckBox ('SVD','Sistema Geniturin√°rio:');
+CALL SPInsereListaCheckBox ('Irriga√ß√£o Vesical','Sistema Geniturin√°rio:');
+CALL SPInsereListaCheckBox ('Incontin√™ncia','Sistema Geniturin√°rio:');
+CALL SPInsereListaCheckBox ('Presen√ßa de Anomalia','Sistema Geniturin√°rio:');
+CALL SPInsereListaCheckBox ('Les√µes nos √ìrg√£os Vesicais','Sistema Geniturin√°rio:');
 
 /*==============================================================*/ 
 /*                       CADASTRO DE LISTA COMBOBOX             */ 
 /*==============================================================*/
 
-CALL SPInsereListaCombo ('Ativa','Dados de interesse clÌnico');
-CALL SPInsereListaCombo ('Inativa','Dados de interesse clÌnico');
-CALL SPInsereListaCombo ('Perda de libido','Dados de interesse clÌnico');
-CALL SPInsereListaCombo ('Doloroso','Dados de interesse clÌnico');
+CALL SPInsereListaCombo ('Ativa','Dados de interesse cl√≠nico');
+CALL SPInsereListaCombo ('Inativa','Dados de interesse cl√≠nico');
+CALL SPInsereListaCombo ('Perda de libido','Dados de interesse cl√≠nico');
+CALL SPInsereListaCombo ('Doloroso','Dados de interesse cl√≠nico');
 
-CALL SPInsereListaCombo ('CatÛlico','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('EvangÈlico','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Cat√≥lico','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Evang√©lico','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Umbanda','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Ateu','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('CandomblÈ','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('EspÌrita','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Candombl√©','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Esp√≠rita','Realiza alguma atividade religiosa-espiritual?');
 
 /*==============================================================*/ 
 /*                    CADASTRO DE LISTA RADIO                   */ 
 /*==============================================================*/
 
-CALL SPInsereListaRadio ('AtÌpica','F·cies:');
-CALL SPInsereListaRadio ('TÌpica','F·cies:');
+CALL SPInsereListaRadio ('At√≠pica','F√°cies:');
+CALL SPInsereListaRadio ('T√≠pica','F√°cies:');
 
 CALL SPInsereListaRadio ('Ausente','Halitose/Tipo de odor');
 CALL SPInsereListaRadio ('Presente','Halitose/Tipo de odor');
 
-CALL SPInsereListaRadio ('Classe I','ClassificaÁ„o de Angle:');
-CALL SPInsereListaRadio ('Classe II','ClassificaÁ„o de Angle:');
-CALL SPInsereListaRadio ('Classe III','ClassificaÁ„o de Angle:');
-CALL SPInsereListaRadio ('Normal','ClassificaÁ„o de Angle:');
+CALL SPInsereListaRadio ('Classe I','Classifica√ß√£o de Angle:');
+CALL SPInsereListaRadio ('Classe II','Classifica√ß√£o de Angle:');
+CALL SPInsereListaRadio ('Classe III','Classifica√ß√£o de Angle:');
+CALL SPInsereListaRadio ('Normal','Classifica√ß√£o de Angle:');
 
 CALL SPInsereListaRadio ('Guia Canina','Lateralidade:');
-CALL SPInsereListaRadio ('FunÁ„o em Grupo','Lateralidade:');
+CALL SPInsereListaRadio ('Fun√ß√£o em Grupo','Lateralidade:');
 CALL SPInsereListaRadio ('Ausente','Lateralidade:');
 
 CALL SPInsereListaRadio ('Presente','Mordida cruzada:');
@@ -1053,88 +1053,88 @@ CALL SPInsereListaRadio ('Ausente','Mordida cruzada:');
 CALL SPInsereListaRadio ('Presente','Guia anterior:');
 CALL SPInsereListaRadio ('Ausente','Guia anterior:');
 
-CALL SPInsereListaRadio ('Sim','Portador de Aparelho ProtÈtico ou OrtodÙntico:');
-CALL SPInsereListaRadio ('N„o','Portador de Aparelho ProtÈtico ou OrtodÙntico:');
+CALL SPInsereListaRadio ('Sim','Portador de Aparelho Prot√©tico ou Ortod√¥ntico:');
+CALL SPInsereListaRadio ('N√£o','Portador de Aparelho Prot√©tico ou Ortod√¥ntico:');
 
-CALL SPInsereListaRadio ('PrÛtese Parcial RemovÌvel','Se portador de aparelho protÈtico:');
-CALL SPInsereListaRadio ('PrÛtese Total RemovÌvel','Se portador de aparelho protÈtico:');
-CALL SPInsereListaRadio ('PrÛtese Parcial Fixa','Se portador de aparelho protÈtico:');
-CALL SPInsereListaRadio ('PrÛtese Sobre Implantes','Se portador de aparelho protÈtico:');
+CALL SPInsereListaRadio ('Pr√≥tese Parcial Remov√≠vel','Se portador de aparelho prot√©tico:');
+CALL SPInsereListaRadio ('Pr√≥tese Total Remov√≠vel','Se portador de aparelho prot√©tico:');
+CALL SPInsereListaRadio ('Pr√≥tese Parcial Fixa','Se portador de aparelho prot√©tico:');
+CALL SPInsereListaRadio ('Pr√≥tese Sobre Implantes','Se portador de aparelho prot√©tico:');
 
 /*==============================================================*/
-/* Inclus„o na tabela Escolaridade                              */
+/* Inclus√£o na tabela Escolaridade                              */
 /*==============================================================*/
 
-INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('2∫ Ano Prim·rio');
-INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('6™ SÈrie');
-INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3™ Gr·u');
-INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3™ Primario');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('2¬∫ Ano Prim√°rio');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('6¬™ S√©rie');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3¬™ Gr√°u');
+INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('3¬™ Primario');
 INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Fundamental Completo');
 INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Fundamental Incompleto');
 INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Superior Completo');
 INSERT INTO	tb_escolaridade (Nom_Escolaridade) VALUES ('Superior Incompleto');
 
 /*==============================================================*/
-/* Inclus„o na tabela Naturalidade                              */
+/* Inclus√£o na tabela Naturalidade                              */
 /*==============================================================*/
 
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamanandiba');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('S„o JosÈ Jacuri');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('S√£o Jos√© Jacuri');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Itamuri');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Bom Despacho');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Belo Horizonte');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('DivinÛpolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Divin√≥polis');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Conselheiro Lafaiete');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Cl·udio');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Sabar·');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Santa L˙zia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Cl√°udio');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Sabar√°');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Santa L√∫zia');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Carmopolis de Minas');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Alto Rio Doce');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('AbaetÈ');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Abaet√©');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Brumadinho');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('CaetÈ');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('ViÁosa');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('VirginÛpolis');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Caet√©');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Vi√ßosa');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Virgin√≥polis');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberaba');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberl‚ndia');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Uberl√¢ndia');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
-INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('TimÛteo');
+INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tim√≥teo');
 INSERT INTO	tb_naturalidade (Nom_Naturalidade) VALUES ('Tiradentes');
 
 
 /*==============================================================*/
-/* Inclus„o na tabela OcupaÁ„o                                  */
+/* Inclus√£o na tabela Ocupa√ß√£o                                  */
 /*==============================================================*/
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('DomÈstica');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Dom√©stica');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Salgadeiro');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Aposentado');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('An·lista de Sistemas');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('AutÙnomo');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('An√°lista de Sistemas');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Aut√¥nomo');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Desempregado');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Diarista');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Advogado');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('T·xista');
-INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('MÈdico');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('T√°xista');
+INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('M√©dico');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Estudante');
 INSERT INTO	tb_ocupacao (Nom_Ocupacao) VALUES ('Programador');
 
 /*==============================================================*/
-/* Inclus„o na tabela Estado Civil                              */
+/* Inclus√£o na tabela Estado Civil                              */
 /*==============================================================*/
 INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Casado');
 INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Solteiro');
-INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Vi˙vo');
+INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Vi√∫vo');
 INSERT INTO	tb_estado_civil (Nom_Estado_Civil) VALUES ('Divorciado');
 
 /*==============================================================*/
-/* Inclus„o na tabela Tipo telefone                             */
+/* Inclus√£o na tabela Tipo telefone                             */
 /*==============================================================*/
 INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Residencial');
 INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Comercial');
 INSERT INTO	tb_tipo_telefone (Des_Tipo_Telefone) VALUES ('Celular');
 
 /*==============================================================*/
-/* Inclus„o na tabela Cor                                       */
+/* Inclus√£o na tabela Cor                                       */
 /*==============================================================*/
 INSERT INTO	tb_cor (Nom_Cor) VALUES ('Negro');
 INSERT INTO	tb_cor (Nom_Cor) VALUES ('Moreno');
@@ -1147,15 +1147,15 @@ INSERT INTO	tb_cor (Nom_Cor) VALUES ('Indefinido');
 /*==============================================================*/
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(5, 1, 1, 1, 1, 'Luiza Freitas da Silva', 'F', '1946/11/10', 2, 'R. Fernandes , 203, Vila S„o Jorge', 'MG8532935');
+VALUES(5, 1, 1, 1, 1, 'Luiza Freitas da Silva', 'F', '1946/11/10', 2, 'R. Fernandes , 203, Vila S√£o Jorge', 'MG8532935');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3334-4954',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(1, 1, 1, 2, 2, 'Iraci GonÁalves da Silva', 'M', '1933/01/30', 6, 'R. Fernandes , 203, Vila S„o Jorge', 'MG9850095');
+VALUES(1, 1, 1, 2, 2, 'Iraci Gon√ßalves da Silva', 'M', '1933/01/30', 6, 'R. Fernandes , 203, Vila S√£o Jorge', 'MG9850095');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3334-4954',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(2, 2, 3, 1, 3, 'JosÈ Benedito Ferreira', 'M', '1943/04/05', 5, 'R. Santa Rosa, 80, S„o Jorge', 'M4974500');
+VALUES(2, 2, 3, 1, 3, 'Jos√© Benedito Ferreira', 'M', '1943/04/05', 5, 'R. Santa Rosa, 80, S√£o Jorge', 'M4974500');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3371-4174',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
@@ -1164,7 +1164,7 @@ INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('8307-0770',(select max(Cod_Cliente) FROM tb_cliente),3);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(4, 4, 2, 1, 5, 'Eva GonÁalves dos Anjos', 'F', '1947/05/17', 3, 'R. Santa InÍs, 125, Morro das Pedras', 'MG311129');
+VALUES(4, 4, 2, 1, 5, 'Eva Gon√ßalves dos Anjos', 'F', '1947/05/17', 3, 'R. Santa In√™s, 125, Morro das Pedras', 'MG311129');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3371-8804',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
@@ -1184,7 +1184,7 @@ VALUES(2, 3, 4, 3, 1, 'Igor Rafael', 'M', '1980/10/5', 1, 'Av. Pedro 2, 171, Cen
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('9145-8804',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
-VALUES(4, 4, 2, 1, 5, 'Rodrigo R R', 'M', '1977/03/15', 8, 'R. CaiÁara, 222, Alto CaiÁara', 'MG12358795'); 
+VALUES(4, 4, 2, 1, 5, 'Rodrigo R R', 'M', '1977/03/15', 8, 'R. Cai√ßara, 222, Alto Cai√ßara', 'MG12358795'); 
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3333-5555',(select max(Cod_Cliente) FROM tb_cliente),1); 
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg) 
@@ -1224,19 +1224,19 @@ VALUES(1, 2, 1, 3, 3, 'Ribery Werneck', 'M', '1995/05/09', 4, 'R.Maria Diniz Fer
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3352-6321',(select max(Cod_Cliente) FROM tb_cliente),2);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(2, 1, 1, 3, 2, 'Thiago Silva', 'M', '1985/02/10', 0, 'R.Av Bar„o Homem de Melo,102,Nova Granda', 'MG1231265');
+VALUES(2, 1, 1, 3, 2, 'Thiago Silva', 'M', '1985/02/10', 0, 'R.Av Bar√£o Homem de Melo,102,Nova Granda', 'MG1231265');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3378-9852',(select max(Cod_Cliente) FROM tb_cliente),2);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(1, 3, 2, 1, 1, 'Ana Flavia', 'F', '1992/08/23', 0, 'Av. Jo„o Cesar de Oliveira, 2013, Eldorado', 'MG24187984');
+VALUES(1, 3, 2, 1, 1, 'Ana Flavia', 'F', '1992/08/23', 0, 'Av. Jo√£o Cesar de Oliveira, 2013, Eldorado', 'MG24187984');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('3395-4762',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(4, 1, 3, 2, 1, 'Carolina Perdig„o', 'F', '1988/02/08', 2, 'Rua Jo„o Gomes Cardoso, 197, Eldorado', 'MG18765494');
+VALUES(4, 1, 3, 2, 1, 'Carolina Perdig√£o', 'F', '1988/02/08', 2, 'Rua Jo√£o Gomes Cardoso, 197, Eldorado', 'MG18765494');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('2564-6299',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(2, 4, 2, 1, 3, 'Maliken Empath', 'M', '1971/07/15', 0, 'Av. JosÈ Faria da Rocha, 875, Eldorado', 'MG24876784');
+VALUES(2, 4, 2, 1, 3, 'Maliken Empath', 'M', '1971/07/15', 0, 'Av. Jos√© Faria da Rocha, 875, Eldorado', 'MG24876784');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('98571-9243',(select max(Cod_Cliente) FROM tb_cliente),3);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
@@ -1244,7 +1244,7 @@ VALUES(5, 2, 4, 1, 2, 'Whretched Hag', 'F', '1930/11/02', 9, 'Rua Buganville, 64
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('99235-6666',(select max(Cod_Cliente) FROM tb_cliente),3);
 
 INSERT INTO tb_cliente (Cod_Cor, Cod_Escolaridade, Cod_Ocupacao, Cod_Estado_Civil, Cod_Naturalidade, Nom_Cliente, Ind_Sexo, Dta_Nascimento, Num_Filhos, Des_Endereco, Num_Rg)
-VALUES(2, 4, 2, 3, 1, 'Hagoromo Otsutsuki', 'F', '1968/11/02', 2, 'Av. Jo„o Cesar de Oliveira , 6432, Novo Eldorado', 'MG24842375');
+VALUES(2, 4, 2, 3, 1, 'Hagoromo Otsutsuki', 'F', '1968/11/02', 2, 'Av. Jo√£o Cesar de Oliveira , 6432, Novo Eldorado', 'MG24842375');
 INSERT INTO tb_telefone (Num_Telefone, Cod_Cliente, Cod_Tipo_Telefone) VALUES ('2557-4982',(select max(Cod_Cliente) FROM tb_cliente),1);
 
 /*==============================================================*/
@@ -1261,10 +1261,10 @@ INSERT INTO tb_especialidade (Nom_Especialidade) VALUES ('Enfermagem');
 /*==============================================================*/
 
 INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Psicologia'), 'jcheringer88@hotmail.com', 'joao', '123', 'Jo„o');
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Psicologia'), 'jcheringer88@hotmail.com', 'joao', '123', 'Jo√£o');
 
 INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Odontologia'), 'fillipedeep@gmail.com', 'filipe', '456', 'Filipe PerpÈtuo');
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Odontologia'), 'fillipedeep@gmail.com', 'filipe', '456', 'Filipe Perp√©tuo');
 
 
 INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
