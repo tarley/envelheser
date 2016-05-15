@@ -192,6 +192,7 @@
 	<?php include("includes/header.php"); ?>
 </head>
 <body>
+	<?php include("includes/loading.php") ?>
     <div id="wrapper">
 		<?php include("includes/menu.php") ?>
 		
@@ -286,7 +287,7 @@
                                     <div id="divQuestionario">										                                    	
                                     	<div style="padding-bottom: 10px">
                                     		<button id="novo" type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
-                                    		<button id="save" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                                    		<button id="save" type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
                                     		</div>
 	                                	</div>                                    		

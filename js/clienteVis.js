@@ -35,7 +35,13 @@ $(document).ready(function() {
 		var filtro = $("#txtFiltro").val();            
 		$("#gridCliente").xGrid("filter", "filtro=" + filtro);
 	});
-
+	
+	
+	$("#txtFiltro").keyup(function(e){
+	    if(e.keyCode == 13)
+	    	$("#btnFiltro").trigger("click");
+	});
+	
 	$("#btnLimpar").click(function(){
 		$("#txtFiltro").val("");
 		$("#gridCliente").xGrid("filter", "filtro=");
