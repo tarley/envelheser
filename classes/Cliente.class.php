@@ -14,7 +14,7 @@ class Cliente {
 	/**
 	* Cria instancia de Logger para gerenciar exce��es.
 	*/
-	function Cliente($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

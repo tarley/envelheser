@@ -14,7 +14,7 @@ class MySQL {
 	/**
 	* Carrega configurações e conecta ao BD
 	*/
-	function MySQL() {
+	function __construct(){
 		$this->log = new Logger();
 		$this->link = mysqli_connect(HOSTNAME, DB_USER, DB_PASSWORD); //Conecta ao BD
 		

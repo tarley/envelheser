@@ -10,7 +10,7 @@ class Logger {
 	* Inicializa logger e cria arquivo txt
 	* caso n�o exista.
 	*/
-	function Logger() {
+	function __construct(){
 		$logPath = ABSPATH . "/log/";
 		$errorfile = "err_" . date("Ymd") . ".txt";
 		
