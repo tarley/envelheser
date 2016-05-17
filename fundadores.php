@@ -147,14 +147,14 @@
                 <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
-                        <h4>Daniel Dias Caldeira</h4>
+                        <h4>Daniel Caldeira</h4>
                         <p class="text-muted">Desenvolvedor Front End</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="facebook.com/danieldcaldeira"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="br.linkedin.com/in/danieldcaldeira"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -227,9 +227,9 @@
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://www.facebook.com/johnny.junio1"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://www.linkedin.com/in/johnny-j%C3%BAnio-7a3194120?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
