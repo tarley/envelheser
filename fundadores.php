@@ -278,6 +278,7 @@
                             </li>
                         </ul>
                     </div>
+                    </div>
                     <div class="col-sm-3">
                     	<div class="team-member">
                         	<img src="images/img_fundador/renato.png" class="img-circle img-fundadores" alt="">
@@ -500,7 +501,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+    
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
