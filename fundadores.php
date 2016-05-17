@@ -71,6 +71,21 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
+                        <img src="images/img_fundador/bruna_ribeiro.png" class="img-circle img-fundadores" alt="">
+                        <h4>Bruna Ribeiro</h4>
+                        <p class="text-muted">Analista de testes</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://m.facebook.com/bruninha.abalen?fref=nf"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
                         <img src="images/img_fundador/bruno_sartori.png" class="img-circle img-fundadores" height="239px" alt="">
                         <h4>Bruno Sartori</h4>
                         <p class="text-muted">Analista de testes</p>
@@ -92,9 +107,9 @@
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="facebook.com/carina.rorizpimenta"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/carina-roriz-pimenta-a7b349a3?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -259,7 +274,7 @@
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="https://www.linkedin.com/in/rodrigo-rodrigues-2495a155?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/rodrigo-rodrigues-2495a155?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
