@@ -176,6 +176,21 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
+                        <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                        <h4>Francisco Coelho</h4>
+                        <p class="text-muted">Responsável Apresentação do Projeto</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
                         <img src="images/img_fundador/Igor_Henrique.jpg" class="img-circle img-fundadores" alt="">
                         <h4>Igor Henrique</h4>
                         <p class="text-muted">Product Owner</p>
@@ -283,7 +298,7 @@
                     	<div class="team-member">
                         	<img src="images/img_fundador/renato.png" class="img-circle img-fundadores" alt="">
                         	<h4>Renato Carvalho</h4>
-                        	<p class="text-muted">Organizador do Evento</p>
+                        	<p class="text-muted">Responsável Apresentação do Projeto</p>
                         	<ul class="list-inline social-buttons">
                             	<li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                            	 	</li>
