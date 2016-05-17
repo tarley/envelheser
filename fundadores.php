@@ -39,17 +39,32 @@
                 </div>
             </div>
             <div class="row">
+            	<div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/img_fundador/alencar.png" class="img-circle img-fundadores" alt="">
+                        <h4>Alencar Canton</h4>
+                        <p class="text-muted">Analista de Testes</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="https://www.linkedin.com/in/alencar-canton-a0964268"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/andre_carvalho.png" class="img-circle img-fundadores" alt="">
                         <h4>André Santos Carvalho</h4>
                         <p class="text-muted">Product Owner</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -60,11 +75,11 @@
                         <h4>Ater Souza</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -75,11 +90,11 @@
                         <h4>Bruna Ribeiro</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="https://m.facebook.com/bruninha.abalen?fref=nf"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://m.facebook.com/bruninha.abalen?fref=nf"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -90,11 +105,11 @@
                         <h4>Bruno Sartori</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -105,11 +120,11 @@
                         <h4>Carina Roriz Pimenta</h4>
                         <p class="text-muted">Desenvolvedor(a)</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="facebook.com/carina.rorizpimenta"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="facebook.com/carina.rorizpimenta"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="https://www.linkedin.com/in/carina-roriz-pimenta-a7b349a3?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://www.linkedin.com/in/carina-roriz-pimenta-a7b349a3?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -120,11 +135,11 @@
                         <h4>Carlos Henrique</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -135,11 +150,11 @@
                         <h4>Daniel Dias Caldeira</h4>
                         <p class="text-muted">Desenvolvedor Front End</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -150,11 +165,11 @@
                         <h4>Fillipe Perpétuo</h4>
                         <p class="text-muted">Desenvolvedor</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -165,11 +180,11 @@
                         <h4>Igor Henrique</h4>
                         <p class="text-muted">Product Owner</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -180,11 +195,11 @@
                         <h4>João Carlos Heringer</h4>
                         <p class="text-muted">Desenvolvedor</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -195,11 +210,11 @@
                         <h4>Johnny Ramos</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -210,11 +225,11 @@
                         <h4>Napoliana Santos Lima</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -225,26 +240,26 @@
                         <h4>Otávio Batista</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                   <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/pedro_henrique.png" class="img-circle img-fundadores" alt="">
                         <h4>Pedro Henrique</h4>
                         <p class="text-muted">Desenvolvedor Front End</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -255,11 +270,25 @@
                         <h4>Rafael Werneck</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/img_fundador/renato.png" class="img-circle img-fundadores" alt="">
+                        <h4>Renato Carvalho</h4>
+                        <p class="text-muted">Organizador do Evento</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="https://www.facebook.com/renatocarvalho"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -270,9 +299,9 @@
                         <h4>Rodrigo Rodrigues</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a target="_blank" href="https://www.linkedin.com/in/rodrigo-rodrigues-2495a155?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
                             </li>
@@ -285,11 +314,11 @@
                         <h4>Vitor Alessandro</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -300,11 +329,11 @@
                         <h4>Vivian Silva</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -315,11 +344,11 @@
                         <h4>Mônica Machado</h4>
                         <p class="text-muted">Prof(a). Orientadora</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -330,11 +359,11 @@
                         <h4>Iremar Nunes</h4>
                         <p class="text-muted">Prof. Orientador</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -345,11 +374,11 @@
                         <h4>Tarley Lana</h4>
                         <p class="text-muted">Prof. Orientador</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -365,11 +394,11 @@
                         <h4>Bárbara Almeida</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -380,11 +409,11 @@
                         <h4>Janaína de Jesus Araújo</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -395,11 +424,11 @@
                         <h4>Kely Barbosa</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -410,11 +439,11 @@
                         <h4>Rosângela Correa de Freitas</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -431,11 +460,11 @@
                         <h4>Letícia Mendes Evangelista</h4>
                         <p class="text-muted">Acadêmica de Odontlogia</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -446,11 +475,11 @@
                         <h4>Luã Augusto Dos Santos</h4>
                         <p class="text-muted">Acadêmico de Odontologia</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -461,17 +490,16 @@
                         <h4>Valquiria Fernandes</h4>
                         <p class="text-muted">Prof(a). Orientadora</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
         
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
