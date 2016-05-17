@@ -134,7 +134,7 @@
 				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
 					echo '<div class="col-md-6 nopadding">';
 					echo '<label class="control-label col-md-2">' . $listaOpcoes[$j]['Des_Item_Radio'] . '</label>';
-					echo '<input id="Ind_Pergunta_Radio[]" name="Ind_Pergunta_Radio[]" type="radio" value="'.$listaOpcoes[$j]['Cod_Item_Radio'].'" class="form-horizontal" >';
+					echo '<input id="Ind_Pergunta_Radio[]" name="Ind_Pergunta_Radio'.$listaPerguntas[$i]['Cod_Pergunta'].'[]" type="radio" value="'.$listaOpcoes[$j]['Cod_Item_Radio'].'" class="form-horizontal" >';
 					echo '</div>';
 				}
 				
