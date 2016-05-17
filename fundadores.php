@@ -469,7 +469,8 @@
 		<div class="row">
             	<div class="col-lg-12 text-center">
                     <h3 class="section-subheading text-muted">Odontológia - 9º Período</h3>
-                </div>                
+                </div>       
+                <div class="row">         
                  <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/Leticia_Mendes.png" class="img-circle img-fundadores" alt="">
@@ -515,6 +516,7 @@
                         </ul>
                     </div>
                 </div>
+            </div>
             </div>
     
 <!-- jQuery -->
