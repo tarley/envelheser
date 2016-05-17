@@ -279,20 +279,20 @@
                         </ul>
                     </div>
                     <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="images/img_fundador/renato.png" class="img-circle img-fundadores" alt="">
-                        <h4>Renato Carvalho</h4>
-                        <p class="text-muted">Organizador do Evento</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a target="_blank"  href="https://www.facebook.com/renatocarvalho"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    	<div class="team-member">
+                        	<img src="images/img_fundador/renato.png" class="img-circle img-fundadores" alt="">
+                        	<h4>Renato Carvalho</h4>
+                        	<p class="text-muted">Organizador do Evento</p>
+                        	<ul class="list-inline social-buttons">
+                            	<li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
+                           	 	</li>
+                            	<li><a target="_blank"  href="https://www.facebook.com/renatocarvalho"><i class="fa fa-facebook"></i></a>
+                           	 	</li>
+                            	<li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            	</li>
+                        	</ul>
+                    	</div>
+                	</div>
                   <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/rodrigo_rodrigues.png" class="img-circle img-fundadores" alt="">
@@ -500,7 +500,7 @@
                     </div>
                 </div>
             </div>
-        
+        </div>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
