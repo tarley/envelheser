@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Bruno.jpg" class="img-circle img-fundadores" height="239px" alt="">
+                        <img src="images/img_fundador/bruno_sartori.png" class="img-circle img-fundadores" height="239px" alt="">
                         <h4>Bruno Sartori</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
@@ -131,7 +131,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/fillipe_perpetuo.png" class="img-circle img-fundadores" alt="">
                         <h4>Fillipe Perpétuo</h4>
                         <p class="text-muted">Desenvolvedor</p>
                         <ul class="list-inline social-buttons">
@@ -161,7 +161,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                       <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                       <img src="images/img_fundador/joao_heringer.png" class="img-circle img-fundadores" alt="">
                         <h4>João Carlos Heringer</h4>
                         <p class="text-muted">Desenvolvedor</p>
                         <ul class="list-inline social-buttons">
@@ -236,7 +236,7 @@
                 </div>
                   <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/rafael_werneck.png" class="img-circle img-fundadores" alt="">
                         <h4>Rafael Werneck</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
@@ -251,7 +251,7 @@
                 </div>
                   <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Rodrigo_Rodrigues.png" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/rodrigo_rodrigues.png" class="img-circle img-fundadores" alt="">
                         <h4>Rodrigo Rodrigues</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
@@ -259,14 +259,14 @@
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/rodrigo-rodrigues-2495a155?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                   <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Vitor_Alessandro.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/vitor_alessandro.png" class="img-circle img-fundadores" alt="">
                         <h4>Vitor Alessandro</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
@@ -281,7 +281,7 @@
                 </div>
                   <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/vivian_silva.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/vivian_silva.png" class="img-circle img-fundadores" alt="">
                         <h4>Vivian Silva</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
