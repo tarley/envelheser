@@ -146,7 +146,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/daniel_caldeira.jpg" class="img-circle img-fundadores" alt="">
                         <h4>Daniel Caldeira</h4>
                         <p class="text-muted">Desenvolvedor Front End</p>
                         <ul class="list-inline social-buttons">
@@ -221,7 +221,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/johnny_junio.jpg" class="img-circle img-fundadores" alt="">
                         <h4>Johnny Ramos</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
@@ -296,7 +296,7 @@
                     </div>
                     <div class="col-sm-3">
                     	<div class="team-member">
-                        	<img src="images/img_fundador/renato.png" class="img-circle img-fundadores" alt="">
+                        	<img src="images/img_fundador/renato.jpg" class="img-circle img-fundadores" alt="">
                         	<h4>Renato Carvalho</h4>
                         	<p class="text-muted">Responsável Apresentação do Projeto</p>
                         	<ul class="list-inline social-buttons">
