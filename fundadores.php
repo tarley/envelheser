@@ -64,14 +64,14 @@
                             </li>
                             <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://br.linkedin.com/in/andrescarvalho"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Ater.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Ater.png" class="img-circle img-fundadores" alt="">
                         <h4>Ater Souza</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
@@ -131,7 +131,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Carlos_Henrique.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Carlos_Henrique.png" class="img-circle img-fundadores" alt="">
                         <h4>Carlos Henrique</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
@@ -146,7 +146,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/daniel_caldeira.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/daniel_caldeira.png" class="img-circle img-fundadores" alt="">
                         <h4>Daniel Caldeira</h4>
                         <p class="text-muted">Desenvolvedor Front End</p>
                         <ul class="list-inline social-buttons">
@@ -191,7 +191,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Igor_Henrique.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Igor_Henrique.png" class="img-circle img-fundadores" alt="">
                         <h4>Igor Henrique</h4>
                         <p class="text-muted">Product Owner</p>
                         <ul class="list-inline social-buttons">
@@ -221,7 +221,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/johnny_junio.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/johnny_junio.png" class="img-circle img-fundadores" alt="">
                         <h4>Johnny Ramos</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
@@ -236,7 +236,22 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Napoliana.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/lucas_amaral.png" class="img-circle img-fundadores" alt="">
+                        <h4>Lucas Amaral</h4>
+                        <p class="text-muted">Analista de testes</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="facebook.com/lucas.amaral8"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="https://br.linkedin.com/in/lucas-amaral-a6403772"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/img_fundador/Napoliana.png" class="img-circle img-fundadores" alt="">
                         <h4>Napoliana Santos Lima</h4>
                         <p class="text-muted">Analista de testes</p>
                         <ul class="list-inline social-buttons">
@@ -264,8 +279,8 @@
                         </ul>
                     </div>
                 </div>
-                  <div class="col-sm-3">
-                    <div class="team-member">
+                <div class="col-sm-3">
+                	<div class="team-member">
                         <img src="images/img_fundador/pedro_henrique.png" class="img-circle img-fundadores" alt="">
                         <h4>Pedro Henrique</h4>
                         <p class="text-muted">Desenvolvedor Front End</p>
@@ -279,7 +294,7 @@
                         </ul>
                     </div>
                 </div>
-                  <div class="col-sm-3">
+                <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/rafael_werneck.png" class="img-circle img-fundadores" alt="">
                         <h4>Rafael Werneck</h4>
@@ -294,9 +309,9 @@
                         </ul>
                     </div>
                     </div>
-                    <div class="col-sm-3">
+                <div class="col-sm-3">
                     	<div class="team-member">
-                        	<img src="images/img_fundador/renato.jpg" class="img-circle img-fundadores" alt="">
+                        	<img src="images/img_fundador/renato.png" class="img-circle img-fundadores" alt="">
                         	<h4>Renato Carvalho</h4>
                         	<p class="text-muted">Responsável Apresentação do Projeto</p>
                         	<ul class="list-inline social-buttons">
@@ -309,7 +324,7 @@
                         	</ul>
                     	</div>
                 	</div>
-                  <div class="col-sm-3">
+                <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/rodrigo_rodrigues.png" class="img-circle img-fundadores" alt="">
                         <h4>Rodrigo Rodrigues</h4>
@@ -324,7 +339,7 @@
                         </ul>
                     </div>
                 </div>
-                  <div class="col-sm-3">
+                <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/vitor_alessandro.png" class="img-circle img-fundadores" alt="">
                         <h4>Vitor Alessandro</h4>
@@ -339,7 +354,7 @@
                         </ul>
                     </div>
                 </div>
-                  <div class="col-sm-3">
+                <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/vivian_silva.png" class="img-circle img-fundadores" alt="">
                         <h4>Vivian Silva</h4>
@@ -354,9 +369,9 @@
                         </ul>
                     </div>
                 </div>
-                  <div class="col-sm-3">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Monica_Machado.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Monica_Machado.png" class="img-circle img-fundadores" alt="">
                         <h4>Mônica Machado</h4>
                         <p class="text-muted">Prof(a). Orientadora</p>
                         <ul class="list-inline social-buttons">
@@ -384,9 +399,9 @@
                         </ul>
                     </div>
                 </div>
-                  <div class="col-sm-3">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/tarley_lana.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/tarley_lana.png" class="img-circle img-fundadores" alt="">
                         <h4>Tarley Lana</h4>
                         <p class="text-muted">Prof. Orientador</p>
                         <ul class="list-inline social-buttons">
@@ -406,7 +421,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Barbara_Almeida.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Barbara_Almeida.png" class="img-circle img-fundadores" alt="">
                         <h4>Bárbara Almeida</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
@@ -421,7 +436,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Janaina_Jesus.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Janaina_Jesus.png" class="img-circle img-fundadores" alt="">
                         <h4>Janaína de Jesus Araújo</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
@@ -436,7 +451,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Kely_Barbosa.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Kely_Barbosa.png" class="img-circle img-fundadores" alt="">
                         <h4>Kely Barbosa</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
@@ -451,7 +466,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Rosangela_Correa.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Rosangela_Correa.png" class="img-circle img-fundadores" alt="">
                         <h4>Rosângela Correa de Freitas</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
@@ -465,12 +480,26 @@
                     </div>
                 </div>
             </div>
-        </div>
-		<div class="row">
+            		<div class="row">
             	<div class="col-lg-12 text-center">
-                    <h3 class="section-subheading text-muted">Odontológia - 9º Período</h3>
-                </div>       
-                <div class="row">         
+                    <h3 class="section-subheading text-muted">Odontologia - 8º e 9º Período</h3>
+                </div>               
+                 <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/img_fundador/amanda_lopes.png" class="img-circle img-fundadores" alt="">
+                        <h4>Amanda Lopes Drumond</h4>
+                        <p class="text-muted">Acadêmica de Odontlogia</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+  
                  <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/Leticia_Mendes.png" class="img-circle img-fundadores" alt="">
@@ -488,7 +517,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/Lua_Augusto.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/Lua_Augusto.png" class="img-circle img-fundadores" alt="">
                         <h4>Luã Augusto Dos Santos</h4>
                         <p class="text-muted">Acadêmico de Odontologia</p>
                         <ul class="list-inline social-buttons">
@@ -503,7 +532,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/valquiria_fernandes.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/valquiria_fernandes.png" class="img-circle img-fundadores" alt="">
                         <h4>Valquiria Fernandes</h4>
                         <p class="text-muted">Prof(a). Orientadora</p>
                         <ul class="list-inline social-buttons">
@@ -515,10 +544,10 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            </div>
-    
+              
+    			</div>
+        </div>
+    </div>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 

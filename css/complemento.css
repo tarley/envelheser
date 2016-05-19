@@ -155,3 +155,7 @@
 .vert-offset-bottom-0 {
 	margin-bottom: 0em;
 }
+
+.form-group.col-md-1 #saveCliente {
+    margin-top: 24px;
+}

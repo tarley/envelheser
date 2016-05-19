@@ -14,8 +14,8 @@ $(document).ready(function() {
 	        { field: "login", title: "Login", sortColumn: "Des_Login", attributes: [{ "class": "text-center" }] }, 
 	        { 
 	            title: "Selecionar", 
-	            attributes: [{ "class": "col-md-1 text-center" }],
-	            template: "<button data-id='{#codigo}' type='button' class='btn btn-warning btn-sm'><i class='fa fa-wrench'></i> Editar</button>" 
+	            attributes: [{ "class": "col-md-1 text-center" }],//fa fa-wrench fa fa-check-circle
+	            template: "<button data-id='{#codigo}' type='button' class='btn btn-warning btn-sm'><i class='fa fa-bluetooth'></i>Selecionar</button>" 
 	        }
 	    ],
 	
