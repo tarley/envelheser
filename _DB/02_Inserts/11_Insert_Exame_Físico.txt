@@ -1,11 +1,11 @@
 /*=============================================================*/
 /*          	CADASTRO DE PERGUNTAS GRUPO EXAME FÍSICO       */
 /*=============================================================*/
-CALL SPInserePergunta ('Exame Físico', 3, 1, 'P.A:');
-CALL SPInserePergunta ('Exame Físico', 3, 2, 'Temperatura:');
-CALL SPInserePergunta ('Exame Físico', 3, 3, 'Pulso:');
-CALL SPInserePergunta ('Exame Físico', 3, 4, 'Respiração:');
+CALL SPInserePergunta ('Exame Físico', 3, 1, 'P.A: (mmHg)');
+CALL SPInserePergunta ('Exame Físico', 3, 2, 'Temperatura: (ºc)');
+CALL SPInserePergunta ('Exame Físico', 3, 3, 'Pulso: (bpm)');
+CALL SPInserePergunta ('Exame Físico', 3, 4, 'Respiração: ( IRPM)');
 CALL SPInserePergunta ('Exame Físico', 18,5, 'Fácies:');
 CALL SPInserePergunta ('Exame Físico', 3, 6, 'IMC:');
-CALL SPInserePergunta ('Exame Físico', 3, 7, 'Peso:');
-CALL SPInserePergunta ('Exame Físico', 3, 8, 'Altura:');
+CALL SPInserePergunta ('Exame Físico', 3, 7, 'Peso: (kg)');
+CALL SPInserePergunta ('Exame Físico', 3, 8, 'Altura: (cm)');
