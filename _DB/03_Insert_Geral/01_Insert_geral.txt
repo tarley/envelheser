@@ -427,6 +427,8 @@ CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
 				CALL SPInsereGrupo ('Etilismo', 'Hábitos e Vícios', 'Triagem', 2, 1);
 
 				CALL SPInsereGrupo ('Drogas Ilícitas', 'Hábitos e Vícios', 'Triagem', 3, 1);
+				
+				CALL SPInsereGrupo ('Outros', 'Hábitos e Vícios', 'Triagem', 4, 1);
 
 CALL SPInsereGrupo ('Necessidades Psicoespirituais', null, 'Triagem', 2, 1);
 
