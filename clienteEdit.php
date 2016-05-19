@@ -263,9 +263,9 @@
                                             <label>Filhos</label>
                                             <input id="numeroFilhosCliente" class="form-control" disabled>
                                         </div>
-                                        <div class="form-group col-md-1">
+                                        <!--<div class="form-group col-md-1">
                                         	<button id="saveCliente" type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-save"></i> Salvar</button>
-                                    	</div>
+                                    	</div>-->
                                     </form>
                                 </div>
                             </div>
