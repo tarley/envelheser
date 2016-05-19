@@ -43,7 +43,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/alencar.png" class="img-circle img-fundadores" alt="">
                         <h4>Alencar Canton</h4>
-                        <p class="text-muted">Analista de Testes</p>
+                        <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -88,7 +88,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/bruna_ribeiro.png" class="img-circle img-fundadores" alt="">
                         <h4>Bruna Ribeiro</h4>
-                        <p class="text-muted">Analista de testes</p>
+                        <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -103,7 +103,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/bruno_sartori.png" class="img-circle img-fundadores" height="239px" alt="">
                         <h4>Bruno Sartori</h4>
-                        <p class="text-muted">Analista de testes</p>
+                        <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -223,7 +223,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/johnny_junio.png" class="img-circle img-fundadores" alt="">
                         <h4>Johnny Ramos</h4>
-                        <p class="text-muted">Analista de testes</p>
+                        <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -238,7 +238,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/lucas_amaral.png" class="img-circle img-fundadores" alt="">
                         <h4>Lucas Amaral</h4>
-                        <p class="text-muted">Analista de testes</p>
+                        <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -253,7 +253,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/Napoliana.png" class="img-circle img-fundadores" alt="">
                         <h4>Napoliana Santos Lima</h4>
-                        <p class="text-muted">Analista de testes</p>
+                        <p class="text-muted">Product Owner / Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -343,7 +343,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/vitor_alessandro.png" class="img-circle img-fundadores" alt="">
                         <h4>Vitor Alessandro</h4>
-                        <p class="text-muted">Analista de testes</p>
+                        <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -358,7 +358,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/vivian_silva.png" class="img-circle img-fundadores" alt="">
                         <h4>Vivian Silva</h4>
-                        <p class="text-muted">Analista de testes</p>
+                        <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
