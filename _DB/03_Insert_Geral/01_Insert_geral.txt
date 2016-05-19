@@ -881,6 +881,7 @@ CALL SPInsereListaCheckBox ('Grupo de idosos','Participação em atividades:');
 CALL SPInsereListaCheckBox ('Hidroginástica','Participação em atividades:');
 CALL SPInsereListaCheckBox ('Dança','Participação em atividades:');
 CALL SPInsereListaCheckBox ('Grupo religioso','Participação em atividades:');
+CALL SPInsereListaCheckBox ('Outros','Participação em atividades:');
 
 CALL SPInsereListaCheckBox ('Televisão','Recreação/Lazer/Criatividade');
 CALL SPInsereListaCheckBox ('Música','Recreação/Lazer/Criatividade');
