@@ -266,7 +266,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                       <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                       <img src="images/img_fundador/otavio.png" class="img-circle img-fundadores" alt="">
                         <h4>Otávio Batista</h4>
                         <p class="text-muted">Analista de Banco de Dados</p>
                         <ul class="list-inline social-buttons">
@@ -386,7 +386,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/pessoa.png" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/iremar.png" class="img-circle img-fundadores" alt="">
                         <h4>Iremar Nunes</h4>
                         <p class="text-muted">Prof. Orientador</p>
                         <ul class="list-inline social-buttons">
