@@ -2,7 +2,7 @@
 /*           CADASTRO DE CATEGORIAS DE MEDICAMENTOS             */
 /*==============================================================*/
 
- CALL SPInsereCategoriaMedicamento ('Antihipertensivos');
+ CALL SPInsereCategoriaMedicamento ('Anti-Hipertensivos');
  CALL SPInsereCategoriaMedicamento ('Hipoglicimiantes');
  CALL SPInsereCategoriaMedicamento ('Cardiotônicos');
  CALL SPInsereCategoriaMedicamento ('Ansiolíticos');
