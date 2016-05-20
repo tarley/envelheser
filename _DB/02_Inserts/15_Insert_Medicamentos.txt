@@ -2,13 +2,13 @@
 /*                    CADASTRO DE MEDICAMENTOS                  */
 /*==============================================================*/
 
-CALL SPInsereMedicamento ('Captopril 25 mg', 'História Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Atenolol 25 mg', 'História Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Losartana 50 mg', 'História Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Enalapril 10 mg', 'História Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Propranolol 40 mg', 'História Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Anlodipino 5 mg', 'História Medicamentosa', 'Antihipertensivos');
-CALL SPInsereMedicamento ('Anlodipino 10 mg', 'História Medicamentosa', 'Antihipertensivos');
+CALL SPInsereMedicamento ('Captopril 25 mg', 'História Medicamentosa', 'Anti-Hipertensivos');
+CALL SPInsereMedicamento ('Atenolol 25 mg', 'História Medicamentosa', 'Anti-Hipertensivos');
+CALL SPInsereMedicamento ('Losartana 50 mg', 'História Medicamentosa', 'Anti-Hipertensivos');
+CALL SPInsereMedicamento ('Enalapril 10 mg', 'História Medicamentosa', 'Anti-Hipertensivos');
+CALL SPInsereMedicamento ('Propranolol 40 mg', 'História Medicamentosa', 'Anti-Hipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 5 mg', 'História Medicamentosa', 'Anti-Hipertensivos');
+CALL SPInsereMedicamento ('Anlodipino 10 mg', 'História Medicamentosa', 'Anti-Hipertensivos');
 
 CALL SPInsereMedicamento ('Metformina 500 mg', 'História Medicamentosa', 'Hipoglicimiantes');
 CALL SPInsereMedicamento ('Metformina 850 mg', 'História Medicamentosa', 'Hipoglicimiantes');
