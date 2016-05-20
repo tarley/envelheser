@@ -479,16 +479,31 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/img_fundador/valquiria_fernandes.png" class="img-circle img-fundadores" alt="">
+                        <h4>Valquiria Fernandes</h4>
+                        <p class="text-muted">Prof(a). Orientadora</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+    			</div>
             </div>
-            		<div class="row">
+            	<div class="row">
             	<div class="col-lg-12 text-center">
-                    <h3 class="section-subheading text-muted">Odontologia - 8º e 9º Período</h3>
+                    <h3 class="section-subheading text-muted">Odontologia - 7º e 8º Período</h3>
                 </div>               
                  <div class="col-sm-3">
                     <div class="team-member">
                         <img src="images/img_fundador/amanda_lopes.png" class="img-circle img-fundadores" alt="">
                         <h4>Amanda Lopes Drumond</h4>
-                        <p class="text-muted">Acadêmica de Odontlogia</p>
+                        <p class="text-muted">Acadêmica de Odontologia</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -504,7 +519,7 @@
                     <div class="team-member">
                         <img src="images/img_fundador/Leticia_Mendes.png" class="img-circle img-fundadores" alt="">
                         <h4>Letícia Mendes Evangelista</h4>
-                        <p class="text-muted">Acadêmica de Odontlogia</p>
+                        <p class="text-muted">Acadêmica de Odontologia</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -530,22 +545,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="images/img_fundador/valquiria_fernandes.png" class="img-circle img-fundadores" alt="">
-                        <h4>Valquiria Fernandes</h4>
-                        <p class="text-muted">Prof(a). Orientadora</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-              
-    			</div>
+                
         </div>
     </div>
 <!-- jQuery -->
