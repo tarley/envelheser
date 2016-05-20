@@ -118,7 +118,7 @@
                     <div class="team-member">
                        <img src="images/img_fundador/carina_roriz.png" class="img-circle img-fundadores" alt="">
                         <h4>Carina Roriz Pimenta</h4>
-                        <p class="text-muted">Desenvolvedor(a)</p>
+                        <p class="text-muted">Desenvolvedora</p>
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-twitter"></i></a>
                             </li>
