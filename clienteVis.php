@@ -13,11 +13,15 @@
 				<div class="col-lg-12">
 					<h1 class="page-header"><i class="fa fa-child"></i> Pacientes</h1>
 				</div>
-
+				<div class="col-sm-3 vert-offset-bottom-1">
+					<button id="btnNovo" type="button" class="btn btn-success">
+						<i class="fa fa-plus-circle"></i> Novo
+					</button>
+				</div>
 				<!-- /.col-lg-12 -->
 			</div>
 			<!-- /.row -->
-
+			
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<i class="fa fa-user"></i> Pacientes

@@ -55,11 +55,11 @@
 		$retorno .= "\"codigo\": " . $dados['Cod_Cliente'] . ", ";
 		$retorno .= "\"nome\": \"" . $dados['Nom_Cliente'] . "\", ";
 		$retorno .= "\"telefone\": \"" . $dados['Num_Telefone'] . "\", ";
-		$retorno .= "\"cor\": \"" . $dados['Nom_Cor'] . "\", ";
-		$retorno .= "\"escolaridade\": \"" . $dados['Nom_Escolaridade'] . "\", ";
-		$retorno .= "\"ocupacao\": \"" . $dados['Nom_Ocupacao'] . "\", ";
-		$retorno .= "\"estadoCivil\": \"" . $dados['Nom_Estado_Civil'] . "\", ";
-		$retorno .= "\"naturalidade\": \"" . $dados['Nom_Naturalidade'] . "\", ";
+		$retorno .= "\"cor\": \"" . $dados['Cod_Cor'] . "\", ";
+		$retorno .= "\"escolaridade\": \"" . $dados['Cod_Escolaridade'] . "\", ";
+		$retorno .= "\"ocupacao\": \"" . $dados['Cod_Ocupacao'] . "\", ";
+		$retorno .= "\"estadoCivil\": \"" . $dados['Cod_Estado_Civil'] . "\", ";
+		$retorno .= "\"naturalidade\": \"" . $dados['Cod_Naturalidade'] . "\", ";
 		$retorno .= "\"sexo\": \"" . $dados['Ind_Sexo'] . "\", ";
 		$retorno .= "\"dataNascimento\": \"" . $dados['Dta_Nascimento'] . "\", ";
 		$retorno .= "\"numeroFilhos\": \"" . $dados['Num_Filhos'] . "\", ";
@@ -80,6 +80,17 @@
 		$retorno .= "}";
 		
 		echo $retorno;
+		
+	} else if (isset($_POST['dadosCliente'])) {		
+		
+		$retorno = "";
+		
+		$dadosClientes = $_POST['dadosCliente'];
+		 
+		$retorno = $cliente->insert($dadosClientes);
+		
+		echo json_encode($retorno);		
+		
 	}
 	
 	

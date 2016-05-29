@@ -3,6 +3,12 @@
 	
 	$mysql = new MySQL();
 	$Prontuario = new Prontuario($mysql->link);
+	$Cor = new Cor($mysql->link);
+	$Escolaridade = new Escolaridade($mysql->link);
+	$Especialidade = new Especialidade($mysql->link);
+	$EstadoCivil = new EstadoCivil($mysql->link);
+	$Naturalidade = new Naturalidade($mysql->link);
+	$Ocupacao = new Ocupacao($mysql->link);
 	
 	function MontaGrupos($codGrupoSuperior){
 		global $Prontuario;
@@ -215,58 +221,110 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <form role="form">
+                                    	<div class="form-group col-md-12 nopadding">
+                                    		<div style="padding-bottom: 10px">
+	                                        	<button id="saveCliente" type="button" class="btn btn-primary"><i class="fa fa-save"></i>Salvar</button>
+	                                        	<button id="btnCancelar" type="button" class="btn btn-danger"><i class="fa fa-times-circle"></i> Cancelar</button>
+                                    		</div>
+                                    	</div>
                                         <div class="form-group col-md-1">
                                             <label>Código</label>
-                                            <input id="codCliente" class="form-control" disabled>
+                                            <input id="codCliente" class="form-control">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label>Nome</label>
-                                            <input id="nomCliente" class="form-control" disabled>
+                                            <input id="nomCliente" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>RG</label>
+                                            <input id="numRg" class="form-control">
                                         </div>
 										<div class="form-group col-md-4">
                                             <label>Endereço</label>
-                                            <input id="enderecoCliente" class="form-control" disabled>
+                                            <input id="enderecoCliente" class="form-control">
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label>Telefone</label>
-                                            <input id="telCliente" class="form-control" disabled>
+                                            <input id="telCliente" class="form-control">
                                         </div>
 										<div class="form-group col-md-2">
                                             <label>Data de Nascimento</label>
-                                            <input id="dataNascimentoCliente" class="form-control" disabled>
+                                            <input id="dataNascimentoCliente" class="form-control">
                                         </div>	
                                         <div class="form-group col-md-2">
                                             <label>Estado Civil</label>
-                                            <input id="estadoCivilCliente" class="form-control" disabled>
+                                            <?php 
+                                            $listaOpcoes = $EstadoCivil->getLista();
+                                            
+                                            echo '<select id="estadoCivilCliente" class="form-control">';
+                                            echo '<option value="">Selecione</option>';
+												for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+													echo '<option value="'.$listaOpcoes[$j]['Cod_Estado_Civil'].'">'.$listaOpcoes[$j]['Nom_Estado_Civil'].'</option>';
+												}
+											echo '</select>';
+											?>
                                         </div>	
                                         <div class="form-group col-md-2">
                                             <label>Naturalidade</label>
-                                            <input id="naturalidadeCliente" class="form-control" disabled>
+                                            <?php 
+                                            $listaOpcoes = $Naturalidade->getLista();
+                                            
+                                            echo '<select id="naturalidadeCliente" class="form-control">';
+                                            echo '<option value="">Selecione</option>';
+												for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+													echo '<option value="'.$listaOpcoes[$j]['Cod_Naturalidade'].'">'.$listaOpcoes[$j]['Nom_Naturalidade'].'</option>';
+												}
+											echo '</select>';
+											?>
                                         </div>		
                                         <div class="form-group col-md-2">
                                             <label>Escolaridade</label>
-                                            <input id="escolaridadeCliente" class="form-control" disabled>
+                                            <?php 
+                                            $listaOpcoes = $Escolaridade->getLista();
+                                            
+                                            echo '<select id="escolaridadeCliente" class="form-control">';
+                                            echo '<option value="">Selecione</option>';
+												for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+													echo '<option value="'.$listaOpcoes[$j]['Cod_Escolaridade'].'">'. $listaOpcoes[$j]['Nom_Escolaridade'].'</option>';
+												}
+											echo '</select>';
+											?>
                                         </div>	
 										<div class="form-group col-md-2">
                                             <label>Sexo</label>
-                                            <input id="sexoCliente" class="form-control" disabled>
+                                            <input id="sexoCliente" class="form-control">
                                         </div>					
 										<div class="form-group col-md-2">
                                             <label>Cor</label>
-                                            <input id="corCliente" class="form-control" disabled>
+                                            <?php 
+                                            $listaOpcoes = $Cor->getLista();
+                                            
+                                            echo '<select id="corCliente" class="form-control">';
+                                            echo '<option value="">Selecione</option>';
+												for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+													echo '<option value="'.$listaOpcoes[$j]['Cod_Cor'].'">'.$listaOpcoes[$j]['Nom_Cor'].'</option>';
+												}
+											echo '</select>';
+											?>
                                         </div>		
                                         <div class="form-group col-md-2">
                                             <label>Ocupação</label>
-                                            <input id="ocupacaoCliente" class="form-control" disabled>
+                                            <?php 
+                                            $listaOpcoes = $Ocupacao->getLista();
+                                            
+                                            echo '<select id="ocupacaoCliente" class="form-control">';
+                                            echo '<option value="">Selecione</option>';
+												for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+													echo '<option value="'.$listaOpcoes[$j]['Cod_Ocupacao'].'">'.$listaOpcoes[$j]['Nom_Ocupacao'].'</option>';
+												}
+											echo '</select>';
+											?>
                                         </div>	
                                         <div class="form-group col-md-1">
                                             <label>Filhos</label>
-                                            <input id="numeroFilhosCliente" class="form-control" disabled>
+                                            <input id="numeroFilhosCliente" class="form-control">
                                         </div>
-                                        <!--<div class="form-group col-md-1">
-                                        	<button id="saveCliente" type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-save"></i> Salvar</button>
-                                    	</div>-->
-                                    </form>
+									</form>
                                 </div>
                             </div>
                             <!-- /.row (nested) -->

@@ -43,6 +43,36 @@ $(document).ready(function() {
 		LimpaCampos();
 	});			
 	
+	$("#btnCancelar").click(function() {
+		window.location= "clienteVis.php";
+	});
+	
+	$("#saveCliente").click(function() {	
+		
+		$("#loader").show();
+		
+		var obj = DadosCliente();
+		//console.log(obj);
+		$.post( "ajax/cliente.ajax.php", { dadosCliente: obj }, function(data) {
+			var retorno = jQuery.parseJSON(data);
+			console.log(retorno);
+			if(retorno.Sucesso == true) {
+				$('#alert .text').append(retorno.Mensagem);
+				$('#alert').addClass("alert-success");
+				
+			} else {
+				$('#alert .text').append(retorno.Mensagem);
+				$('#alert').addClass("alert-danger");
+			}
+
+			$('#alert').show().delay(3000).fadeOut("fast", function() {
+				$('#alert .text').html(""); 
+			}); 
+			
+			$("#loader").hide();
+		});
+	});
+	
 	$("#save").click(function() {		
 		
 		$("#loader").show();
@@ -341,4 +371,22 @@ function MontaJSON(){
 	
 	return obj;
 	
+}
+
+function DadosCliente(){
+	var obj = {};
+	obj['Cod_Cliente'] = $("#codCliente").val();
+	obj['Nom_Cliente'] = $("#nomCliente").val();
+	obj['Dta_Nascimento'] = $("#dataNascimentoCliente").val();
+	obj['Num_Rg'] = $("#numRg").val();
+	obj['Des_Endereco'] = $("#enderecoCliente").val();
+	obj['Ind_Sexo'] = $("#sexoCliente").val();
+	obj['Num_Filhos'] = $("#numeroFilhosCliente").val();
+	obj['Cod_Cor'] = $("#corCliente").val();
+	obj['Cod_Escolaridade'] = $("#escolaridadeCliente").val();
+	obj['Cod_Ocupacao'] = $("#ocupacaoCliente").val();
+	obj['Cod_Estado_Civil'] = $("#estadoCivilCliente").val();
+	obj['Cod_Naturalidade'] = $("#naturalidadeCliente").val();
+	
+	return obj;
 }

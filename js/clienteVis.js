@@ -47,4 +47,8 @@ $(document).ready(function() {
 		$("#gridCliente").xGrid("filter", "filtro=");
 	});	
 	
+	$("#btnNovo").click(function(){
+		window.location= "clienteEdit.php";
+	});	
+	
 });
