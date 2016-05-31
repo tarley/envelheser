@@ -56,6 +56,7 @@ CALL SPInserePergunta ('Sistema Genitourinário', 9, 2, 'Cálculos Renais');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 3, 'Doenças Sexualmente Transmissíveis');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência Urinária');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 5, 'Infecção De Urina');
+CALL SPInserePergunta ('Sistema Genitourinário', 9, 6, 'Realização de exame citopatológico');
 
 /*===================================*/ 
 /*          Endócrino                */ 
