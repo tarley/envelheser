@@ -432,11 +432,11 @@ CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
 
 CALL SPInsereGrupo ('Necessidades Psicoespirituais', null, 'Triagem', 2, 1);
 
-CALL SPInsereGrupo ('Necessidades Psicosociais', null, 'Triagem', 3, 1);
+CALL SPInsereGrupo ('Necessidades Psicossociais', null, 'Triagem', 3, 1);
 
-	CALL SPInsereGrupo ('Interação Social', 'Necessidades Psicosociais', 'Triagem', 1, 1);
+	CALL SPInsereGrupo ('Interação Social', 'Necessidades Psicossociais', 'Triagem', 1, 1);
 
-	CALL SPInsereGrupo ('Recreação/Lazer/Criatividade', 'Necessidades Psicosociais', 'Triagem', 2, 1);
+	CALL SPInsereGrupo ('Recreação/Lazer/Criatividade', 'Necessidades Psicossociais', 'Triagem', 2, 1);
 
 CALL SPInsereGrupo ('Necessidades Psicobiológicas', null, 'Triagem', 4, 1);
 
@@ -497,6 +497,8 @@ CALL SPInsereTipoPergunta(1,0,0,0,0,0,1,0,0,1,0,'CheckBox - Aberta - Observaçã
 CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,1,0,'SimNão - CheckBox - Cite');
 CALL SPInsereTipoPergunta(0,0,0,0,0,1,0,0,0,1,0,'CheckBox - Cite');
 CALL SPInsereTipoPergunta(0,1,1,0,0,0,0,0,0,1,0,'SimNão - CheckBox - Qual');
+CALL SPInsereTipoPergunta(0,0,0,0,1,0,0,0,1,0,0,'Radio - Outros');
+CALL SPInsereTipoPergunta(0,1,0,0,1,0,0,0,0,1,0,'SimNão - CheckBox - Outros');
 
 
 /*==============================================================*/
@@ -660,7 +662,7 @@ CALL SPInserePergunta ('Histórico de Queda', 9, 1, 'Quedas Nos Últimos 12 Mese
 CALL SPInserePergunta ('Anamnese', 3,  1, 'Qual a Queixa Principal?');
 CALL SPInserePergunta ('Anamnese', 12, 2, 'História Medicamentosa');
 CALL SPInserePergunta ('Anamnese', 3,  3, 'História da Moléstia Atual');
-CALL SPInserePergunta ('Anamnese', 24, 4, 'Alergias?');
+CALL SPInserePergunta ('Anamnese', 26, 4, 'Alergias?');
 CALL SPInserePergunta ('Anamnese', 10, 5, 'Tem ou teve doença infecto-contagiosa?');
 CALL SPInserePergunta ('Anamnese', 6,  6, 'Já esteve internado ou se submeteu a alguma cirurgia, tratamento com radioterapia e quimioterapia?');
 CALL SPInserePergunta ('Anamnese', 3,  7, 'Última consulta - Época e motivo');
@@ -702,7 +704,7 @@ CALL SPInserePergunta ('Necessidades Psicoespirituais', 15, 1, 'Realiza alguma a
 
 
 /*==============================================================*/
-/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOSOCIAIS      */
+/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOSSOCIAIS     */
 /*==============================================================*/
 
 CALL SPInserePergunta ('Interação Social', 22, 1, 'Participação em atividades:');
@@ -762,7 +764,7 @@ CALL SPInserePergunta ('Coong', 10, 9, 	'Alteração de Palato:');
 CALL SPInserePergunta ('Coong', 10, 10,	'Alteração de Orofaringe:');
 CALL SPInserePergunta ('Coong', 10, 11,	'Alteração de Glândulas e ductos salivares:');
 CALL SPInserePergunta ('Coong', 10, 12,	'Alteração de Saliva:');
-CALL SPInserePergunta ('Coong', 19, 13,	'Halitose/Tipo de odor');
+CALL SPInserePergunta ('Coong', 25, 13,	'Halitose/Tipo de odor');
 CALL SPInserePergunta ('Coong', 18, 14,	'Classificação de Angle:');
 CALL SPInserePergunta ('Coong', 18, 15,	'Lateralidade:');
 CALL SPInserePergunta ('Coong', 18, 16,	'Mordida Cruzada:');
