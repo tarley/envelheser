@@ -18,7 +18,7 @@ CALL SPInserePergunta ('Sistema Cardiovascular', 9, 9, 'Marca-Passo');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'Doença de Chagas');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 11, 'Prolapso de Válvula Mitral');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 12, 'Febre Reumática Com Cardiopatia');
-CALL SPInserePergunta ('Sistema Cardiovascular', 24, 13, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Cardiovascular', 25, 13, 'Observações Finais');
 
 /*===================================*/ 
 /*          Respiratório             */ 
@@ -33,7 +33,7 @@ CALL SPInserePergunta ('Sistema Respiratório', 9, 6, 'Enfisema');
 CALL SPInserePergunta ('Sistema Respiratório', 9, 7, 'Sinusite');
 CALL SPInserePergunta ('Sistema Respiratório', 9, 8, 'Tosse Crônica');
 CALL SPInserePergunta ('Sistema Respiratório', 9, 9, 'Doença Pulmonar Obstrutiva Crônica');
-CALL SPInserePergunta ('Sistema Respiratório', 24, 10, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Respiratório', 25, 10, 'Observações Finais');
 
 /*===================================*/ 
 /*          Digestório               */ 
@@ -48,7 +48,7 @@ CALL SPInserePergunta ('Sistema Digestório', 9, 6, 'Icterícia');
 CALL SPInserePergunta ('Sistema Digestório', 9, 7, 'Diarréia Persistente');
 CALL SPInserePergunta ('Sistema Digestório', 9, 8, 'Constipação Intestinal');
 CALL SPInserePergunta ('Sistema Digestório', 9, 9, 'Refluxo');
-CALL SPInserePergunta ('Sistema Digestório', 24, 10, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Digestório', 25, 10, 'Observações Finais');
 
 /*===================================*/ 
 /*          Genitourinário           */ 
@@ -60,7 +60,7 @@ CALL SPInserePergunta ('Sistema Genitourinário', 9, 3, 'Doenças Sexualmente Tr
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência Urinária');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 5, 'Infecção De Urina');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 6, 'Realização de exame citopatológico');
-CALL SPInserePergunta ('Sistema Genitourinário', 24, 7, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Genitourinário', 25, 7, 'Observações Finais');
 
 /*===================================*/ 
 /*          Endócrino                */ 
@@ -72,7 +72,7 @@ CALL SPInserePergunta ('Sistema Endócrino', 9, 3, 'Distúrbio Hipofisário');
 CALL SPInserePergunta ('Sistema Endócrino', 9, 4, 'Hipotiroidismo');
 CALL SPInserePergunta ('Sistema Endócrino', 9, 5, 'Hipertiroidismo');
 CALL SPInserePergunta ('Sistema Endócrino', 9, 6, 'Hipoglicemia');
-CALL SPInserePergunta ('Sistema Endócrino', 24, 7, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Endócrino', 25, 7, 'Observações Finais');
 
 
 /*===================================*/ 
@@ -95,7 +95,7 @@ CALL SPInserePergunta ('Sistema Nervoso Central', 9, 13, 'Epilepsia');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 14, 'Sindrome do Pânico');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 15, 'Derrame');
 CALL SPInserePergunta ('Sistema Nervoso Central', 9, 16, 'Cefaléia Intensa');
-CALL SPInserePergunta ('Sistema Nervoso Central', 24, 17, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Nervoso Central', 25, 17, 'Observações Finais');
 
 /*===================================*/ 
 /*          Sensitivo                */ 
@@ -108,7 +108,7 @@ CALL SPInserePergunta ('Sistema Sensitivo', 9, 4, 'Auditivo');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 5, 'Hanseníase');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 6, 'Agnosia');
 CALL SPInserePergunta ('Sistema Sensitivo', 9, 7, 'Gustativo');
-CALL SPInserePergunta ('Sistema Sensitivo', 24, 8, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Sensitivo', 25, 8, 'Observações Finais');
 
 /*===================================*/ 
 /*          Hematopoético            */ 
@@ -124,7 +124,7 @@ CALL SPInserePergunta ('Sistema Hematopoético', 9, 7, 'Linfadenopatia');
 CALL SPInserePergunta ('Sistema Hematopoético', 9, 8, 'Hemofilia');
 CALL SPInserePergunta ('Sistema Hematopoético', 9, 9, 'Leucemia');
 CALL SPInserePergunta ('Sistema Hematopoético', 9, 10,'Anemia Falciforme');
-CALL SPInserePergunta ('Sistema Hematopoético', 24, 11,'Observações Finais');
+CALL SPInserePergunta ('Sistema Hematopoético', 25, 11,'Observações Finais');
 
 /*===================================*/ 
 /*          Osteomuscular            */ 
@@ -141,14 +141,14 @@ CALL SPInserePergunta ('Sistema Osteomuscular', 9, 8, 'Lombalgia');
 CALL SPInserePergunta ('Sistema Osteomuscular', 9, 9, 'Hérnia de disco');
 CALL SPInserePergunta ('Sistema Osteomuscular', 8, 10,'Quedas');
 CALL SPInserePergunta ('Sistema Osteomuscular', 8, 11,'Fraturas');
-CALL SPInserePergunta ('Sistema Osteomuscular', 24, 12,'Observações Finais');
+CALL SPInserePergunta ('Sistema Osteomuscular', 25, 12,'Observações Finais');
 
 /*===================================*/ 
 /*          Histórico de queda       */ 
 /*===================================*/ 
 
 CALL SPInserePergunta ('Histórico de Queda', 9, 1, 'Quedas Nos Últimos 12 Meses');
-CALL SPInserePergunta ('Sistema Osteomuscular', 24, 2,'Observações Finais');
+CALL SPInserePergunta ('Sistema Osteomuscular', 25, 2,'Observações Finais');
 
 /*===================================*/ 
 /*              Anamnese             */ 
