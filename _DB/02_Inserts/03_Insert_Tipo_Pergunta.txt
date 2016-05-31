@@ -25,3 +25,4 @@ CALL SPInsereTipoPergunta(1,0,0,0,0,0,1,0,0,1,0,'CheckBox - Aberta - Observaçã
 CALL SPInsereTipoPergunta(0,1,0,0,0,1,0,0,0,1,0,'SimNão - CheckBox - Cite');
 CALL SPInsereTipoPergunta(0,0,0,0,0,1,0,0,0,1,0,'CheckBox - Cite');
 CALL SPInsereTipoPergunta(0,1,1,0,0,0,0,0,0,1,0,'SimNão - CheckBox - Qual');
+CALL SPInsereTipoPergunta(0,0,0,0,0,0,1,0,0,0,0,'Observação');
