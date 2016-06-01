@@ -158,6 +158,15 @@ create table tb_naturalidade
 );
 
 /*==============================================================*/
+/* Table: tb_nivel_acesso                                       */
+/*==============================================================*/
+create table tb_nivel_acesso
+(
+   Cod_Acesso           int not null auto_increment PRIMARY KEY,
+   Des_Acesso           varchar(50)
+);
+
+/*==============================================================*/
 /* Table: tb_ocupacao                                           */
 /*==============================================================*/
 create table tb_ocupacao
@@ -284,6 +293,9 @@ create table tb_tipo_telefone
 
 alter table tb_avaliador add constraint FK_FK_Especialidade_Avaliador foreign key (Cod_Especialidade)
       references tb_especialidade (Cod_Especialidade);
+      
+alter table tb_avaliador add constraint FK_FK_nivel_acesso_avaliador foreign key (Cod_Acesso)
+      references tb_nivel_acesso (Cod_Acesso);
 
 alter table tb_cliente add constraint FK_Cor_Cliente foreign key (Cod_Cor)
       references tb_cor (Cod_Cor);
