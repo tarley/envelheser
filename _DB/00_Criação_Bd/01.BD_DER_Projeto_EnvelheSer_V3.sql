@@ -12,6 +12,7 @@ create table tb_avaliador
    Cod_Avaliador        int not null auto_increment PRIMARY KEY,
    Nom_Avaliador        varchar(100) not null,
    Cod_Especialidade    int,
+   Cod_Acesso           int,
    Des_Email            varchar(100),
    Des_Login            varchar(100),
    Des_Senha            varchar(200)
