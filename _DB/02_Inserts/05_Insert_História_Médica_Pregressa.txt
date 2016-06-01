@@ -16,7 +16,7 @@ CALL SPInserePergunta ('Sistema Cardiovascular', 9, 7, 'Arritmias');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 8, 'Cirurgias Cardíacas');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 9, 'Marca-Passo');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'Doença de Chagas');
-CALL SPInserePergunta ('Sistema Cardiovascular', 25, 13, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Cardiovascular', 25, 11, 'Observações Finais');
 
 /*===================================*/ 
 /*          Respiratório             */ 
@@ -58,7 +58,8 @@ CALL SPInserePergunta ('Sistema Genitourinário', 9, 3, 'Doenças Sexualmente Tr
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 4, 'Incontinência Urinária');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 5, 'Infecção De Urina');
 CALL SPInserePergunta ('Sistema Genitourinário', 9, 6, 'Realização de exame citopatológico');
-CALL SPInserePergunta ('Sistema Genitourinário', 25, 7, 'Observações Finais');
+CALL SPInserePergunta ('Sistema Genitourinário', 9, 7, 'Realização de mamografia')
+CALL SPInserePergunta ('Sistema Genitourinário', 25, 8, 'Observações Finais');
 
 /*===================================*/ 
 /*          Endócrino                */ 
