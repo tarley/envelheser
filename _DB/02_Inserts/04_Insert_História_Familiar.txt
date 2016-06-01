@@ -1,12 +1,12 @@
 /*==============================================================*/
-/*     	CADASTRO DE PERGUNTAS GRUPO HISTÃ“RICO FAMILIAR      	*/
+/*     	CADASTRO DE PERGUNTAS GRUPO HISTÓRICO FAMILIAR     	*/
 /*==============================================================*/
-CALL SPInserePergunta ('HistÃ³rico Familiar', 7, 1, 'HÃ¡ alguma doenÃ§a predominante em sua famÃ­lia?');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 1, 2, 'Pais vivos? ');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 3, 3, 'Causa da Morte: ');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 3, 4, 'NÃºmero de irmÃ£os? ');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 3, 5, 'Mortos? ');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 3, 6, 'Causa da Morte: ');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 3, 7, 'NÃºmero de filhos?');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 3, 8, 'Mortos? ');
-CALL SPInserePergunta ('HistÃ³rico Familiar', 3, 9, 'Causa da Morte: ');
+CALL SPInserePergunta ('Histórico Familiar', 7, 1, 'Há alguma doença predominante em sua família?');
+CALL SPInserePergunta ('Histórico Familiar', 1, 2, 'Pais vivos? ');
+CALL SPInserePergunta ('Histórico Familiar', 3, 3, 'Causa da Morte: ');
+CALL SPInserePergunta ('Histórico Familiar', 3, 4, 'Número de irmãos? ');
+CALL SPInserePergunta ('Histórico Familiar', 3, 5, 'Mortos? ');
+CALL SPInserePergunta ('Histórico Familiar', 3, 6, 'Causa da Morte: ');
+CALL SPInserePergunta ('Histórico Familiar', 3, 7, 'Número de filhos?');
+CALL SPInserePergunta ('Histórico Familiar', 3, 8, 'Mortos? ');
+CALL SPInserePergunta ('Histórico Familiar', 3, 9, 'Causa da Morte: ');

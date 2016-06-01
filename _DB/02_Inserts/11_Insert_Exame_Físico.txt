@@ -1,11 +1,11 @@
 /*=============================================================*/
-/*          	CADASTRO DE PERGUNTAS GRUPO EXAME F√çSICO       */
+/*          	CADASTRO DE PERGUNTAS GRUPO EXAME FÕSICO       */
 /*=============================================================*/
-CALL SPInserePergunta ('Exame F√≠sico', 3, 1, 'P.A: (mmHg)');
-CALL SPInserePergunta ('Exame F√≠sico', 3, 2, 'Temperatura: (¬∫c)');
-CALL SPInserePergunta ('Exame F√≠sico', 3, 3, 'Pulso: (bpm)');
-CALL SPInserePergunta ('Exame F√≠sico', 3, 4, 'Respira√ß√£o: ( IRPM)');
-CALL SPInserePergunta ('Exame F√≠sico', 18,5, 'F√°cies:');
-CALL SPInserePergunta ('Exame F√≠sico', 3, 6, 'IMC:');
-CALL SPInserePergunta ('Exame F√≠sico', 3, 7, 'Peso: (kg)');
-CALL SPInserePergunta ('Exame F√≠sico', 3, 8, 'Altura: (cm)');
+CALL SPInserePergunta ('Exame FÌsico', 3, 1, 'P.A: (mmHg)');
+CALL SPInserePergunta ('Exame FÌsico', 3, 2, 'Temperatura: (∫c)');
+CALL SPInserePergunta ('Exame FÌsico', 3, 3, 'Pulso: (bpm)');
+CALL SPInserePergunta ('Exame FÌsico', 3, 4, 'RespiraÁ„o: ( IRPM)');
+CALL SPInserePergunta ('Exame FÌsico', 18,5, 'F·cies:');
+CALL SPInserePergunta ('Exame FÌsico', 3, 6, 'IMC:');
+CALL SPInserePergunta ('Exame FÌsico', 3, 7, 'Peso: (kg)');
+CALL SPInserePergunta ('Exame FÌsico', 3, 8, 'Altura: (cm)');

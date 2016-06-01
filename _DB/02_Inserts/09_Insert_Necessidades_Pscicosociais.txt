@@ -1,9 +1,9 @@
 /*==============================================================*/
-/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOSOCIAIS      */
+/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOSsOCIAIS     */
 /*==============================================================*/
 
-CALL SPInserePergunta ('InteraÃ§Ã£o Social', 22, 1, 'ParticipaÃ§Ã£o em atividades:');
-CALL SPInserePergunta ('InteraÃ§Ã£o Social', 17, 2, 'IntegraÃ§Ã£o com a famÃ­lia:');
-CALL SPInserePergunta ('InteraÃ§Ã£o Social', 3, 3, 'Pessoas de maior afinidade:');
+CALL SPInserePergunta ('Interação Social', 22, 1, 'Participação em atividades:');
+CALL SPInserePergunta ('Interação Social', 17, 2, 'Integração com a família:');
+CALL SPInserePergunta ('Interação Social', 3, 3, 'Pessoas de maior afinidade:');
 
-CALL SPInserePergunta ('RecreaÃ§Ã£o/Lazer/Criatividade', 23, 1, 'RecreaÃ§Ã£o/Lazer/Criatividade');
+CALL SPInserePergunta ('Recreação/Lazer/Criatividade', 23, 1, 'Recreação/Lazer/Criatividade');

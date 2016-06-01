@@ -1,5 +1,5 @@
 /*==============================================================*/ 
-/*     CRIA√á√ÉO DA PROCEDURE PARA REGISTRAR TIPO DE PERGUNTAS    */ 
+/*     CRIA«√O DA PROCEDURE PARA REGISTRAR TIPO DE PERGUNTAS    */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -16,8 +16,8 @@ DELIMITER $$
         IN  P_Pergunta_ComboBox 	bool,
         IN  P_Pergunta_Radio   		bool,
         IN  P_Pergunta_CheckBox 	bool,
-		IN  P_Pergunta_MultiCombo 	bool,
-		IN  P_Des_Tipo_Pergunta 	VARCHAR(100)
+	IN  P_Pergunta_MultiCombo 	bool,
+	IN  P_Des_Tipo_Pergunta 	VARCHAR(100)
     )
         BEGIN
         
@@ -31,8 +31,8 @@ DELIMITER $$
             DECLARE  V_Pergunta_ComboBox 	bool;
             DECLARE  V_Pergunta_Radio   	bool;
             DECLARE  V_Pergunta_CheckBox 	bool;
-	    	DECLARE  V_Pergunta_MultiCombo 	bool;
-	    	DECLARE  V_Des_Tipo_Pergunta 	VARCHAR(100);
+	    DECLARE  V_Pergunta_MultiCombo 	bool;
+	    DECLARE  V_Des_Tipo_Pergunta 	VARCHAR(100);
           
             SET  V_Pergunta_Aberta     := P_Pergunta_Aberta;
             SET  V_Pergunta_SimNao     := P_Pergunta_SimNao;
@@ -44,8 +44,8 @@ DELIMITER $$
             SET  V_Pergunta_ComboBox   := P_Pergunta_ComboBox;
             SET  V_Pergunta_Radio      := P_Pergunta_Radio;
             SET  V_Pergunta_CheckBox   := P_Pergunta_CheckBox;
-	    	SET  V_Pergunta_MultiCombo := P_Pergunta_MultiCombo;
-	    	SET  V_Des_Tipo_Pergunta   := P_Des_Tipo_Pergunta;
+	    SET  V_Pergunta_MultiCombo := P_Pergunta_MultiCombo;
+	    SET  V_Des_Tipo_Pergunta   := P_Des_Tipo_Pergunta;
           
           
 	  	 INSERT INTO tb_tipo_pergunta
@@ -77,7 +77,7 @@ DELIMITER $$
 			V_Pergunta_Radio,
 			V_Pergunta_CheckBox,
 			V_Pergunta_MultiCombo,
-	    	V_Des_Tipo_Pergunta
+	    		V_Des_Tipo_Pergunta
 		);
           
         END  $$

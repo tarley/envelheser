@@ -2,18 +2,18 @@
 /*   CADASTRO DE PERGUNTAS GRUPO COONG 2                        */
 /*==============================================================*/
 
-CALL SPInserePergunta ('Sistema RespiratÃ³rio_2', 10, 1, 'TÃ³rax:');
-CALL SPInserePergunta ('Sistema RespiratÃ³rio_2', 10, 2, 'Auscultura Pulmonar:');
+CALL SPInserePergunta ('Sistema Respiratório Coong', 10, 1, 'Tórax:');
+CALL SPInserePergunta ('Sistema Respiratório Coong', 10, 2, 'Auscultura Pulmonar:');
 
-CALL SPInserePergunta ('Sistema Cardiovascular_2', 10, 1, 'Pulsos:');
-CALL SPInserePergunta ('Sistema Cardiovascular_2', 10, 2, 'Auscultura Pulmonar.:');
+CALL SPInserePergunta ('Sistema Cardiovascular Coong', 10, 1, 'Pulsos:');
+CALL SPInserePergunta ('Sistema Cardiovascular Coong', 10, 2, 'Auscultura Pulmonar.:');
 
-CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 1, 'Abdome:');
-CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 2, 'Auscultura:');
-CALL SPInserePergunta ('Sistema Gastrointestinal_2', 10, 3, 'PercussÃ£o:');
+CALL SPInserePergunta ('Sistema Gastrointestinal', 10, 1, 'Abdome:');
+CALL SPInserePergunta ('Sistema Gastrointestinal', 10, 2, 'Auscultura:');
+CALL SPInserePergunta ('Sistema Gastrointestinal', 10, 3, 'Percussão:');
 
-CALL SPInserePergunta ('Membros Superiores MMSS_2', 10, 1, 'Membros Superiores (MMSS):');
+CALL SPInserePergunta ('Membros Superiores MMSS', 10, 1, 'Membros Superiores (MMSS):');
 
-CALL SPInserePergunta ('Membros Inferiores MMII_2', 10, 1, 'Membros Inferiores (MMII):');
+CALL SPInserePergunta ('Membros Inferiores MMII', 10, 1, 'Membros Inferiores (MMII):');
 
-CALL SPInserePergunta ('Sistema GeniturinÃ¡rio_2', 10, 1, 'Sistema GeniturinÃ¡rio:');
+CALL SPInserePergunta ('Sistema Geniturinário Coong', 10, 1, 'Sistema Geniturinário:');
