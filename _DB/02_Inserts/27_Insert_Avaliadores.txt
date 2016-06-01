@@ -2,16 +2,16 @@
 /*                      CADASTRO DE AVALIADORES                 */
 /*==============================================================*/
 
-INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Psicologia'), 'jcheringer88@hotmail.com', 'joao', '123', 'João');
+INSERT INTO tb_avaliador (Cod_Especialidade, Cod_Acesso, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Psicologia'), (SELECT Cod_Acesso FROM tb_nivel_acesso WHERE Des_Acesso = 'Administrador'),  'jcheringer88@hotmail.com', 'joao', '123', 'João');
 
-INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Odontologia'), 'fillipedeep@gmail.com', 'filipe', '456', 'Filipe Perpétuo');
-
-
-INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Fisioterapia'), 'rodrigorodriguesnp@gmail.com', 'rr', '321', 'Rodrigo Rodrigues');
+INSERT INTO tb_avaliador (Cod_Especialidade, Cod_Acesso, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Odontologia'), (SELECT Cod_Acesso FROM tb_nivel_acesso WHERE Des_Acesso = 'Administrador'), 'fillipedeep@gmail.com', 'filipe', '456', 'Filipe Perpétuo');
 
 
-INSERT INTO tb_avaliador (Cod_Especialidade, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
-VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Enfermagem'), 'carinaroriz@hotmail.com', 'carina', '111', 'Carina Roriz');
+INSERT INTO tb_avaliador (Cod_Especialidade, Cod_Acesso, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Fisioterapia'), (SELECT Cod_Acesso FROM tb_nivel_acesso WHERE Des_Acesso = 'Administrador'), 'rodrigorodriguesnp@gmail.com', 'rr', '321', 'Rodrigo Rodrigues');
+
+
+INSERT INTO tb_avaliador (Cod_Especialidade, Cod_Acesso, Des_Email, Des_Login, Des_Senha, Nom_Avaliador) 
+VALUES ((SELECT Cod_Especialidade FROM tb_especialidade WHERE Nom_Especialidade = 'Enfermagem'), (SELECT Cod_Acesso FROM tb_nivel_acesso WHERE Des_Acesso = 'Administrador'), 'carinaroriz@hotmail.com', 'carina', '111', 'Carina Roriz');
