@@ -16,8 +16,6 @@ CALL SPInserePergunta ('Sistema Cardiovascular', 9, 7, 'Arritmias');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 8, 'Cirurgias Cardíacas');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 9, 'Marca-Passo');
 CALL SPInserePergunta ('Sistema Cardiovascular', 9, 10, 'Doença de Chagas');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 11, 'Prolapso de Válvula Mitral');
-CALL SPInserePergunta ('Sistema Cardiovascular', 9, 12, 'Febre Reumática Com Cardiopatia');
 CALL SPInserePergunta ('Sistema Cardiovascular', 25, 13, 'Observações Finais');
 
 /*===================================*/ 
