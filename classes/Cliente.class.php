@@ -49,7 +49,7 @@ class Cliente {
 	* Retorna os dados do cliente de acordo com o codigo passado pelo parametro
 	*/	
 	function getDados($codCliente) {		
-
+		
 		$query = "SELECT Cod_Cliente, Nom_Cliente, ";
 		$query .= "(SELECT Num_Telefone FROM tb_telefone t WHERE t.Cod_Cliente = c.Cod_Cliente LIMIT 1) AS Num_Telefone, ";
 		$query .= "co.Nom_Cor, co.Cod_Cor, e.Nom_Escolaridade, e.Cod_Escolaridade, o.Nom_Ocupacao, o.Cod_Ocupacao, ec.Nom_Estado_Civil, ec.Cod_Estado_Civil, n.Nom_Naturalidade, n.Cod_Naturalidade, ";
