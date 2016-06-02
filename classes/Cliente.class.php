@@ -38,7 +38,7 @@ class Cliente {
 
 		$listaClientes = array();
 		
-		while($list  = mysqli_fetch_assoc($query)) {
+		while($list  = mysqli_fetch_assoc($query)) {		
 			$listaClientes[] = $list;
 		}
 
@@ -65,7 +65,7 @@ class Cliente {
 		
 		$query = mysqli_query($this->cnn, $query);
 		
-		$cliente  = mysqli_fetch_assoc($query);		
+		$cliente  = mysqli_fetch_assoc($query);	
 
 		return $cliente;
 	}

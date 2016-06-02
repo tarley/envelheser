@@ -20,5 +20,5 @@ function __autoload($class_name) {
 }
 
 function utf8(&$entry) {
-	$entry = iconv('Windows-1250', 'UTF-8', $entry);
+	//$entry = iconv('Windows-1250', 'UTF-8', $entry);
 }
