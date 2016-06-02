@@ -21,7 +21,7 @@
 			</li>
 			<?php } ?>
 			<li class="menu-principal-li">
-				<a href="fundadores.php" ><i class="fa fa-user-md"></i> Fundadores</a>
+				<a href="fundadores.php" ><i class="fa fa-group"></i> Fundadores</a>
 			</li>		
 		</ul>
 	</div>	
