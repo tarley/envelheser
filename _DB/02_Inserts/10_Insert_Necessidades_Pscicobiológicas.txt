@@ -1,21 +1,21 @@
 /*==============================================================*/
-/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOBIOLÃ“GICAS   */
+/*   CADASTRO DE PERGUNTAS GRUPO NECESSIDADES PSICOBIOLÓGICAS   */
 /*==============================================================*/
 
-CALL SPInserePergunta ('Cuidado Corporal', 17, 1, 'DÃ©ficit prÃ©vio no auto cuidado: Higiene corporal');
-CALL SPInserePergunta ('Cuidado Corporal', 17, 2, 'DÃ©ficit prÃ©vio no auto cuidado: Higiene oral');
+CALL SPInserePergunta ('Cuidado Corporal', 17, 1, 'Déficit prévio no auto cuidado: Higiene corporal');
+CALL SPInserePergunta ('Cuidado Corporal', 17, 2, 'Déficit prévio no auto cuidado: Higiene oral');
 
-CALL SPInserePergunta ('HÃ¡bito de Sono e Repouso', 22, 1, 'Tem dificuldade para dormir?');
+CALL SPInserePergunta ('Hábito de Sono e Repouso', 22, 1, 'Tem dificuldade para dormir?');
 
-CALL SPInserePergunta ('ExercÃ­cio', 7, 1, 'ExercÃ­cio');
+CALL SPInserePergunta ('Exercício', 7, 1, 'Exercício');
 
-CALL SPInserePergunta ('EliminaÃ§Ã£o Intestinal', 3, 1, 'FrequÃªncia vezes/dia:');
-CALL SPInserePergunta ('EliminaÃ§Ã£o Intestinal', 3, 2, 'ColoraÃ§Ã£o');
-CALL SPInserePergunta ('EliminaÃ§Ã£o Intestinal', 1, 3, 'Odor');
-CALL SPInserePergunta ('EliminaÃ§Ã£o Intestinal', 1, 4, 'Dor');
-CALL SPInserePergunta ('EliminaÃ§Ã£o Intestinal', 3, 5, 'Quantidade:');
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 1, 'Frequência vezes/dia:');
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 2, 'Coloração');
+CALL SPInserePergunta ('Eliminação Intestinal', 1, 3, 'Odor');
+CALL SPInserePergunta ('Eliminação Intestinal', 1, 4, 'Dor');
+CALL SPInserePergunta ('Eliminação Intestinal', 3, 5, 'Quantidade:');
 
-CALL SPInserePergunta ('TerapÃªutica', 9, 1, 'Segue orientaÃ§Ãµes prÃ©vias relacionadas Ã¡ saÃºde?');
+CALL SPInserePergunta ('Terapêutica', 9, 1, 'Segue orientações prévias relacionadas á saúde?');
 
-CALL SPInserePergunta ('Sexualidade', 16, 1, 'Dados de interesse clÃ­nico');
+CALL SPInserePergunta ('Sexualidade', 16, 1, 'Dados de interesse clínico');
 

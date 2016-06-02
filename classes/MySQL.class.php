@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type: text/html; charset=UTF-8", true);
 class MySQL {
 	/*
 	* Instancia de Logger
@@ -17,6 +17,8 @@ class MySQL {
 	function __construct(){
 		$this->log = new Logger();
 		$this->link = mysqli_connect(HOSTNAME, DB_USER, DB_PASSWORD); //Conecta ao BD
+
+		mysqli_set_charset($this->link,"utf8");
 		
 		if(!$this->link) //Verifica a conex�o
 		{

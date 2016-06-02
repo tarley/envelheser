@@ -2,19 +2,19 @@
 /*                    CADASTRO DE LISTA RADIO                   */ 
 /*==============================================================*/
 
-CALL SPInsereListaRadio ('AtÃ­pica','FÃ¡cies:');
-CALL SPInsereListaRadio ('TÃ­pica','FÃ¡cies:');
+CALL SPInsereListaRadio ('Atípica','Fácies:');
+CALL SPInsereListaRadio ('Típica','Fácies:');
 
 CALL SPInsereListaRadio ('Ausente','Halitose/Tipo de odor');
 CALL SPInsereListaRadio ('Presente','Halitose/Tipo de odor');
 
-CALL SPInsereListaRadio ('Classe I','ClassificaÃ§Ã£o de Angle:');
-CALL SPInsereListaRadio ('Classe II','ClassificaÃ§Ã£o de Angle:');
-CALL SPInsereListaRadio ('Classe III','ClassificaÃ§Ã£o de Angle:');
-CALL SPInsereListaRadio ('Normal','ClassificaÃ§Ã£o de Angle:');
+CALL SPInsereListaRadio ('Classe I','Classificação de Angle:');
+CALL SPInsereListaRadio ('Classe II','Classificação de Angle:');
+CALL SPInsereListaRadio ('Classe III','Classificação de Angle:');
+CALL SPInsereListaRadio ('Normal','Classificação de Angle:');
 
 CALL SPInsereListaRadio ('Guia Canina','Lateralidade:');
-CALL SPInsereListaRadio ('FunÃ§Ã£o em Grupo','Lateralidade:');
+CALL SPInsereListaRadio ('Função em Grupo','Lateralidade:');
 CALL SPInsereListaRadio ('Ausente','Lateralidade:');
 
 CALL SPInsereListaRadio ('Presente','Mordida cruzada:');
@@ -23,10 +23,10 @@ CALL SPInsereListaRadio ('Ausente','Mordida cruzada:');
 CALL SPInsereListaRadio ('Presente','Guia anterior:');
 CALL SPInsereListaRadio ('Ausente','Guia anterior:');
 
-CALL SPInsereListaRadio ('Sim','Portador de Aparelho ProtÃ©tico ou OrtodÃ´ntico:');
-CALL SPInsereListaRadio ('NÃ£o','Portador de Aparelho ProtÃ©tico ou OrtodÃ´ntico:');
+CALL SPInsereListaRadio ('Sim','Portador de Aparelho Protético ou Ortodôntico:');
+CALL SPInsereListaRadio ('Não','Portador de Aparelho Protético ou Ortodôntico:');
 
-CALL SPInsereListaRadio ('PrÃ³tese Parcial RemovÃ­vel','Se portador de aparelho protÃ©tico:');
-CALL SPInsereListaRadio ('PrÃ³tese Total RemovÃ­vel','Se portador de aparelho protÃ©tico:');
-CALL SPInsereListaRadio ('PrÃ³tese Parcial Fixa','Se portador de aparelho protÃ©tico:');
-CALL SPInsereListaRadio ('PrÃ³tese Sobre Implantes','Se portador de aparelho protÃ©tico:');
+CALL SPInsereListaRadio ('Prótese Parcial Removível','Se portador de aparelho protético:');
+CALL SPInsereListaRadio ('Prótese Total Removível','Se portador de aparelho protético:');
+CALL SPInsereListaRadio ('Prótese Parcial Fixa','Se portador de aparelho protético:');
+CALL SPInsereListaRadio ('Prótese Sobre Implantes','Se portador de aparelho protético:');

@@ -2,114 +2,114 @@
 /*                       CADASTRO DE LISTA CHECKBOX             */ 
 /*==============================================================*/
 
-CALL SPInsereListaCheckBox ('√Åcaros e poeira','Alergias?');
+CALL SPInsereListaCheckBox ('¡caros e poeira','Alergias?');
 CALL SPInsereListaCheckBox ('Alimentares','Alergias?');
 CALL SPInsereListaCheckBox ('Medicamentos','Alergias?');
 CALL SPInsereListaCheckBox ('Picada de inseto','Alergias?');
 CALL SPInsereListaCheckBox ('Plantas','Alergias?');
 
-CALL SPInsereListaCheckBox ('Varicela','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Sarampo','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Rub√©ola','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Herpes','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Gripe','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Conjutivite','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Tuberculose','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Caxumba','Tem ou teve doen√ßa infecto-contagiosa?');
-CALL SPInsereListaCheckBox ('Hepatite','Tem ou teve doen√ßa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Varicela','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Sarampo','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('RubÈola','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Herpes','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Gripe','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Conjutivite','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Tuberculose','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Caxumba','Tem ou teve doenÁa infecto-contagiosa?');
+CALL SPInsereListaCheckBox ('Hepatite','Tem ou teve doenÁa infecto-contagiosa?');
 
-CALL SPInsereListaCheckBox ('Grupo de idosos','Participa√ß√£o em atividades:');
-CALL SPInsereListaCheckBox ('Hidrogin√°stica','Participa√ß√£o em atividades:');
-CALL SPInsereListaCheckBox ('Dan√ßa','Participa√ß√£o em atividades:');
-CALL SPInsereListaCheckBox ('Grupo religioso','Participa√ß√£o em atividades:');
-CALL SPInsereListaCheckBox ('Outros','Participa√ß√£o em atividades:');
+CALL SPInsereListaCheckBox ('Grupo de idosos','ParticipaÁ„o em atividades:');
+CALL SPInsereListaCheckBox ('Hidrogin·stica','ParticipaÁ„o em atividades:');
+CALL SPInsereListaCheckBox ('DanÁa','ParticipaÁ„o em atividades:');
+CALL SPInsereListaCheckBox ('Grupo religioso','ParticipaÁ„o em atividades:');
+CALL SPInsereListaCheckBox ('Outros','ParticipaÁ„o em atividades:');
 
-CALL SPInsereListaCheckBox ('Televis√£o','Recrea√ß√£o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('M√∫sica','Recrea√ß√£o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Computador','Recrea√ß√£o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Revistas','Recrea√ß√£o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Livros','Recrea√ß√£o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Trabalhos manuais','Recrea√ß√£o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Jogos','Recrea√ß√£o/Lazer/Criatividade');
-CALL SPInsereListaCheckBox ('Outros','Recrea√ß√£o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Televis„o','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('M˙sica','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Computador','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Revistas','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Livros','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Trabalhos manuais','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Jogos','RecreaÁ„o/Lazer/Criatividade');
+CALL SPInsereListaCheckBox ('Outros','RecreaÁ„o/Lazer/Criatividade');
 
-CALL SPInsereListaCheckBox ('Ins√¥nia','Tem dificuldade para dormir?');
+CALL SPInsereListaCheckBox ('InsÙnia','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Sonambulismo','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Inverte dia com a noite','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Medo noturno','Tem dificuldade para dormir?');
 CALL SPInsereListaCheckBox ('Outros','Tem dificuldade para dormir?');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Pele:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Pele:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Pele:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Pele:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Pele:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Pele:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Pele:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Pele:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Linfonodos:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Linfonodos:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Linfonodos:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Linfonodos:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Linfonodos:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de ATM:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de ATM:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de ATM:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de ATM:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de ATM:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de ATM:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de ATM:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de ATM:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de L√°bios:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de L√°bios:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de L√°bios:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de L√°bios:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de L·bios:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de L·bios:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de L·bios:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de L·bios:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Mucosa jugal:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Mucosa jugal:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Mucosa jugal:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Mucosa jugal:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Mucosa jugal:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Gengiva e mucosa alveolar:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Gengiva e mucosa alveolar:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Gengiva e mucosa alveolar:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Gengiva e mucosa alveolar:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Gengiva e mucosa alveolar:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Soalho Bucal:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Soalho Bucal:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Soalho Bucal:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Soalho Bucal:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Soalho Bucal:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de L√≠ngua:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de L√≠ngua:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de L√≠ngua:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de L√≠ngua:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de LÌngua:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de LÌngua:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de LÌngua:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de LÌngua:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Palato:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Palato:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Palato:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Palato:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Palato:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Palato:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Palato:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Palato:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Orofaringe:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Orofaringe:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Orofaringe:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Orofaringe:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Orofaringe:');
 
-CALL SPInsereListaCheckBox ('Cor','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
-CALL SPInsereListaCheckBox ('Aspecto','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
-CALL SPInsereListaCheckBox ('Textura','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
-CALL SPInsereListaCheckBox ('Nenhuma Altera√ß√£o','Altera√ß√£o de Gl√¢ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Cor','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Aspecto','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Textura','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
+CALL SPInsereListaCheckBox ('Nenhuma AlteraÁ„o','AlteraÁ„o de Gl‚ndulas e ductos salivares:');
 
-CALL SPInsereListaCheckBox ('Fluida','Altera√ß√£o de Saliva:');
-CALL SPInsereListaCheckBox ('Viscosa','Altera√ß√£o de Saliva:');
-CALL SPInsereListaCheckBox ('Quantidade','Altera√ß√£o de Saliva:');
-CALL SPInsereListaCheckBox ('Hipersaliva√ß√£o','Altera√ß√£o de Saliva:');
+CALL SPInsereListaCheckBox ('Fluida','AlteraÁ„o de Saliva:');
+CALL SPInsereListaCheckBox ('Viscosa','AlteraÁ„o de Saliva:');
+CALL SPInsereListaCheckBox ('Quantidade','AlteraÁ„o de Saliva:');
+CALL SPInsereListaCheckBox ('HipersalivaÁ„o','AlteraÁ„o de Saliva:');
 
-CALL SPInsereListaCheckBox ('Sim√©trico','T√≥rax:');
-CALL SPInsereListaCheckBox ('Assim√©trico','T√≥rax:');
-CALL SPInsereListaCheckBox ('Expansibilidade Normal','T√≥rax:');
-CALL SPInsereListaCheckBox ('Expansibilidade Diminu√≠da','T√≥rax:');
-CALL SPInsereListaCheckBox ('Presen√ßa de Fr√™mitos','T√≥rax:');
+CALL SPInsereListaCheckBox ('SimÈtrico','TÛrax:');
+CALL SPInsereListaCheckBox ('AssimÈtrico','TÛrax:');
+CALL SPInsereListaCheckBox ('Expansibilidade Normal','TÛrax:');
+CALL SPInsereListaCheckBox ('Expansibilidade DiminuÌda','TÛrax:');
+CALL SPInsereListaCheckBox ('PresenÁa de FrÍmitos','TÛrax:');
 
 CALL SPInsereListaCheckBox ('MVF','Auscultura Pulmonar:');
 CALL SPInsereListaCheckBox ('MVA','Auscultura Pulmonar:');
 CALL SPInsereListaCheckBox ('Roncos','Auscultura Pulmonar:');
-CALL SPInsereListaCheckBox ('S√≠bilos','Auscultura Pulmonar:');
-CALL SPInsereListaCheckBox ('Crepita√ß√£o','Auscultura Pulmonar:');
+CALL SPInsereListaCheckBox ('SÌbilos','Auscultura Pulmonar:');
+CALL SPInsereListaCheckBox ('CrepitaÁ„o','Auscultura Pulmonar:');
 CALL SPInsereListaCheckBox ('Estertores','Auscultura Pulmonar:');
 
 CALL SPInsereListaCheckBox ('Regular','Pulsos:');
@@ -125,33 +125,33 @@ CALL SPInsereListaCheckBox ('BNRNF\2T','Auscultura Pulmonar.:');
 CALL SPInsereListaCheckBox ('Plano','Abdome:');
 CALL SPInsereListaCheckBox ('Globoso','Abdome:');
 CALL SPInsereListaCheckBox ('Normotenso','Abdome:');
-CALL SPInsereListaCheckBox ('Fl√°cido √† Palpa√ß√£o','Abdome:');
-CALL SPInsereListaCheckBox ('Resistente √† Palpa√ß√£o','Abdome:');
+CALL SPInsereListaCheckBox ('Fl·cido ‡ PalpaÁ„o','Abdome:');
+CALL SPInsereListaCheckBox ('Resistente ‡ PalpaÁ„o','Abdome:');
 
-CALL SPInsereListaCheckBox ('Presen√ßa de RHA','Auscultura:');
-CALL SPInsereListaCheckBox ('Aus√™ncia de RHA','Auscultura:');
+CALL SPInsereListaCheckBox ('PresenÁa de RHA','Auscultura:');
+CALL SPInsereListaCheckBox ('AusÍncia de RHA','Auscultura:');
 
-CALL SPInsereListaCheckBox ('Tip√¢nico','Percuss√£o:');
-CALL SPInsereListaCheckBox ('Maci√ßo','Percuss√£o:');
-CALL SPInsereListaCheckBox ('Submaci√ßo','Percuss√£o:');
-CALL SPInsereListaCheckBox ('Endolar','Percuss√£o:');
-CALL SPInsereListaCheckBox ('Outros','Percuss√£o:');
+CALL SPInsereListaCheckBox ('Tip‚nico','Percuss„o:');
+CALL SPInsereListaCheckBox ('MaciÁo','Percuss„o:');
+CALL SPInsereListaCheckBox ('SubmaciÁo','Percuss„o:');
+CALL SPInsereListaCheckBox ('Endolar','Percuss„o:');
+CALL SPInsereListaCheckBox ('Outros','Percuss„o:');
 
-CALL SPInsereListaCheckBox ('Sensibilidade e For√ßa Motora Preservada','Membros Superiores (MMSS):');
-CALL SPInsereListaCheckBox ('Presen√ßa de Les√µes','Membros Superiores (MMSS):');
+CALL SPInsereListaCheckBox ('Sensibilidade e ForÁa Motora Preservada','Membros Superiores (MMSS):');
+CALL SPInsereListaCheckBox ('PresenÁa de Lesıes','Membros Superiores (MMSS):');
 CALL SPInsereListaCheckBox ('Paresia','Membros Superiores (MMSS):');
 CALL SPInsereListaCheckBox ('Plegia','Membros Superiores (MMSS):');
 CALL SPInsereListaCheckBox ('Edema','Membros Superiores (MMSS):');
 
-CALL SPInsereListaCheckBox ('Sensibilidade e For√ßa Motora Preservada','Membros Inferiores (MMII):');
+CALL SPInsereListaCheckBox ('Sensibilidade e ForÁa Motora Preservada','Membros Inferiores (MMII):');
 CALL SPInsereListaCheckBox ('Paresia','Membros Inferiores (MMII):');
 CALL SPInsereListaCheckBox ('Plegia','Membros Inferiores (MMII):');
 CALL SPInsereListaCheckBox ('Edema','Membros Inferiores (MMII):');
 
-CALL SPInsereListaCheckBox ('Sem Altera√ß√µes Anat√¥micas','Sistema Geniturin√°rio:');
-CALL SPInsereListaCheckBox ('Mic√ß√£o Espont√¢nea','Sistema Geniturin√°rio:');
-CALL SPInsereListaCheckBox ('SVD','Sistema Geniturin√°rio:');
-CALL SPInsereListaCheckBox ('Irriga√ß√£o Vesical','Sistema Geniturin√°rio:');
-CALL SPInsereListaCheckBox ('Incontin√™ncia','Sistema Geniturin√°rio:');
-CALL SPInsereListaCheckBox ('Presen√ßa de Anomalia','Sistema Geniturin√°rio:');
-CALL SPInsereListaCheckBox ('Les√µes nos √ìrg√£os Vesicais','Sistema Geniturin√°rio:');
+CALL SPInsereListaCheckBox ('Sem AlteraÁıes AnatÙmicas','Sistema Geniturin·rio:');
+CALL SPInsereListaCheckBox ('MicÁ„o Espont‚nea','Sistema Geniturin·rio:');
+CALL SPInsereListaCheckBox ('SVD','Sistema Geniturin·rio:');
+CALL SPInsereListaCheckBox ('IrrigaÁ„o Vesical','Sistema Geniturin·rio:');
+CALL SPInsereListaCheckBox ('IncontinÍncia','Sistema Geniturin·rio:');
+CALL SPInsereListaCheckBox ('PresenÁa de Anomalia','Sistema Geniturin·rio:');
+CALL SPInsereListaCheckBox ('Lesıes nos ”rg„os Vesicais','Sistema Geniturin·rio:');

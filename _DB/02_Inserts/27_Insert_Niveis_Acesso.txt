@@ -1,0 +1,6 @@
+/*==============================================================*/
+/*                   CADASTRO DE NIVEIS DE ACESSO               */
+/*==============================================================*/
+
+INSERT INTO tb_nivel_acesso (Des_Acesso) VALUES ('Administrador');
+INSERT INTO tb_nivel_acesso (Des_Acesso) VALUES ('Comum');

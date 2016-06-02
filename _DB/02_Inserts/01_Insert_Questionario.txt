@@ -1,5 +1,5 @@
 /*==============================================================*/  
-/*                  INSERT DOS QUESTION√ÅRIOS                    */  
+/*                  INSERT DOS QUESTION¡RIOS                    */  
 /*==============================================================*/  
 
 INSERT INTO tb_questionario (Des_Questionario) VALUES ('Triagem'); 

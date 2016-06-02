@@ -1,30 +1,30 @@
 /*==============================================================*/ 
-/*           CRIA√á√ÉO DA PROCEDURE DE REGISTRAR GRUPOS           */ 
+/*           CRIA«√O DA PROCEDURE DE REGISTRAR GRUPOS           */ 
 /*==============================================================*/
 
 DELIMITER $$
 
     CREATE  PROCEDURE SPInsereGrupo
     (
-        IN P_Nome_Grupo 		 VARCHAR(100),
+        IN P_Nome_Grupo 	 VARCHAR(100),
         IN P_Nome_Grupo_Superior VARCHAR(100),
         IN P_Nome_Questionario   VARCHAR(100),
         IN P_Numero_Ordem_Grupo  INT,
-		IN P_Ind_Status          boolean		
+	IN P_Ind_Status          boolean		
     )
         BEGIN
         
-          DECLARE V_Nome_Grupo			VARCHAR(100);
+          DECLARE V_Nome_Grupo		VARCHAR(100);
           DECLARE V_Cod_Grupo_Superior 	INT;
           DECLARE V_Cod_Questionario 	INT;
           DECLARE V_Numero_Ordem_Grupo 	INT;
-	  	  DECLARE V_Ind_Status          boolean;
+	  DECLARE V_Ind_Status          boolean;
           
-          SET V_Nome_Grupo 			:= P_Nome_Grupo;
+          SET V_Nome_Grupo 		:= P_Nome_Grupo;
           SET V_Cod_Grupo_Superior 	:= (SELECT Cod_Grupo FROM tb_grupo WHERE Nom_Grupo = P_Nome_Grupo_Superior);
           SET V_Cod_Questionario 	:= (SELECT Cod_Questionario FROM tb_questionario WHERE Des_Questionario = P_Nome_Questionario);
           SET V_Numero_Ordem_Grupo 	:= P_Numero_Ordem_Grupo;
-          SET V_Ind_Status          := P_Ind_Status;
+          SET V_Ind_Status          	:= P_Ind_Status;
           
           
 	  	 INSERT INTO tb_grupo

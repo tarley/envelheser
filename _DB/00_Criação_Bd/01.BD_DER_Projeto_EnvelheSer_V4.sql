@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     06/05/2016 00:17:18                          */
+/* Created on:     01/06/2016 01:11:24                          */
 /*==============================================================*/
 
 
@@ -12,6 +12,7 @@ create table tb_avaliador
    Cod_Avaliador        int not null auto_increment PRIMARY KEY,
    Nom_Avaliador        varchar(100) not null,
    Cod_Especialidade    int,
+   Cod_Acesso           int,
    Des_Email            varchar(100),
    Des_Login            varchar(100),
    Des_Senha            varchar(200)
@@ -158,6 +159,15 @@ create table tb_naturalidade
 );
 
 /*==============================================================*/
+/* Table: tb_nivel_acesso                                       */
+/*==============================================================*/
+create table tb_nivel_acesso
+(
+   Cod_Acesso           int not null auto_increment PRIMARY KEY,
+   Des_Acesso           varchar(50)
+);
+
+/*==============================================================*/
 /* Table: tb_ocupacao                                           */
 /*==============================================================*/
 create table tb_ocupacao
@@ -206,17 +216,17 @@ create table tb_questionario
 create table tb_resposta
 (
    Cod_Resposta_Prontuario smallint not null auto_increment PRIMARY KEY,
-   Num_Prontuario      	   int not null,
-   Cod_Pergunta            smallint not null,
-   Des_Resposta_Aberta     varchar(255),
-   Ind_Resposta_SimNao     bool,
-   Des_Resposta_Qual       varchar(255),
-   Des_Resposta_Quando     varchar(255),
-   Des_Resposta_Outros     varchar(255),
-   Des_Resposta_Cite       varchar(255),
+   Num_Prontuario       int not null,
+   Cod_Pergunta         smallint not null,
+   Des_Resposta_Aberta  varchar(255),
+   Ind_Resposta_SimNao  bool,
+   Des_Resposta_Qual    varchar(255),
+   Des_Resposta_Quando  varchar(255),
+   Des_Resposta_Outros  varchar(255),
+   Des_Resposta_Cite    varchar(255),
    Des_Resposta_Observacao varchar(255),
-   Cod_Resposta_ComboBox   smallint,
-   Cod_Resposta_Radio      smallint
+   Cod_Resposta_ComboBox smallint,
+   Cod_Resposta_Radio   smallint
 );
 
 /*==============================================================*/
@@ -225,10 +235,10 @@ create table tb_resposta
 create table tb_resposta_checkbox
 (
    Cod_Resposta_CheckBox smallint not null auto_increment PRIMARY KEY,
-   Num_Prontuario        int,
-   Cod_Pergunta          smallint,
-   Cod_Item_Check        smallint,
-   Ind_CheckBox          bool
+   Num_Prontuario       int,
+   Cod_Pergunta         smallint,
+   Cod_Item_Check       smallint,
+   Ind_CheckBox         bool
 );
 
 /*==============================================================*/
@@ -237,9 +247,9 @@ create table tb_resposta_checkbox
 create table tb_resposta_multi_combo
 (
    Cod_Resposta_Multi_Combo smallint not null auto_increment PRIMARY KEY,
-   Num_Prontuario       	int,
-   Cod_Pergunta         	smallint,
-   Cod_Item_Multi_Combo 	int
+   Num_Prontuario       int,
+   Cod_Pergunta         smallint,
+   Cod_Item_Multi_Combo int
 );
 
 /*==============================================================*/
@@ -258,19 +268,19 @@ create table tb_telefone
 /*==============================================================*/
 create table tb_tipo_pergunta
 (
-   Cod_Tipo_Pergunta    	tinyint not null auto_increment PRIMARY KEY,
-   Ind_Pergunta_Aberta  	bool,
-   Ind_Pergunta_SimNao 		bool,
-   Ind_Pergunta_Qual   	 	bool,
-   Ind_Pergunta_Quando  	bool,
-   Ind_Pergunta_Outros  	bool,
-   Ind_Pergunta_Cite    	bool,
-   Ind_Pergunta_Observacao  bool,
-   Ind_Pergunta_ComboBox 	bool,
-   Ind_Pergunta_Radio   	bool,
-   Ind_Pergunta_CheckBox 	bool,
+   Cod_Tipo_Pergunta    tinyint not null auto_increment PRIMARY KEY,
+   Ind_Pergunta_Aberta  bool,
+   Ind_Pergunta_SimNao  bool,
+   Ind_Pergunta_Qual    bool,
+   Ind_Pergunta_Quando  bool,
+   Ind_Pergunta_Outros  bool,
+   Ind_Pergunta_Cite    bool,
+   Ind_Pergunta_Observacao bool,
+   Ind_Pergunta_ComboBox bool,
+   Ind_Pergunta_Radio   bool,
+   Ind_Pergunta_CheckBox bool,
    Ind_Pergunta_Multi_Combo bool,
-   Des_Tipo_Perguntas   	varchar(100)
+   Des_Tipo_Perguntas   varchar(100)
 );
 
 /*==============================================================*/
@@ -281,6 +291,9 @@ create table tb_tipo_telefone
    Cod_Tipo_Telefone    int not null auto_increment PRIMARY KEY,
    Des_Tipo_Telefone    varchar(20)
 );
+
+alter table tb_avaliador add constraint FK_FK_Acesso_Avaliador foreign key (Cod_Acesso)
+      references tb_nivel_acesso (Cod_Acesso);
 
 alter table tb_avaliador add constraint FK_FK_Especialidade_Avaliador foreign key (Cod_Especialidade)
       references tb_especialidade (Cod_Especialidade);

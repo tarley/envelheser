@@ -1,4 +1,9 @@
+<?php
+	require_once 'init.php';
 
+    if ($_SESSION['Cod_Acesso'] != 1)
+        header("location:index.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,5 +1,5 @@
 <?php
-	header("Content-Type: text/html; charset=ISO-8859-1", true);
+	header("Content-Type: text/html; charset=UTF-8", true);
 	
 	require_once '../init.php';
 	
@@ -42,6 +42,18 @@
 		$retorno .= "}";
 		
 		echo $retorno;
+	} else if(isset($_POST['user'])) {
+		$user = $_POST['user'];
+		$pass = $_POST['pass'];
+
+		$retorno = $avaliador->Login($user, $pass);
+
+		if ($retorno['Sucesso']) {
+			$_SESSION['Cod_Avaliador'] = $retorno['Cod_Avaliador'];
+			$_SESSION['Cod_Acesso'] = $retorno['Cod_Acesso'];
+		}
+
+		echo json_encode($retorno);
 	}
 	
 	//Este trecho deve ficar sempre no fim do arquivo

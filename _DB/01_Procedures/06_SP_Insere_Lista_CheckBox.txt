@@ -1,5 +1,5 @@
 /*==============================================================*/ 
-/*       CRIA√á√ÉO DA PROCEDURE DE REGISTRAR LISTA DE CHECKBOX    */ 
+/*       CRIA«√O DA PROCEDURE DE REGISTRAR LISTA DE CHECKBOX    */ 
 /*==============================================================*/ 
 
 DELIMITER $$
@@ -16,7 +16,7 @@ DELIMITER $$
           DECLARE V_Cod_Pergunta 	SMALLINT;
           
           SET V_Descricao_Item 	    	:= P_Descricao_Item;
-          SET V_Cod_Pergunta   			:= (SELECT Cod_Pergunta FROM tb_pergunta WHERE Des_Pergunta = P_Descricao_Pergunta);
+          SET V_Cod_Pergunta   		:= (SELECT Cod_Pergunta FROM tb_pergunta WHERE Des_Pergunta = P_Descricao_Pergunta);
           
           
 	  	 INSERT INTO tb_lista_check_box

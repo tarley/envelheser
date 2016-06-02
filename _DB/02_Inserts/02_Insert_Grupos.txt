@@ -2,74 +2,74 @@
 /*                     CADASTRO DOS GRUPOS                      */ 
 /*==============================================================*/ 
 
-CALL SPInsereGrupo ('IdentificaÃ§Ã£o', null, 'Triagem', 1, 0);
+CALL SPInsereGrupo ('Identificação', null, 'Triagem', 1, 0);
 
 CALL SPInsereGrupo ('Anamnese', null, 'Triagem', 1, 1);
 
-			CALL SPInsereGrupo ('HistÃ³ria MÃ©dica Pregressa', 'Anamnese', 'Triagem', 1, 1);
+			CALL SPInsereGrupo ('História Médica Pregressa', 'Anamnese', 'Triagem', 1, 1);
 
-						CALL SPInsereGrupo ('Sistema Cardiovascular', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 1, 1);
-						CALL SPInsereGrupo ('Sistema RespiratÃ³rio', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 2, 1);
-						CALL SPInsereGrupo ('Sistema DigestÃ³rio', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 3, 1);
-						CALL SPInsereGrupo ('Sistema GenitourinÃ¡rio', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 4, 1);
-						CALL SPInsereGrupo ('Sistema EndÃ³crino', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 5, 1);
-						CALL SPInsereGrupo ('Sistema Nervoso Central', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 6, 1);
-						CALL SPInsereGrupo ('Sistema Sensitivo', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 7, 1);
-						CALL SPInsereGrupo ('Sistema HematopoÃ©tico', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 8, 1);
-						CALL SPInsereGrupo ('Sistema Osteomuscular', 'HistÃ³ria MÃ©dica Pregressa', 'Triagem', 9, 1);
+						CALL SPInsereGrupo ('Sistema Cardiovascular', 'História Médica Pregressa', 'Triagem', 1, 1);
+						CALL SPInsereGrupo ('Sistema Respiratório', 'História Médica Pregressa', 'Triagem', 2, 1);
+						CALL SPInsereGrupo ('Sistema Digestório', 'História Médica Pregressa', 'Triagem', 3, 1);
+						CALL SPInsereGrupo ('Sistema Geniturinário', 'História Médica Pregressa', 'Triagem', 4, 1);
+						CALL SPInsereGrupo ('Sistema Endócrino', 'História Médica Pregressa', 'Triagem', 5, 1);
+						CALL SPInsereGrupo ('Sistema Nervoso Central', 'História Médica Pregressa', 'Triagem', 6, 1);
+						CALL SPInsereGrupo ('Sistema Sensitivo', 'História Médica Pregressa', 'Triagem', 7, 1);
+						CALL SPInsereGrupo ('Sistema Hematopoético', 'História Médica Pregressa', 'Triagem', 8, 1);
+						CALL SPInsereGrupo ('Sistema Osteomuscular', 'História Médica Pregressa', 'Triagem', 9, 1);
 
-			CALL SPInsereGrupo ('HistÃ³rico de Queda', 'Anamnese', 'Triagem', 2, 1);
+			CALL SPInsereGrupo ('Histórico de Queda', 'Anamnese', 'Triagem', 2, 1);
 
-			CALL SPInsereGrupo ('HistÃ³rico Familiar', 'Anamnese', 'Triagem', 3, 1);
+			CALL SPInsereGrupo ('Histórico Familiar', 'Anamnese', 'Triagem', 3, 1);
 
-			CALL SPInsereGrupo ('HistÃ³rico Social', 'Anamnese', 'Triagem', 4, 1);
+			CALL SPInsereGrupo ('Histórico Social', 'Anamnese', 'Triagem', 4, 1);
 
-			CALL SPInsereGrupo ('HÃ¡bitos e VÃ­cios', 'Anamnese', 'Triagem', 5, 1);
+			CALL SPInsereGrupo ('Hábitos e Vícios', 'Anamnese', 'Triagem', 5, 1);
 
-				CALL SPInsereGrupo ('Tabagismo', 'HÃ¡bitos e VÃ­cios', 'Triagem', 1, 1);
+				CALL SPInsereGrupo ('Tabagismo', 'Hábitos e Vícios', 'Triagem', 1, 1);
 
-				CALL SPInsereGrupo ('Etilismo', 'HÃ¡bitos e VÃ­cios', 'Triagem', 2, 1);
+				CALL SPInsereGrupo ('Etilismo', 'Hábitos e Vícios', 'Triagem', 2, 1);
 
-				CALL SPInsereGrupo ('Drogas IlÃ­citas', 'HÃ¡bitos e VÃ­cios', 'Triagem', 3, 1);
+				CALL SPInsereGrupo ('Drogas Ilícitas', 'Hábitos e Vícios', 'Triagem', 3, 1);
 				
-				CALL SPInsereGrupo ('Outros', 'HÃ¡bitos e VÃ­cios', 'Triagem', 4, 1);
+				CALL SPInsereGrupo ('Outros', 'Hábitos e Vícios', 'Triagem', 4, 1);
 
 CALL SPInsereGrupo ('Necessidades Psicoespirituais', null, 'Triagem', 2, 1);
 
-CALL SPInsereGrupo ('Necessidades Psicosociais', null, 'Triagem', 3, 1);
+CALL SPInsereGrupo ('Necessidades Psicossociais', null, 'Triagem', 3, 1);
 
-	CALL SPInsereGrupo ('InteraÃ§Ã£o Social', 'Necessidades Psicosociais', 'Triagem', 1, 1);
+	CALL SPInsereGrupo ('Interação Social', 'Necessidades Psicossociais', 'Triagem', 1, 1);
 
-	CALL SPInsereGrupo ('RecreaÃ§Ã£o/Lazer/Criatividade', 'Necessidades Psicosociais', 'Triagem', 2, 1);
+	CALL SPInsereGrupo ('Recreação/Lazer/Criatividade', 'Necessidades Psicossociais', 'Triagem', 2, 1);
 
-CALL SPInsereGrupo ('Necessidades PsicobiolÃ³gicas', null, 'Triagem', 4, 1);
+CALL SPInsereGrupo ('Necessidades Psicobiológicas', null, 'Triagem', 4, 1);
 
-	CALL SPInsereGrupo ('Cuidado Corporal', 'Necessidades PsicobiolÃ³gicas', 'Triagem', 1, 1);
+	CALL SPInsereGrupo ('Cuidado Corporal', 'Necessidades Psicobiológicas', 'Triagem', 1, 1);
 
-	CALL SPInsereGrupo ('HÃ¡bito de Sono e Repouso', 'Necessidades PsicobiolÃ³gicas', 'Triagem', 2, 1);
+	CALL SPInsereGrupo ('Hábito de Sono e Repouso', 'Necessidades Psicobiológicas', 'Triagem', 2, 1);
 	
-	CALL SPInsereGrupo ('ExercÃ­cio', 'Necessidades PsicobiolÃ³gicas', 'Triagem', 3, 1);
+	CALL SPInsereGrupo ('Exercício', 'Necessidades Psicobiológicas', 'Triagem', 3, 1);
 
-	CALL SPInsereGrupo ('EliminaÃ§Ã£o Intestinal', 'Necessidades PsicobiolÃ³gicas', 'Triagem', 4, 1);
+	CALL SPInsereGrupo ('Eliminação Intestinal', 'Necessidades Psicobiológicas', 'Triagem', 4, 1);
 	
-	CALL SPInsereGrupo ('TerapÃªutica', 'Necessidades PsicobiolÃ³gicas', 'Triagem', 5, 1);
+	CALL SPInsereGrupo ('Terapêutica', 'Necessidades Psicobiológicas', 'Triagem', 5, 1);
 
-	CALL SPInsereGrupo ('Sexualidade', 'Necessidades PsicobiolÃ³gicas', 'Triagem', 6, 1);
+	CALL SPInsereGrupo ('Sexualidade', 'Necessidades Psicobiológicas', 'Triagem', 6, 1);
 
-CALL SPInsereGrupo ('Exame FÃ­sico', null, 'Triagem', 5, 1);
+CALL SPInsereGrupo ('Exame Físico', null, 'Triagem', 5, 1);
 
 CALL SPInsereGrupo ('Coong', null, 'Triagem', 6, 1);
 
-CALL SPInsereGrupo ('Exame FÃ­sico Objetivo de coong_2', null, 'Triagem', 7, 1);
+CALL SPInsereGrupo ('Exame Físico Objetivo de coong', null, 'Triagem', 7, 1);
 
-			CALL SPInsereGrupo ('Sistema RespiratÃ³rio_2', 'Exame FÃ­sico Objetivo de coong_2', 'Triagem', 1, 1);
+			CALL SPInsereGrupo ('Sistema Respiratório coong', 'Exame Físico Objetivo de coong', 'Triagem', 1, 1);
 
-			CALL SPInsereGrupo ('Sistema Cardiovascular_2', 'Exame FÃ­sico Objetivo de coong_2', 'Triagem', 2, 1);
+			CALL SPInsereGrupo ('Sistema Cardiovascular coong', 'Exame Físico Objetivo de coong', 'Triagem', 2, 1);
 
-			CALL SPInsereGrupo ('Sistema Gastrointestinal_2', 'Exame FÃ­sico Objetivo de coong_2', 'Triagem', 3, 1);
+			CALL SPInsereGrupo ('Sistema Gastrointestinal', 'Exame Físico Objetivo de coong', 'Triagem', 3, 1);
 
-			CALL SPInsereGrupo ('Membros Superiores MMSS_2', 'Exame FÃ­sico Objetivo de coong_2', 'Triagem', 4, 1);
+			CALL SPInsereGrupo ('Membros Superiores MMSS', 'Exame Físico Objetivo de coong', 'Triagem', 4, 1);
 
-			CALL SPInsereGrupo ('Membros Inferiores MMII_2', 'Exame FÃ­sico Objetivo de coong_2', 'Triagem', 5, 1);
+			CALL SPInsereGrupo ('Membros Inferiores MMII', 'Exame Físico Objetivo de coong', 'Triagem', 5, 1);
 
-			CALL SPInsereGrupo ('Sistema GeniturinÃ¡rio_2', 'Exame FÃ­sico Objetivo de coong_2', 'Triagem', 6, 1);
+			CALL SPInsereGrupo ('Sistema Geniturinário coong', 'Exame Físico Objetivo de coong', 'Triagem', 6, 1);

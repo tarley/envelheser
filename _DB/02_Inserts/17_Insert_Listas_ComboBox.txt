@@ -2,14 +2,14 @@
 /*                       CADASTRO DE LISTA COMBOBOX             */ 
 /*==============================================================*/
 
-CALL SPInsereListaCombo ('Ativa','Dados de interesse clÃ­nico');
-CALL SPInsereListaCombo ('Inativa','Dados de interesse clÃ­nico');
-CALL SPInsereListaCombo ('Perda de libido','Dados de interesse clÃ­nico');
-CALL SPInsereListaCombo ('Doloroso','Dados de interesse clÃ­nico');
+CALL SPInsereListaCombo ('Ativa','Dados de interesse clínico');
+CALL SPInsereListaCombo ('Inativa','Dados de interesse clínico');
+CALL SPInsereListaCombo ('Perda de libido','Dados de interesse clínico');
+CALL SPInsereListaCombo ('Doloroso','Dados de interesse clínico');
 
-CALL SPInsereListaCombo ('CatÃ³lico','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('EvangÃ©lico','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Católico','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Evangélico','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Umbanda','Realiza alguma atividade religiosa-espiritual?');
 CALL SPInsereListaCombo ('Ateu','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('CandomblÃ©','Realiza alguma atividade religiosa-espiritual?');
-CALL SPInsereListaCombo ('EspÃ­rita','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Candomblé','Realiza alguma atividade religiosa-espiritual?');
+CALL SPInsereListaCombo ('Espírita','Realiza alguma atividade religiosa-espiritual?');

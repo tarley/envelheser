@@ -38,7 +38,7 @@ class Cliente {
 
 		$listaClientes = array();
 		
-		while($list  = mysqli_fetch_assoc($query)) {
+		while($list  = mysqli_fetch_assoc($query)) {		
 			$listaClientes[] = $list;
 		}
 
@@ -49,10 +49,10 @@ class Cliente {
 	* Retorna os dados do cliente de acordo com o codigo passado pelo parametro
 	*/	
 	function getDados($codCliente) {		
-
+		
 		$query = "SELECT Cod_Cliente, Nom_Cliente, ";
 		$query .= "(SELECT Num_Telefone FROM tb_telefone t WHERE t.Cod_Cliente = c.Cod_Cliente LIMIT 1) AS Num_Telefone, ";
-		$query .= "co.Nom_Cor, e.Nom_Escolaridade, o.Nom_Ocupacao, ec.Nom_Estado_Civil, n.Nom_Naturalidade, ";
+		$query .= "co.Nom_Cor, co.Cod_Cor, e.Nom_Escolaridade, e.Cod_Escolaridade, o.Nom_Ocupacao, o.Cod_Ocupacao, ec.Nom_Estado_Civil, ec.Cod_Estado_Civil, n.Nom_Naturalidade, n.Cod_Naturalidade, ";
 		$query .= "CASE WHEN c.Ind_Sexo = 'F' THEN 'Feminino' ELSE 'Masculino' END AS Ind_Sexo, ";
 		$query .= "c.Num_Filhos, c.Des_Endereco, ";
 		$query .= "DATE_FORMAT(c.Dta_Nascimento, '%d/%m/%Y') AS Dta_Nascimento ";
@@ -65,7 +65,7 @@ class Cliente {
 		
 		$query = mysqli_query($this->cnn, $query);
 		
-		$cliente  = mysqli_fetch_assoc($query);		
+		$cliente  = mysqli_fetch_assoc($query);	
 
 		return $cliente;
 	}
@@ -94,6 +94,77 @@ class Cliente {
 		}
 		
 		return $listaProntuario;		
+	}
+	
+	function insert($c) {
+		$retorno = array();
+		try {
+			
+			$codCliente = "";
+			
+			if($c['Cod_Cliente'] != ""){
+				
+				$codCliente = $c['Cod_Cliente'];
+				
+				$query = "UPDATE tb_cliente ";
+				$query .= "SET  ";
+				$query .= "Nom_Cliente = '" . $c['Nom_Cliente'] . "', ";
+				$query .= "Dta_Nascimento = " . $c['Dta_Nascimento'] . ", ";
+				$query .= "Num_Rg = '" . $c['Num_Rg'] . "', ";
+				$query .= "Des_Endereco = '" . $c['Des_Endereco'] . "', ";
+				$query .= "Ind_Sexo = '" . $c['Ind_Sexo'] . "', ";
+				$query .= "Num_Filhos = " . $c['Num_Filhos'] . ", ";
+				$query .= "Cod_Cor = " . $c['Cod_Cor'] . ", ";
+				$query .= "Cod_Escolaridade = " . $c['Cod_Escolaridade'] . ", ";
+				$query .= "Cod_Ocupacao = " . $c['Cod_Ocupacao'] . ", ";
+				$query .= "Cod_Estado_Civil = " . $c['Cod_Estado_Civil'] . ", ";
+				$query .= "Cod_Naturalidade = " . $c['Cod_Naturalidade'] . " ";
+				$query .= "WHERE Cod_Cliente = " . $c['Cod_Cliente'] . "; ";
+				
+				
+				if (mysqli_query($this->cnn, $query)) {
+					$retorno['Sucesso'] = true;
+					$retorno['Mensagem'] = "Dados inseridos com sucesso";
+					$retorno['CodCliente'] = $codCliente;
+				}
+			}
+			else{
+				
+				$Nom_Cliente = 'NULL';
+				$Dta_Nascimento = 'NULL';
+				$Num_Rg = 'NULL';
+				$Des_Endereco = 'NULL';
+				$Ind_Sexo = 'NULL';
+				$Num_Filhos = 'NULL';
+				$Cod_Cor = 'NULL';
+				$Cod_Escolaridade = 'NULL';
+				$Cod_Ocupacao = 'NULL';
+				$Cod_Estado_Civil = 'NULL';
+				$Cod_Naturalidade = 'NULL';
+				
+				$query = "INSERT INTO `tb_cliente`(`Nom_Cliente`, `Dta_Nascimento`, `Num_Rg`, `Des_Endereco`, `Ind_Sexo`, `Num_Filhos`, `Cod_Cor`, `Cod_Escolaridade`, `Cod_Ocupacao`, `Cod_Estado_Civil`, `Cod_Naturalidade`) ";
+				$query = "VALUES (".$c['Nom_Cliente'].", ".$c['Dta_Nascimento'].", ".$c['Num_Rg'].", ".$c['Des_Endereco'].", ".$c['Ind_Sexo'].", ".$c['Num_Filhos'].", ".$c['Cod_Cor'].", ".$c['Cod_Escolaridade'].", ".$c['Cod_Ocupacao'].", ".$c['Cod_Estado_Civil'].", ".$c['Cod_Naturalidade']."); ";
+				
+				if (mysqli_query($this->cnn, $query)) {
+					$codCliente = mysqli_insert_id($this->cnn);
+					
+					$retorno['Sucesso'] = true;
+					$retorno['Mensagem'] = "Dados atualizados com sucesso";
+					$retorno['CodCliente'] = $codCliente;
+				}
+			}
+			
+			
+			
+		} catch (Exception $e) {
+			$msg = "Falha ao inserir respostas. Mensagem de erro: " . mysqli_error($this->cnn);
+			$this->log->logError($this,$msg);			
+			
+			$retorno['Sucesso'] = false;			
+			$retorno['Mensagem'] = "Falha ao inserir respostas";
+		}
+		
+		return $retorno;
 	}
 }
 
