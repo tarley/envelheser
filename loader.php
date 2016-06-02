@@ -6,6 +6,11 @@ if (!defined('ABSPATH')) exit;
 // Inicia a sessão
 session_start();
 
+$pageName = basename($_SERVER['PHP_SELF']);
+
+if (strpos($pageName, ".ajax") === false && $pageName != "login.php" && !isset($_SESSION['Cod_Avaliador']))
+	header("location:login.php");
+
 // Verifica o modo para debugar
 if (!defined('DEBUG') || DEBUG === false ) {	
 	// Esconde todos os erros

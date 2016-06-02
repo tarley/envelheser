@@ -142,5 +142,44 @@ class Avaliador{
 		
 		return $retorno;
 	}
+
+	function Login($usuario = "", $senha = "") {
+
+		//Senha 12345 em md5: 827ccb0eea8a706c4c34a16891f84e7b
+
+		$retorno = array();
+		
+		try {
+
+			$csenha = md5($senha);
+
+			$query = "SELECT Cod_Avaliador, Cod_Acesso FROM tb_avaliador WHERE Des_Login = '$usuario' AND Des_Senha = '$csenha'";
+			
+			$query = mysqli_query($this->cnn, $query);
+
+			$numRows = mysqli_num_rows($query);
+
+			if ($numRows == 1) {
+				
+				$avaliador  = mysqli_fetch_assoc($query);
+
+				$retorno['Sucesso'] = true;
+				$retorno['Cod_Avaliador'] = $avaliador['Cod_Avaliador'];
+				$retorno['Cod_Acesso'] = $avaliador['Cod_Acesso'];
+			} else {
+				$retorno['Sucesso'] = false;
+				$retorno['Mensagem'] = "Usuário ou senha inválidos";
+			}
+
+		} catch (Exception $e) {
+			$msg = "Falha ao autenticar avaliador. Mensagem de erro: " . mysqli_error($this->cnn);
+			$this->log->logError($this,$msg);
+			
+			$retorno['Sucesso'] = false;			
+			$retorno['Mensagem'] = "Falha ao autenticar avaliador";
+		}
+		
+		return $retorno;
+	}
 }
 ?>

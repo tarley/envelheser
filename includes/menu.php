@@ -15,9 +15,11 @@
 			<li class="menu-principal-li">
 				<a href="clienteVis.php" ><i class="fa fa-list-alt"></i> Pacientes</a>
 			</li>
+			<?php if($_SESSION['Cod_Acesso'] == 1) { ?>
 			<li class="menu-principal-li">
 				<a href="avaliadorVis.php" ><i class="fa fa-user-md"></i> Avaliadores</a>
 			</li>
+			<?php } ?>
 			<li class="menu-principal-li">
 				<a href="fundadores.php" ><i class="fa fa-user-md"></i> Fundadores</a>
 			</li>		
@@ -36,7 +38,7 @@
 <!-- 				<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> -->
 <!-- 				</li> -->
 <!-- 				<li class="divider"></li> -->
-				<li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+				<li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 				</li>
 			</ul>
 			<!-- /.dropdown-user -->

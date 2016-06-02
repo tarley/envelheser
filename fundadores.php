@@ -1,4 +1,7 @@
-    <!DOCTYPE html>
+<?php
+    require_once 'init.php';
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
