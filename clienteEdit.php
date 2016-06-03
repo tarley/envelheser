@@ -224,7 +224,7 @@
                                     	<div class="form-group col-md-12 nopadding">
                                     		<div style="padding-bottom: 10px">
 	                                        	<button id="saveCliente" type="button" class="btn btn-primary"><i class="fa fa-save"></i>Salvar</button>
-	                                        	<button id="btnCancelar" type="button" class="btn btn-danger"><i class="fa fa-times-circle"></i> Cancelar</button>
+	                                        	<button id="btnCancelar" type="button" class="btn btn-default"><i class="fa fa-times-circle"></i> Voltar</button>
                                     		</div>
                                     	</div>
                                         <div class="form-group col-md-1">

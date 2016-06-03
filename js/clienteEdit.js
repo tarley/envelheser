@@ -18,7 +18,7 @@ $(document).ready(function() {
 				$("#dataNascimentoCliente").val(cliente.dataNascimento);	
 				$("#numeroFilhosCliente").val(cliente.numeroFilhos);
 				$("#enderecoCliente").val(cliente.endereco);
-
+				$("#numRg").val(cliente.numRg);
 				$("#divHistPront").show();
 					
 				if(cliente.prontuario.length != 0){

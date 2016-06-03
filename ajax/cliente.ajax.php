@@ -64,7 +64,7 @@
 		$retorno .= "\"dataNascimento\": \"" . $dados['Dta_Nascimento'] . "\", ";
 		$retorno .= "\"numeroFilhos\": \"" . $dados['Num_Filhos'] . "\", ";
 		$retorno .= "\"endereco\": \"" . $dados['Des_Endereco'] . "\", ";
-		
+		$retorno .= "\"numRg\": \"" . $dados['Num_Rg'] . "\", ";
 		
 		$jsonPront = "";
 		for ($i = 0; $i < sizeof($pront); $i++) {

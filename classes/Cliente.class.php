@@ -50,7 +50,7 @@ class Cliente {
 	*/	
 	function getDados($codCliente) {		
 		
-		$query = "SELECT Cod_Cliente, Nom_Cliente, ";
+		$query = "SELECT Cod_Cliente, Nom_Cliente, Num_Rg, ";
 		$query .= "(SELECT Num_Telefone FROM tb_telefone t WHERE t.Cod_Cliente = c.Cod_Cliente LIMIT 1) AS Num_Telefone, ";
 		$query .= "co.Nom_Cor, co.Cod_Cor, e.Nom_Escolaridade, e.Cod_Escolaridade, o.Nom_Ocupacao, o.Cod_Ocupacao, ec.Nom_Estado_Civil, ec.Cod_Estado_Civil, n.Nom_Naturalidade, n.Cod_Naturalidade, ";
 		$query .= "CASE WHEN c.Ind_Sexo = 'F' THEN 'Feminino' ELSE 'Masculino' END AS Ind_Sexo, ";
@@ -106,10 +106,12 @@ class Cliente {
 				
 				$codCliente = $c['Cod_Cliente'];
 				
+				$Dta_Nascimento = DateTime::createFromFormat("d/m/Y", $c['Dta_Nascimento']);
+				
 				$query = "UPDATE tb_cliente ";
 				$query .= "SET  ";
 				$query .= "Nom_Cliente = '" . $c['Nom_Cliente'] . "', ";
-				$query .= "Dta_Nascimento = " . $c['Dta_Nascimento'] . ", ";
+				$query .= "Dta_Nascimento = '" . date_format($Dta_Nascimento, "Y-m-d"). "', ";
 				$query .= "Num_Rg = '" . $c['Num_Rg'] . "', ";
 				$query .= "Des_Endereco = '" . $c['Des_Endereco'] . "', ";
 				$query .= "Ind_Sexo = '" . $c['Ind_Sexo'] . "', ";
@@ -121,10 +123,9 @@ class Cliente {
 				$query .= "Cod_Naturalidade = " . $c['Cod_Naturalidade'] . " ";
 				$query .= "WHERE Cod_Cliente = " . $c['Cod_Cliente'] . "; ";
 				
-				
 				if (mysqli_query($this->cnn, $query)) {
 					$retorno['Sucesso'] = true;
-					$retorno['Mensagem'] = "Dados inseridos com sucesso";
+					$retorno['Mensagem'] = "Dados atualizados com sucesso";
 					$retorno['CodCliente'] = $codCliente;
 				}
 			}
@@ -142,14 +143,56 @@ class Cliente {
 				$Cod_Estado_Civil = 'NULL';
 				$Cod_Naturalidade = 'NULL';
 				
+				if($c['Nom_Cliente'] != ''){
+					$Nom_Cliente = "'".$c['Nom_Cliente']."'";
+				}
+				
+				if($c['Dta_Nascimento'] != ''){
+					$Dta_Nascimento = DateTime::createFromFormat("d/m/Y", $c['Dta_Nascimento']);
+				}
+					
+				if($c['Num_Rg'] != ''){
+					$Num_Rg = "'".$c['Num_Rg']."'";
+				}
+				
+				if($c['Des_Endereco'] != ''){
+					$Des_Endereco = "'".$c['Des_Endereco']."'";
+				}
+				
+				if($c['Ind_Sexo'] != ''){
+					$Ind_Sexo = "'".$c['Ind_Sexo']."'";
+				}
+				
+				if($c['Num_Filhos'] != ''){
+					$Num_Filhos = $c['Num_Filhos'];
+				}
+				
+				if($c['Cod_Cor'] != ''){
+					$Cod_Cor = $c['Cod_Cor'];
+				}
+				
+				if($c['Cod_Escolaridade'] != ''){
+					$Cod_Escolaridade = $c['Cod_Escolaridade'];
+				}
+				
+				if($c['Cod_Ocupacao'] != ''){
+					$Cod_Ocupacao = $c['Cod_Ocupacao'];
+				}
+				
+				if($c['Cod_Estado_Civil'] != ''){
+					$Cod_Estado_Civil = $c['Cod_Estado_Civil'];
+				}
+				
+				if($c['Cod_Naturalidade'] != ''){
+					$Cod_Naturalidade = $c['Cod_Naturalidade'];
+				}
+				
 				$query = "INSERT INTO `tb_cliente`(`Nom_Cliente`, `Dta_Nascimento`, `Num_Rg`, `Des_Endereco`, `Ind_Sexo`, `Num_Filhos`, `Cod_Cor`, `Cod_Escolaridade`, `Cod_Ocupacao`, `Cod_Estado_Civil`, `Cod_Naturalidade`) ";
-				$query = "VALUES (".$c['Nom_Cliente'].", ".$c['Dta_Nascimento'].", ".$c['Num_Rg'].", ".$c['Des_Endereco'].", ".$c['Ind_Sexo'].", ".$c['Num_Filhos'].", ".$c['Cod_Cor'].", ".$c['Cod_Escolaridade'].", ".$c['Cod_Ocupacao'].", ".$c['Cod_Estado_Civil'].", ".$c['Cod_Naturalidade']."); ";
+				$query .= "VALUES (".$Nom_Cliente.", '" . date_format($Dta_Nascimento, "Y-m-d") ."', ".$Num_Rg.", ".$Des_Endereco.", ".$Ind_Sexo.", ".$Num_Filhos.", ".$Cod_Cor.", ".$Cod_Escolaridade.", ".$Cod_Ocupacao.", ".$Cod_Estado_Civil.", ".$Cod_Naturalidade."); ";
 				
 				if (mysqli_query($this->cnn, $query)) {
-					$codCliente = mysqli_insert_id($this->cnn);
-					
 					$retorno['Sucesso'] = true;
-					$retorno['Mensagem'] = "Dados atualizados com sucesso";
+					$retorno['Mensagem'] = "Dados inseridos com sucesso";
 					$retorno['CodCliente'] = $codCliente;
 				}
 			}
