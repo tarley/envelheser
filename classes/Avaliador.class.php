@@ -62,7 +62,7 @@ class Avaliador{
 	/**
 	 * Insere os dados de um avaliador
 	 */
-	function Insert($nomAvaliador, $codEspecialidade, $desEmail, $desLogin, $desSenha){
+	function Insert($dadosAvaliador){
 		
 		$retorno = array();
 		

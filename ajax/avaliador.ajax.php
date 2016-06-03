@@ -54,6 +54,16 @@
 		}
 
 		echo json_encode($retorno);
+	} else if (isset($_POST['dadosAvaliador'])) {
+	
+		$retorno = "";
+	
+		$dadosAvaliador = $_POST['dadosAvaliador'];
+			
+		$retorno = $avaliador->Insert($dadosAvaliador);
+	
+		echo json_encode($retorno);
+	
 	}
 	
 	//Este trecho deve ficar sempre no fim do arquivo

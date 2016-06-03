@@ -22,7 +22,7 @@
 					</h1>
 				</div>
 				<div class="col-sm-3 vert-offset-bottom-1">
-					<button id="#" type="button" class="btn btn-success">
+					<button id="btnNovo" type="button" class="btn btn-success">
 						<i class="fa fa-plus-circle"></i> Novo
 					</button>
 				</div>

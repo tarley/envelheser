@@ -1,8 +1,10 @@
 <?php
     require_once 'init.php';
 
-    if ($_SESSION['Cod_Acesso'] != 1)
-        header("location:index.php");
+    $mysql = new MySQL();
+    $Especialidade = new Especialidade($mysql->link);
+    if($_SESSION['Cod_Acesso'] != 1)
+    	header("location:index.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,10 +47,16 @@
                                         </div>
                                         <div class="form-group col-md-3">
                                         	<label>Especialidade</label>
-                                            <select class="form-control">
-                                            <option>Psicologia</option>
-                                            <option>Odontologia</option>
-                                            </select>
+                                             <?php 
+                                            $listaOpcoes = $Especialidade->getLista();
+                                            
+                                            echo '<select id="nomEspecialidade" class="form-control">';
+                                            echo '<option value="">Selecione</option>';
+												for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+													echo '<option value="'.$listaOpcoes[$j]['Cod_Especialidade'].'">'.$listaOpcoes[$j]['Nom_Especialidade'].'</option>';
+												}
+											echo '</select>';
+											?>
                                         </div>						
                                         <div class="form-group col-md-5">
                                             <label>E-mail</label>
@@ -65,7 +73,7 @@
                                         
                                          <div class="form-group col-md-3 col-md-offset-9 vert-offset-top-1">
                                     		<div class="pull-right">
-                                    		<button id="btnSalvar" type="button" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>		
+                                    		<button id="saveAvaliador" type="button" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>		
                                     		<button id="btnCancelar" type="button" class="btn btn-danger"><i class="fa fa-times-circle"></i> Cancelar</button>
                                			</div>
                                			</div>

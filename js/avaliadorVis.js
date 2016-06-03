@@ -15,7 +15,7 @@ $(document).ready(function() {
 	        { 
 	            title: "Selecionar", 
 	            attributes: [{ "class": "col-md-1 text-center" }],//fa fa-wrench fa fa-check-circle
-	            template: "<button data-id='{#codigo}' type='button' class='btn btn-warning btn-sm'><i class='fa fa-bluetooth'></i>Selecionar</button>" 
+	            template: "<button data-id='{#codigo}' type='button' class='btn btn-warning btn-sm'><i class='fa fa-bluetooth'></i>Editar</button>" 
 	        }
 	    ],
 	
@@ -28,7 +28,11 @@ $(document).ready(function() {
 	
 	$("#gridAvaliador").on("click", "button[data-id]", function() {
 	    window.location= "avaliadorEdit.php?idAvaliador=" + $(this).attr("data-id");
-	});    
+	});   
+	
+	$("#btnNovo").click(function(){
+		window.location= "avaliadorEdit.php";
+	});	
 
 	$("#btnFiltro").click(function () {
 		console.log("filtrou");
