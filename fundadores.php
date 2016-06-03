@@ -370,7 +370,7 @@
             </div>
             <div class="row">
             	<div class="col-lg-12 text-center">
-                    <h3 class="section-subheading text-muted">Enfermagem - 3º Período</h3>
+                    <h3 class="section-subheading text-muted">Enfermagem - 3º e 7º Período</h3>
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
@@ -384,11 +384,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-            	<div class="col-lg-12 text-center">
-                    <h3 class="section-subheading text-muted">Enfermagem - 7º Período</h3>
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
@@ -456,7 +451,7 @@
                     </div>
     			</div>
             </div>
-            	<div class="row">
+            <div class="row">
             	<div class="col-lg-12 text-center">
                     <h3 class="section-subheading text-muted">Odontologia - 7º e 8º Período</h3>
                 </div>               
