@@ -10,7 +10,7 @@ $(document).ready(function() {
 				$("#nomEspecialidade").val(avaliador.codEspecialidade);
 				$("#emailAvaliador").val(avaliador.desEmail);
 				$("#loginAvaliador").val(avaliador.desLogin);	
-				//$("#senhaAvaliador").val(avaliador.ocupacao);		
+				$("#senhaAvaliador").val(avaliador.desSenha);		
 				
 			
 			}

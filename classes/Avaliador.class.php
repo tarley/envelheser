@@ -1,4 +1,5 @@
 <?php
+
 class Avaliador{
 	/*
 	 * Instância de Logger
@@ -62,13 +63,65 @@ class Avaliador{
 	/**
 	 * Insere os dados de um avaliador
 	 */
-	function Insert($dadosAvaliador){
-		
+	function Insert($a){
 		$retorno = array();
-		
 		try {
-			$query = "INSERT INTO tb_avaliador (Nom_Avaliador, Cod_Especialidade, Des_Email, Des_Login, Des_Senha) ";
-			$query .= "VALUES ($nomAvaliador, $codEspecialidade, $desEmail, $desLogin, $desSenha)";
+			
+			$codAvaliador = "";
+			
+			if($a['Cod_Avaliador'] != ""){
+			
+				$codAvaliador = $a['Cod_Avaliador'];
+			
+				$query = "UPDATE tb_avaliador ";
+				$query .= "SET  ";
+				$query .= "Nom_Avaliador = '" . $a['Nom_Avaliador'] . "', ";
+				$query .= "Cod_Especialidade = '" . $a['Cod_Especialidade'] . "', ";
+				$query .= "Des_Email = '" . $a['Des_Email'] . "', ";
+				$query .= "Des_Login = '" . $a['Des_Login'] . "', ";
+				$query .= "Des_Senha = " . $a['Des_Senha'] . "; ";
+			
+				if (mysqli_query($this->cnn, $query)) {
+					$retorno['Sucesso'] = true;
+					$retorno['Mensagem'] = "Dados atualizados com sucesso";
+					$retorno['CodAvaliador'] = $codAvaliador;
+				}
+			}
+			
+			else{
+			
+				$Nom_Avaliador = 'NULL';
+				$Cod_Especialidade = 'NULL';
+				$Des_Email = 'NULL';
+				$Des_Login = 'NULL';
+				$Des_Senha = 'NULL';
+				
+				if($a['Nom_Avaliador'] != ''){
+					$Nom_Avaliador = "'".$a['Nom_Avaliador']."'";
+				}
+					
+				if($a['Cod_Especialidade'] != ''){
+					$Cod_Especialidade = "'".$a['Cod_Especialidade']."'";
+				}
+			
+				if($a['Des_Email'] != ''){
+					$Des_Email = "'".$a['Des_Email']."'";
+				}
+			
+				if($a['Des_Login'] != ''){
+					$Des_Login = "'".$a['Des_Login']."'";
+				}
+			
+				if($a['Des_Senha'] != ''){
+					$Des_Senha = $a['Des_Senha'];
+				}
+			}	
+			
+			$query = "INSERT INTO `tb_avaliador`(`Nom_Avaliador`, `Cod_Especialidade`, `Des_Email`, `Des_Login`, `Des_Senha`) ";
+			$query .= "VALUES (" . $Nom_Avaliador . ", '" . $Cod_Especialidade . "', " . $Des_Email . ", " . $Des_Login.", ".$Des_Senha."); ";
+			
+// 			$query = "INSERT INTO tb_avaliador (Nom_Avaliador, Cod_Especialidade, Des_Email, Des_Login, Des_Senha) ";
+// 			$query .= "VALUES ($Nom_Avaliador, $Cod_Especialidade, $Des_Email, $Des_Login, $Des_Senha)";
 		
 			if (mysqli_query($this->cnn, $query)) {
 				$codAvaliador = mysqli_insert_id($this->cnn);
