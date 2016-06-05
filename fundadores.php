@@ -152,9 +152,9 @@
                         <h4>Fillipe Perpétuo</h4>
                         <p class="text-muted">Desenvolvedor</p>
                         <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="facebook.com/fillipeperpetuo"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="linkedin.com/in/fillipe-perpétuo-639b0075?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
