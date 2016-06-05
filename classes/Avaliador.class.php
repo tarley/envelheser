@@ -72,14 +72,26 @@ class Avaliador{
 				
 				$codAvaliador = $a['Cod_Avaliador'];
 				
-				$query = "UPDATE tb_avaliador ";
-				$query .= "SET  ";
-				$query .= "Nom_Avaliador = '" . $a['Nom_Avaliador'] . "', ";
-				$query .= "Cod_Especialidade = '" . $a['Cod_Especialidade'] . "', ";
-				$query .= "Des_Email = '" . $a['Des_Email'] . "', ";
-				$query .= "Des_Login = '" . $a['Des_Login'] . "', ";
-				$query .= "Des_Senha = '" . md5($a['Des_Senha']) . "' ";
-				$query .= "WHERE Cod_Avaliador = " . $codAvaliador . "; ";
+				if($a['Des_Senha'] != ""){
+					$query = "UPDATE tb_avaliador ";
+					$query .= "SET  ";
+					$query .= "Nom_Avaliador = '" . $a['Nom_Avaliador'] . "', ";
+					$query .= "Cod_Especialidade = '" . $a['Cod_Especialidade'] . "', ";
+					$query .= "Des_Email = '" . $a['Des_Email'] . "', ";
+					$query .= "Des_Login = '" . $a['Des_Login'] . "', ";
+					$query .= "Des_Senha = '" . md5($a['Des_Senha']) . "' ";
+					$query .= "WHERE Cod_Avaliador = " . $codAvaliador . "; ";
+				}
+				else{
+					$query = "UPDATE tb_avaliador ";
+					$query .= "SET  ";
+					$query .= "Nom_Avaliador = '" . $a['Nom_Avaliador'] . "', ";
+					$query .= "Cod_Especialidade = '" . $a['Cod_Especialidade'] . "', ";
+					$query .= "Des_Email = '" . $a['Des_Email'] . "', ";
+					$query .= "Des_Login = '" . $a['Des_Login'] . "' ";
+					$query .= "WHERE Cod_Avaliador = " . $codAvaliador . "; ";
+				}
+				
 				
 				if (mysqli_query($this->cnn, $query)) {
 					$retorno['Sucesso'] = true;

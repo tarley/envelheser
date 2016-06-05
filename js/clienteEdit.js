@@ -47,6 +47,10 @@ $(document).ready(function() {
 		window.location= "clienteVis.php";
 	});
 	
+	$("#btnCancelarProntuario").click(function() {
+		window.location= "clienteVis.php";
+	});
+	
 	$("#saveCliente").click(function() {	
 		
 		$("#loader").show();
@@ -73,7 +77,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	$(".fa fa-save").click(function() {		
+	$(".btn-primary.save").click(function() {			
 		
 		$("#loader").show();
 		
@@ -91,6 +95,9 @@ $(document).ready(function() {
 				$('#alert .text').append(retorno.Mensagem);
 				$('#alert').addClass("alert-success");
 
+				$('#alert2 .text').append(retorno.Mensagem);
+				$('#alert2').addClass("alert-success");
+				
 				$.ajax({
 					url: "ajax/cliente.ajax.php?codigo=" + retorno.CodCliente,
 					success: function (data) {
@@ -112,17 +119,24 @@ $(document).ready(function() {
 								$("#divHistoricoProntuarios").append(btn);
 								$("#save").attr("disabled", "disabled");
 							}
-						}				
+						}
 					}
 				});
 				
 			} else {
 				$('#alert .text').append(retorno.Mensagem);
 				$('#alert').addClass("alert-danger");
+				
+				$('#alert2 .text').append(retorno.Mensagem);
+				$('#alert2').addClass("alert-danger");
 			}
 
 			$('#alert').show().delay(3000).fadeOut("fast", function() {
 				$('#alert .text').html(""); 
+			}); 
+			
+			$('#alert2').show().delay(3000).fadeOut("fast", function() {
+				$('#alert2 .text').html(""); 
 			}); 
 			
 			$("#loader").hide();

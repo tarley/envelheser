@@ -348,7 +348,7 @@
                                     <div id="divQuestionario">										                                    	
                                     	<div style="padding-bottom: 10px">
                                     		<button id="novo" type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Novo</button>
-                                    		<button id="save" type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-save"></i> Salvar</button>
+                                    		<button id="save" type="button" class="btn btn-primary save" disabled="disabled"><i class="fa fa-save"></i> Salvar</button>
                                     		<div id='divHistoricoProntuarios' class="btn-group">
                                     		</div>
 	                                	</div>                                    		
@@ -364,7 +364,16 @@
 													</div>
 												 </div>
 											 </div> 
-											 <button id="save" type="button" class="btn btn-primary" ><i class="fa fa-save"></i> Salvar</button>                             
+											 <div class="form-group col-md-12 nopadding">
+                                    			<div style="padding-bottom: 10px">
+											 		<button id="save" type="button" class="btn btn-primary save" ><i class="fa fa-save"></i> Salvar</button>
+											 		<button id="btnCancelarProntuario" type="button" class="btn btn-default"><i class="fa fa-times-circle"></i> Voltar</button>    
+											 	</div>
+											 </div>
+											 <div id="alert2" class="alert alert-dismissable" style="display: none">
+												<span class="text"></span>
+												<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											</div>                         
 										</div>
 	                             	</div>
 	                         	</div>
