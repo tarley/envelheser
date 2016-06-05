@@ -68,9 +68,12 @@
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label>Senha</label>
-                                            <input id="senhaAvaliador" class="form-control">
+                                            <input id="senhaAvaliador" type="password" class="form-control">
                                         </div>	
-                                        
+                                        <div class="form-group col-md-3">
+                                            <label>Confirma Senha</label>
+                                            <input id="confirmaSenhaAvaliador" type="password" class="form-control">
+                                        </div>	
                                          <div class="form-group col-md-3 col-md-offset-9 vert-offset-top-1">
                                     		<div class="pull-right">
                                     		<button id="saveAvaliador" type="button" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>		
@@ -84,7 +87,10 @@
                             	</div>
                                     
                                 </div>
-
+								<div id="alert" class="alert alert-dismissable" style="display: none">
+									<span class="text"></span>
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								</div>	
                                 
                             </div>
                             <!-- /.row (nested) -->

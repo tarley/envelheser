@@ -23,29 +23,35 @@ $(document).ready(function() {
 
 	
 	$("#saveAvaliador").click(function() {	
-		
-		$("#loader").show();
-		
-		var obj = DadosAvaliador();
-		//console.log(obj);
-		$.post( "ajax/avaliador.ajax.php", { dadosAvaliador: obj }, function(data) {
-			var retorno = jQuery.parseJSON(data);
-			console.log(retorno);
-			if(retorno.Sucesso == true) {
-				$('#alert .text').append(retorno.Mensagem);
-				$('#alert').addClass("alert-success");
-				
-			} else {
-				$('#alert .text').append(retorno.Mensagem);
-				$('#alert').addClass("alert-danger");
-			}
-
-			$('#alert').show().delay(3000).fadeOut("fast", function() {
-				$('#alert .text').html(""); 
-			}); 
+		console.log($("#senhaAvaliador").val());
+		console.log($("#confirmaSenhaAvaliador").val());
+		if($("#senhaAvaliador").val() == $("#confirmaSenhaAvaliador").val()){
+			$("#loader").show();
 			
-			$("#loader").hide();
-		});
+			var obj = DadosAvaliador();
+			console.log(obj);
+			$.post( "ajax/avaliador.ajax.php", { dadosAvaliador: obj }, function(data) {
+				var retorno = jQuery.parseJSON(data);
+				console.log(retorno);
+				if(retorno.Sucesso == true) {
+					$('#alert .text').append(retorno.Mensagem);
+					$('#alert').addClass("alert-success");
+					
+				} else {
+					$('#alert .text').append(retorno.Mensagem);
+					$('#alert').addClass("alert-danger");
+				}
+
+				$('#alert').show().delay(3000).fadeOut("fast", function() {
+					$('#alert .text').html(""); 
+				}); 
+				
+				$("#loader").hide();
+			});
+		}
+		else{
+			alert("As senhas digitadas são diferentes.");
+		}
 	});
 	
 
@@ -53,10 +59,10 @@ function DadosAvaliador(){
 	var obj = {};
 	obj['Cod_Avaliador'] = $("#codAvaliador").val();
 	obj['Nom_Avaliador'] = $("#nomAvaliador").val();
-	obj['Cod_Especialidade'] = $("#codEspecialidade").val();
-	obj['Des_Email'] = $("#desEmail").val();
-	obj['Des_Login'] = $("#desLogin").val();
-	obj['Des_Senha'] = $("#desSenha").val();
-	
+	obj['Cod_Especialidade'] = $("#nomEspecialidade").val();
+	obj['Des_Email'] = $("#emailAvaliador").val();
+	obj['Des_Login'] = $("#loginAvaliador").val();
+	obj['Des_Senha'] = $("#senhaAvaliador").val();
+	console.log(obj);
 	return obj;
 }
