@@ -66,21 +66,21 @@ class Avaliador{
 	function Insert($a){
 		$retorno = array();
 		try {
-			
 			$codAvaliador = "";
 			
 			if($a['Cod_Avaliador'] != ""){
-			
+				
 				$codAvaliador = $a['Cod_Avaliador'];
-			
+				
 				$query = "UPDATE tb_avaliador ";
 				$query .= "SET  ";
 				$query .= "Nom_Avaliador = '" . $a['Nom_Avaliador'] . "', ";
 				$query .= "Cod_Especialidade = '" . $a['Cod_Especialidade'] . "', ";
 				$query .= "Des_Email = '" . $a['Des_Email'] . "', ";
 				$query .= "Des_Login = '" . $a['Des_Login'] . "', ";
-				$query .= "Des_Senha = " . $a['Des_Senha'] . "; ";
-			
+				$query .= "Des_Senha = '" . md5($a['Des_Senha']) . "' ";
+				$query .= "WHERE Cod_Avaliador = " . $codAvaliador . "; ";
+				
 				if (mysqli_query($this->cnn, $query)) {
 					$retorno['Sucesso'] = true;
 					$retorno['Mensagem'] = "Dados atualizados com sucesso";
@@ -115,22 +115,18 @@ class Avaliador{
 				if($a['Des_Senha'] != ''){
 					$Des_Senha = $a['Des_Senha'];
 				}
-			}	
-			
-// 			$query = "INSERT INTO `tb_avaliador`(`Nom_Avaliador`, `Cod_Especialidade`, `Des_Email`, `Des_Login`, `Des_Senha`) ";
-// 			$query .= "VALUES (" . $Nom_Avaliador . ", '" . $Cod_Especialidade . "', " . $Des_Email . ", " . $Des_Login.", ".$Des_Senha."); ";
-			
-			$query = "INSERT INTO tb_avaliador (Nom_Avaliador, Cod_Especialidade, Des_Email, Des_Login, Des_Senha) ";
-			$query .= "VALUES ($Nom_Avaliador, $Cod_Especialidade, $Des_Email, $Des_Login, $Des_Senha)";
-		
-			if (mysqli_query($this->cnn, $query)) {
-				$codAvaliador = mysqli_insert_id($this->cnn);
 				
-				$retorno['Sucesso'] = true;
-				$retorno['Mensagem'] = "Dados inseridos com sucesso";
-				$retorno['CodAvaliador'] = $codAvaliador;
-			}
-			
+				$query = "INSERT INTO tb_avaliador (Nom_Avaliador, Cod_Especialidade, Des_Email, Des_Login, Des_Senha) ";
+				$query .= "VALUES ($Nom_Avaliador, $Cod_Especialidade, $Des_Email, $Des_Login, md5($Des_Senha))";
+				
+				if (mysqli_query($this->cnn, $query)) {
+					$codAvaliador = mysqli_insert_id($this->cnn);
+				
+					$retorno['Sucesso'] = true;
+					$retorno['Mensagem'] = "Dados inseridos com sucesso";
+					$retorno['CodAvaliador'] = $codAvaliador;
+				}
+			}	
 		} catch (Exception $e) {
 			$msg = "Falha ao inserir avaliador. Mensagem de erro: " . mysqli_error($this->cnn);
 			$this->log->logError($this,$msg);			

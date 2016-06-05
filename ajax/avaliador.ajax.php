@@ -55,11 +55,8 @@
 
 		echo json_encode($retorno);
 	} else if (isset($_POST['dadosAvaliador'])) {
-	
 		$retorno = "";
-	
 		$dadosAvaliador = $_POST['dadosAvaliador'];
-			
 		$retorno = $avaliador->Insert($dadosAvaliador);
 	
 		echo json_encode($retorno);
