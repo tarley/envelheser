@@ -73,7 +73,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	$("#save").click(function() {		
+	$(".fa fa-save").click(function() {		
 		
 		$("#loader").show();
 		

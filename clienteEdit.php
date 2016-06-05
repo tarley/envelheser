@@ -363,7 +363,8 @@
 														</div>
 													</div>
 												 </div>
-											 </div>                              
+											 </div> 
+											 <button id="save" type="button" class="btn btn-primary" ><i class="fa fa-save"></i> Salvar</button>                             
 										</div>
 	                             	</div>
 	                         	</div>
