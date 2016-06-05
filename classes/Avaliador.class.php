@@ -117,11 +117,11 @@ class Avaliador{
 				}
 			}	
 			
-			$query = "INSERT INTO `tb_avaliador`(`Nom_Avaliador`, `Cod_Especialidade`, `Des_Email`, `Des_Login`, `Des_Senha`) ";
-			$query .= "VALUES (" . $Nom_Avaliador . ", '" . $Cod_Especialidade . "', " . $Des_Email . ", " . $Des_Login.", ".$Des_Senha."); ";
+// 			$query = "INSERT INTO `tb_avaliador`(`Nom_Avaliador`, `Cod_Especialidade`, `Des_Email`, `Des_Login`, `Des_Senha`) ";
+// 			$query .= "VALUES (" . $Nom_Avaliador . ", '" . $Cod_Especialidade . "', " . $Des_Email . ", " . $Des_Login.", ".$Des_Senha."); ";
 			
-// 			$query = "INSERT INTO tb_avaliador (Nom_Avaliador, Cod_Especialidade, Des_Email, Des_Login, Des_Senha) ";
-// 			$query .= "VALUES ($Nom_Avaliador, $Cod_Especialidade, $Des_Email, $Des_Login, $Des_Senha)";
+			$query = "INSERT INTO tb_avaliador (Nom_Avaliador, Cod_Especialidade, Des_Email, Des_Login, Des_Senha) ";
+			$query .= "VALUES ($Nom_Avaliador, $Cod_Especialidade, $Des_Email, $Des_Login, $Des_Senha)";
 		
 			if (mysqli_query($this->cnn, $query)) {
 				$codAvaliador = mysqli_insert_id($this->cnn);
