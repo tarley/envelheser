@@ -5,7 +5,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
    	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Projeto Envelheser </title>
     
@@ -76,7 +76,7 @@
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="http://br.linkedin.com/in/ater-souza-53712922"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://br.linkedin.com/in/ater-souza-53712922"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -87,7 +87,7 @@
                         <h4>Bruna Ribeiro</h4>
                         <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="https://m.facebook.com/bruninha.abalen?fref=nf"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://facebook.com/bruninha.abalen?fref=nf"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
@@ -102,7 +102,7 @@
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="http://www.linkedin.com/in/bruno-sartori-40b9b4116?trk=hp-identity-name "><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://www.linkedin.com/in/bruno-sartori-40b9b4116?trk=hp-identity-name "><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -113,7 +113,7 @@
                         <h4>Carina Roriz Pimenta</h4>
                         <p class="text-muted">Desenvolvedora</p>
                         <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="facebook.com/carina.rorizpimenta"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://facebook.com/carina.rorizpimenta"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a target="_blank"  href="https://www.linkedin.com/in/carina-roriz-pimenta-a7b349a3?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a>
                             </li>
@@ -139,9 +139,9 @@
                         <h4>Daniel Caldeira</h4>
                         <p class="text-muted">Desenvolvedor Front End</p>
                         <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="facebook.com/danieldcaldeira"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://facebook.com/danieldcaldeira"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="br.linkedin.com/in/danieldcaldeira"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://br.linkedin.com/in/danieldcaldeira"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -152,9 +152,9 @@
                         <h4>Fillipe Perpétuo</h4>
                         <p class="text-muted">Desenvolvedor</p>
                         <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="facebook.com/fillipeperpetuo"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://facebook.com/fillipeperpetuo"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="linkedin.com/in/fillipe-perpétuo-639b0075?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://linkedin.com/in/fillipe-perpétuo-639b0075?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -165,7 +165,7 @@
                         <h4>Francisco Coelho</h4>
                         <p class="text-muted">Responsável Apresentação do Projeto</p>
                         <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="http://www.facebook.com/francisco.augusto.31"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://www.facebook.com/francisco.augusto.31"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a target="_blank"  href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
@@ -217,7 +217,7 @@
                         <h4>Lucas Amaral</h4>
                         <p class="text-muted">Analista de Teste</p>
                         <ul class="list-inline social-buttons">
-                            <li><a target="_blank"  href="facebook.com/lucas.amaral8"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank"  href="https://facebook.com/lucas.amaral8"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a target="_blank"  href="https://br.linkedin.com/in/lucas-amaral-a6403772"><i class="fa fa-linkedin"></i></a>
                             </li>
@@ -258,7 +258,7 @@
                         <ul class="list-inline social-buttons">
                             <li><a target="_blank"  href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a target="_blank"  href="http://www.linkedin.com/in/pedro-henrique-6601a2115"><i class="fa fa-linkedin"></i></a>
+                            <li><a target="_blank"  href="https://www.linkedin.com/in/pedro-henrique-6601a2115"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
