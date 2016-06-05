@@ -374,7 +374,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/img_fundador/lorena_castro.jpg" class="img-circle img-fundadores" alt="">
+                        <img src="images/img_fundador/lorena_castro.png" class="img-circle img-fundadores" alt="">
                         <h4>Lorena Castro Silva</h4>
                         <p class="text-muted">Acadêmica de Enfermagem</p>
                         <ul class="list-inline social-buttons">
