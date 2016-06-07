@@ -164,7 +164,6 @@ class Cliente {
 				
 				$result = mysqli_query($this->cnn, $queryTel);
 				$num_rows = mysqli_num_rows($result);
-				echo $num_rows;
 				if ($num_rows >= 1) {
 					$query2 = "UPDATE `tb_telefone` SET `Num_Telefone` = '" . $Num_Telefone. "' ";
 					$query2 .= "WHERE Cod_Cliente = " . $c['Cod_Cliente'] . "; ";
