@@ -432,6 +432,10 @@ function validaCampos(){
 		result = true;
 		texto += "Filhos \r\n";
 	}
+	if($("#telCliente").val() == ""){
+		result = true;
+		texto += "Telefone \r\n";
+	}
 	
 	if(result)
 		alert(texto);
