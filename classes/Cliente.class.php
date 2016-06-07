@@ -118,7 +118,8 @@ class Cliente {
 				$Cod_Ocupacao = 'NULL';
 				$Cod_Estado_Civil = 'NULL';
 				$Cod_Naturalidade = 'NULL';
-					
+				$Num_Telefone = 'NULL';
+				
 				if($c['Cod_Cor'] != ''){
 					$Cod_Cor = $c['Cod_Cor'];
 				}
@@ -138,6 +139,10 @@ class Cliente {
 				if($c['Cod_Naturalidade'] != ''){
 					$Cod_Naturalidade = $c['Cod_Naturalidade'];
 				}
+				
+				if($c['Num_Telefone'] != ''){
+					$Num_Telefone = $c['Num_Telefone'];
+				}
 					
 				$query = "UPDATE tb_cliente ";
 				$query .= "SET  ";
@@ -154,10 +159,30 @@ class Cliente {
 				$query .= "Cod_Naturalidade = " . $Cod_Naturalidade . " ";
 				$query .= "WHERE Cod_Cliente = " . $c['Cod_Cliente'] . "; ";
 				
+				$queryTel = "SELECT COUNT(*) FROM `tb_telefone` ";
+				$queryTel .= "WHERE Cod_Cliente = " . $c['Cod_Cliente'] . "; ";
+				
+				$result = mysqli_query($this->cnn, $queryTel);
+				$num_rows = mysqli_num_rows($result);
+				echo $num_rows;
+				if ($num_rows >= 1) {
+					$query2 = "UPDATE `tb_telefone` SET `Num_Telefone` = '" . $Num_Telefone. "' ";
+					$query2 .= "WHERE Cod_Cliente = " . $c['Cod_Cliente'] . "; ";
+				}
+				else {
+					$query2 = "INSERT INTO `tb_telefone`(`Num_Telefone`, `Cod_Cliente`, `Cod_Tipo_Telefone`) ";
+					$query2 .= "VALUES (".$Num_Telefone.", '" . $codCliente ."', ".'1'."); ";
+				}
+				
 				if (mysqli_query($this->cnn, $query)) {
-					$retorno['Sucesso'] = true;
-					$retorno['Mensagem'] = "Dados atualizados com sucesso";
-					$retorno['CodCliente'] = $codCliente;
+					if (mysqli_query($this->cnn, $query2)) {
+						$retorno['Sucesso'] = true;
+						$retorno['Mensagem'] = "Dados atualizados com sucesso";
+						$retorno['CodCliente'] = $codCliente;
+					}
+					else{
+						throw new Exception(mysqli_error($this->cnn), mysqli_errno($this->cnn));
+					}
 				}
 				else{
 					throw new Exception(mysqli_error($this->cnn), mysqli_errno($this->cnn));
@@ -176,6 +201,7 @@ class Cliente {
 				$Cod_Ocupacao = 'NULL';
 				$Cod_Estado_Civil = 'NULL';
 				$Cod_Naturalidade = 'NULL';
+				$Num_Telefone = 'NULL';
 				
 				if($c['Nom_Cliente'] != ''){
 					$Nom_Cliente = "'".$c['Nom_Cliente']."'";
@@ -222,13 +248,26 @@ class Cliente {
 					$Cod_Naturalidade = $c['Cod_Naturalidade'];
 				}
 				
+				if($c['Num_Telefone'] != ''){
+					$Num_Telefone = $c['Num_Telefone'];
+				}
+				
 				$query = "INSERT INTO `tb_cliente`(`Nom_Cliente`, `Dta_Nascimento`, `Num_Rg`, `Des_Endereco`, `Ind_Sexo`, `Num_Filhos`, `Cod_Cor`, `Cod_Escolaridade`, `Cod_Ocupacao`, `Cod_Estado_Civil`, `Cod_Naturalidade`) ";
 				$query .= "VALUES (".$Nom_Cliente.", '" . $Dta_Nascimento ."', ".$Num_Rg.", ".$Des_Endereco.", ".$Ind_Sexo.", ".$Num_Filhos.", ".$Cod_Cor.", ".$Cod_Escolaridade.", ".$Cod_Ocupacao.", ".$Cod_Estado_Civil.", ".$Cod_Naturalidade."); ";
 				
+				$query2 = "INSERT INTO `tb_telefone`(`Num_Telefone`, `Cod_Cliente`, `Cod_Tipo_Telefone`) ";
+				$query2 .= "VALUES (".$Num_Telefone.", '" . $codCliente ."', ".'1'."); ";
+				
 				if (mysqli_query($this->cnn, $query)) {
-					$retorno['Sucesso'] = true;
-					$retorno['Mensagem'] = "Dados inseridos com sucesso";
-					$retorno['CodCliente'] = $codCliente;
+					
+					if(mysqli_query($this->cnn, $query2)){
+						$retorno['Sucesso'] = true;
+						$retorno['Mensagem'] = "Dados inseridos com sucesso";
+						$retorno['CodCliente'] = $codCliente;
+					}
+					else {
+						throw new Exception(mysqli_error($this->cnn), mysqli_errno($this->cnn));
+					}
 				}
 				else{
 					throw new Exception(mysqli_error($this->cnn), mysqli_errno($this->cnn));

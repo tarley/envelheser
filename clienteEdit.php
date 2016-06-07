@@ -105,6 +105,29 @@
 				echo '</div>';
 			}
 			
+			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){
+					
+				echo '<div class="col-md-3 col-lg-3 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Multi_Combo">';
+					
+				$listaOpcoes = $Prontuario->getCategoriaMultiCombo($listaPerguntas[$i]['Cod_Pergunta']);
+					
+				echo '<select data-placeholder="Selecione" class="chosen-select" style="width: 300px" multiple>';
+				echo '<option value=""></option>';
+					
+				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
+					echo '<optgroup label="' . $listaOpcoes[$j]['Des_Categoria'] . '">';
+			
+					$listaItens = $Prontuario->getOpcoesMultiComboByCategoria($listaOpcoes[$j]['Cod_Categoria_Combo']);
+			
+					for ($k = 0; $k < sizeof($listaItens); $k++) {
+						echo '<option value="'.$listaItens[$k]['Cod_Item_Multi_Combo'].'">'.$listaItens[$k]['Des_Item_Multi_Combo'].'</option>';
+					}
+				}
+					
+				echo '</select>';
+				echo '</div>';
+			}
+			
 			if($listaPerguntas[$i]['Ind_Pergunta_Outros']){
 				echo '<div id="divOutros" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Outros" class="form-horizontal">';
 				echo '<label class="control-label col-md-1 float-left text-right nopadding">Outros:</label>';
@@ -160,30 +183,6 @@
 				}
 				echo '</div>';
 			}
-			
-			if($listaPerguntas[$i]['Ind_Pergunta_Multi_Combo']){		
-				
-				echo '<div class="col-md-3 col-lg-3 col-xs-3 nopadding" data-tipo="resposta" data-tipopergunta="Ind_Pergunta_Multi_Combo">';
-				
-				$listaOpcoes = $Prontuario->getCategoriaMultiCombo($listaPerguntas[$i]['Cod_Pergunta']);
-				
-				echo '<select data-placeholder="Selecione" class="chosen-select" style="width: 300px" multiple>';
-				echo '<option value=""></option>';
-				
-				for ($j = 0; $j < sizeof($listaOpcoes); $j++) {
-					echo '<optgroup label="' . $listaOpcoes[$j]['Des_Categoria'] . '">';
-					
-					$listaItens = $Prontuario->getOpcoesMultiComboByCategoria($listaOpcoes[$j]['Cod_Categoria_Combo']);
-					
-					for ($k = 0; $k < sizeof($listaItens); $k++) {
-						echo '<option value="'.$listaItens[$k]['Cod_Item_Multi_Combo'].'">'.$listaItens[$k]['Des_Item_Multi_Combo'].'</option>';
-					}
-				}
-				
-				echo '</select>';
-				echo '</div>';				
-			}
-			
 			echo '</div>';
 			
 			$contPergunta++;
@@ -290,9 +289,18 @@
 											echo '</select>';
 											?>
                                         </div>	
-										<div class="form-group col-md-2 col-xs-4">
+										<div class="form-group col-md-2">
                                             <label>Sexo</label>
-                                            <input id="sexoCliente" class="form-control">
+                                            <div class="radio">
+				                                <label>
+				                                    <input type="radio" id="sexoCliente[]" name="sexoCliente[]" value="M" class="form-horizontal" checked="checked"/> Masculino
+				                                </label>
+				                            </div>
+				                            <div class="radio">
+				                                <label>
+				                                    <input type="radio" id="sexoCliente[]" name="sexoCliente[]" value="F" class="form-horizontal"/> Feminino
+				                                </label>
+				                            </div>
                                         </div>					
 										<div class="form-group col-md-2 col-xs-4">
                                             <label>Cor</label>

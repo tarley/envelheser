@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$('#form').validator();
 	
 	if($.urlParam('idCliente') != null) {
 		$.ajax({
@@ -408,25 +407,30 @@ function DadosCliente(){
 	obj['Cod_Ocupacao'] = $("#ocupacaoCliente").val();
 	obj['Cod_Estado_Civil'] = $("#estadoCivilCliente").val();
 	obj['Cod_Naturalidade'] = $("#naturalidadeCliente").val();
+	obj['Num_Telefone'] = $("#telCliente").val();
 	
 	return obj;
 }
 
 function validaCampos(){
 	var result = false;
-	var texto = "Preencha os campos: ";
+	var texto = "Preencha os campos: \r\n";
 	
 	if($("#nomCliente").val() == ""){
 		result = true;
-		texto += " Nome \r\n";
+		texto += "Nome \r\n";
 	}
 	if($("#enderecoCliente").val() == ""){
 		result = true;
-		texto += " Endereço \r\n";
+		texto += "Endereço \r\n";
 	}
 	if($("#dataNascimentoCliente").val() == ""){
 		result = true;
-		texto += " Data Nascimento \r\n";
+		texto += "Data Nascimento \r\n";
+	}
+	if($("#numeroFilhosCliente").val() == ""){
+		result = true;
+		texto += "Filhos \r\n";
 	}
 	
 	if(result)
