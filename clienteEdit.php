@@ -263,7 +263,7 @@
 											echo '</select>';
 											?>
                                         </div>	
-                                        <div class="form-group col-md-2 col-xs-4">
+                                        <div class="form-group col-md-2 col-xs-5">
                                             <label>Naturalidade</label>
                                             <?php 
                                             $listaOpcoes = $Naturalidade->getLista();
@@ -276,7 +276,7 @@
 											echo '</select>';
 											?>
                                         </div>		
-                                        <div class="form-group col-md-2 col-xs-4">
+                                        <div class="form-group col-md-2 col-xs-5">
                                             <label>Escolaridade</label>
                                             <?php 
                                             $listaOpcoes = $Escolaridade->getLista();
@@ -289,17 +289,19 @@
 											echo '</select>';
 											?>
                                         </div>	
-										<div class="form-group col-md-2">
-                                            <label>Sexo</label>
-                                            <div class="radio">
-				                                <label>
-				                                    <input type="radio" id="sexoCliente[]" name="sexoCliente[]" value="M" class="form-horizontal" checked="checked"/> Masculino
-				                                </label>
-				                            </div>
-				                            <div class="radio">
-				                                <label>
-				                                    <input type="radio" id="sexoCliente[]" name="sexoCliente[]" value="F" class="form-horizontal"/> Feminino
-				                                </label>
+										<div class="control-group col-md-3 col-xs-5">
+                                            <label class="control-label">Sexo</label>
+                                            <div class="controls text-center">
+	                                            <div class="radio-inline form-group">
+					                                <label>
+					                                    <input type="radio" id="sexoCliente[]" name="sexoCliente[]" value="M"  checked="checked"/> Masculino
+					                                </label>
+					                            </div>
+					                            <div class="radio-inline form-group" style="margin-left: 50px;">
+					                                <label>
+					                                    <input type="radio" id="sexoCliente[]" name="sexoCliente[]" value="F" /> Feminino
+					                                </label>
+					                            </div>					                                
 				                            </div>
                                         </div>					
 										<div class="form-group col-md-2 col-xs-4">
