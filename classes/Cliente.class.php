@@ -53,7 +53,7 @@ class Cliente {
 		$query = "SELECT Cod_Cliente, Nom_Cliente, Num_Rg, ";
 		$query .= "(SELECT Num_Telefone FROM tb_telefone t WHERE t.Cod_Cliente = c.Cod_Cliente LIMIT 1) AS Num_Telefone, ";
 		$query .= "co.Nom_Cor, co.Cod_Cor, e.Nom_Escolaridade, e.Cod_Escolaridade, o.Nom_Ocupacao, o.Cod_Ocupacao, ec.Nom_Estado_Civil, ec.Cod_Estado_Civil, n.Nom_Naturalidade, n.Cod_Naturalidade, ";
-		$query .= "CASE WHEN c.Ind_Sexo = 'F' THEN 'Feminino' ELSE 'Masculino' END AS Ind_Sexo, ";
+		$query .= "c.Ind_Sexo, ";
 		$query .= "c.Num_Filhos, c.Des_Endereco, ";
 		$query .= "DATE_FORMAT(c.Dta_Nascimento, '%d/%m/%Y') AS Dta_Nascimento ";
 		$query .= "FROM tb_cliente c LEFT JOIN tb_cor co ON (c.Cod_Cor = co.Cod_Cor) ";
@@ -106,27 +106,61 @@ class Cliente {
 				
 				$codCliente = $c['Cod_Cliente'];
 				
-				$Dta_Nascimento = DateTime::createFromFormat("d/m/Y", $c['Dta_Nascimento']);
+				if($c['Dta_Nascimento'] != ""){
+					$Dta_Nascimento = DateTime::createFromFormat("d/m/Y", $c['Dta_Nascimento']);
+					$Dta_Nascimento = date_format($Dta_Nascimento, "Y-m-d");
+				}
+				else 
+					$Dta_Nascimento = 'NULL';
 				
+				$Cod_Cor = 'NULL';
+				$Cod_Escolaridade = 'NULL';
+				$Cod_Ocupacao = 'NULL';
+				$Cod_Estado_Civil = 'NULL';
+				$Cod_Naturalidade = 'NULL';
+					
+				if($c['Cod_Cor'] != ''){
+					$Cod_Cor = $c['Cod_Cor'];
+				}
+				
+				if($c['Cod_Escolaridade'] != ''){
+					$Cod_Escolaridade = $c['Cod_Escolaridade'];
+				}
+				
+				if($c['Cod_Ocupacao'] != ''){
+					$Cod_Ocupacao = $c['Cod_Ocupacao'];
+				}
+				
+				if($c['Cod_Estado_Civil'] != ''){
+					$Cod_Estado_Civil = $c['Cod_Estado_Civil'];
+				}
+				
+				if($c['Cod_Naturalidade'] != ''){
+					$Cod_Naturalidade = $c['Cod_Naturalidade'];
+				}
+					
 				$query = "UPDATE tb_cliente ";
 				$query .= "SET  ";
 				$query .= "Nom_Cliente = '" . $c['Nom_Cliente'] . "', ";
-				$query .= "Dta_Nascimento = '" . date_format($Dta_Nascimento, "Y-m-d"). "', ";
+				$query .= "Dta_Nascimento = '" . $Dta_Nascimento. "', ";
 				$query .= "Num_Rg = '" . $c['Num_Rg'] . "', ";
 				$query .= "Des_Endereco = '" . $c['Des_Endereco'] . "', ";
 				$query .= "Ind_Sexo = '" . $c['Ind_Sexo'] . "', ";
 				$query .= "Num_Filhos = " . $c['Num_Filhos'] . ", ";
-				$query .= "Cod_Cor = " . $c['Cod_Cor'] . ", ";
-				$query .= "Cod_Escolaridade = " . $c['Cod_Escolaridade'] . ", ";
-				$query .= "Cod_Ocupacao = " . $c['Cod_Ocupacao'] . ", ";
-				$query .= "Cod_Estado_Civil = " . $c['Cod_Estado_Civil'] . ", ";
-				$query .= "Cod_Naturalidade = " . $c['Cod_Naturalidade'] . " ";
+				$query .= "Cod_Cor = " . $Cod_Cor . ", ";
+				$query .= "Cod_Escolaridade = " . $Cod_Escolaridade . ", ";
+				$query .= "Cod_Ocupacao = " . $Cod_Ocupacao . ", ";
+				$query .= "Cod_Estado_Civil = " . $Cod_Estado_Civil . ", ";
+				$query .= "Cod_Naturalidade = " . $Cod_Naturalidade . " ";
 				$query .= "WHERE Cod_Cliente = " . $c['Cod_Cliente'] . "; ";
 				
 				if (mysqli_query($this->cnn, $query)) {
 					$retorno['Sucesso'] = true;
 					$retorno['Mensagem'] = "Dados atualizados com sucesso";
 					$retorno['CodCliente'] = $codCliente;
+				}
+				else{
+					throw new Exception(mysqli_error($this->cnn), mysqli_errno($this->cnn));
 				}
 			}
 			else{
@@ -149,6 +183,7 @@ class Cliente {
 				
 				if($c['Dta_Nascimento'] != ''){
 					$Dta_Nascimento = DateTime::createFromFormat("d/m/Y", $c['Dta_Nascimento']);
+					$Dta_Nascimento = date_format($Dta_Nascimento, "Y-m-d");
 				}
 					
 				if($c['Num_Rg'] != ''){
@@ -188,17 +223,17 @@ class Cliente {
 				}
 				
 				$query = "INSERT INTO `tb_cliente`(`Nom_Cliente`, `Dta_Nascimento`, `Num_Rg`, `Des_Endereco`, `Ind_Sexo`, `Num_Filhos`, `Cod_Cor`, `Cod_Escolaridade`, `Cod_Ocupacao`, `Cod_Estado_Civil`, `Cod_Naturalidade`) ";
-				$query .= "VALUES (".$Nom_Cliente.", '" . date_format($Dta_Nascimento, "Y-m-d") ."', ".$Num_Rg.", ".$Des_Endereco.", ".$Ind_Sexo.", ".$Num_Filhos.", ".$Cod_Cor.", ".$Cod_Escolaridade.", ".$Cod_Ocupacao.", ".$Cod_Estado_Civil.", ".$Cod_Naturalidade."); ";
+				$query .= "VALUES (".$Nom_Cliente.", '" . $Dta_Nascimento ."', ".$Num_Rg.", ".$Des_Endereco.", ".$Ind_Sexo.", ".$Num_Filhos.", ".$Cod_Cor.", ".$Cod_Escolaridade.", ".$Cod_Ocupacao.", ".$Cod_Estado_Civil.", ".$Cod_Naturalidade."); ";
 				
 				if (mysqli_query($this->cnn, $query)) {
 					$retorno['Sucesso'] = true;
 					$retorno['Mensagem'] = "Dados inseridos com sucesso";
 					$retorno['CodCliente'] = $codCliente;
 				}
+				else{
+					throw new Exception(mysqli_error($this->cnn), mysqli_errno($this->cnn));
+				}
 			}
-			
-			
-			
 		} catch (Exception $e) {
 			$msg = "Falha ao inserir respostas. Mensagem de erro: " . mysqli_error($this->cnn);
 			$this->log->logError($this,$msg);			

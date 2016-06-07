@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$('#form').validator();
 	
 	if($.urlParam('idCliente') != null) {
 		$.ajax({
@@ -13,8 +14,9 @@ $(document).ready(function() {
 				$("#escolaridadeCliente").val(cliente.escolaridade);	
 				$("#ocupacaoCliente").val(cliente.ocupacao);		
 				$("#estadoCivilCliente").val(cliente.estadoCivil);	
-				$("#naturalidadeCliente").val(cliente.naturalidade);	
-				$("#sexoCliente").val(cliente.sexo);	
+				$("#naturalidadeCliente").val(cliente.naturalidade);
+				console.log(cliente.sexo);
+				$("input[value*='" + cliente.sexo + "']").prop('checked', true);
 				$("#dataNascimentoCliente").val(cliente.dataNascimento);	
 				$("#numeroFilhosCliente").val(cliente.numeroFilhos);
 				$("#enderecoCliente").val(cliente.endereco);
@@ -51,96 +53,101 @@ $(document).ready(function() {
 		window.location= "clienteVis.php";
 	});
 	
+	
 	$("#saveCliente").click(function() {	
-		
-		$("#loader").show();
-		
-		var obj = DadosCliente();
-		//console.log(obj);
-		$.post( "ajax/cliente.ajax.php", { dadosCliente: obj }, function(data) {
-			var retorno = jQuery.parseJSON(data);
-			console.log(retorno);
-			if(retorno.Sucesso == true) {
-				$('#alert .text').append(retorno.Mensagem);
-				$('#alert').addClass("alert-success");
-				
-			} else {
-				$('#alert .text').append(retorno.Mensagem);
-				$('#alert').addClass("alert-danger");
-			}
-
-			$('#alert').show().delay(3000).fadeOut("fast", function() {
-				$('#alert .text').html(""); 
-			}); 
+	
+		if(validaCampos()){
+			$("#loader").show();
 			
-			$("#loader").hide();
-		});
+			var obj = DadosCliente();
+			//console.log(obj);
+			$.post( "ajax/cliente.ajax.php", { dadosCliente: obj }, function(data) {
+				var retorno = jQuery.parseJSON(data);
+				console.log(retorno);
+				if(retorno.Sucesso == true) {
+					$('#alert .text').append(retorno.Mensagem);
+					$('#alert').addClass("alert-success");
+					
+				} else {
+					$('#alert .text').append(retorno.Mensagem);
+					$('#alert').addClass("alert-danger");
+				}
+		
+				$('#alert').show().delay(3000).fadeOut("fast", function() {
+					$('#alert .text').html(""); 
+				}); 
+				
+				$("#loader").hide();
+			});
+		
+			}
 	});
 	
 	$(".btn-primary.save").click(function() {			
 		
-		$("#loader").show();
 		
-		var obj = MontaJSON();
-		
-		var codCliente = $("#codCliente").val();
-		console.log(JSON.stringify(obj));
-		
-		$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
-			//console.log(data);
-			var retorno = jQuery.parseJSON(data);
+			$("#loader").show();
 			
-			//console.log(retorno.Mensagem)
-			if(retorno.Sucesso == true) {
-				$('#alert .text').append(retorno.Mensagem);
-				$('#alert').addClass("alert-success");
-
-				$('#alert2 .text').append(retorno.Mensagem);
-				$('#alert2').addClass("alert-success");
+			var obj = MontaJSON();
+			
+			var codCliente = $("#codCliente").val();
+			console.log(JSON.stringify(obj));
+			
+			$.post( "ajax/prontuario.ajax.php", { CodCliente: codCliente, listaRespostas: JSON.stringify(obj) }, function(data) {
+				//console.log(data);
+				var retorno = jQuery.parseJSON(data);
 				
-				$.ajax({
-					url: "ajax/cliente.ajax.php?codigo=" + retorno.CodCliente,
-					success: function (data) {
-						var cliente = jQuery.parseJSON(data);
-
-						$("#divHistoricoProntuarios").empty();
-						
-						if(cliente.prontuario.length != 0){
-							for(var i=0; i < cliente.prontuario.length; i++){
-								var btn = $("<button type='button'>");
-								btn.prop("id", "btnPront-" + cliente.prontuario[i].NumProntuario);
-								btn.html(cliente.prontuario[i].DtaProntuario);
-
-								if(cliente.prontuario[i].NumProntuario == retorno.NumProntuario)
-									btn.addClass("btn btn-primary");
-								else
-									btn.addClass("btn btn-default");
-								
-								$("#divHistoricoProntuarios").append(btn);
-								$("#save").attr("disabled", "disabled");
+				console.log(retorno.Mensagem)
+				if(retorno.Sucesso == true) {
+					$('#alert .text').append(retorno.Mensagem);
+					$('#alert').addClass("alert-success");
+	
+					$('#alert2 .text').append(retorno.Mensagem);
+					$('#alert2').addClass("alert-success");
+					
+					$.ajax({
+						url: "ajax/cliente.ajax.php?codigo=" + retorno.CodCliente,
+						success: function (data) {
+							var cliente = jQuery.parseJSON(data);
+	
+							$("#divHistoricoProntuarios").empty();
+							
+							if(cliente.prontuario.length != 0){
+								for(var i=0; i < cliente.prontuario.length; i++){
+									var btn = $("<button type='button'>");
+									btn.prop("id", "btnPront-" + cliente.prontuario[i].NumProntuario);
+									btn.html(cliente.prontuario[i].DtaProntuario);
+	
+									if(cliente.prontuario[i].NumProntuario == retorno.NumProntuario)
+										btn.addClass("btn btn-primary");
+									else
+										btn.addClass("btn btn-default");
+									
+									$("#divHistoricoProntuarios").append(btn);
+									$("#save").attr("disabled", "disabled");
+								}
 							}
 						}
-					}
-				});
+					});
+					
+				} else {
+					$('#alert .text').append(retorno.Mensagem);
+					$('#alert').addClass("alert-danger");
+					
+					$('#alert2 .text').append(retorno.Mensagem);
+					$('#alert2').addClass("alert-danger");
+				}
+	
+				$('#alert').show().delay(3000).fadeOut("fast", function() {
+					$('#alert .text').html(""); 
+				}); 
 				
-			} else {
-				$('#alert .text').append(retorno.Mensagem);
-				$('#alert').addClass("alert-danger");
+				$('#alert2').show().delay(3000).fadeOut("fast", function() {
+					$('#alert2 .text').html(""); 
+				}); 
 				
-				$('#alert2 .text').append(retorno.Mensagem);
-				$('#alert2').addClass("alert-danger");
-			}
-
-			$('#alert').show().delay(3000).fadeOut("fast", function() {
-				$('#alert .text').html(""); 
-			}); 
-			
-			$('#alert2').show().delay(3000).fadeOut("fast", function() {
-				$('#alert2 .text').html(""); 
-			}); 
-			
-			$("#loader").hide();
-		});
+				$("#loader").hide();
+			});
 	});			
 
 	$('.btn-toggle .btn').click(function() {
@@ -394,7 +401,7 @@ function DadosCliente(){
 	obj['Dta_Nascimento'] = $("#dataNascimentoCliente").val();
 	obj['Num_Rg'] = $("#numRg").val();
 	obj['Des_Endereco'] = $("#enderecoCliente").val();
-	obj['Ind_Sexo'] = $("#sexoCliente").val();
+	obj['Ind_Sexo'] = $("input[id*='sexoCliente']:checked").val();
 	obj['Num_Filhos'] = $("#numeroFilhosCliente").val();
 	obj['Cod_Cor'] = $("#corCliente").val();
 	obj['Cod_Escolaridade'] = $("#escolaridadeCliente").val();
@@ -403,4 +410,27 @@ function DadosCliente(){
 	obj['Cod_Naturalidade'] = $("#naturalidadeCliente").val();
 	
 	return obj;
+}
+
+function validaCampos(){
+	var result = false;
+	var texto = "Preencha os campos: ";
+	
+	if($("#nomCliente").val() == ""){
+		result = true;
+		texto += " Nome \r\n";
+	}
+	if($("#enderecoCliente").val() == ""){
+		result = true;
+		texto += " Endereço \r\n";
+	}
+	if($("#dataNascimentoCliente").val() == ""){
+		result = true;
+		texto += " Data Nascimento \r\n";
+	}
+	
+	if(result)
+		alert(texto);
+	
+	return !result;
 }
