@@ -39,7 +39,7 @@
                                     <form role="form">
                                         <div class="form-group col-md-2">
                                             <label>Código</label>
-                                            <input id="codAvaliador" class="form-control" >
+                                            <input id="codAvaliador" disabled="disabled" class="form-control" >
                                         </div>
                                         <div class="form-group col-md-7">
                                             <label>Nome</label>

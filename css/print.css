@@ -1,0 +1,89 @@
+.no-print{
+	display:none;
+}
+
+.btn-group-sm{
+	padding: 5px 5px !important;
+}
+	
+}
+.btn-primary{
+	border: 2px solid #000 !important;
+}
+
+.btn-default{
+	display:none !important;
+	
+}
+
+body{
+	font: 10pt;
+	margin: 0 !important;
+	padding:0 !important;
+	page-break-inside:avoid !important;
+	
+	
+}
+.col-lg-12{
+	padding-right: 5px !important;
+    padding-left: 5px !important;
+}
+
+#page-wrapper{
+	padding: 0px 10px !important;
+}
+
+@page{
+	margin: 0,5cm;
+}
+
+.float-left {
+	float: left !important;
+	
+}
+
+
+.page-header{
+	margin-top:5px;
+}
+
+.marg-print-5{
+	margin-left: 5px !important;
+}
+
+p {
+	windows:3;
+	orphans:3;	
+}
+
+label{
+	font-size: 10pt !important;
+	text-align: rigth !important;
+	font-size: 10pt !important;
+	
+	
+	
+}
+
+input{
+	font-size: 10pt !important;
+	
+	
+	
+}
+
+.panel-body{
+	padding-bottom: 0px;
+}
+
+@media print{
+    body{ page-break-inside:avoid; }
+}
+
+
+
+
+
+
+
+

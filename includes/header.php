@@ -28,6 +28,8 @@
 
 <!-- Complemento CSS -->
 <link href="css/complemento.css" rel="stylesheet">
+<!-- Print CSS -->
+<link rel="stylesheet" type="text/css" href="css/print.css"  media="print">
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="images\favicon.png" />
 
