@@ -14,7 +14,7 @@ class EstadoCivil{
 	/**
 	 * Cria instancia de Logger para gerenciar exce��es.
 	 */
-	function EstadoCivil($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

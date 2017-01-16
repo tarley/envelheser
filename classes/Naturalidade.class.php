@@ -14,7 +14,7 @@ class Naturalidade{
 	/**
 	 * Cria instancia de Logger para gerenciar exce��es.
 	 */
-	function Naturalidade($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

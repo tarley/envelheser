@@ -14,7 +14,7 @@ class Avaliador{
 	/**
 	 * Cria instancia de Logger para gerenciar exceções.
 	 */
-	function Avaliador($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

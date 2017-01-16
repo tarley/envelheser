@@ -14,7 +14,7 @@ class Escolaridade{
 	/**
 	 * Cria instancia de Logger para gerenciar exce��es.
 	 */
-	function Escolaridade($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

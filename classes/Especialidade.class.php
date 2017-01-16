@@ -14,7 +14,7 @@ class Especialidade{
 	/**
 	 * Cria instancia de Logger para gerenciar exceções.
 	 */
-	function Especialidade($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

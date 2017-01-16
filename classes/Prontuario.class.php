@@ -14,7 +14,7 @@ class Prontuario {
 	/**
 	 * Cria instancia de Logger para gerenciar exce��es.
 	 */
-	function Prontuario($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

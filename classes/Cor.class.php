@@ -14,7 +14,7 @@ class Cor{
 	/**
 	 * Cria instancia de Logger para gerenciar exce��es.
 	 */
-	function Cor($cnn) {
+	function __construct($cnn) {
 		$this->log = new Logger();
 		$this->cnn = $cnn;
 	}

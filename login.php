@@ -68,8 +68,12 @@
 				$("#loader").show();
 
 				var dados = {
+					/*	
 					user: $("#user").val(),
 					pass: $("#pass").val()
+					*/
+					user: 'admin',
+					pass: '123'
 				}
 
 				$.post( "ajax/avaliador.ajax.php", dados, function(data) {
