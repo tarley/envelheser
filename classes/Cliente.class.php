@@ -205,12 +205,14 @@ class Cliente {
 				if($c['Nom_Cliente'] != ''){
 					$Nom_Cliente = "'".$c['Nom_Cliente']."'";
 				}
-				
-				if($c['Dta_Nascimento'] != ''){
-					$Dta_Nascimento = DateTime::createFromFormat("d/m/Y", $c['Dta_Nascimento']);
-					$Dta_Nascimento = date_format($Dta_Nascimento, "Y-m-d");
-				}
-					
+
+                if($c['Dta_Nascimento'] != ""){
+                    $Dta_Nascimento = DateTime::createFromFormat("d/m/Y", $c['Dta_Nascimento']);
+                    $Dta_Nascimento = date_format($Dta_Nascimento, "Y-m-d");
+                }
+                else
+                    $Dta_Nascimento = 'NULL';
+
 				if($c['Num_Rg'] != ''){
 					$Num_Rg = "'".$c['Num_Rg']."'";
 				}
@@ -253,12 +255,14 @@ class Cliente {
 				
 				$query = "INSERT INTO `tb_cliente`(`Nom_Cliente`, `Dta_Nascimento`, `Num_Rg`, `Des_Endereco`, `Ind_Sexo`, `Num_Filhos`, `Cod_Cor`, `Cod_Escolaridade`, `Cod_Ocupacao`, `Cod_Estado_Civil`, `Cod_Naturalidade`) ";
 				$query .= "VALUES (".$Nom_Cliente.", '" . $Dta_Nascimento ."', ".$Num_Rg.", ".$Des_Endereco.", ".$Ind_Sexo.", ".$Num_Filhos.", ".$Cod_Cor.", ".$Cod_Escolaridade.", ".$Cod_Ocupacao.", ".$Cod_Estado_Civil.", ".$Cod_Naturalidade."); ";
-				
-				$query2 = "INSERT INTO `tb_telefone`(`Num_Telefone`, `Cod_Cliente`, `Cod_Tipo_Telefone`) ";
-				$query2 .= "VALUES (".$Num_Telefone.", '" . $codCliente ."', ".'1'."); ";
-				
+
 				if (mysqli_query($this->cnn, $query)) {
-					
+
+                    $codCliente = mysqli_insert_id($this->cnn);
+
+                    $query2 = "INSERT INTO `tb_telefone`(`Num_Telefone`, `Cod_Cliente`, `Cod_Tipo_Telefone`) ";
+                    $query2 .= "VALUES ('".$Num_Telefone."', '" . $codCliente ."', ".'1'."); ";
+
 					if(mysqli_query($this->cnn, $query2)){
 						$retorno['Sucesso'] = true;
 						$retorno['Mensagem'] = "Dados inseridos com sucesso";

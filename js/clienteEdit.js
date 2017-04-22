@@ -1,20 +1,21 @@
 $(document).ready(function() {
-	
+
+	$('#telCliente').mask('(00) 00000-0000');
+    $('#dataNascimentoCliente').mask('00/00/0000');
+
 	if($.urlParam('idCliente') != null) {
 		$.ajax({
 			url: "ajax/cliente.ajax.php?codigo=" + $.urlParam('idCliente'),
 			success: function (data) {
 				var cliente = jQuery.parseJSON(data);
 				$("#codCliente").val(cliente.codigo);
-				$("#telCliente").val(cliente.telefone);	
-				
+				$("#telCliente").val(cliente.telefone);
 				$("#nomCliente").val(cliente.nome);
 				$("#corCliente").val(cliente.cor);
 				$("#escolaridadeCliente").val(cliente.escolaridade);	
 				$("#ocupacaoCliente").val(cliente.ocupacao);		
 				$("#estadoCivilCliente").val(cliente.estadoCivil);	
 				$("#naturalidadeCliente").val(cliente.naturalidade);
-				console.log(cliente.sexo);
 				$("input[value*='" + cliente.sexo + "']").prop('checked', true);
 				$("#dataNascimentoCliente").val(cliente.dataNascimento);	
 				$("#numeroFilhosCliente").val(cliente.numeroFilhos);
@@ -57,9 +58,9 @@ $(document).ready(function() {
 	
 		if(validaCampos()){
 			$("#loader").show();
-			
+
 			var obj = DadosCliente();
-			//console.log(obj);
+
 			$.post( "ajax/cliente.ajax.php", { dadosCliente: obj }, function(data) {
 				var retorno = jQuery.parseJSON(data);
 				console.log(retorno);
@@ -78,7 +79,7 @@ $(document).ready(function() {
 				
 				$("#loader").hide();
 			});
-		
+
 			}
 	});
 	
