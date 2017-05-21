@@ -73,18 +73,20 @@
 				}
 
 				$.post( "ajax/avaliador.ajax.php", dados, function(data) {
-					
-					var retorno = jQuery.parseJSON(data);
+					try {
+						console.log(data);
+						var retorno = jQuery.parseJSON(data);
 
-					console.log(retorno);
+						if (retorno.Sucesso == true) {
+							window.location = "index.php";
+						} else {
+							alert(retorno.Mensagem);
+						}
 
-					if (retorno.Sucesso == true) {
-						window.location = "index.php";						
-					} else {
-						alert(retorno.Mensagem);
+						$("#loader").hide();
+					} catch(e) {
+						alert('Falha no login do sistema. Entre em contato com o administrador do sistema.');
 					}
-					
-					$("#loader").hide();
 				});				
 			}		
 		});
