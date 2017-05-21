@@ -20,4 +20,4 @@
 <script src="js/util.js"></script>
 
 <!-- jQuery Mask-->
-<script src="components/Jquery Mask/jquery.mask.js"></script>
+<script src="components/jquery-mask/jquery.mask.js"></script>

@@ -48,7 +48,7 @@
 			<a href="http://www.freepik.com"> Selected by freepik</a>
 		</div>
 	</div>
-	<?php include("includes/footer.php"); ?>	
+	<?php include("includes/footer.php"); ?>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			
@@ -68,12 +68,8 @@
 				$("#loader").show();
 
 				var dados = {
-					/*	
 					user: $("#user").val(),
 					pass: $("#pass").val()
-					*/
-					user: 'admin',
-					pass: '123'
 				}
 
 				$.post( "ajax/avaliador.ajax.php", dados, function(data) {
